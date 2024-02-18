@@ -1,0 +1,133 @@
+﻿.IE8_Menu_Fix 
+{ 
+	z-index: 100; 
+}
+
+.mGrid {    
+    width: 100%;    
+    background-color: #fff;    
+    margin: 5px 0 10px 0;    
+    border: solid 1px #525252;    
+    border-collapse:collapse;    
+}   
+.mGrid td {    
+    padding: 2px;    
+    border: solid 1px #c1c1c1;    
+    color: #717171;    
+}   
+.mGrid th {    
+    padding: 4px 2px;    
+    color: #fff;    
+    background: #424242 url(grd_head.png) repeat-x top;    
+    border-left: solid 1px #525252;    
+    font-size: 0.9em;    
+}   
+.mGrid .alt { background: #fcfcfc url(grd_alt.png) repeat-x top; }   
+.mGrid .pgr { background: #424242 url(grd_pgr.png) repeat-x top; }   
+.mGrid .pgr table { margin: 5px 0; }   
+.mGrid .pgr td {    
+    border-width: 0;    
+    padding: 0 6px;    
+    border-left: solid 1px #666;    
+    font-weight: bold;    
+    color: #fff;    
+    line-height: 12px;    
+ }      
+.mGrid .pgr a { color: #666; text-decoration: none; }   
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+
+/* grid */
+table.paging_gridview { border-collapse: collapse; margin: 0px !important; width: 100%; border: #6593CF 1px solid; }
+.paging_gridview td { font-size: 11px; font-family: Arial; color: #000000; cursor: default; text-align: left; }
+.paging_gridview th { font-size: 11px; font-family: Arial; color:  #484848; cursor: default; text-align: left; }
+table.paging_gridview a { color: #000000; text-decoration: none; }
+table.paging_gridview a:hover { text-decoration: underline; }
+
+/* header */
+tr.paging_gridview_hdr { background-color: #DEECFF; }
+.paging_gridview_hdr th { color: black; font-weight: normal; text-align: left;border-top: solid 1px #6593CF; border-bottom: solid 1px #6593CF; border-left: solid 1px #6593CF; border-right: solid 1px #6593CF; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; }
+.paging_gridview_hdr th a { color: #484848; text-decoration: none; }
+.paging_gridview_hdr th a:hover { color: #484848; text-decoration: none; }
+
+/* item row */
+tr.paging_gridview_itm { background-color: #FFFFFF; }
+.paging_gridview_itm td { padding: 2px 5px; border-right: #FFFFFF 0px solid; border-top: #FFFFFF 1px solid; border-left: #FFFFFF 0px solid; border-bottom: #ADD1FF 1px solid; }
+.paging_gridview_itm td a { text-decoration: underline; }
+
+/* alternating item row */
+tr.paging_gridview_aitm { background-color: #FFFFFF; }
+.paging_gridview_aitm td { padding: 2px 5px; border-right: #FFFFFF 0px solid; border-top: #FFFFFF 1px solid; border-left: #FFFFFF 0px solid; border-bottom: #ADD1FF 1px solid; }
+.paging_gridview_aitm td a { text-decoration: underline; }
+
+/* pager row */
+tr.paging_gridview_pgr { width : 100%; }
+.paging_gridview_pgr td { background-image: url(../Immagini/GridView/bg.gif); background-repeat: repeat-x; height: 23px; padding: 0px; font-size: 10px; font-family: Arial;}
+.paging_gridview_pgr_ddl { font-size: 10px; font-family: Arial; }
+
+/* Accordion */
+.accordionHeader
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #2E4d7B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #5078B3;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionLink
+{
+	background-color: #2E4d7B;
+	color: White;
+}
+
+.accordionContent
+{
+    background-color: #D3DEEF;
+    border: 1px dashed #2F4F4F;
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;
+}

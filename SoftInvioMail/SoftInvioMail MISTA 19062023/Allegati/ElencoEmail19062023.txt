@@ -1,0 +1,3112 @@
+1	0	NULL		gemiliani@kronosan.com
+2	0	NULL		info@pallacanestrosenigallia.it;
+3	0	NULL		bsic8aa00q@istruzione.it
+4	0	NULL		100per100danza@gmail.com
+5	0	NULL		marta.bertulessi@2a-group.it
+6	0	NULL		francescobenelli@hotmail.it; info@dueffe.net
+7	0	NULL		3blocks.ssdrl@gmail.com
+8	0	NULL		vincenzo.commisso.57@gmail.com
+9	0	NULL		farmacia3dfarma@gmail.com
+10	0	NULL		scorradi1@mmm.com ; adibenedetto1@mmm.com
+11	0	NULL		andrea.boiardi@626service.it
+12	0	NULL		massiluigi@alice.it
+13	0	NULL		borsala@libero.it
+14	0	NULL		giancarlo.barbaglia@trovaprezzi.it ; servizi.generali@trovaprezzi.it ; corrado.basso@trovaprezzi.it
+15	0	NULL		co262@fidal.it
+16	0	NULL		renzozanetti72@gmail.com
+17	0	NULL		federica.boscolo@testoni.com
+18	0	NULL		finessiluciano@lombardia.bancoalimentare.it
+19	0	NULL		brunodiego@libero.it
+20	0	NULL		alquartiere1978@libero.it
+21	0	NULL		info@adraxles.com ; badin@adraxles.com
+22	0	NULL		alessandroadvs@libero.it
+23	0	NULL		afsicurezza.amministrazione@gmail.com
+24	0	NULL		salvatore@abacosistemi.net
+25	0	NULL		ags_oratoriocastenedolo@alice.it
+26	0	NULL		g.ghetti@aicsbasket.it
+27	0	NULL		aicstv@hotmail.com
+28	0	NULL		cocco.oreste@gmail.com
+29	0	NULL		arch.albriva@gmail.com
+30	0	NULL		anap@aplaparma.it
+31	0	NULL		giovannifc@libero.it
+32	0	NULL		segreteriapaoloteam@gmail.com; zipaolo@inwind.it
+33	0	NULL		paola.gallina@apaantincendio.it; segreteria@apantincendio.it
+34	0	NULL		posta@sportinsieme.net
+35	0	NULL		ass.amicidelcapitolo@libero.it
+36	0	NULL		giochi55@hotmail.com
+37	0	NULL		marpanzer@tiscali.it
+38	0	NULL		nordovest1981@gmail.com
+39	0	NULL		msantalmasi@gmail.com
+40	0	NULL		f.girardi@asativolispa.it
+41	0	NULL		gaia_fdr@hotmail.it
+42	0	NULL		mat.tanfoglio@gmail.com
+43	0	NULL		info@piccolomondoanticopisa.it
+44	0	NULL		claudio.rocco19@virgilio.it; 
+45	0	NULL		enrico.pozzato@fastwebnet.it; info@academydance.eu
+46	0	NULL		aeoliangym@live.net
+47	0	NULL		daser52@gmail.com; info@alldanceworld.it
+48	0	NULL		info@anshinkai.it
+49	0	NULL		info@yogaparma.com
+50	0	NULL		info@italoboselli.it
+51	0	NULL		giagios@tiscali.it
+52	0	NULL		aviomose@gmail.com
+53	0	NULL		francesca.prandina@me.com
+54	0	NULL		avegiusi@libero.it
+55	0	NULL		basket.iglesias@libero.it; murru.ing.maurizio@tiscali.it
+56	0	NULL		asdbereguardo@libero.it
+57	0	NULL		info@bodyupfitness.it
+58	0	NULL		brianzascherma@fastwebnet.it
+59	0	NULL		info@butokukaratedo.it
+60	0	NULL		mauro.migliore2@alice.it
+61	0	NULL		l.dipiazza@fastwebnet.it
+62	0	NULL		asdcc@libero.it
+63	0	NULL		cea.bvaddolorata@gmail.com
+64	0	NULL		crimast@gmail.com
+65	0	NULL		info@circoloippicoargentano.it
+66	0	NULL		gabriella.tondelli@gmail.com
+67	0	NULL		sm56765@gmail.com
+68	0	NULL		tennis@ctcervia.it
+69	0	NULL		maxbiz58@gmail.com
+70	0	NULL		miniroma1998@libero.it
+71	0	NULL		ileanarenso@gmail.com
+72	0	NULL		fabrizio.olivieri@dailydance.it; fabrizio.olivieri@tin.it
+73	0	NULL		makawara84@hotmail.com
+74	0	NULL		elevationdancecenter@virgilio.it
+75	0	NULL		energyaclub@tin.it ; energyaclub@gmail.com
+76	0	NULL		carlofarsetti@gmail.com
+77	0	NULL		fattidifitness@gmail.com
+78	0	NULL		asdfcborgorivola@gmail.com
+79	0	NULL		marco@autoscuolacarra.it
+80	0	NULL		e.maestri@libero.it
+81	0	NULL		andrea.grippa@lombardia.cri.it
+82	0	NULL		asdfopponino@gmail.com
+83	0	NULL		imonsters@libero.it
+84	0	NULL		info@forumtennis.it
+85	0	NULL		perzianomassimiliano@gmai.com
+86	0	NULL		pirasg@libero.it
+87	0	NULL		cristiana.preti@gmail.com
+88	0	NULL		asdginnasticaastro@gmail.com
+89	0	NULL		e.serafimova@tiscali.it
+90	0	NULL		a.berna@virgilio.it ; asgiussagocalcio@gmail.com
+91	0	NULL		chinte55@alice.it
+92	0	NULL		calcio@cralbpb.it
+93	0	NULL		asd.montecchio@libero.it
+94	0	NULL		edoardo.riva5@gmail.com
+95	0	NULL		hockey.vaccari@libero.it
+96	0	NULL		marvinpharma@gmail.com
+97	0	NULL		montanaribartolucci@gmail.com
+98	0	NULL		enzoiafrate@libero.it
+99	0	NULL		in.forma.sangiorgio@gmail.com
+100	0	NULL		info@ippocampo.info
+101	0	NULL		jazzercise.vi.est@gmail.com
+102	0	NULL		judoclubsamurailecco@yahoo.it
+103	0	NULL		judofaenza@libero.it
+104	0	NULL		juniortennistraining@gmail.com
+105	0	NULL		piparoni@tiscali.it
+106	0	NULL		glendamagistrali@gmail.com
+107	0	NULL		lateladitersicore@gmail.com
+108	0	NULL		info@lariointelvi.com
+109	0	NULL		learene.equitazione@libero.it
+110	0	NULL		libertasmontalcino@gmail.com
+111	0	NULL		lifecentrofitness@yahoo.it
+112	0	NULL		lo.vedance@tiscali.it
+113	0	NULL		luca.pellacini@alice.it
+114	0	NULL		info@maldimare.org
+115	0	NULL		superspago@alice.it
+116	0	NULL		info@menssanamesagne.it
+117	0	NULL		campi.lorenzo@alice.it
+118	0	NULL		anna.carnevalini@gmail.com
+119	0	NULL		info@easydance.it
+120	0	NULL		novamontello@gmail.com ; ceciliapersiani@gmail.com
+121	0	NULL		valentina.damiola@gmail.com
+122	0	NULL		stucchigigi@gmail.com; clauro@alice.it
+123	0	NULL		santavaleria.sgr@gmail.com
+124	0	NULL		emanuelezamin@gmail.com 
+125	0	NULL		parri.oslcalcio.garbagnate@libero.it
+126	0	NULL		infopadelcenter@gmail.com
+127	0	NULL		info@pallacanestrosabaudia.it
+128	0	NULL		pallavolo.arquatese.pres@gmail.com
+129	0	NULL		gherardi@gherardiangelo.191.it
+130	0	NULL		pattinaggioprimavera@libero.it
+131	0	NULL		folgore.bosto@gmail.com
+132	0	NULL		stefano.colage@virgilio.it
+133	0	NULL		maralatino72@virgilio.it
+134	0	NULL		ioriincerti@libero.it
+135	0	NULL		polisportivafutura96@libero.it
+136	0	NULL		cracco.marco@gmail.com
+137	0	NULL		pollariana@alice.it
+138	0	NULL		segreteria@malerina.it
+139	0	NULL		carrieri.ad@libero.it
+140	0	NULL		giacomel@hesa.com
+141	0	NULL		mauriziotesta1967@gmail.com
+142	0	NULL		fasoanto@alice.it
+143	0	NULL		polisportivarepax@outlook.com
+144	0	NULL		pangelo.pab@gmail.com
+145	0	NULL		RIF massimiliano.ioppolo@me.com
+146	0	NULL		a.s.d.proferrera@gmail.com
+147	0	NULL		prolissoneginnastica@alice.it; marcelloniroberto@gmail.com
+148	0	NULL		ilbenno89@hotmail.it; asprogettointesaallcampasd@gmail.com
+149	0	NULL		claudioguardigli@gmail.com
+150	0	NULL		puntoebasket@hotmail.it
+151	0	NULL		rgp@precotto.it
+152	0	NULL		oscar.ver@virgilio.it
+153	0	NULL		c.nebel@aldobrandini.it
+154	0	NULL		sandromorandin@euroskate.it
+155	0	NULL		asdroman91@gmail.com
+156	0	NULL		segreteria@asdsantignaziotorino.it
+157	0	NULL		sdsarcobaleno@gmail.com
+158	0	NULL		cscsacrocuore@gmail.com
+159	0	NULL		matteo.mazzucco1983@gmail.com
+160	0	NULL		info@asdsamzmilano.it ; presidente@asdsamzmilano.it 
+161	0	NULL		calcio@parrocchiasangaldino.it
+162	0	NULL		alex_cell@libero.it
+163	0	NULL		p.d.mapelli@sansimplicianocalcio.it
+164	0	NULL		asdsancolombanoitaltex@gmail.com
+165	0	NULL		segreteria@polisambrogio.com
+166	0	NULL		vianellogiancarlo@hotmail.com
+167	0	NULL		asdsanto95@libero.it
+168	0	NULL		s.casalini@gmail.com
+169	0	NULL		info@paolobonomi.it
+170	0	NULL		fabiodelduca@decorappresentanze.it
+171	0	NULL		sizianolanterna@gmail.com
+172	0	NULL		spaziodanzavigevano@live.it
+173	0	NULL		speedbikeuta@gmail.com
+174	0	NULL		presidente.spes@gmail.com
+175	0	NULL		asdsportella@gmail.com
+176	0	NULL		gmotta1953@gmail.com
+177	0	NULL		asdtorrevecchia@gmail.com
+178	0	NULL		cascavillapaolo@libero.it
+179	0	NULL		teoprov82@gmail.com
+180	0	NULL		info@studio-kineos.it
+181	0	NULL		giancarlo-beretta@virgilio.it
+182	0	NULL		sede@salsotennis.it
+183	0	NULL		tennisclubtradate@gmail.com
+184	0	NULL		calvi-andrea@alice.it ; calvi@saep.it
+185	0	NULL		maurossola@gmail.com; info@tennistavolovarese.it
+186	0	NULL		mircobinelli@sistemabinario.com
+187	0	NULL		info@associazionetizianociotti.it
+188	0	NULL		roberto.barzago65@gmail.com  
+189	0	NULL		bobbiovolleyasd@gmail.com; elettrautocastelli@libero.it
+190	0	NULL		maurizo.negletti@cheapnet.it
+191	0	NULL		micvis67@gmail.com
+192	0	NULL		asdurbisagliatennis@tiscali.it
+193	0	NULL		us.montebello.parma@gmail.com
+194	0	NULL		asdvallesacra@yahoo.it
+195	0	NULL		ciemme@intercom.it; ciemme@intercom.it
+196	0	NULL		034940@spes.fip.it
+197	0	NULL		volleygobachelet@gmail.com
+198	0	NULL		info@wellfitstudio.it
+199	0	NULL		vicepresidente@croceviolacesate.it 
+200	0	NULL		wolftrainersdept@gmail.com
+201	0	NULL		info@crossfitlucca.com
+202	0	NULL		naty974@libero.it
+203	0	NULL		yamakarateclub@gmail.com
+204	0	NULL		albertabiressi@gmail.com
+205	0	NULL		yogyamoinsieme@libero.it
+206	0	NULL		zeroxarzachena@tiscali.it
+207	0	NULL		areatecnica@asparditodesio.it
+208	0	NULL		andrea.macchi@aschulman.com ; AP.Inquiry_Italiano_EU@LYB.com
+209	0	NULL		amministratore@atam-rc.it
+210	0	NULL		athsrl@athsrl.it
+211	0	NULL		italo.orengo@alice.it
+212	0	NULL		selva@avvalves.it ; ranghetti@avvalves.it ; ranghetti@avvalves.it ;
+213	0	NULL		INFO@ABAMEDICA.IT
+214	0	NULL		abc_life_formazione@yahoo.it; carlo1963vr@yahoo.it
+215	0	NULL		nicoletta@abfantincendio.it; francesco@abfantincendio.it
+216	0	NULL		reggiani@ably.it
+217	0	NULL		info@abwork.it
+218	0	NULL		info@academydanza.it
+219	0	NULL		alberto.albertazzi@acao.it; daniela@acao.it
+220	0	NULL		info@palermo8.it
+221	0	NULL		commercial.dep@acciaierievenete.com
+222	0	NULL		r.ferloni@achillepinto.com
+223	0	NULL		cristina@sarcasrl.com
+224	0	NULL		presidente@usaclimi.it
+225	0	NULL		aclita@libero.it
+226	0	NULL		serena.torquati@acquirenteunico.it
+227	0	NULL		presidente@danzainsieme.it
+228	0	NULL		antonella.ludovico@acsm-agam.it; fornitori@pec.acsm.agam.it
+229	0	NULL		valentina.caminelli@aqvasport.it
+230	0	NULL		nicola@activasc.it, manutenzione@activasc.it
+231	0	NULL		st.testa@gmail.com
+232	0	NULL		Domenico.pistone@ansit.adac.de
+233	0	NULL		info@adesital.it
+234	0	NULL		amministrazione@adgenera.com
+235	0	NULL		rainoldiroberto@libero.it
+236	0	NULL		e.curumi@advenias.it
+237	0	NULL		guido.vaini@mondoparchi.it
+238	0	NULL		fidaspaola@libero.it
+239	0	NULL		nicoletta.galana@universiis.com
+240	0	NULL		maura@afcorse.it
+241	0	NULL		francesca.gaudino@virgilio.it
+242	0	NULL		amministrazione@genitori-lnfvi.it
+243	0	NULL		agenziademanio@pec.agenziademanio.it
+244	0	NULL		giulio.bevilacqua@agenziadogane.it
+245	0	NULL		assu@enterpoint.it
+246	0	NULL		info@agif.net
+247	0	NULL		spingardo@gmail.com
+248	0	NULL		ufficioacquisti@agri2000.it
+249	0	NULL		amministrazione@agribrianza.it
+250	0	NULL		zappettinifrancesco@gmail.com
+251	0	NULL		enoreazzolin@gmail.com
+252	0	NULL		sicurezza@candeoagostino.it
+253	0	NULL		info@aguanilebbe.net
+254	0	NULL		e_marin1@virgilio.it; amministrazione@aiaceasd.com
+255	0	NULL		giocampioni@libero.it
+256	0	NULL		luca.biagini@aidro.it
+257	0	NULL		info@aiedbrescia.org
+258	0	NULL		d.vizza@outlook.it
+259	0	NULL		manuela.calautt@virgilio.it
+260	0	NULL		vale.aimola@gmail.com
+261	0	NULL		michaela.peloso@alfalaval.com ; roberta.spaliviero@luvegroup.com ; giulia.pretto@luvegroup.com
+262	0	NULL		direzione@airanet.it
+263	0	NULL		acquisti@airbank.it; 
+264	0	NULL		 d.mologni@yahoo.com
+265	0	NULL		roberto.sips@akzonobel.com
+266	0	NULL		mauro.viale@albint.com
+267	0	NULL		info@hotel4stagioni.com
+268	0	NULL		info@albergodagianni.com
+269	0	NULL		albertoperossi@gmail.com
+270	0	NULL		alessandro@rapinese.com
+271	0	NULL		claudio.citi@yahoo.it
+272	0	NULL		francesco.gallo@alfalaval.com ; michaela.peloso@alfalaval.com
+273	0	NULL		sborsarini@alfawassermann.it; xmb-a16@alfawassermann.it
+274	0	NULL		michela.prestia@alfagomma.com
+275	0	NULL		giovanni@alfanofratelli.com
+276	0	NULL		amministrazione@palacehoteldesenzano.it
+277	0	NULL		massimilianoalghisi@libero.it
+278	0	NULL		c.tagliaferri@aliasblindate.com
+279	0	NULL		commerciale@alighierointi.it; 
+280	0	NULL		alle@all-flex.eu ; maria.venturini@all-flexgroup.com
+281	0	NULL		acquisti@almapetroli.com
+282	0	NULL		info@alphamedclinic.com
+283	0	NULL		alvinmed@libero.it
+284	0	NULL		fiorealvise@gmail.com
+285	0	NULL		giorgia.susnik@amada.it
+286	0	NULL		bellanapoli@alice.it
+287	0	NULL		turettam@amazon.com
+288	0	NULL		customerservice@amazon.co.it
+289	0	NULL		schanton@amazon.com; macneil@amazon.com; tzilinsk@amazon.co.uk
+290	0	NULL		feridbouchiba@yahoo.fr
+291	0	NULL		ambasciata.kabul@esteri.it
+292	0	NULL		NULL
+293	0	NULL		ieracitanoesala@libero.it; paolodottsala@libero.it
+294	0	NULL		loredana.cresta@amc.info
+295	0	NULL		cinosia@libero.it
+296	0	NULL		enricomarina8@gmail.com
+297	0	NULL		davide.paladini@ametek.com; fabrizia.perrachon@ametek.com
+298	0	NULL		pinuccioprina@virgilio.it
+299	0	NULL		marcomarson.acit@amorim.com ; claudio.marchioni@amorim.com ; 
+300	0	NULL		candida.petrucci@amotek-ita.com
+301	0	NULL		agnese.vanzini@amundi.com
+302	0	NULL		segreteria@anacilombardia.com
+303	0	NULL		gian.terry@alice.it
+304	0	NULL		andromedaglobalser@libero.it
+305	0	NULL		rspp@anemocyte.com
+306	0	NULL		maurizio.franco@angelantoni.it
+307	0	NULL		claudiabonamici@comingsoon.it
+308	0	NULL		dragan.arsic@animasgr.it
+309	0	NULL		accountdept@animasgr.it
+310	0	NULL		annalisaballetti@yahoo.it
+311	0	NULL		francescoieno@gmail.com
+312	0	NULL		agenzia.sicurezza@ansf.it
+313	0	NULL		accettazionefienza@antaresparma.it; dastardley10@gmail.com
+314	0	NULL		steve.galli@libero.it
+315	0	NULL		riccardo@padgloves.com
+316	0	NULL		hotel@antonandart.it 
+317	0	NULL		rosalodesrto@libero.it
+318	0	NULL		farmantonicelli@libero.it
+319	0	NULL		ufficioacquisti@sadaspa.it
+320	0	NULL		antoniolidomenico@virgilio.it
+321	0	NULL		imp.antonioli@libero.it
+322	0	NULL		acquisti@api-spa.com; mpini@stoncor.com
+323	0	NULL		info@apicolturaburato.it
+324	0	NULL		gia.var@libero.it
+325	0	NULL		info@appisrl.it
+326	0	NULL		BCS_RECEPTION@amat.com ; Mario_DiCriscio@contractor.amat.com
+327	0	NULL		genitoriperladuse@gmail.com
+328	0	NULL		castagnis@a4ind.com
+329	0	NULL		gbonazzi@aqua.it; mcavazzoni@aqua.it
+330	0	NULL		aquilotticeleres@alice.it
+331	0	NULL		amministrazione@aqvasport.it
+332	0	NULL		nadia.scotti@arcadis.com
+333	0	NULL		infodirettivo@arcicorvetto.it
+334	0	NULL		dariomartini53@gmail.com
+335	0	NULL		ardanese.della@alice.it
+336	0	NULL		kids@areadance.it
+337	0	NULL		alex.cambini@gmail.com
+338	0	NULL		tiziana.calloni@argos-st.com
+339	0	NULL		battino@tiscali.it
+340	0	NULL		fabrizio@arienti.it
+341	0	NULL		coopariete@coopariete.it
+342	0	NULL		a.lecce@armet.it
+343	0	NULL		i.voglino@arol.it
+344	0	NULL		comunicazione@artsana.com; anna.frigerio@artsana.com
+345	0	NULL		presidenza@torneidellamicizia.it
+346	0	NULL		aldo.vitali@libero.it
+347	0	NULL		streetgym016@gmail.com
+348	0	NULL		giorgio.conforti@judojo.it
+349	0	NULL		forti67@interfree.it
+350	0	NULL		info@evolutionteamcalcio.com; silvano_modolo@hotmail.it
+351	0	NULL		marinaascione@tiscali.it
+352	0	NULL		roberto.maceri@vigilfuoco.it
+353	0	NULL		info@gymnasiumbelotti.com
+354	0	NULL		segr.asdlabosana@gmail.com
+355	0	NULL		bono.lauretta@tiscali.it
+356	0	NULL		info@magicgymrimini.it;
+357	0	NULL		infohardfit@yahoo.com
+358	0	NULL		info@olimpia-asd.it ; assolimpia@inwind.it
+359	0	NULL		m.perronecapano@romametropolitane.it
+360	0	NULL		primo.capozzi@gmail.com
+361	0	NULL		polsanmarco@libero.it; tierredi@tiscali.it 
+362	0	NULL		rugbyazzano@gmail.com
+363	0	NULL		INFO@SANFRUTTUOSOCALCIO.COM
+364	0	NULL		buticchi.edoardo@gmail.com; bubu@bubuipsc.com
+365	0	NULL		giuseppe.fra@coldiretti.it
+366	0	NULL		usk2@fastwebnet.it
+367	0	NULL		asdlacedonia@gmail.com
+368	0	NULL		usvelate@gmail.com
+369	0	NULL		asdobesana@gmail.com
+370	0	NULL		info@asdoagora.net
+371	0	NULL		r.rigamonti@alice.it
+372	0	NULL		robertopennati@libero.it
+373	0	NULL		mmolteni@fideuram.it
+374	0	NULL		lorenzo.pensabene52@gmail.com
+375	0	NULL		sicurezza@asedsrl.it
+376	0	NULL		acquisti@asfautolinee.it ; b.venturelli@asfautolinee.it
+377	0	NULL		info@asibrescia.it; dmagnabosco@alice.it
+378	0	NULL		segreteria@asia.it
+379	0	NULL		direttivo.asic@gmail.com; 
+380	0	NULL		s.davella@asmare.eu
+381	0	NULL		a.cecchetto@ghirada.it ; marika_stefanin@asologolf.it
+382	0	NULL		patriziadelluomo@istruzione.it; amicidelcuoreaps@gmail.com
+383	0	NULL		mbisio@emanuelebrignole.it
+384	0	NULL		ass.cardio.forlivese@gmail.com
+385	0	NULL		valli.teramane@anvvfc.it
+386	0	NULL		calogero.diprima@gmail.com
+387	0	NULL		christian@siegavignut.it; info@afdspn.it
+388	0	NULL		associazioneoratorio@parrocchiaspioxmn.it
+389	0	NULL		giovanniliaci@gmail.com
+390	0	NULL		avpc.camparada@libero.it
+391	0	NULL		INFO@ANDROMEDA-BO.IT  MARESCIALLO ROCCA
+392	0	NULL		info@assindustriasport.it
+393	0	NULL		grazia.pelacci@assistgroup.it
+394	0	NULL		appellegrino79@gmail.com
+395	0	NULL		sede.avsa@avsacornate.net
+396	0	NULL		o.giorrgio@assit.it
+397	0	NULL		p.assobalneari@assobalneari.net               
+398	0	NULL		nbianchi@fastwebnet.it
+399	0	NULL		s.brusori@asplaurarodriguez.it
+400	0	NULL		cristiano.viotto@gmail.com
+401	0	NULL		ass.cap.info@gmail.com
+402	0	NULL		amicideipompieridivimercate@gmail.com
+403	0	NULL		marcello.pace@alice.it
+404	0	NULL		cavallo.f23@gmail.com; amicidellemole@gmail.com
+405	0	NULL		cfraschetta@yahoo.it; mauroceci@yahoo.it
+406	0	NULL		toul@libero.it; uniterpuglia@gmail.com
+407	0	NULL		abbiate.luigi@libero.it
+408	0	NULL		giacomo.fogliata@gmail.com
+409	0	NULL		info@associazioneanzianiterzaeta.191.it
+410	0	NULL		nidobenessere@tiscali.it
+411	0	NULL		gsorrento@libero.it
+412	0	NULL		info@studioserviziimmobiliari.it
+413	0	NULL		segreteria@assocarbonera.it
+414	0	NULL		topolin.o@virgilio.it
+415	0	NULL		giardinifrancesco55@gmail.com
+416	0	NULL		info@biodanzabologna.it
+417	0	NULL		MICHELE VALENTE - micvalente@tiscali.it
+418	0	NULL		info@civibo.it
+419	0	NULL		forlimpopolibertinoro@cri.it
+420	0	NULL		difazionicola@gmail.com
+421	0	NULL		fostegno@virgilio.it
+422	0	NULL		fulvio.schiano@gmail.com
+423	0	NULL		info@davidcarelli.org
+424	0	NULL		giovanni.schifino@cri.it
+425	0	NULL		roberto.marchetti@cri.it;davide.bottazzi@cri.it
+426	0	NULL		segreteria@insiemeperlavita.org
+427	0	NULL		fabrizio.gusmeri@ecotherm.it
+428	0	NULL		acquisti01@pavan.com
+429	0	NULL		claudia.meroni@fastwebnet.it; doridelgrossi@libero.it
+430	0	NULL		antonio.cimei@ennovagroup.it
+431	0	NULL		castecri@gmail.com
+432	0	NULL		info@comunitaaga.it
+433	0	NULL		silviabottello@libero.it
+434	0	NULL		andreacamilli@hotmail.it
+435	0	NULL		segreteria@villaspada.vr.it
+436	0	NULL		s.zumerle@alice.it; info@grupponauticodielleffe.it
+437	0	NULL		avv.cappelletti@studiolegalecappelletti.it
+438	0	NULL		sagradelpanino@gmail.com
+439	0	NULL		fabriziofanella@lapromessa.it
+440	0	NULL		e.magri@0246.it; a.cecchetto@ghirada.it
+441	0	NULL		anna@assogiornalisti.it
+442	0	NULL		info@parrocchiaveduggio.it
+443	0	NULL		como@ana.it
+444	0	NULL		adriano.crugnola@ana.it
+445	0	NULL		luigi.ponti16@virgilio.it; siforprev@gmail.com
+446	0	NULL		giuseppeballario@anavalsusa.it
+447	0	NULL		ranghetti.gmario@hotmail.it
+448	0	NULL		gcovizzi@tim.it
+449	0	NULL		l.mariani@anc-brugherio.it
+450	0	NULL		antonellacavalcante@yahoo.it
+451	0	NULL		sabrina.anaclerio@confagripc.it
+452	0	NULL		anmi.ospitaletto@gmail.com
+453	0	NULL		m.cappiello@philips.com
+454	0	NULL		RIF. patrimonio@crinova.it; novamilanese.comunale@avis.it
+455	0	NULL		tecnologie@operasanfrancesco.it
+456	0	NULL		rose@cittaellerose.it
+457	0	NULL		frafranch@hotmail.it
+458	0	NULL		anteasvicenza@gmail.com
+459	0	NULL		f.herbora@gmail.com
+460	0	NULL		simona998@gmail.com
+461	0	NULL		info@braincenterfirenze.it; cecchelli.chiara@gmail.com
+462	0	NULL		progettovita.piacenza@gmail.com; gianlosi@alice.it; grilloerne@gmail.com
+463	0	NULL		live@prolocopodenzano.net
+464	0	NULL		as.volcostasmeralda@libero.it
+465	0	NULL		federicoperetti@hotmail.com
+466	0	NULL		robertalbani@yahoo.it
+467	0	NULL		massimo.casiraghi@triuggio.bcc.it
+468	0	NULL		mail@associazionesorriso.it
+469	0	NULL		lino.salanitro@tiscali.it
+470	0	NULL		fra9407@hotmail.it
+471	0	NULL		newbonsaiki@gmail.com
+472	0	NULL		elenapiano@me.com
+473	0	NULL		1881962@gmail.com
+474	0	NULL		santalucia.cont@gmail.com ; giuseppe.mule@enkisrl.eu
+475	0	NULL		r.fulvio71@gmail.com
+476	0	NULL		giovanni.pucci@comune.milano.it
+477	0	NULL		vitasenzadolore@pec.it
+478	0	NULL		ambulanzo@libero.it
+479	0	NULL		avismisanobg@gmail.com
+480	0	NULL		albaneseant@libero.it
+481	0	NULL		info@collettivo14.it
+482	0	NULL		f.cuccato@assopadana.com
+483	0	NULL		info@astipadel.com
+484	0	NULL		info@atalanta.it
+485	0	NULL		amministrazione@atep.it
+486	0	NULL		Goffredo.bevilacqua@f-group.it
+487	0	NULL		t.uez@unipoltrento.it
+488	0	NULL		giovanni.longhi49@gmail.com
+489	0	NULL		atleticoselena@gmail.com
+490	0	NULL		alessandro@attivasrls.com
+491	0	NULL		paola.gardumi@amstrento.it; in
+492	0	NULL		federicabrugiati@hotmail.it
+493	0	NULL		cabizzosulucia@gmail.com
+494	0	NULL		claudio.betti@acu.edu.au
+495	0	NULL		marco@autofficinadiemme.it
+496	0	NULL		c.bisanzio@automaticsystem.it
+497	0	NULL		info@autotradeandlogistics.it
+498	0	NULL		antonella.bertazzo@eu.averydennison.com
+499	0	NULL		giacomo.vitello@alice.it
+500	0	NULL		p.tetiviola@alice.it
+501	0	NULL		piozzano.comunale@avis.it
+502	0	NULL		ass.bilancio@comune.arcore.mb.it
+503	0	NULL		avisannonebrianza@tin.it
+504	0	NULL		busnago.comunale@avis.it
+505	0	NULL		nausicaa89@tiscali.it
+506	0	NULL		avis.garlasco@gmail.com
+507	0	NULL		presidente@avispachino.it
+508	0	NULL		enzodecieri@alice.it
+509	0	NULL		info@avisfondi.it
+510	0	NULL		avisgessopalena@yahoo.it
+511	0	NULL		novamilanese.comunale@avis.it
+512	0	NULL		contab2@avisbergamo.it
+513	0	NULL		unitadiraccolta@avis.mantova.it
+514	0	NULL		ordini@avismodena.it
+515	0	NULL		renzo.righi@avisre.it
+516	0	NULL		info@aviscastellarquato.it
+517	0	NULL		alseno.comunale@avis.it
+518	0	NULL		andrea.zanotto.az@gmail.com
+519	0	NULL		fiorenzuoladarda.comunale@avis.it
+520	0	NULL		BESENZONE.COMUNALE@AVIS.IT; tecnico@comune.besenzone.pc.it
+521	0	NULL		miro.salvi@gmail.com
+522	0	NULL		rocco.dibenedetto@avl.com
+523	0	NULL		elena.contessi@avps.it; cristina.chiassoni@avps.it
+524	0	NULL		cooperativadellevalli@gmail.com
+525	0	NULL		avv.zeffinalberto@libero.it
+526	0	NULL		ggpasquale@libero.it
+527	0	NULL		t.pricca@atopavia.it
+528	0	NULL		marcorosio@gmail.com
+529	0	NULL		amministrazione@acsnovamilanese.it
+530	0	NULL		e.penati@acs-sandonato.it
+531	0	NULL		direttorefca@operapiacoianiz.it
+532	0	NULL		direzione@centro anziani.info ; roberta.marzona@aspvillasantina.it
+533	0	NULL		a.nardone@areu.lombardia.it; approvigionamenti@areu.lombardia.it
+534	0	NULL		fciaruginello@virgilio.it
+535	0	NULL		az.sp.sedicoservizi@legalmail.it
+536	0	NULL		paolo.boncompagni@atm.it
+537	0	NULL		luisa.lolli@benettiyachts.it
+538	0	NULL		vmissiroli@dorelan.it
+539	0	NULL		mauro@baap.it ; info@baap.it
+540	0	NULL		fabio.galligani@bfgsrl.it
+541	0	NULL		statodiflow@gmail.com
+542	0	NULL		mazzola.gianluca@baerlocher.com
+543	0	NULL		marilenabaf@alice.it
+544	0	NULL		info@balestricostruzioni.com
+545	0	NULL		gioballerini@iol.it
+546	0	NULL		cesanomaderno7035@midas.it
+547	0	NULL		info@palestramiros.it
+548	0	NULL		scapasso@bancacapasso.it
+549	0	NULL		dario.dagostino@bccregalbuto.it
+550	0	NULL		regolaa@agrobresciano.bcc.it
+551	0	NULL		avis2006@libero.it
+552	0	NULL		arcolombo@alzatebrianza.bcc.it ; cnovati@alzatebrianza.bcc.it
+553	0	NULL		marketing@banca8833.bcc.it
+554	0	NULL		psic83500a@istruzione.it
+555	0	NULL		roberto.caspani@triuggio.bcc.it
+556	0	NULL		alessandra.guerra@bccmonsile.it
+557	0	NULL		giuseppe.baroni@credem.it
+558	0	NULL		g.masciopinto@popolarebari.it
+559	0	NULL		biso.damiano@bvlg.bcc.it ; PEC amministrazione@bccversilia.legalmail.it
+560	0	NULL		banda.comunale@libero.it
+561	0	NULL		m.ferrari84@alice.it
+562	0	NULL		l.valiante@barbe.it
+563	0	NULL		a.cadenelli@outlook.it
+564	0	NULL		info@barindelli.it
+565	0	NULL		luca.baruzzo@yahoo.it
+566	0	NULL		presidente@basketsansecondo.it
+567	0	NULL		segreteria@battelliericolombo.it; guido.corsato@gmail.com
+568	0	NULL		giancarlo.battistella@spem.it
+569	0	NULL		Mauro.Monguzzi@bausch.com
+570	0	NULL		sergio.valsecchi@bavelloni.com
+571	0	NULL		marcobazzucchi@gmail.com; segreteriastudiogracchi@gmail.com
+572	0	NULL		bdfitness@alice.it
+573	0	NULL		bel.sogno.srl@gmail.com
+574	0	NULL		chiara.continati@medtronic.com
+575	0	NULL		amministrazione@bellettiimpianti.com
+576	0	NULL		manuel_belotti@yahoo.it
+577	0	NULL		stefanobaroni@beniniantonio.com
+578	0	NULL		bensonacademyasd@gmail.com
+579	0	NULL		info@gberardi.com; e.cicognani@gberardi.com
+580	0	NULL		g.berardi@gberardi.com
+581	0	NULL		mauriziobergamini@libero.it
+582	0	NULL		doc.bernardini@gmail.com
+583	0	NULL		bernazzoli@bernazzoli.com; produzione@bernazzoli.com
+584	0	NULL		f.bertolotti@bertolotti.it
+585	0	NULL		info@hotelnettunopuntamarina.it
+586	0	NULL		sara.bruccoleri@paddypowerbetfair.com
+587	0	NULL		floriano.d@me.com
+588	0	NULL		laura.todirica4@gmail.com
+589	0	NULL		roberto.bianchini1976@gmail.com
+590	0	NULL		info@biggymfitness.it
+591	0	NULL		flavia.bigoni@studiomedicobigoni.it
+592	0	NULL		roberto.maggioni@fastwebnet.it
+593	0	NULL		istituto@ganassini.it
+594	0	NULL		a.desideri@gruppobiokimica.com
+595	0	NULL		acquisti@biolchim.it
+596	0	NULL		andrea.moschetti@biolevano.it ; cristiano.dalleva@biolevano.it ; d.bertaia@mobilplastic.it
+597	0	NULL		centofantipierluigi@hotmail.com
+598	0	NULL		vbenedetto@gvmnet.it
+599	0	NULL		claudio.pedrazzini@apiesse.com
+600	0	NULL		birrariabauce@alice.it
+601	0	NULL		massimobiselli.1970@gmail.com 
+602	0	NULL		elisa.bernasconi@biseta.it
+603	0	NULL		andrea.natalina46@gmail.com
+604	0	NULL		prod.blumen@blumen.it
+605	0	NULL		info@bluserena.it
+606	0	NULL		mendozziserena@gmail.com
+607	0	NULL		federica.bolpagni@bodycote.com
+608	0	NULL		gio.globo@alice.it
+609	0	NULL		baiocchi.fabio@gmail.com
+610	0	NULL		mauro.santonati@gmail.com
+611	0	NULL		lpisani@boltonalimentari.it
+612	0	NULL		parioli@boltongroup.it; sbertolino@boltongroup.it ; rmartin@boltongroup.it
+613	0	NULL		sbestetti@boltonmanitoba.it
+614	0	NULL		mcecconi@bolzonigroup.com
+615	0	NULL		MILO.MORSIANI@BONFIGLIOLI.COM
+616	0	NULL		fabrizio.martelli@bonomelli.it
+617	0	NULL		t.borella@libero.it
+618	0	NULL		mcatania@borgwarner.com ; gdegiuseppe@borgwarner.com
+619	0	NULL		s.daloia@bormioliluigi.it
+620	0	NULL		roberto_gentilini@bormiolirocco.com
+621	0	NULL		alessandro.fiorot@bortolinkemo.com
+622	0	NULL		bovef24@gmail.com
+623	0	NULL		segreteria@swservice.biz
+624	0	NULL		info@bramationoranze.it ; segreteria@bramanationoranze.it
+625	0	NULL		paolo.brandani@brandani.it; lara.lottini@brandani.it
+626	0	NULL		acquisti@brembo.it ; Matteo_Gariani@brembo.it
+627	0	NULL		luca.brenna@brevit.com
+628	0	NULL		stafno.colombo@beabrianza.it ; carolina.magnani@beabrianza.it
+629	0	NULL		brianzaperilcuore@asst-monza.it
+630	0	NULL		info@brianzaplastica.it; fatture.fornitori@brianzaplastica.it
+631	0	NULL		umberto.brighetti@gmail.com
+632	0	NULL		acquisti@briomoulds.com
+633	0	NULL		ldimarco@brugola.com
+634	0	NULL		fabrizio@brume.it
+635	0	NULL		info@kickandpunch-miptv.it
+636	0	NULL		robertopolloni@prefel.it
+637	0	NULL		amministrazione@btfitalia.it
+638	0	NULL		ribolzi@interfree.it
+639	0	NULL		sonia.libertella@bulfaro.com
+640	0	NULL		Miryam.Battaglia@bulgarihotels.com;
+641	0	NULL		21investigazioni@gmail.com
+642	0	NULL		giovanna.burocco@burocco.it
+643	0	NULL		info@businesssolutions.it ; ledda.l@icatributi.it
+644	0	NULL		Rif. info@emmegiturismo.com
+645	0	NULL		marco@bussifalegnameria.it
+646	0	NULL		rbellotti@bvmedia.it
+647	0	NULL		campana@cedelettronica.com
+648	0	NULL		baldiniadriano63@gmail.com
+649	0	NULL		marco.tomba@cabicattaneo.it
+650	0	NULL		mengheri.elena@gmail.com; fiorangelabellotti@gmail.com
+651	0	NULL		andrea.giuliattini@gmail,com
+652	0	NULL		r.bacchilega@cam-tech.it
+653	0	NULL		pisati@cbgacciai.com
+654	0	NULL		cdgcavaria@libero.it
+655	0	NULL		raffaele.chirichetta@er.cgil.it; angela.beghelli@er.cgil.it
+656	0	NULL		n.console@cef-farma.it
+657	0	NULL		barbara.cajelli@virgilio.it
+658	0	NULL		mario@fiocchetti.it
+659	0	NULL		commerciale@cfesmedical.com; a.chiabrera@cfesmedical.com
+660	0	NULL		r.manfredi@ciclat.it; m.povacari@ciclat.it; segreteria@ciclat.it
+661	0	NULL		cimes@cimes.it; ufficio.tecnico@cimes.it; ufficio.acquisti@cimes.it
+662	0	NULL		segreteria@scuolaosteopatia.it
+663	0	NULL		cademartori.elema@clcoperture.it
+664	0	NULL		g.william@clpsrl.com
+665	0	NULL		c.fumagalli@cmrimpianti.it 
+666	0	NULL		fiumicino@cngei.it
+667	0	NULL		viorobica@sasl.it; coordinatore.comed@soccorsospeleo.it
+668	0	NULL		claudia.ognibene@coc.it
+669	0	NULL		bassolario@cri.it
+670	0	NULL		cl.luratecaccivio@cri.it
+671	0	NULL		crrbesozzo@alice.it
+672	0	NULL		cantrosportivolasal@yahoo.it; maurizio.buri@gmail.com
+673	0	NULL		info@specialsteelstock.com
+674	0	NULL		d.castagnetti@cfs.it
+675	0	NULL		daniele.zamboni83@gmail.com
+676	0	NULL		csipolavenocalcio@gmail.com
+677	0	NULL		acquisti@cssa.it; info@cssa.it
+678	0	NULL		cadelbosco@cadelbosco.com
+679	0	NULL		n.zanon@santamargherita.com
+680	0	NULL		pierluigi.garbero@cabur.it
+681	0	NULL		carlotta@cacciarimpianti.it
+682	0	NULL		paolo@cafemoka.it
+683	0	NULL		giovanni@lufeti.net
+684	0	NULL		info@emporiosportpadova.com
+685	0	NULL		rota@caldic.it ; d.delorenzo@caldic.it
+686	0	NULL		cofran52@studiocaligaris.it
+687	0	NULL		elisa@maruska.it
+688	0	NULL		Laura_Mancin@er.cgil.it
+689	0	NULL		maurizio.bertelegni@c-a-m.com
+690	0	NULL		info@camicsrl.it
+691	0	NULL		info@cammigomme.it
+692	0	NULL		enricochiara.mmg@gmail.com
+693	0	NULL		fvatore@alice.it
+694	0	NULL		scarpi@unionlido.com
+695	0	NULL		m.campominosi@agrisilva.it
+696	0	NULL		francesca.sibani@camst.it; camst_fattcosti@legalmail.it
+697	0	NULL		calogeroalu@liberi.it
+698	0	NULL		raffaella.nani@canon.it; elena.colombo@canon.it
+699	0	NULL		daniele@codecasayachts.com
+700	0	NULL		giuseppe.zaccaria@cantinesanmarzano.com
+701	0	NULL		contabilita2@cantinavaltidone.it
+702	0	NULL		segreteria@canturinaservizi.it
+703	0	NULL		s.mossini@capellinitechnology.com; capellini-srl@ticertifica.it
+704	0	NULL		capitani.gru@libero.it
+705	0	NULL		 letizia.cappelletti@yahoo.com
+706	0	NULL		postacaralis@tin.it
+707	0	NULL		paolo_azzoni@cargill.com
+708	0	NULL		giacomo.barcellesi@cariniindustria.it
+709	0	NULL		angela.magnani@hotmail.it
+710	0	NULL		 nicoletta.vallini@zeiss.com
+711	0	NULL		monica.molon@zeiss.com
+712	0	NULL		farmacia@sancamillo-taranto.it
+713	0	NULL		chiara.degrandi@carloratti.com
+714	0	NULL		nicoletta@ricco.it
+715	0	NULL		s.mistrali@servizi-aziendali.eu
+716	0	NULL		s.carnevale@technores.it
+717	0	NULL		germana@carpenteriavigano.it
+718	0	NULL		pratella.progetti@libero.it
+719	0	NULL		cartaf2@gmail.com
+720	0	NULL		mirko@cartaorobicapoloni.net
+721	0	NULL		mauriziolupia@cartesiofullcard.it
+722	0	NULL		walter.boscato@postumia.it ; walter.boscato@postumia.it
+723	0	NULL		alda.campani@tenutacasadelsole.it
+724	0	NULL		paola.repossi@gmail.com
+725	0	NULL		info@rsatappero.it
+726	0	NULL		amministrazione@engimtonezza.it
+727	0	NULL		amministrazione@casasantachiara.it
+728	0	NULL		barbara.stucchi@gruppocimbali.com
+729	0	NULL		parellim@casappa.com
+730	0	NULL		calcio@casatiarcore.it
+731	0	NULL		cascellaleo@libero.it
+732	0	NULL		contabilita@cascospa.com
+733	0	NULL		aldocaselli7@gmail.com
+734	0	NULL		barbara.gabelli@casone.it; DAVIDE.GORRARA@CASONE.IT
+735	0	NULL		cassi@tecnoidea.it
+736	0	NULL		amonzini@castel.it
+737	0	NULL		prof.avv.catenacci@alice.it
+738	0	NULL		christiancavazza@gmail.com
+739	0	NULL		cavidue@cavidue.it
+740	0	NULL		ecavina@hotmail.com
+741	0	NULL		maxemil2@gmail.com
+742	0	NULL		info@cecini.it
+743	0	NULL		laura.restani@mais.com
+744	0	NULL		Giancarlo.Alinovi@Cedacri.it
+745	0	NULL		giorgio.bosi@cedecra.it
+746	0	NULL		vincenzo.patruno@cedicbio.com
+747	0	NULL		sabrina.mambelli@cefla.it
+748	0	NULL		responsabile-terapeutico@ceisge.org; economato@ceisge.org
+749	0	NULL		celegato@celegatosrl.it
+750	0	NULL		asoverini@cenacchiinternational.it
+751	0	NULL		Rif. l.panarotto@confcommercioverona.it
+752	0	NULL		INFO@PIVELAB.IT
+753	0	NULL		circololido@yahoo.it
+754	0	NULL		belfiore.ugo@alice.it
+755	0	NULL		davidepittalis@yahoo.it
+756	0	NULL		segreteria@icondomini.eu
+757	0	NULL		info@crmpalermo.it
+758	0	NULL		info@friuliriabilitazione.it
+759	0	NULL		centro.fisioterapia@tin.it
+760	0	NULL		fedexyzk@hotmail.com
+761	0	NULL		Info@agriturismo-lamontagnola.com
+762	0	NULL		info@centromedicovaldivara.com
+763	0	NULL		cmosantevincenzi@gmail.com
+764	0	NULL		cicciu.silvia@gmail.com
+765	0	NULL		tinopeveri_1958@libero.it
+766	0	NULL		piazzabonghi@centrovilla.it
+767	0	NULL		stemsps@yahoo.it
+768	0	NULL		info@centroprogettieducativi.it
+769	0	NULL		TOMM33200E@ISTRUZIONE.IT
+770	0	NULL		ALMM09700T@ISTRUZIONE.IT
+771	0	NULL		cemm18000t@istruzione.it
+772	0	NULL		info@centroremierolagodipusiano.it
+773	0	NULL		lab.madonnadellerose@libero.it
+774	0	NULL		info@centroanzianimonselice.it
+775	0	NULL		patrizia.braidi@gmail.com
+776	0	NULL		pmerlini@newtechgrafics.it
+777	0	NULL		 pietropaol.valen@gmail.com; centroanzianiaranova@gmail.com
+778	0	NULL		csrc.tulipano@gmail.com
+779	0	NULL		giorgio.minozzi50@gmail.com
+780	0	NULL		cedis.emmaus@libero.it
+781	0	NULL		caramella.flavia@gmail.com
+782	0	NULL		centrodanza.tv@virgilio.it
+783	0	NULL		centrozzano@gmail.com; info@new-photo.it
+784	0	NULL		e.barilli@cercol.it; m.bertolini@mapei.it
+785	0	NULL		silvia@certech.it
+786	0	NULL		giovanni.bilardello@cerve.it
+787	0	NULL		giorgio.cesari5@gmail.com
+788	0	NULL		info@consortilecesi.it
+789	0	NULL		cfsette@gmail.com
+790	0	NULL		s.bagnara@cfi-refrigerazione.it
+791	0	NULL		marziobondioli@cftmasserini.it
+792	0	NULL		Andrea.Alfieri@cedacri.it
+793	0	NULL		fcolli@yahoo.it
+794	0	NULL		marco.checchi@pelliconi.com
+795	0	NULL		roberto.penna@basf.com; laura.perri@basf.com
+796	0	NULL		dario.torsello@chemiplastica.com
+797	0	NULL		cecilia.dicosta@chemogroup.it; kusumarn.tavecchia@chemogroup.it; grazia.petrone@chemobiosynthesis.it
+798	0	NULL		pchiab@gmail.com
+799	0	NULL		enricochieffo@gmail.com
+800	0	NULL		brugoninazareno@tiscali.it
+801	0	NULL		ga.cannas@chiesi.com
+802	0	NULL		milena@cibitex.com
+803	0	NULL		m.cazzaniga@ciemme-noleggio.it
+804	0	NULL		ulisse.f@alice.it
+805	0	NULL		amministrazione@cimansrl.com
+806	0	NULL		n.nicoletti@studionicoletti.it
+807	0	NULL		domgrassi@libero.it
+808	0	NULL		rineo.caiola@alice.it
+809	0	NULL		info@farmaciadibesenzone.it
+810	0	NULL		enzo.romanini@libero.it
+811	0	NULL		dir2@studiobottim.it
+812	0	NULL		arcisanlazzaro@tiscali.it
+813	0	NULL		fer.arrigoni@libero.it
+814	0	NULL		servizi@circolodellacaccia.it; maggiordomo@circolodellacaccia.it
+815	0	NULL		circolodellascranna@gmail.com; info@circolodellascranna.it
+816	0	NULL		giovanni.sponza@tin.it
+817	0	NULL		bree02300l@istruzione.it
+818	0	NULL		circoloilcolle@libero.it
+819	0	NULL		andcardile@tiscali.it
+820	0	NULL		a.castellani@marbet.it
+821	0	NULL		info@circolonauticochioggia.it
+822	0	NULL		segreteria@circolonauticorapallo.it
+823	0	NULL		polisportivacusmanoasd@istitutocusmano.it
+824	0	NULL		gs.mercury@virgilio.it
+825	0	NULL		nicolamartinolli@libero.it
+826	0	NULL		ddipiramo@gmail.com
+827	0	NULL		pierluigi.cricca@alice.it
+828	0	NULL		alessiaodoardi@gmail.com
+829	0	NULL		claudio.ramaccini@gmail.com 
+830	0	NULL		laura@citterioline.com
+831	0	NULL		d.riminucci@seymechamlou.it
+832	0	NULL		amministrazione@cleaf.it
+833	0	NULL		bvannini@cgsh.com
+834	0	NULL		sonia.ferraresi@c-led.it
+835	0	NULL		samanta.carra@gmail.com
+836	0	NULL		reception@clevertech-group.com
+837	0	NULL		lderossi@collegelifeitalia.com
+838	0	NULL		cont@climater.it
+839	0	NULL		francesco.marella@climaveneta.com
+840	0	NULL		info@diagnosticacomunian.com
+841	0	NULL		luigi@simonetto.net
+842	0	NULL		fspaghetti@clouditalia.com; imontaini@clouditalia.com
+843	0	NULL		club.atleticobologna@libero.it
+844	0	NULL		matteo.bonaccorsi31@gmail.com
+845	0	NULL		natistanchipc@gmail.com
+846	0	NULL		info@clubschermaapuano.it
+847	0	NULL		novara@aics.it
+848	0	NULL		pietro.scolamacchia@clubino.it
+849	0	NULL		rd@cerliani.it ; info@cerliani.it
+850	0	NULL		pierpaolo.panesi@navico.com
+851	0	NULL		Ferrarini@cnaemiliaromagna.it
+852	0	NULL		eva.bertaccini@cnafc.it
+853	0	NULL		acq@comacitalia.it
+854	0	NULL		riccardo.zeri@coprob.com
+855	0	NULL		francescocornacchia2@gmail.com
+856	0	NULL		info@colgemasrl.it
+857	0	NULL		mauriziocolla@mac.com
+858	0	NULL		info@ordineperiticomo.it
+859	0	NULL		economato@ghislieri.it ; conca@ghislieri.it
+860	0	NULL		collscat@unipv.it;
+861	0	NULL		segreteria@collegiovilloresi.it
+862	0	NULL		marcello.montomoli@tin.it
+863	0	NULL		elisabetta_fortuna@libero.it
+864	0	NULL		sicurezza@colombo-costruzioni.it ; antonio.gerosa@colombo-costruzioni.it
+865	0	NULL		info@colomboedilrestauri.it
+866	0	NULL		mario@salumificiocolombo.com
+867	0	NULL		info@colosseumazzate.it
+868	0	NULL		marco.morini@colser.com
+869	0	NULL		federico.gialdi@comalsrl.it
+870	0	NULL		giancarlo.comeri@virgilio.it
+871	0	NULL		info@csipoint.it; basket@csibergamo.it; blsd@csibergamo.it;
+872	0	NULL		info.home@comifar.it ; gilda.lirangi@comifar.it ; Giovanni.NAPOLITANO@comifar.it
+873	0	NULL		progettofagnanocuore@virgilio.it
+874	0	NULL		antochinosi@libero.it
+875	0	NULL		giuseppe_schirripa@yahoo.it
+876	0	NULL		sucapanegiuseppe@gmail.com
+877	0	NULL		scacchetti1955@libero.it
+878	0	NULL		verona@verona.net
+879	0	NULL		acquisti@commercialeadriatica.com
+880	0	NULL		Christiane.DEFLANDRE@ec.europa.eu
+881	0	NULL		f.coppa@csuspa.it; cus_amministrazione@pcert.postecert.it
+882	0	NULL		gtesti@compac.it
+883	0	NULL		info@portualipiombino.it
+884	0	NULL		andrea@g2pf.it;
+885	0	NULL		claudio.r@tomasella.it
+886	0	NULL		Antonella.Forina@nephos.net
+887	0	NULL		l.bernardotto@compositex.com
+888	0	NULL		bborghi@cccglobal.com
+889	0	NULL		protocollo@comune.alagna.pv.it
+890	0	NULL		andrea.invernizzi@comune.albairate.mi.it
+891	0	NULL		protocollo@comune.badiapavese.pv.it
+892	0	NULL		servizisociali@comune.baressa.or.it
+893	0	NULL		sport@comune.belgioioso.pv.it
+894	0	NULL		segreteria@comune.besozzo.varese.it
+895	0	NULL		vcolapietro@ospedaliriunitidifoggia.it
+896	0	NULL		mirobis@tiscali.it
+897	0	NULL		info@comune.borgosansiro.pv.it
+898	0	NULL		gianmario.sacristani@comune.breno.bs.it
+899	0	NULL		UTCCALLIANO@GMAIL.COM
+900	0	NULL		segreteria@comune.castelgerundo.lo.it
+901	0	NULL		utcbello@virgilio.it
+902	0	NULL		nadia.zuin@comune.campolongo.ve.it
+903	0	NULL		ragioneria@comune.candialomellina.pv.it
+904	0	NULL		ufficio.tecnico@comune.canosa.bt.it
+905	0	NULL		economato@comune.cantu.co.it
+906	0	NULL		socio-educativo@comune.carpaneto.pc.it
+907	0	NULL		demografici@comune.casalnuovomonterotaro.fg.it
+908	0	NULL		protocollo@comune.castiglionetinella.cn.it; segreteria@comune.castiglionetinella.cn.it; 
+909	0	NULL		ragioneria@comune.casto.bs.it
+910	0	NULL		info@comune.ceranova.pv.it
+911	0	NULL		comune.cerignale@sintranet.it
+912	0	NULL		s.saputelli@comune.cermignano.te.gov.it
+913	0	NULL		amministrazione@comune.cernuscolombardone.lc.it
+914	0	NULL		tributi@comune.chignolopo.pv.it
+915	0	NULL		Info@comune.clainoconosteno.co.it
+916	0	NULL		paologazzaniga@alice.it ; ragioneria@comune.codevilla.pv.it
+917	0	NULL		geometra.grieco.alessandro@gmail.com
+918	0	NULL		info@comune.corato.ba.it
+919	0	NULL		Baronio Marco
+920	0	NULL		sindaco.corneliano.dalba@ruparpiemonte.it
+921	0	NULL		utc.lanfranchi@comune.corteolonaegenzone.pv.it
+922	0	NULL		comunecotronei@hotmail.com
+923	0	NULL		sindaco@comune.dizzasco.com.it
+924	0	NULL		comune@comunefarafiliorumpetri.it
+925	0	NULL		nfo@comune.fontanellato.pr.it
+926	0	NULL		comune.frassinoro@pec.it
+927	0	NULL		sindacofurci@gmail.com; comunedifurci@virgilio.it
+928	0	NULL		monte@comune.gatteo.fo.it
+929	0	NULL		tecnico@comune.gazzola.pc.it
+930	0	NULL		economo@comune.giardini-naxos.me.it
+931	0	NULL		segretario.comunale@comune.godiascosaliceterme.pv.it ; godiasco@comune.godiascosaliceterme.pv.it 
+932	0	NULL		presidenza.consiglio@guidonia.org
+933	0	NULL		areatecnica@comune.jeragoconorago.va.it
+934	0	NULL		comunedilasplassas@libero.it
+935	0	NULL		gamberini@comune.loiano.bologna.it; chiara.fanti@comune.loiano.bologna.it
+936	0	NULL		comunedilucera@anutel.it
+937	0	NULL		info@comune.mairano.bs.it
+938	0	NULL		guarnati.alessia@comunemalcesine.it
+939	0	NULL		guido.furloni@comune.malegno.bs.it
+940	0	NULL		serviziotecnico@comune.maleo.lo.it
+941	0	NULL		vicesindaco@maniago.it; umberto.scarabello@maniago.it
+942	0	NULL		commar@comune.maranello.mo.it
+943	0	NULL		affari.generali@comune.maslianico.co.it
+944	0	NULL		biblioteca@comune.mazzano.bs
+945	0	NULL		uffici.comunali@comune.mezzanarabattone.pv.it
+946	0	NULL		pm@comune.monteporziocatone.rm.it ; sociale@comune.monteporziocatone.rm.it
+947	0	NULL		segreteria@comune.montacassiano.mc.it
+948	0	NULL		corciolani.m@comune.montefiorino.mo.it
+949	0	NULL		serviziaffarigenerali@comune.monteiasi.ta.it
+950	0	NULL		ragioneria@comune.monteviale.vi.it ; protocollo@comune.monteviale.vi.it
+951	0	NULL		anagrafe@comune.monticellipavese.pv.it
+952	0	NULL		ufficiotecnico@comune.musso.co.it
+953	0	NULL		economato@comune.orbassano.to.it
+954	0	NULL		avvcons@tiscali.it
+955	0	NULL		tecnico@comune.pancarana.pv.it
+956	0	NULL		servizifinanziari@comune.parona.pv.it
+957	0	NULL		antonio.bobbiopallavicini@comune.pv.it; esola@comune.pv.it
+958	0	NULL		sociali.perito@asmepec.it 
+959	0	NULL		edoardo.barbazza@comune.piacenza.it
+960	0	NULL		servizi.educativi@comune.pontesanpietro.bg.it
+961	0	NULL		simonabrandolini1973@gmail.com
+962	0	NULL		ragioneria@uclfoedus.it
+963	0	NULL		rossa@ruparpiemonte.it
+964	0	NULL		r.argenti@comune.sabbioneta.mn.it
+965	0	NULL		ragioneria@com-sagrado.regione.fvg.it
+966	0	NULL		zampella.v@comune.salsomaggiore-terme.pr.it
+967	0	NULL		gpoli@comune.sanbonifacio.vr.it
+968	0	NULL		ragioneria@comune.sanfedeleintelvi.co.it ; farmacia@comune.centrovalleintelvi.co.it
+969	0	NULL		tecnico@comune.sanfermodellabattaglia.co.it
+970	0	NULL		segreteria@comune.sangiorgiodellarichinvelda.pn.it
+971	0	NULL		comune@comune.sangiorgiopiacentino.pc.it
+972	0	NULL		alfonsodigiacomo@alice.it
+973	0	NULL		silvia.scarabelli@comune.san-rocco-al-porto.lo.it
+974	0	NULL		poliziamunicipale@comune.sanvitodeinormanni.br.it
+975	0	NULL		info@crocedorosannazzaro.org
+976	0	NULL		scanno.ufftecnico@tiscali.it;
+977	0	NULL		l.cicinelli@comune.selvazzano-dentro.pd.it
+978	0	NULL		tecnico@comune.sergnano.cr.it
+979	0	NULL		serviziallapersonasimericrichi@asmepec.it
+980	0	NULL		comune.sirmione.pec@legalmail.it ; a.bertazzi@sirmionebs.it
+981	0	NULL		segreteria@comune.siziano.pv.it
+982	0	NULL		laura.rubulotta@comune.solaro.mi.it
+983	0	NULL		marianna.pepe@comune.stradella.pv.it
+984	0	NULL		anagrafe@comune.taleggio.bg.it
+985	0	NULL		pm@comune.terlizzi.ba.it; segreteriapm@comune.terlizzi.ba.it
+986	0	NULL		info@comune.torredenegri.pv.it
+987	0	NULL		tecnico@comune.travedonamonate.va.it
+988	0	NULL		responsabileambiente@trevignanoromano.gov.it
+989	0	NULL		giuseppe.lamendola@comune.triuggio.mb.it
+990	0	NULL		comunevalbrona@halleycert.it
+991	0	NULL		valeggio@libero.it
+992	0	NULL		danilo.diani@comune.vellezzobellini.pv.it
+993	0	NULL		ragioneria@comune.verderio.lc.it
+994	0	NULL		protocollo@pec.comune.verolanuova.bs.it
+995	0	NULL		assistente.sociale@comune.villadadda.bg.it
+996	0	NULL		ing.ferrari.federico@gmail.com
+997	0	NULL		ufficiotecnico@comune.villanterio.pv.it
+998	0	NULL		biblioteca@comune.villongo.bg.it
+999	0	NULL		zavattarellosegreter@libero.it
+1000	0	NULL		filippo@comunianvini.it; cristina.renucci@comunianvini.it; michela@comunianvini.it
+1001	0	NULL		pirano@centrocomunicare.it
+1002	0	NULL		stefano.picchi@cmsebino.bs.it
+1003	0	NULL		massimo-liguori@virgilio.it
+1004	0	NULL		stefano.boschetto@concerialaveneta.com
+1005	0	NULL		paolo.cesarano@smartconcept.it
+1006	0	NULL		studiocesaregrasselli@gmail.com
+1007	0	NULL		fabio@studiogirardi.net
+1008	0	NULL		claudio@sadino.it
+1009	0	NULL		luca.gla@hotmail.it ; ufficio@studiomeschi.191.it
+1010	0	NULL		rif. maxvf@libero.it
+1011	0	NULL		eduard@troebinger.it; posta@gestioni3a.it
+1012	0	NULL		emanuelacavalieri@studiocavalierisrl.it ; info@studiocavalierisrl.it
+1013	0	NULL		michele.stagnitto@libero.it
+1014	0	NULL		ribo@iol.it
+1015	0	NULL		commerciale@lavisconfezioni.it
+1016	0	NULL		gsantin@aimb.it
+1017	0	NULL		lagorio.giorgio@gmail.com
+1018	0	NULL		info@misericordia-piacenza.eu
+1019	0	NULL		zappiamato@inqind.it
+1020	0	NULL		stefanolanza@hotmail.com
+1021	0	NULL		ccastignola@ccdp.it
+1022	0	NULL		info@rondinelle.net ; Alessandro.Colomelli@cbre.com
+1023	0	NULL		antonio.tiberi@gruppoigd.it
+1024	0	NULL		elisa.nempi@cbpiacenza.it; chiara.gemmati@cbpiacenza.it; angela.zerga@cbpiacenza.it
+1025	0	NULL		roberto.dimasa@cbre.com
+1026	0	NULL		bellocco@confindustrialeccoesondrio.it
+1027	0	NULL		consorzio.voltunna@gmail.com
+1028	0	NULL		consorzio@gammaservizi.it
+1029	0	NULL		info@consorzioimpegnosociale.it 
+1030	0	NULL		info@balnearipietrasanta.com
+1031	0	NULL		direttore@grandaffi.it ; amministrazione@grandaffi.it
+1032	0	NULL		rpizzagalli@oriocenter.it
+1033	0	NULL		n.ammirata@granapadano.com
+1034	0	NULL		gianfranco.luciano@klepierre.com
+1035	0	NULL		info@capodarco.org
+1036	0	NULL		progetti.ricerca@consorziosisifo.it
+1037	0	NULL		pamela.parroco@cosmeticaitalia.it
+1038	0	NULL		roberta.scipione@associatipmi.com
+1039	0	NULL		gionata.sturam@consulenzaservizifvg.it
+1040	0	NULL		giorgiaprandini@contiwej.it; luciavallisa@contiwej.it; camillaconti@contiwej.it
+1041	0	NULL		amministrazione@controlloqualita.net
+1042	0	NULL		PACC010006@ISTRUZIONE.IT
+1043	0	NULL		PAVC010006@ISTRUZIONE.IT
+1044	0	NULL		maurizio.molinelli@eridana.coop.it
+1045	0	NULL		info@cooplavittoria.it
+1046	0	NULL		info@coopalmamater.it
+1047	0	NULL		a.scano@coopfrassati.com
+1048	0	NULL		barbara.barbieri@forteto.it
+1049	0	NULL		info@coopdiaz.it
+1050	0	NULL		e.tita@cea-coop.it
+1051	0	NULL		coopglobal.service@libero.it
+1052	0	NULL		m.marchi10@virgilio.it
+1053	0	NULL		albano.priami@gmail.com ; centromedico42@gmail.com
+1054	0	NULL		g.romano@colisseum.it
+1055	0	NULL		sacrocuoregallarate@fastwebnet.it ; antonio.boniolo@sacrocuoregallarate.it
+1056	0	NULL		brunorosario.dominici@coopservice.it; cristian.bondi@coopservice.it ; cinzia.turrini@coopservice.it
+1057	0	NULL		info@coralegnami.it
+1058	0	NULL		atreglia@libero.it
+1059	0	NULL		basile@corman.it
+1060	0	NULL		emilio.manzini@corob.com
+1061	0	NULL		pietra@programmastudio.it
+1062	0	NULL		giulio.corpore@gmail.it; giulio@corpore.biz
+1063	0	NULL		raffaella.mineo01@giustizia.it
+1064	0	NULL		rxcort@alice.it
+1065	0	NULL		dott.gcortona@libero.it; cortona@pasollecco.it
+1066	0	NULL		roberto.redaelli@gruppocosma.com
+1067	0	NULL		a.taddei@cosmopol.it ; l.vacca@cosmopol.it ; l.capossela@serimat.it
+1068	0	NULL		monica.costa@thermoking.it
+1069	0	NULL		carlo.corti@costamp.it
+1070	0	NULL		gf2.costantino@gmail.com
+1071	0	NULL		nicola.vigarani@cmbcarpi.it
+1072	0	NULL		p.misuraca@lbandera.com
+1073	0	NULL		c.barzaghi@cpcinox.com
+1074	0	NULL		enzodicostanza@virgilio.it ; stchinesi.dicostanza@alice.it ; enzodicostanza@gmail.com
+1075	0	NULL		castelli.m@alice.it
+1076	0	NULL		cral.tribunale.milano@giustizia.it
+1077	0	NULL		SIMONA_DOTTI@ALICE.IT
+1078	0	NULL		marina.gava@crea-test.com
+1079	0	NULL		picius2302@live.it
+1080	0	NULL		mfrigni@creazionipadus.it
+1081	0	NULL		rif. giuseppe.baroni@credem.it
+1082	0	NULL		csleco@credem.it
+1083	0	NULL		lorenacrippa@tiscali.it
+1084	0	NULL		economato@cristallo.it
+1085	0	NULL		info@cabelgioioso.it
+1086	0	NULL		croceazzurraromagnese@gmail.com
+1087	0	NULL		info@croceazzurrasabaudia.it
+1088	0	NULL		castanoprimo@croceazzurraticinia.it; ikanz@libero.it
+1089	0	NULL		segretario@crocebiancacalusco.org; responsabileattrezzature@crocebiancacalusco.org
+1090	0	NULL		crocegiallap@tiscali.it
+1091	0	NULL		crocerossagela@tiscali.it
+1092	0	NULL		cl.cassino@cri.it
+1093	0	NULL		cp.foggia@cert.it; gdintron@libero.it
+1094	0	NULL		vita.enzo@creval.it
+1095	0	NULL		cl.menaggio@cri.it
+1096	0	NULL		cl.lipomo@cri.it
+1097	0	NULL		cl.montorfano@cri.it 
+1098	0	NULL		info@cricomo.org ; armando.onida@cricomo.org
+1099	0	NULL		civitacastellana@cri.it
+1100	0	NULL		cinzia.bedeschi@gmail.com ; castellarano@cri.it
+1101	0	NULL		segreteria@crilecco.it
+1102	0	NULL		cl.cantu@cri.it
+1103	0	NULL		cl.brescia@cri.it
+1104	0	NULL		pacovassallo@virgilio.it
+1105	0	NULL		fornitori@cribo.it
+1106	0	NULL		cl.caravaggio@cri.it
+1107	0	NULL		farmacia.provinciale@cripadova.it; padova@cri.it
+1108	0	NULL		cl.pavia@cri.it; dotazionesanitariacripavia@gmail.com
+1109	0	NULL		novamilanese@cri.it
+1110	0	NULL		tizzanovalparma@cri.it
+1111	0	NULL		cp.latina@cri.it
+1112	0	NULL		cr.emiliaromagna@cri.it
+1113	0	NULL		cl.treviglioegeradadda@cri.it
+1114	0	NULL		vicepresidente@croceviolacesate.it
+1115	0	NULL		cromdura@cromdura.it
+1116	0	NULL		jessica@cromolord.it
+1117	0	NULL		purchasing@crosspoint.it
+1118	0	NULL		info@crossfitmodena.it; nano10@libero.it
+1119	0	NULL		info@crssas.net
+1120	0	NULL		info@studiocruciata.it
+1121	0	NULL		marco.colleluori@cruing.com
+1122	0	NULL		CSPLAST@CSPLAST.COM
+1123	0	NULL		ruffowilliam@gmail.com
+1124	0	NULL		m.stoduto@csv-ls.com; s.nava@csv-ls.com; d.molinaro@csv-ls.com; g.delprete@csv-ls.com
+1125	0	NULL		segreteria@ctapomezia.it
+1126	0	NULL		Manlio.SuteraSardo@element.com
+1127	0	NULL		Info@cuoreamicodelgarda.it
+1128	0	NULL		battista.regonesi@fastwebnet.it
+1129	0	NULL		adrimanu2004@libero.it; LCIC806008@istruzione.it
+1130	0	NULL		mauro.cursietti@gmail.com
+1131	0	NULL		info@cusbrescia.it ; ezio.defazio@cusbrescia.it
+1132	0	NULL		federica@loftstudiocerere.com
+1133	0	NULL		giocutugno@tiscali.it
+1134	0	NULL		direzione@dvserramenti.it
+1135	0	NULL		DMELETTROMECCANICA@LIVE.IT
+1136	0	NULL		m.gasparella@dmospa.it
+1137	0	NULL		studiotecnico.dare@libero.it
+1138	0	NULL		fiorella.pirovano@dada-kitchens.com
+1139	0	NULL		dafal@dafal.it; personale@dafal.it
+1140	0	NULL		mirko.damasco@tiscali.it
+1141	0	NULL		cvergnani@comatrol.com
+1142	0	NULL		daniele.bolognesi1953@gmail.com
+1143	0	NULL		ciro@daniello.it
+1144	0	NULL		renzo.rp1958@gmail.com
+1145	0	NULL		davide@sol-group.it
+1146	0	NULL		davidegomieropt@yahoo.it
+1147	0	NULL		longo.davi@hotmail.it
+1148	0	NULL		f.silva@davines.it
+1149	0	NULL		info@dbmedica.com
+1150	0	NULL		rdebiasi1960@gmail.com
+1151	0	NULL		pasqualinodemartino@virgilio.it
+1152	0	NULL		moreno.derosso@hotmail.it
+1153	0	NULL		dae@decimpianti.com
+1154	0	NULL		alessandro.formica@decoindustrie.it
+1155	0	NULL		dedalo-asd@virgilio.it
+1156	0	NULL		mattana.f@marella.it; 
+1157	0	NULL		llocatelli@delifrance.com
+1158	0	NULL		info@delsarlame.com
+1159	0	NULL		valentina.negro@dematic.com
+1160	0	NULL		disnel@hotmail.it
+1161	0	NULL		mancini@torricellimpianti.it
+1162	0	NULL		fabrizio.deluisio@despe.com
+1163	0	NULL		enzdib@gmail.com
+1164	0	NULL		pietrociamacco@gmail.com
+1165	0	NULL		r.digiovambattista@libero.it
+1166	0	NULL		f.diprospero@yahoo.it
+1167	0	NULL		fabio.dirienzo@hotmail.it
+1168	0	NULL		ditannoeass@ditanno.it
+1169	0	NULL		antonio@dia-sicurezza.it
+1170	0	NULL		segreteria@diamanteverdesoccorso.it
+1171	0	NULL		c.maccario@dieci.com
+1172	0	NULL		fornitori@dierremacap.com
+1173	0	NULL		francesca.polito@difacooper.com
+1174	0	NULL		lambruschi.c@diffusionetessile.it; bagni.m@diffusionetessile.it
+1175	0	NULL		info@dinamicamedica.it
+1176	0	NULL		studiodini@ymail.com
+1177	0	NULL		giovanni.fricano@vigilfuoco.it
+1178	0	NULL		dr.robertodisanto@gmail.com
+1179	0	NULL		info@giulioraimo.it
+1180	0	NULL		Gasparetti-A@mail.dnp.co.jp ; giordano-e@mail.dnp.co.jp
+1181	0	NULL		francesco@dolmenspa.com
+1182	0	NULL		ds.vallediscalve@gmail.com
+1183	0	NULL		g.caldini@doppel.it
+1184	0	NULL		studiobardolino@tiscali.it
+1185	0	NULL		fioravante.antonazzo@gallina.it
+1186	0	NULL		lucaghislanzoni@gmail.com
+1187	0	NULL		studioclaudiomalagoli@gmail.com
+1188	0	NULL		fabio.rastrelli@intesasanpaolo.com
+1189	0	NULL		e.rolla@gymgest.it ; emiliano.rolla@gymgest.it
+1190	0	NULL		dtomasi@ee-co.com
+1191	0	NULL		vincenza.vigone@tin.it ; PEC vincenza.vigone@pec.it
+1192	0	NULL		annamaria.sicari@draeger.com
+1193	0	NULL		francesco.zancanaro@dssmith.com; luisa.zanon@dssmith.it
+1194	0	NULL		nicola.romano@dts-automotive.it; sales@dts-automotive.it
+1195	0	NULL		m.alessandrini@ducatienergia.com
+1196	0	NULL		davide.lopresti@ducati.com
+1197	0	NULL		clairemissgym@gmail.com ; box@crossfit2torri.com
+1198	0	NULL		safety@dulcop.com
+1199	0	NULL		gabrifuser@gmail.com
+1200	0	NULL		info@duotekservice.it
+1201	0	NULL		CMonaco@durante.it
+1202	0	NULL		mario.callegari@dussichservices.it
+1203	0	NULL		ddurante@skillathleticcesena.com
+1204	0	NULL		amm@edconsultsrl.it
+1205	0	NULL		acquisti@villaangela.info
+1206	0	NULL		info@estintoriesma.it
+1207	0	NULL		giancarla.fracca@it.eagleburgmann.com
+1208	0	NULL		svalentino@eastman.com
+1209	0	NULL		D.LOCHNER@ECO-CENTER.IT
+1210	0	NULL		nicolo.russo@riccoboniholding.com
+1211	0	NULL		margherita.macellari@kinexia.it
+1212	0	NULL		pmanera@ecoconsult.it
+1213	0	NULL		ambiente@ecogeo.it
+1214	0	NULL		info@ecoimballsrl.it
+1215	0	NULL		info@economieambientali.it
+1216	0	NULL		info@ecosphera.net; salvi@ecosphera.net
+1217	0	NULL		r.rivoli@yahoo.it
+1218	0	NULL		cpotali@tin.it
+1219	0	NULL		frilomacquisti@e-distribuzione.com
+1220	0	NULL		albertomelis@eetsrl.it
+1221	0	NULL		info@efdssrl.com
+1222	0	NULL		monia.martini@effe-due.it
+1223	0	NULL		contabilita@effezetasystem.com
+1224	0	NULL		a.grieco@eglab.it
+1225	0	NULL		pierangela.ravara@it.lactalis.com
+1226	0	NULL		matteo.chiarati@egonzehnder.com
+1227	0	NULL		g.rutili@elen.it; d.peretti@elen.it
+1228	0	NULL		maurizio.dordoni@el-in.it
+1229	0	NULL		ANTONIO.LONGO@ELECTRICALMARINE.IT
+1230	0	NULL		Simona.Cima@element.com
+1231	0	NULL		leobar772014@libero.it
+1232	0	NULL		edo89@inwind.it 
+1233	0	NULL		silvano.grementieri@misileo.com, INFO@MISILEO.COM
+1234	0	NULL		acq1@tironi.com
+1235	0	NULL		info@elettromedicalisamed.com
+1236	0	NULL		m.favini@elgaeurope.it
+1237	0	NULL		afe@ellab.com
+1238	0	NULL		ely.scamperle@gmail.com
+1239	0	NULL		g.bellucco@efdssrl.com
+1240	0	NULL		info@emergencyfocus.com
+1241	0	NULL		comm_dep@pentair.com; Elena.Baricordi@Emerson.com
+1242	0	NULL		vergato101@postacert.emilbanca.it; piero.prezzi@emilbanca.it
+1243	0	NULL		acquisti@emilsider.it
+1244	0	NULL		emilfarma_med@yahoo.it
+1245	0	NULL		p.parlangeli@warriorsbologna.it
+1246	0	NULL		info@emmebiservizi.it
+1247	0	NULL		c.peverari@emmegi.com
+1248	0	NULL		a.vaccari@emmegi.com
+1249	0	NULL		info@emmegiturismo.com  Giuseppe Miletta 
+1250	0	NULL		maurizioiodica71@gmail.com
+1251	0	NULL		g_buongiorno@libero.it
+1252	0	NULL		enelgreenpower@pec.enel.it
+1253	0	NULL		gianluca.almadori@eng2k.com
+1254	0	NULL		 info@enolab.it
+1255	0	NULL		enricadelbaro@yahoo.it
+1256	0	NULL		david.mele@emb.it
+1257	0	NULL		enrico.pennacchio@promoberg.it
+1258	0	NULL		info.posta@parcoaspromonte.gov.it
+1259	0	NULL		CProserpio@edaspa.com
+1260	0	NULL		apascalute@experbuy.com
+1261	0	NULL		Adriana.Bruschi@eptainks.com ; paolo.beltrami@eptainks.com
+1262	0	NULL		fabio.rumer@katamail.com
+1263	0	NULL		sicurezza@eredibaitelli.it ; sara.disalvio@eredibaitelli.it
+1264	0	NULL		u.falchieri@ergotech.it; t.borin@ergotech.it
+1265	0	NULL		INFO@ERREVISPORT.COM
+1266	0	NULL		marcoeschilo@libero.it
+1267	0	NULL		f.villani@escumed.com 
+1268	0	NULL		servizi.ambiente@esseatre.it
+1269	0	NULL		giuseppe.garbin@essegi-system.com
+1270	0	NULL		prosperotosoni@essentra.com
+1271	0	NULL		info@campingmarepineta.com
+1272	0	NULL		info@esteticarelaxtime.com
+1273	0	NULL		amministrazione.paola@etaimpiantimed.it
+1274	0	NULL		venere@etecla.it
+1275	0	NULL		euclidea@omniway.sm
+1276	0	NULL		eugenio.papa50@gmail.com
+1277	0	NULL		giorgio.zucchelli@eureinox.it
+1278	0	NULL		SILVIO.BARONI@EURIZONCAPITAL.COM; Franco.Cortellino@eurizoncapital.com
+1279	0	NULL		letizia@eurmoma.it
+1280	0	NULL		amministrazione@addolcitori.it
+1281	0	NULL		iredeem@franciacortaservizi.it
+1282	0	NULL		Laura.Brambilla@euroitalia.it
+1283	0	NULL		roberto.minozzi@eurolls.com; rleonarduzzi@eurolls.com
+1284	0	NULL		riccardo.turcato@euronda.com
+1285	0	NULL		info@europamangimi.it; nnocera@hotmail.it
+1286	0	NULL		andreamauri@eurostands.it; ordini@eurostands.it
+1287	0	NULL		marco.peruch@studioperuch.it
+1288	0	NULL		pierpaolo.foiani@eurovetrocap.com
+1289	0	NULL		matteo.dilernia@euticals.com; sara.cantauppi@amriglobal.com; conferme.ordini@amriglobal.com
+1290	0	NULL		direzione@evolvereformazione.it
+1291	0	NULL		dimmare@hotmail.it
+1292	0	NULL		abazzani@gmail.com
+1293	0	NULL		uforte@fasspa.net
+1294	0	NULL		salvo.frasca80@gmail.com
+1295	0	NULL		dececco@dececco.it
+1296	0	NULL		valentina@variniautodemolizioni.com
+1297	0	NULL		roberto.tagliavini@faacgroup.com ; Christian.Schiralli@faacgroup.com
+1298	0	NULL		andrea.arcano@hotmail.com
+1299	0	NULL		MONICA COLLEONI 
+1300	0	NULL		fabriziofabrizzi@msn.com
+1301	0	NULL		michela.garavaglia@factorit.it ; nuvola.giori@factorit.it
+1302	0	NULL		adascanio@fadassali.it ; info@fadassali.it
+1303	0	NULL		maurizio.fadi@icloud.com
+1304	0	NULL		lfstudiomedico@gmail.com
+1305	0	NULL		silvano.falasconi@gmail.com
+1306	0	NULL		Nicola.Martinelli@Falckgroup.eu
+1307	0	NULL		mfanelli@alice.it
+1308	0	NULL		mario.fragnito@fantozziufficio.it
+1309	0	NULL		acquisti@fanzinisrl.it; 
+1310	0	NULL		otten_andrea@hotmail.com
+1311	0	NULL		gianpietro.bombardieri@cordenpharma.it
+1312	0	NULL		faresin@faresin.net
+1313	0	NULL		info@farmacomspa.it
+1314	0	NULL		vendite@farmaceutical.it
+1315	0	NULL		info@farmaciaforyou.com
+1316	0	NULL		farmacia.aldoge@libero.it
+1317	0	NULL		farmaciaalboreto@gmail.com
+1318	0	NULL		enrico.traballi@gmail.com
+1319	0	NULL		aiutosanitario@farmaciariale.it
+1320	0	NULL		direttore@farmaciaprilianord.it
+1321	0	NULL		farmaciaportalupi@gmail.com
+1322	0	NULL		domebat@virgilio.it
+1323	0	NULL		giancarlo.blunda@gmail.com
+1324	0	NULL		farmbombardi@alice.it
+1325	0	NULL		marisaboriolo@gmail.com
+1326	0	NULL		vezio@capochiani.it
+1327	0	NULL		farmaciacardella@alice.it
+1328	0	NULL		farmaciacentrale.preganziol@gmail.com
+1329	0	NULL		farm.cicerchia@farmacietv.it
+1330	0	NULL		info@farmaciacavallino.it
+1331	0	NULL		farmaciacomunale.chiampo@gmail.com
+1332	0	NULL		dedalicorradofarmacia@virgilio.it
+1333	0	NULL		giovruoc@tin.it
+1334	0	NULL		farmaciadelgrappa@tin.it
+1335	0	NULL		farmaciapianezzola@gmail.com; massimo.pianezzola@gmail.com
+1336	0	NULL		farmaciaditomaso@virgilio.it
+1337	0	NULL		croce.canto@libero.it
+1338	0	NULL		farmacia.chiodino@virgilio.it
+1339	0	NULL		rif: a.berna@virgilio.it
+1340	0	NULL		tosovaloresalute@gmail.com
+1341	0	NULL		info@farmacialivi.it
+1342	0	NULL		farmacia@farmaciaperoni.net
+1343	0	NULL		anninameringolo@virgilio.it
+1344	0	NULL		farmaciagalloamministrazione@gmail.com
+1345	0	NULL		farmaciazimella@libero.it
+1346	0	NULL		claudio.gambarin@libero.it
+1347	0	NULL		farmaciagattafoni@tiscali.it
+1348	0	NULL		farmaciagiardina@gmail.com
+1349	0	NULL		sergiodigioia@farmaciadigioia.it
+1350	0	NULL		stefanomazzolini@libero.it
+1351	0	NULL		farm.guerricchio@alice.it
+1352	0	NULL		info@farmaciamaccioni.it
+1353	0	NULL		farmacia.mangiolino@gmail.com;  12735@PEC2.FEDERFARMA.IT
+1354	0	NULL		miccichemist@yahoo.it
+1355	0	NULL		info@farmacianuova.it
+1356	0	NULL		romina.nava@assp.it
+1357	0	NULL		antoegio@alice.it
+1358	0	NULL		farmacia@farmacia.quaranta.it
+1359	0	NULL		farmaciaquintostampi@libero.it; farmacia.quintostampi@pec.it
+1360	0	NULL		minias82@hotmail.it
+1361	0	NULL		andrea.melegari@gmail.com
+1362	0	NULL		farmasanmartinosas@libero.it
+1363	0	NULL		giuseppezop@libero.it
+1364	0	NULL		farmacia.villa@tiscali.it
+1365	0	NULL		farmsstefano@gmail.com
+1366	0	NULL		farmacia.satta@tiscali.it
+1367	0	NULL		farmacia.spurio@libero.it
+1368	0	NULL		infofarmaciaticinese@enterpoint.it
+1369	0	NULL		farmaciatoso@gmail.com
+1370	0	NULL		gianpaolo69@gmail.com
+1371	0	NULL		farmaciamoretti2014@libero.it
+1372	0	NULL		nicola.urgesi@fastwebnet.it
+1373	0	NULL		solaro.farmacista@gmail.com
+1374	0	NULL		sara.zucca@farmaciazucca.it ; eppifarm@gmail.com
+1375	0	NULL		info@farmagan.com
+1376	0	NULL		fabrizio.casula@fastautomation.biz
+1377	0	NULL		marcomongera@alice.it
+1378	0	NULL		brienza.d@fater.it
+1379	0	NULL		a.chitussi@bcerre.it
+1380	0	NULL		ginofave@gmail.com
+1381	0	NULL		paolo@fabbrigroup.com
+1382	0	NULL		gabriella.fedele77@alice.it
+1383	0	NULL		iumiko@libero.it
+1384	0	NULL		amministrazione@fipavpiacenza.com
+1385	0	NULL		spottima@gmail.com
+1386	0	NULL		sonia.manighetti@acli.it
+1387	0	NULL		info@federfarmapc.it; mmolinari@federfarmapc.it
+1388	0	NULL		federicovivalavita@gmail.com
+1389	0	NULL		c.dusina@feinrohren.it
+1390	0	NULL		sandro.felici@libero.it
+1391	0	NULL		production.manager@femm.it
+1392	0	NULL		amministrazione@ferocart.it; ferocart@pec.it
+1393	0	NULL		gianluca@ferrarinicostruzioni.it
+1394	0	NULL		pakifit@libero.it
+1395	0	NULL		vcilloni@ferrettogroup.com
+1396	0	NULL		silvanapillera@alice.it
+1397	0	NULL		gdeo@ferri.com
+1398	0	NULL		debora.panzeri@ferrierecima.it
+1399	0	NULL		lucilla.gori@ferrarifirenze.it
+1400	0	NULL		dr.francescoferrini@gmail.com
+1401	0	NULL		l.albanese@fseonline.it; l.pecorella@fseonline.it
+1402	0	NULL		monica.maduli@festo.it ; roberto.fattori@festo.com
+1403	0	NULL		paola.ghezzi@myaspa.it
+1404	0	NULL		tecnico@comune.villardora.to.it
+1405	0	NULL		valerio.nestola@gmail.com
+1406	0	NULL		giusppinarubino@virgilio.it
+1407	0	NULL		valentina.quadrana@fiege.com
+1408	0	NULL		acquisti@fieni.it
+1409	0	NULL		epc@fimaitalia.it
+1410	0	NULL		lorena.quarti@barco.com
+1411	0	NULL		massimo.fargnoli@gmail.com
+1412	0	NULL		mdimieri@finagricola.it
+1413	0	NULL		lucaghislanzoni@leccocuore.it
+1414	0	NULL		ferruccio.veri@ts.fujitsu.com
+1415	0	NULL		idsc@diocesivolterra.org
+1416	0	NULL		fipel@libero.it
+1417	0	NULL		andrea@fireco.eu
+1418	0	NULL		luca_bindella@elba-cookers.it
+1419	0	NULL		info@studiofisiomedical.it
+1420	0	NULL		delmedicomara@yahoo.it
+1421	0	NULL		info@fisiored.it
+1422	0	NULL		alberto.debei@gmail.com
+1423	0	NULL		fisioterapiarbb1@gmail.com
+1424	0	NULL		 info@fisique.it
+1425	0	NULL		fitdifferent@libero.it
+1426	0	NULL		info@fiusis.com
+1427	0	NULL		l.tersigni@fjt.it
+1428	0	NULL		alessandro.rochetti@fkpteam.com
+1429	0	NULL		flaminia@flaminia.it
+1430	0	NULL		flaviosanna88@gmail.com
+1431	0	NULL		alessio.tempella@flex.com ; michele.savioli@flex.com
+1432	0	NULL		guarinifabio@hotmail.it
+1433	0	NULL		ruffaldis@florim.it ; cinzia.morselli@florim.com
+1434	0	NULL		sperego@flowserve.com; valbart_ap@flowserve.com
+1435	0	NULL		roberto@flu-id.it
+1436	0	NULL		info@flyergym.it
+1437	0	NULL		michela.strabla@foma.it ; foma.lumezzane@foma.it
+1438	0	NULL		gianni.bambozzi@alice.it
+1439	0	NULL		paola.vitali@ubibanca.it
+1440	0	NULL		rif. fondazionesacco@tin.it
+1441	0	NULL		direzione@fondazionecasadelgiovane.it
+1442	0	NULL		amministrazione@ceisge.org
+1443	0	NULL		barbara.rovati@fondazionecella.it; roberto.rovati@fondazionecella.it; elena.sacchi@fondazionecella.i
+1444	0	NULL		info@fondazionecreberg.it; alessandro.guerini@bancobpm.it
+1445	0	NULL		info@fondazionecusanivisconti.it
+1446	0	NULL		segreteriabrescia@cfpcanossa.it
+1447	0	NULL		aiasravenna@virgilio.it
+1448	0	NULL		dmonari@fondazioneidi.it
+1449	0	NULL		benevagienna@infermeria-casadiriposo.it
+1450	0	NULL		lepidorocco@lepidorocco.com
+1451	0	NULL		domenico.zanchi@zetaconsultingsrl.it
+1452	0	NULL		palumbo@fondazionemaddalenagrassi.it
+1453	0	NULL		segr@fondazionebrovedani.it
+1454	0	NULL		auditoriumsandionigi@lafondazione.com ; presidenza@lafondazione.com
+1455	0	NULL		ingdistefanodamitech.biz
+1456	0	NULL		cfaloni@fondazioneroma.it
+1457	0	NULL		ingdistefano@damitech.biz
+1458	0	NULL		alessandro.pilerio@sassigropello.it ; sassiuno@sassigropello.it
+1459	0	NULL		amministrazione@teatrofraschini.org; maggi.architettura@gmail.com; piscari@teatrofraschini.org
+1460	0	NULL		rob.mazzini@alice.it
+1461	0	NULL		fondermetal.info@fondermetal.com
+1462	0	NULL		commerciale@foodmaniasrl.it
+1463	0	NULL		zilpa@tiscali.it
+1464	0	NULL		massimo.pighizzini@foppapedrettitech.it
+1465	0	NULL		gcarpana@gmail.com
+1466	0	NULL		first@fora.it; j.rombolacci@fora.it
+1467	0	NULL		CarloGiacinto.Ferrari@forgiadiospiate.it; amministrazione@forgiadiospiate.it
+1468	0	NULL		alucchini@forgevienna.it ; mcozzi@forgevienna.it
+1469	0	NULL		roberta.marcora@forgiaturamarcora.it
+1470	0	NULL		davide.piana@forgital.com; paolo.zilio@forgital.com
+1471	0	NULL		umbertoformaro@tiscali.it
+1472	0	NULL		moreno@format-srl.it
+1473	0	NULL		sicurezza@formec.it; federicocarseni@formec.it
+1474	0	NULL		bergamo@formeco.it
+1475	0	NULL		g.barreca@gadagroup.com
+1476	0	NULL		eripamonti@gieffe-italy.com
+1477	0	NULL		cnova@fgvitaly.com
+1478	0	NULL		federico@formento.it
+1479	0	NULL		carlomariafornaciari@gmail.com
+1480	0	NULL		fornaro.maurizio@alice.it
+1481	0	NULL		fornaroli@fornarolipaper.com
+1482	0	NULL		forni.mat@gmail.com
+1483	0	NULL		nadia@fornitureedili.com
+1484	0	NULL		info@forniturelaboratorio.it
+1485	0	NULL		y.rossi@fornovogas.it
+1486	0	NULL		franco@casone.it
+1487	0	NULL		g.fenoggio@frareg.com
+1488	0	NULL		daniele.sciandra@libero.it
+1489	0	NULL		giovanna@casatiflock.it
+1490	0	NULL		asdquadri@gmail.com
+1491	0	NULL		rcanza@tin.it
+1492	0	NULL		info@moltenifratelli.it
+1493	0	NULL		segreteriapaolo@gmail.com
+1494	0	NULL		misericordia.regal@hotmail.com; 
+1495	0	NULL		farmacia.fratto@valoresalute.it
+1496	0	NULL		poli@freddi.it
+1497	0	NULL		drfrancesco.frega@alice.it
+1498	0	NULL		angelo.fregni@fastwebnet.it
+1499	0	NULL		freracq@frer.it
+1500	0	NULL		mgfrigerio@libero.it
+1501	0	NULL		info@frigofluid.it
+1502	0	NULL		commerciale@friulovestbanca.it;
+1503	0	NULL		morgianpi@alice.it
+1504	0	NULL		franco.fuchicello@gmail.com
+1505	0	NULL		fumaji2@virgilio.it
+1506	0	NULL		F.Bonfanti@fumagallisalumi.it; V.Bianco@fumagallisalumi.it
+1507	0	NULL		d.ciecato@inwind.it
+1508	0	NULL		s.petrini@live.it
+1509	0	NULL		direzione@centrofutura.it
+1510	0	NULL		daniela.ivone@futuragri.eu
+1511	0	NULL		c.tomba2@gmail.com
+1512	0	NULL		gapprolocoportalbera@libero.it
+1513	0	NULL		antonella.signaroldi@gmail.com
+1514	0	NULL		direzione.vialarga@cbre.com
+1515	0	NULL		lospago@tin.it
+1516	0	NULL		aroldo.caovilla@gradoit.it
+1517	0	NULL		glbiraghi@gmail.com
+1518	0	NULL		piero@gost.it
+1519	0	NULL		roberto@ambralingerie.it
+1520	0	NULL		giuseppe.mandia@gmail.com ; annalisa.mornati@gsbasketpaderno.it
+1521	0	NULL		clarasandro51@gmail.com
+1522	0	NULL		maddalenalissi@gmail.com
+1523	0	NULL		ettore.giulia@gmail.com; roberto.tandoi@fastwebnet.it; Info@ASDCasoretto.it
+1524	0	NULL		zaffaronic@gabelgroup.com
+1525	0	NULL		a.aglietti@gabriel-chemie.com ; b.ceroni@it.gabriel-chemie.com
+1526	0	NULL		elasgarbi@gmail.com
+1527	0	NULL		ivi.guza@galileo-soc-coop.it
+1528	0	NULL		direzione@borgofaxhall.it; segreteria@borgofaxhall.it
+1529	0	NULL		gpgalletti@studiogalletti.it
+1530	0	NULL		manutenzione@galletti.it ; massimiliano.gherardi@galletti.it ; umberto.paganini@galletti.it
+1531	0	NULL		sicurezza@gammapack.com
+1532	0	NULL		zappelli.m@gmail.com
+1533	0	NULL		257@GANDINI.IT
+1534	0	NULL		gardasalus@gmail.com
+1535	0	NULL		matteo.ghizzoni@gruppocgi.it ; elisabetta.curti@gassales.it
+1536	0	NULL		stefanocasalino@hotmail.com; segreteria@roscio.it
+1537	0	NULL		ggazzola@gampack.com
+1538	0	NULL		maurizio.brevini@gbservicelab.com; marianna.brevini@gbservicelab.com;
+1539	0	NULL		Felice.Ferrarini@gdm-spa.it ; Jessica.Massari@gdm-spa.it ; annamaria.premoli@gdm-spa.it
+1540	0	NULL		manuela.cavagnoli@gdm-spa.it
+1541	0	NULL		geser2@alice.it; dott.valeriani@gmail.com
+1542	0	NULL		roberto.vanzillotta@alice.it
+1543	0	NULL		a.fogli@geatech.it
+1544	0	NULL		vicky_raimo@hotmail.it
+1545	0	NULL		l.monopoli@gtslogistic.com
+1546	0	NULL		k.cianci@oxystore.it
+1547	0	NULL		cristina.beretta@gentilimosconi.it; mariagrazia.draicchio@gentilimosconi.it
+1548	0	NULL		info@genyasolutions.it
+1549	0	NULL		direzione@geosec.it
+1550	0	NULL		arianna.cavaion@geox.com
+1551	0	NULL		alessandro.cannata@gruppopaoletti.it
+1552	0	NULL		francesco.geuna@artcosmetics.it
+1553	0	NULL		gfm@stadiosansiro.it
+1554	0	NULL		francesco.digregorio@gherrimt.com
+1555	0	NULL		c.colombi@ghibson.it
+1556	0	NULL		anna.berriolo@fastwebnet.it
+1557	0	NULL		d.accornero@gi-ac.it
+1558	0	NULL		fabiolaferrara226@gmail.com
+1559	0	NULL		duetpc@libero.it
+1560	0	NULL		gianni.bruno@pavianelcuore.it;
+1561	0	NULL		gidalitalia@gmail.com
+1562	0	NULL		ginekos@gmail.com
+1563	0	NULL		patricia.cocciolo@magneto-wellness.it
+1564	0	NULL		mototopo98@libero.it
+1565	0	NULL		contab@gioria.com
+1566	0	NULL		gb.grassi@gmail.com
+1567	0	NULL		giovannicanali61@gmail.com
+1568	0	NULL		serpelloni@giovanniserpelloni.it
+1569	0	NULL		giambattista.girardello@gmail.com
+1570	0	NULL		overstudio@virgilio.it
+1571	0	NULL		giseurope.it@giseurope.net
+1572	0	NULL		manuela.faverzani@cgil.brescia.it
+1573	0	NULL		romani@giuppi.it; amministrazione@giuppi.it
+1574	0	NULL		bavilagiuseppe@virgilio.it
+1575	0	NULL		andreaponzini@gmail.com
+1576	0	NULL		info@amicidelcuorepaola.it; studio@rossiantonio12.191.it
+1577	0	NULL		gliamicidelcuore@virgilio.it
+1578	0	NULL		luca.fantinel@gchumanrights.org; info@gchumanrights.org
+1579	0	NULL		a.tatti@gloriamed.it
+1580	0	NULL		pierangelo.amigoni@gmmspa.com
+1581	0	NULL		fabrizio.trucco@gnalitalia.it
+1582	0	NULL		Maurizio.Ravazzoni@goglio.it
+1583	0	NULL		goldgym2@libero.it
+1584	0	NULL		info@gold-gym.it
+1585	0	NULL		g.perotti@goldenpoint.it
+1586	0	NULL		alessandromascitti@gmail.com
+1587	0	NULL		francesca@bramucci.it
+1588	0	NULL		michela.ori@giusti.it
+1589	0	NULL		info@graphicandart.com
+1590	0	NULL		acquisti@graphicscalve.it
+1591	0	NULL		giuseppe.masi@riccoboniholding.com
+1592	0	NULL		info@grasselli.com
+1593	0	NULL		grazia.guiducci@gratiaetsalus.it
+1594	0	NULL		erica.cantarelli@casone.it
+1595	0	NULL		silvia.botti@greenleo.com
+1596	0	NULL		bruno.passerini@gpsemi.it
+1597	0	NULL		c.amati@greensteelgroup.com
+1598	0	NULL		p.tonutti@grenke.it
+1599	0	NULL		karlagrillotti@yahoo.it
+1600	0	NULL		chris@victory.ch
+1601	0	NULL		luigianselmi2@gmail.com
+1602	0	NULL		soniamaistrello@alice.it
+1603	0	NULL		marconi@gruppoimmaginevr.it
+1604	0	NULL		tributi.vernasca@sintranet.it
+1605	0	NULL		info@anamarone.it
+1606	0	NULL		valter.bolzoni@gruppoaturia.com
+1607	0	NULL		fratres.galluzzo@virgilio.it
+1608	0	NULL		lilli.pezzoni@gmail.com
+1609	0	NULL		f.marchese@gruppofabbri.com ; R.Zanantoni@gruppofabbri.com
+1610	0	NULL		masoni.alberto@gmail.com
+1611	0	NULL		gruppofortedeimarmi@fratres.eu
+1612	0	NULL		a.dallavalle@giv.it
+1613	0	NULL		guido.bollini@it.lactalis.com
+1614	0	NULL		3rose.fiorenzuola@gmail.com
+1615	0	NULL		info@mastrotto.com
+1616	0	NULL		germano.mossali@gruppomossali.com; elena.caruna@gruppomossali.com
+1617	0	NULL		bertifly@inwind.it
+1618	0	NULL		marco_brugnolaro@trane.com
+1619	0	NULL		viviana.marini@hotmail.it; segreteria@gsaurorasf.it
+1620	0	NULL		duoromano@libero.it
+1621	0	NULL		formazione@prealpisoccorso.org
+1622	0	NULL		gspanniverdi2012@gmail.com
+1623	0	NULL		lara@pavinord.it
+1624	0	NULL		manzoni.sergio@virgilio.it
+1625	0	NULL		irmanno1986@libero.it
+1626	0	NULL		info@comune.sonico.bs.it 
+1627	0	NULL		r.chiavenna@tin.it
+1628	0	NULL		info@croceverdefino.org
+1629	0	NULL		aLodi@gsegroup.com
+1630	0	NULL		info@ecopag.it
+1631	0	NULL		sicurezza@gtline.com
+1632	0	NULL		MI0520014@gdf.it
+1633	0	NULL		a.guarducci@enegan.it
+1634	0	NULL		diegolacanna@webhtp.eu
+1635	0	NULL		hsppiefit@gmail.com
+1636	0	NULL		infohardfit@yahoo.it
+1637	0	NULL		ch.desimone@libero.it
+1638	0	NULL		mparati@hearst.it
+1639	0	NULL		Laura.Modugno@hsf.com
+1640	0	NULL		sara_deblasis@hermanmiller.com
+1641	0	NULL		info@giampaolomarconi.it
+1642	0	NULL		HOTEL@CROCEDIMALTA.INFO
+1643	0	NULL		francesco@hoteldellenazioni.com
+1644	0	NULL		info@hotelelpaso.com
+1645	0	NULL		hpievent@live.it
+1646	0	NULL		amministrazione@hubergroup.com; monica.spada@hubergroup.com
+1647	0	NULL		a.barni@humanaitalia.org
+1648	0	NULL		carla.radaelli@hyster-yale.com
+1649	0	NULL		cangrandi@libero.it
+1650	0	NULL		gazzetta.a@ifratelliemiliani.it
+1651	0	NULL		info@asdimartelli.it
+1652	0	NULL		kavantros@gmail.com
+1653	0	NULL		paolo@icosleonelli.it
+1654	0	NULL		info@albaciscuole.edu.it
+1655	0	NULL		daniela@igfmarmi.it
+1656	0	NULL		segreteria@liceolevi.it ; tvis00300b@istruzione.it
+1657	0	NULL		rmis064003@istruzione.it
+1658	0	NULL		PNIS00300Q@ISTRUZIONE.IT
+1659	0	NULL		bgpm010002@istruzione.it ; info@suardo.it
+1660	0	NULL		SVIS011009@ISTRUZIONE.IT
+1661	0	NULL		BAIS03600P@ISTRUZIONE.IT
+1662	0	NULL		bais02800q@istruzione.it
+1663	0	NULL		cdo@ilpra.com
+1664	0	NULL		imespa@imespa.net ; acq.vari@imespa.net
+1665	0	NULL		amministrazione.lnl@pec.infn.it
+1666	0	NULL		RERC01000P@ISTRUZIONE.IT; fioritamonica@ipsscfilippore.edu.it
+1667	0	NULL		citernesi@iralab.it; info@iralab.it
+1668	0	NULL		giovanniruisi@ippodromopalermo.it
+1669	0	NULL		sorrentino@mollificioisb.it
+1670	0	NULL		cois00700e@istruzione.it; calogera.accardo@setificio.edu.it
+1671	0	NULL		bonavogliam@poloagroindustriale.gov.it
+1672	0	NULL		nais01100g@istruzione.it
+1673	0	NULL		FIIS012007@ISTRUZIONE.IT
+1674	0	NULL		michelinopuntovalente@gmail.com
+1675	0	NULL		REMTD17000C@ISTRUZIONE.IT
+1676	0	NULL		aptd07000b@istruzione.it
+1677	0	NULL		segreteria@volta.edu.it ; altf01000r@istruzione.it
+1678	0	NULL		vrtf03000v@istruzione.it
+1679	0	NULL		AVTF070004@ISTRUZIONE.IT
+1680	0	NULL		purchase@iamekarting.com
+1681	0	NULL		reguzzonialdo@ibiplast.com
+1682	0	NULL		pierluigi.biffi@ibsa.it ; diletta.dragoni@ibsa.it
+1683	0	NULL		protocollo@icareviareggio.it
+1684	0	NULL		elide.ferraro@icasmuselet.it
+1685	0	NULL		elisa.taroni@icelscpa.it
+1686	0	NULL		lermirio@gvmnet.it
+1687	0	NULL		andrea.moioli@icraitalia.it
+1688	0	NULL		fabrizio.napolitano@idro-elettrica.it
+1689	0	NULL		accounting@bertolinipumps.com
+1690	0	NULL		idroval.fontana.79@gmail.com
+1691	0	NULL		ieci.esposto@iecionline.com; Ieci.mancini@iecionline.com
+1692	0	NULL		qualita@iesespansi.it
+1693	0	NULL		igea.voghera@libero.it
+1694	0	NULL		diego.polelli@igpdecaux.it
+1695	0	NULL		daniele.puggioni2@ikea.com
+1696	0	NULL		lasonisi@ikron.it
+1697	0	NULL		paolo.ghilardi@gmail.com
+1698	0	NULL		asdilbranco@gmail.com; dnornella@gmail.com
+1699	0	NULL		info@il cantantedellasolidarieta.org
+1700	0	NULL		info@societacolibri.com
+1701	0	NULL		silvano.fiorilli51@gmail.com
+1702	0	NULL		nancy@ilfotoamatore.it
+1703	0	NULL		info@ilpolloneveneto.191.it
+1704	0	NULL		ilquadrifoglio_coop@libero.it
+1705	0	NULL		stefanochiaverina@ilarioormezzano.it; andreadonati@ilarioormezzano.it
+1706	0	NULL		tecnico@ilpra.it
+1707	0	NULL		info@imgroup.srl
+1708	0	NULL		cristian.maida@imageline.it
+1709	0	NULL		marco.amaru@imal.com
+1710	0	NULL		pergreffi.c@imax.it; davoliomarani.m@imax.it
+1711	0	NULL		matteo.facheris@imequadriduestelle.it
+1712	0	NULL		dallolio@imeta.it
+1713	0	NULL		cinzia.frigerio@imlmotori.it
+1714	0	NULL		consulenza@immergas.com ; bertoli_e@immergas.com
+1715	0	NULL		p.belletti@teknaparma.com
+1716	0	NULL		maxplastsrl@virgilio.it
+1717	0	NULL		Admin381120@immobiliarefavorita.191.it
+1718	0	NULL		immobiliareroma.it@gmail.com
+1719	0	NULL		urbanacostruzioniappalti@gmail.com
+1720	0	NULL		immobiliaresportiva@libero.it
+1721	0	NULL		claudia.zampieri@inglesina.com
+1722	0	NULL		u.fusco@impergom.it
+1723	0	NULL		c.tedaldi@impresacella.it
+1724	0	NULL		ing.federicorossi@me.com
+1725	0	NULL		s.monciatta@imsgiotto.com; accettazione@imsgiotto.com
+1726	0	NULL		d.valentini@intechnet.org
+1727	0	NULL		gianluca.ungari@gmail.com
+1728	0	NULL		c.alghisi@cementirossi.it; d.monico@cementirossi.it
+1729	0	NULL		sara@ind-pack.com; davidecorradini@ind-pack.com
+1730	0	NULL		Davide.Bertuol@infineon.com
+1731	0	NULL		alessandro.infusino@alice.it
+1732	0	NULL		paolo.castelli@polin.it
+1733	0	NULL		sussannamiola@yahoo.it
+1734	0	NULL		amlapenna@innotec-srl.it
+1735	0	NULL		giulio.oreggia@ialombardia.it
+1736	0	NULL		giulio.oreggia@ialombardia.it ; roberta.tonelli@ialombardia.it
+1737	0	NULL		silvia@inoxmecc.com
+1738	0	NULL		d.renati@intals.it
+1739	0	NULL		gerardo.salmoiraghi@inteaengineering.it;
+1740	0	NULL		fabio.delle-rose@integradm.com; paolo.puricelli@integradm.com
+1741	0	NULL		stefano.valagussa@intergen.it
+1742	0	NULL		alberto.boletti@interlabo.it
+1743	0	NULL		villalba.tangsudo@gmail.com
+1744	0	NULL		anna.beretta@intesasanpaolovita.it
+1745	0	NULL		GIULIANO.COLLOCA@INTESASANPAOLO.COM; cofo@intesasanpaolo.com
+1746	0	NULL		cesare.schiavi@intesisrl.it
+1747	0	NULL		andrea.dare@valspar.com
+1748	0	NULL		sicurezza@mondoline.it
+1749	0	NULL		info@invernizzistudio.it
+1750	0	NULL		elena.baccani@investecmail.com
+1751	0	NULL		maglan.ionelia@gmail.com
+1752	0	NULL		fabiano.moretti@iper.it; Gianmarco.Tarana@iper.it
+1753	0	NULL		eriviera@ipgphotonics.com
+1754	0	NULL		eleonora.rodenghi@ipsai.it
+1755	0	NULL		purchasing@irbm.it; a.distefano@irbm.it
+1756	0	NULL		enrico.clara@gruppoiren.it
+1757	0	NULL		amministrazione@centrooculisticoiris.it
+1758	0	NULL		lfazio@irmieimpianti.com
+1759	0	NULL		irongympalestra@gmail.com
+1760	0	NULL		amministrazione@irrimec.it
+1761	0	NULL		beatrice@isaimpianti.com
+1762	0	NULL		a.donati@gmail.com
+1763	0	NULL		info@isolcentersrl.it
+1764	0	NULL		bstd15000l@istruzione.it
+1765	0	NULL		lonero.giuseppe@libero.it
+1766	0	NULL		ceic8ar004@istruzione.it
+1767	0	NULL		CEIC8A600L@ISTRUZIONE.IT
+1768	0	NULL		baic87300d@istruzione.it
+1769	0	NULL		cbic85300q@istruzione.it
+1770	0	NULL		BAIC84200T@ISTRUZIONE.IT
+1771	0	NULL		meic86600p@istruzione.it
+1772	0	NULL		feic82100e@istruzione.it
+1773	0	NULL		miic8fj00v@istruzione.it
+1774	0	NULL		miic8fe006@istruzione.it
+1775	0	NULL		naee24200v@istruzione.it
+1776	0	NULL		LEIC89300D@ISTRUZIONE.IT
+1777	0	NULL		BSIC899007@ISTRUZIONE.IT
+1778	0	NULL		mbic8bs008@istruzione.it
+1779	0	NULL		foic81100c@istruzione.it
+1780	0	NULL		moic84100v@istruzione.it
+1781	0	NULL		TOIC86700T@ISTRUZIONE.IT
+1782	0	NULL		BSIC827009@ISTRUZIONE.IT
+1783	0	NULL		peic8300004@istruzione.it
+1784	0	NULL		csic8ap00g@istruzione.it
+1785	0	NULL		PVIC81600P@ISTRUZIONE.IT
+1786	0	NULL		noic80600v@istruzione.it
+1787	0	NULL		veic80800a@istruzione.it
+1788	0	NULL		VEIC846005@ISTRUZIONE.IT
+1789	0	NULL		preneste.anzolin@istruzione.it
+1790	0	NULL		mbic8ah00d@istruzione.it
+1791	0	NULL		tric82100g@istruzione.it
+1792	0	NULL		rmic87200t@istruzione.it
+1793	0	NULL		TAIC844006ç@ISTRUZIONE.IT
+1794	0	NULL		VRIC814009@istruzione.it
+1795	0	NULL		scuolavicchio@tiscali.it
+1796	0	NULL		miic8d000t@istruzione.it
+1797	0	NULL		veic861007@istruzione.it
+1798	0	NULL		caic84400a@istruzione.it; a.flaviani@tiscali.it
+1799	0	NULL		veic86000b@istruzione.it
+1800	0	NULL		bnic83000t@istruzione.it
+1801	0	NULL		info@ic2nova.gov.it
+1802	0	NULL		fris023002@pec.istruzione.it
+1803	0	NULL		BOIS02400B@ISTRUZIONE.IT
+1804	0	NULL		amministrazione3@itisvoltasassuolo.it
+1805	0	NULL		CRIS01600C@ISTRUZIONE.IT
+1806	0	NULL		annamaria.dicianni@istruzione.it
+1807	0	NULL		pdis02700t@istruzione.it
+1808	0	NULL		pais018007@istruzione.it
+1809	0	NULL		sonoiovinc@gmail.com
+1810	0	NULL		dsga@istitutoturoldo.it; bgis013003@istruzione.it
+1811	0	NULL		info@iisdipopparozzi.it
+1812	0	NULL		benieservizi@ipsfrisi.it; elisagesmundo@libero.it
+1813	0	NULL		casas.teresalivraga@gmail.com
+1814	0	NULL		c.jonghi@ganassini.it
+1815	0	NULL		anis00800x@istruzione.it
+1816	0	NULL		salvatore.giuliano@istruzione.it
+1817	0	NULL		BSIS03400L@istruzione.it ; chiara.rocco@falconeiis.edu.it
+1818	0	NULL		mois017006@istruzione.it
+1819	0	NULL		bgis0030c@istruzione.it
+1820	0	NULL		TAIS01200V@ISTRUZIONE.IT
+1821	0	NULL		ut@iiseinaudiscarpa.gov.it
+1822	0	NULL		sais046001@istruzione.it
+1823	0	NULL		miis017001@istruzione.it
+1824	0	NULL		FIIS01700A@ISTRUZIONE.IT
+1825	0	NULL		rmis09400v@istruzione.it
+1826	0	NULL		reis014004@istruzione.it
+1827	0	NULL		posta@verganinavarra.it
+1828	0	NULL		info@istitutoleonedehon.it
+1829	0	NULL		francesco.felici@creditosportivo.it; francesco.parrinello@creditosportivo.it;
+1830	0	NULL		BGRI15000D@ISTRUZIONE.IT
+1831	0	NULL		segreteria@istitutoapollinare.org
+1832	0	NULL		moira.intra@istitutospallanzani.it
+1833	0	NULL		ufficiotecnico@isissvalleseriana.it
+1834	0	NULL		baggio@spaggiari.eu; gris00400r@istruzione.it
+1835	0	NULL		info.tg@elisabettine.it
+1836	0	NULL		bgis00200l@istruzione.it; antonella.galla@isweil.edu.it
+1837	0	NULL		parodi.angelo@tiscali.it
+1838	0	NULL		reis00200t@istruzione.it
+1839	0	NULL		tatd08000p@istruzione.it
+1840	0	NULL		fgtf17000v@istruzione.it
+1841	0	NULL		isvegi@ivgparma.it
+1842	0	NULL		info@istitutowalther.it
+1843	0	NULL		miis00100b@istruzione.it ; salvatoreturone@libero.it
+1844	0	NULL		SOIS008005@ISTRUZIONE.IT
+1845	0	NULL		amministrazione@isval.com ; ufficio.acquisti@isval.com
+1846	0	NULL		acquisti@itatiles.it
+1847	0	NULL		carlo.stopazzola@gruppomarseglia.com
+1848	0	NULL		safety@italbestvalve.com; financeship@italbestvalve.com
+1849	0	NULL		a.boni@italcanditi.it
+1850	0	NULL		marcello.anacleria@italgas.it
+1851	0	NULL		paolo.battigaglia@italgas.it ; valter.scevarolli@italgas.it ; luca.sabato@italgas.it
+1852	0	NULL		milano_no@italianostra.org
+1853	0	NULL		amministrazione@tirellimedical.it
+1854	0	NULL		stefania.petrini@italianpack.it
+1855	0	NULL		i.gelmi@italmeccanica.eu 
+1856	0	NULL		luca.reale@ntvspa.it ; francesco.landolfo@ntvspa.it
+1857	0	NULL		rosanna@italpollina.com  
+1858	0	NULL		NATF02000T@ISTRUZIONE.IT
+1859	0	NULL		gronchetti@itwappliance.com
+1860	0	NULL		ivan.golinelli@gmail.com
+1861	0	NULL		Mattia.Genovesi@lechler.eu
+1862	0	NULL		antonio.demaria@iveco.com
+1863	0	NULL		vdandrea@jaguarlandrover.com
+1864	0	NULL		mario.mancini@jcb.com
+1865	0	NULL		info@jesolmare.it
+1866	0	NULL		INFO@GIBERMEDICALI.IT
+1867	0	NULL		cservice@its.jnj.com
+1868	0	NULL		g.pompei@publiacqua.it
+1869	0	NULL		pietro.bratta@judosakuracusano.it
+1870	0	NULL		info@jumptraining.it
+1871	0	NULL		amministrazione@genesisclinic.org; claudiomanna55@gmail.com
+1872	0	NULL		giuseppe.cuciti@justbestbid.eu
+1873	0	NULL		alessandro.biasiolirossi@gmail.com
+1874	0	NULL		studiodentistico@ksdental.it
+1875	0	NULL		carlo.colli@kahle.it
+1876	0	NULL		karatepippo@alice.it; info@karateclub2000.com
+1877	0	NULL		franco.g.keller@me.com
+1878	0	NULL		daniele.restelli@kellyservices.com
+1879	0	NULL		diego.sartori@plasmec.it
+1880	0	NULL		matteo.bressan@kemin.com
+1881	0	NULL		gianni.marchesin@chemetall.com; stella.turrin@basf.com
+1882	0	NULL		avaccari@emmegi.com
+1883	0	NULL		keramo@keramo.com
+1884	0	NULL		mariaf@tiscali.it
+1885	0	NULL		ramponi.carlo@gmail.com
+1886	0	NULL		kokoroasd2013@gmail.com
+1887	0	NULL		italia@komatsu.eu
+1888	0	NULL		lkrieger@inwind.it
+1889	0	NULL		lapedone@q8.it
+1890	0	NULL		info@legservice.it ; f.fabbri@legservice.it 
+1891	0	NULL		a.berna@virgilio.it
+1892	0	NULL		info@postalnd.it
+1893	0	NULL		Jacopo.Benassi@bonatti.it
+1894	0	NULL		mgrazia.f@bulloneria-emiliana.it
+1895	0	NULL		gianmaria@still-casa.it
+1896	0	NULL		ala.bianca73@alice.it
+1897	0	NULL		Ilpocho7@gmail.com
+1898	0	NULL		michele.faugno@gmail.com
+1899	0	NULL		info@garbenspurghi.it
+1900	0	NULL		RRomagnoli@laleonessa.it ; MPredari@laleonessa.it
+1901	0	NULL		william.zanforlin@yahoo.it
+1902	0	NULL		risposi@meccanicapadana.com
+1903	0	NULL		lapalestravoghera@gmail.com
+1904	0	NULL		info@lapizzapiuuno.it
+1905	0	NULL		direzione@campinglarocca.com
+1906	0	NULL		salina@termedimiradolo.it
+1907	0	NULL		geometrarpino@libero.it
+1908	0	NULL		peruzzinicola@yahoo.it
+1909	0	NULL		csv@sardegnasolidale.it
+1910	0	NULL		davidcomploj@gmail.com
+1911	0	NULL		info@latecnoplastica.it
+1912	0	NULL		v.rapalli@alice.it
+1913	0	NULL		fmolinari@lavenetaservizi.it
+1914	0	NULL		david_laffranchi@la-cam.it; carmelina_bonavetti@la-cam.it
+1915	0	NULL		carlotta.boccaccio@lachi.it
+1916	0	NULL		amministrazione@la-co.it ; marco.braghini@la-co.it
+1917	0	NULL		amministrazione@labelspa.it; p.almondo@labelspa.it
+1918	0	NULL		annalisalarosa@legalmail.it
+1919	0	NULL		melenarti@gmail.com
+1920	0	NULL		claudiobaldassini32@gmail.com; c.baldassini@labzerouno.com
+1921	0	NULL		sanitaria@dellomo.it
+1922	0	NULL		giuseppelanzo1989@libero.it
+1923	0	NULL		c.pecorari@leca.it
+1924	0	NULL		adepaoli@it.lati.com
+1925	0	NULL		info@piantadoro.it
+1926	0	NULL		marcochiaravalli@gmail.com
+1927	0	NULL		alan@ldf-laghi.it
+1928	0	NULL		Michele.Stillavato@cushwake.com
+1929	0	NULL		centrolepozzette@libero.it
+1930	0	NULL		info@lerotonde.com
+1931	0	NULL		leatherline@leatherlinesrl.it
+1932	0	NULL		mleccese5@gmail.com
+1933	0	NULL		pescara@leganavale.it
+1934	0	NULL		info@lemelettronica.it
+1935	0	NULL		l.mariateresa@lemie.it
+1936	0	NULL		tecnologie@leoshoes.it; uff.amm@leoshoes.it; uff.amm@antoniofilograna.it
+1937	0	NULL		michele.quarantelli@silitherm.com
+1938	0	NULL		leporienrico2@gmail.com
+1939	0	NULL		run.curno@leroymerlin.it
+1940	0	NULL		anna.muttoni@leroymerlin.it
+1941	0	NULL		giovanni serao@leroymerlin.it
+1942	0	NULL		valentina.ortu@leroymerlin.it
+1943	0	NULL		fabiolevisenigaglia@gmail.com
+1944	0	NULL		n.barbieri@laapc.it
+1945	0	NULL		libmart97@gmail.com
+1946	0	NULL		Nicola.Mazzone@LibertyGlobalGroup.com
+1947	0	NULL		vigpil@alice.it
+1948	0	NULL		bspc01000a@istruzione.it
+1949	0	NULL		ariosto@liceoariosto.it; fepc020005@istruzione.it;
+1950	0	NULL		bspc020001@istruzione.it ; bagatta@scuole.provincia.brescia.it
+1951	0	NULL		bapc150004@istruzione.it
+1952	0	NULL		VAPS03000P@ISTRUZIONE.IT
+1953	0	NULL		info@liceogolgi.it
+1954	0	NULL		bsps01000d@istruzione.it; ufficio.acquisti@liceocalini.it
+1955	0	NULL		MPS01000B@ISTRUZIONE.IT
+1956	0	NULL		TOPS340002@istruzione.it 
+1957	0	NULL		BGPS05000B@istruzione.it
+1958	0	NULL		dsga@copernico.pv.it
+1959	0	NULL		nops01004@istruzione.it
+1960	0	NULL		antonio.palcich@gmail.com; rmps090001@istruzione.it
+1961	0	NULL		amministrazione@liceoseveri.it
+1962	0	NULL		lops02000t@istruzione.it
+1963	0	NULL		annalisa.spacca@liceokennedy.it
+1964	0	NULL		mops030002@istruzione.it
+1965	0	NULL		vris008006@istruzione.it
+1966	0	NULL		pepm020004@istruzione.it
+1967	0	NULL		naps97000l@istruzione.it
+1968	0	NULL		rmpc23000x@istruzione.it
+1969	0	NULL		mammolettacosmo@gmail.com
+1970	0	NULL		lidoserapide@libero.it
+1971	0	NULL		info@life.it
+1972	0	NULL		lifeservice100@gmail.com
+1973	0	NULL		g.calvisi@lighthouse-geo.com ; l.dick@lighthouse-geo.com ; c.campioni@lighthouse-geo.com
+1974	0	NULL		grazianolimido@aliceposta.it
+1975	0	NULL		presidentelionsbresciahost@gmail.com
+1976	0	NULL		g.hunterbrenno@gmail.com
+1977	0	NULL		giuseppepellegrini03@tin.it
+1978	0	NULL		orlandigiorgio@tin.it
+1979	0	NULL		protocollo@comune.garlasco.pv.it
+1980	0	NULL		l.f.franchioli@gmail.com
+1981	0	NULL		rso.masi@gmail.com; lionsclub.melfi.pz@gmail.com
+1982	0	NULL		info@hotel-bellavista.org
+1983	0	NULL		enrico.dallarmi@azimut.it
+1984	0	NULL		studio.notaiorossi@alice.it
+1985	0	NULL		remo.decian@alice.it ; studioghanem@gmail.com
+1986	0	NULL		info@lucian.it
+1987	0	NULL		lucamiconi@inwind.it
+1988	0	NULL		pierluigiaversa@libero.it
+1989	0	NULL		vbassanini@assoconsulting.it
+1990	0	NULL		speca63@gmail.com
+1991	0	NULL		ggbertinetti@gmail.com
+1992	0	NULL		lionsclubvalledelconca@gmail.com; adaonlusitalia@gmail.com
+1993	0	NULL		walter.pedala@mytips.it ; afacoet@tin.it
+1994	0	NULL		rolipari60@hotmail.it
+1995	0	NULL		captain@mymarea.com
+1996	0	NULL		studiolomuziosrl@gmail.com
+1997	0	NULL		infosanollipigoli@oasi-onlus.it; direzionersanollipigoli@oasi-onlus.it
+1998	0	NULL		e.cortonicchi@lodovichi.it
+1999	0	NULL		clombardi@mac.com; fetalmedicine@me.com
+2000	0	NULL		pinalomb70@libero.it
+2001	0	NULL		lmelli@lombardini.it
+2002	0	NULL		massimo.burol@loran.it
+2003	0	NULL		francesco@loschimauro.com
+2004	0	NULL		gianlosi@alice.it
+2005	0	NULL		mmorett@luc.edu
+2006	0	NULL		r.rizzoli@lslex.com ; m.morselli@lslex.it
+2007	0	NULL		lorini@lorinisport.com
+2008	0	NULL		maurizio.pizzamiglio@xcerra.com
+2009	0	NULL		arcangelo.zappala@gmail.com
+2010	0	NULL		gentili@lucegroup.it
+2011	0	NULL		pasquale.samele@gmail.com
+2012	0	NULL		commerciale.luckytrade@gmail.com
+2013	0	NULL		corsi@ludwigsrl.it
+2014	0	NULL		info@luigieaugusta.it
+2015	0	NULL		ale.bini@luilor.it
+2016	0	NULL		luisa.gagliardi54@gmail.com
+2017	0	NULL		info@lu-me.it
+2018	0	NULL		lunati.maurizio@gmail.com
+2019	0	NULL		helpdesk@luxvide.it
+2020	0	NULL		marie-christine.nasuti@lycee-chateaubriand.eu
+2021	0	NULL		amministrazione@mcspa.eu
+2022	0	NULL		m.nonino@mmgrigliati.it
+2023	0	NULL		info@msemedical.it  LASCIARE PAGAMENTO ANTICIPATO
+2024	0	NULL		info@imperiaportservices.it; mariozanasi@hotmail.com
+2025	0	NULL		masimigliora@legalmail.ti ; justfitprati@gmail.com
+2026	0	NULL		andrea.indorato@mabimedical.com
+2027	0	NULL		info@mabimedical.com; mabimedical@pecimprese.it
+2028	0	NULL		noemipaola.romilio@macdermidenthone.com
+2029	0	NULL		l.bernazzani@mcmspa.it ; C.DiLauro@mcmspa.it
+2030	0	NULL		acquisti@mafveicolispeciali.com
+2031	0	NULL		i.costantino@magrisgroup.com
+2032	0	NULL		i.costantino@magrisplanet.it ; l.biava@magrisgroup.com
+2033	0	NULL		info@magugliani.it
+2034	0	NULL		facchetti.e@maico-italia.it
+2035	0	NULL		alessandro@gruppoaudioplus.it
+2036	0	NULL		avvocato@paolomaini.it
+2037	0	NULL		l.fraccaroli@mainivending.it
+2038	0	NULL		g.carotta@mair-research.com
+2039	0	NULL		malaspina.sport@gmail.com
+2040	0	NULL		reluglio@sveziamotori.it
+2041	0	NULL		maura@manara.net
+2042	0	NULL		diletta.bonfigli@gmail.com
+2043	0	NULL		marco.pizzimiglia@mandelli.com; sabrina.dadati@mandelli.com ; servizi.generali@mandelli.com
+2044	0	NULL		manenti02@gmail.com
+2045	0	NULL		giobocca@hotmail.com; info@mangimimonti.it
+2046	0	NULL		volponi.m@msm-re.it
+2047	0	NULL		bondavalli.m@msm-re.com
+2048	0	NULL		slusetti@manord.com; gpagliani@manord.com
+2049	0	NULL		l.mantegazza@mantegazza.eu; info@mantegazza.eu
+2050	0	NULL		U.MANTOVANI@LIBERO.IT
+2051	0	NULL		alessandra.pulliero@louisvuitton.com
+2052	0	NULL		mapei@mapei.it
+2053	0	NULL		f.bertolini@mapei.it; m.quartieri@cercol.it
+2054	0	NULL		info@maranellosport.it 
+2055	0	NULL		roxcarris@libero.it
+2056	0	NULL		gianni.marchesin@chemetall.com
+2057	0	NULL		Pisoniercolimarco@gmail.com
+2058	0	NULL		gbmarcon@nsoft.it
+2059	0	NULL		lisi@marconigomma.it
+2060	0	NULL		brunoclarici@claricisrl.it
+2061	0	NULL		info@margen.it; logistica@margen.it
+2062	0	NULL		edi@comarch.it
+2063	0	NULL		cristinagranelli@alice.it
+2064	0	NULL		n.gasbarro@tiscali.it
+2065	0	NULL		assistenza@marianifratelli.it
+2066	0	NULL		marmik07@unipv.it
+2067	0	NULL		info@portodellamaremma.it
+2068	0	NULL		manuel1961@alice.it; info@marinapuntaverde.it
+2069	0	NULL		mrovatti@manord.com ; servizioprevenzione@marinarinaldi.it
+2070	0	NULL		paolo.magoni@marineinteriors.it; elisa.trevisan@marineinteriors.it
+2071	0	NULL		contabilita@officinamassimomarinonipavia.it
+2072	0	NULL		Mars.italia@effem.com
+2073	0	NULL		michele.marsiaj@mmarsiaj.it
+2074	0	NULL		stefano_marzocchi@hotmail.com
+2075	0	NULL		info@masc-ristorazione.it; micamale.68@gmail.com
+2076	0	NULL		ermase@libero.it
+2077	0	NULL		masolini78@gmail.com
+2078	0	NULL		andreazoanni@gmail.com
+2079	0	NULL		studiomedicopicerna@gmail.com
+2080	0	NULL		info@mattucci.it
+2081	0	NULL		servizioprevenzione@maxmara.it
+2082	0	NULL		maycoscorporate@maycos.it
+2083	0	NULL		orazio.cammarata@mazzonilb.it
+2084	0	NULL		marcommz@gmail.com
+2085	0	NULL		staff@mbsafety.it
+2086	0	NULL		c.cesaroni@mcconsulenze.it
+2087	0	NULL		ermas.passoni@it.mcd.com
+2088	0	NULL		roberto_mauri@mckinsey.com
+2089	0	NULL		info@officinamcm.it
+2090	0	NULL		fabio.magrini@mecglobal.com
+2091	0	NULL		monica.perer@meccanicanova.com; roberta.sciacca@meccanicanova.com
+2092	0	NULL		amministrazione@meccanicavadese.it
+2093	0	NULL		turco@mecomer.it
+2094	0	NULL		vinci.valerio@gruppogheron.it ; amministrazione@medservices.it
+2095	0	NULL		segreteria@medeamedicale.it
+2096	0	NULL		r.vercellone@mcs.it
+2097	0	NULL		info@mediaservicesrl.info
+2098	0	NULL		mediadoc@mediadocsrl.it
+2099	0	NULL		info@medianetservizi.it
+2100	0	NULL		specialisti@studiofapanni.it
+2101	0	NULL		AMMINISTRAZIONE@MED-EA.IT
+2102	0	NULL		segreteria@medicallabsystem.com
+2103	0	NULL		medicalservicesal@alice.it
+2104	0	NULL		commerciale@medicom.napoli.it
+2105	0	NULL		 v.campanile@medigroup.it
+2106	0	NULL		medikron@portofluvialegroup.it
+2107	0	NULL		marco.boscolo@mis.mediobanca.com
+2108	0	NULL		fabrizio.mastrolorenzi@mcc.it
+2109	0	NULL		chiarameletti90@gmail.com
+2110	0	NULL		luca.gargiulo@mscsorrento.com
+2111	0	NULL		alessandro.semprevivo@gls-italy.com
+2112	0	NULL		info@meditronsrl.it
+2113	0	NULL		lucabuzio@medlavitalia.it
+2114	0	NULL		info@medvetsrl.it
+2115	0	NULL		morena.forti@megaitalia.it
+2116	0	NULL		nicola.sedicina@unioneconsorzio.it
+2117	0	NULL		melisvince@tiscali.it
+2118	0	NULL		matteo.sacchi@meregalli.it
+2119	0	NULL		matteo.sacchi@meregallivinoearte.it
+2120	0	NULL		architettoteresapagano@gmail.com
+2121	0	NULL		roberto.buraglio@merlett.it
+2122	0	NULL		luisa.merlotti56@gmail.com
+2123	0	NULL		a.losi@metalgennari.it
+2124	0	NULL		michele.perin@metals.it
+2125	0	NULL		cristiano.baldolini@metaltronica.com ; daniela.chialastri@metaltronica.com
+2126	0	NULL		ga@metroz.it
+2127	0	NULL		mezzadri.maurizio@libero.it
+2128	0	NULL		mborsetto@minigears.com; Gianni.Franceschi@hgears.com
+2129	0	NULL		paola.trombetta@mg.marposs.com
+2130	0	NULL		p.codazzi@microdatagroup.it
+2131	0	NULL		p.codazzi@gmail.com
+2132	0	NULL		reception@midihotel.it; rocco.dibenedetto@bulfaro.com
+2133	0	NULL		nicholas.biason@midj.it
+2134	0	NULL		micheledoris@gmail.com
+2135	0	NULL		info@milanimarisa.it
+2136	0	NULL		segreteria@minervapictures.com
+2137	0	NULL		poliamb.villorba@libero.it
+2138	0	NULL		simonetta.butto@beniculturali.it
+2139	0	NULL		scuolasuperiorepolizia.amministrazione@interno.it
+2140	0	NULL		for.scuolabase@vigilfuoco.it ; maurizio.doddi@vigilfuoco.it
+2141	0	NULL		cinzia.ciaramellano@mit.gov.it
+2142	0	NULL		carmela.adinolfi@vigilfuoco.it
+2143	0	NULL		info@miramare.it
+2144	0	NULL		emanuele.riviera@fordmirani.it; amministrazione@fordmirani.it
+2145	0	NULL		bruno.gavini@alice.it
+2146	0	NULL		info@mitawt.it
+2147	0	NULL		Jessica.Albiero@mcam.com
+2148	0	NULL		alberto.chies@melcohit.com ; ivan.bertacci@melcohit.com
+2149	0	NULL		MARIKA.SANDRINI@MIWENTI.COM
+2150	0	NULL		mizuumikaikaratedo@yahoo.it
+2151	0	NULL		davide.balduzzi@mlengraving.com
+2152	0	NULL		dariaalbertijazz@gmail.com
+2153	0	NULL		modameccanica@modameccanica.com
+2154	0	NULL		carla.manzini@modeafood.com ; claudia.minari@modeafood.com
+2155	0	NULL		junior@modenarugby.it
+2156	0	NULL		info@modernsportingclub.it
+2157	0	NULL		moiolivalerioguido@tiscali.it
+2158	0	NULL		info@molajoni.it
+2159	0	NULL		a.gozzi@buonristoro.com
+2160	0	NULL		monia7778@gmail.com
+2161	0	NULL		mariagrazia@dallagiovanna.it; sabrina@dallagiovanna.it;
+2162	0	NULL		acquisti@molipack.com
+2163	0	NULL		patrizia-mauri@molteni.it
+2164	0	NULL		avvocatomondera@libero.it
+2165	0	NULL		marco@zanisofa.it
+2166	0	NULL		acquisti@monolabsrl.com
+2167	0	NULL		francesco.masci@spc.va
+2168	0	NULL		info@montanari-gruzza.it; fabio.pesci@montanari-gruzza.it
+2169	0	NULL		alberto.longhi@montenegro.it ; info@montenegro.it
+2170	0	NULL		commerciale@montini.it; fe.montinispa@pecarchivio.it
+2171	0	NULL		eleonora.romano@moratopane.com
+2172	0	NULL		info@morellibuilding.com
+2173	0	NULL		gabrielebezzon@morgante.it
+2174	0	NULL		mpalma@morocolor.it; ecarraro@morocolor.it
+2175	0	NULL		moroni@ultrasuoni.it
+2176	0	NULL		andrea.vago@mossrl.com
+2177	0	NULL		info@mosaicopiu.it; amministrazione@mosaicopiu.it
+2178	0	NULL		gianni.aquaro@gmail.com
+2179	0	NULL		francescolancellotti60to@gmail.com
+2180	0	NULL		maurizio.montillo@movexii.com; patrizia.bertoli@movexii.com
+2181	0	NULL		andreamozzi72@gmail.com
+2182	0	NULL		studiomediconovara@gmail.com ; luca@antognoli.it
+2183	0	NULL		accounts@movingservice2000.com
+2184	0	NULL		info@multiservices.srl
+2185	0	NULL		milogiovanelli@gmail.com
+2186	0	NULL		nunzietta.mura@gmail.com
+2187	0	NULL		simone@mussari.com
+2188	0	NULL		fabio.garegnani@muster-dikson.com
+2189	0	NULL		amministrazione@my-club.it
+2190	0	NULL		mygym.ssd@libero.it
+2191	0	NULL		info@nt-green.it; sandro@nt-green.it
+2192	0	NULL		convertini.sante@gmail.com
+2193	0	NULL		domenico.frattulillo@napoletanagas.it
+2194	0	NULL		edoardo.nartelli@generalipiacenza.it
+2195	0	NULL		stefania.tiozzo@victor.it
+2196	0	NULL		silvia.bocchiddi@nau.it
+2197	0	NULL		viviana.zedda@yahoo.it
+2198	0	NULL		amministrazione@nearchimica.it
+2199	0	NULL		mariarosa.tita@hyatt.com
+2200	0	NULL		rif. e.dimarco@fvconsulting.it
+2201	0	NULL		Diegonardin1981@gmail.com
+2202	0	NULL		newecosrl.autospurghi@gmail.com
+2203	0	NULL		palestra.newego@gmail.com
+2204	0	NULL		lmancini@newfontitalia.it; cgaggiotti@newfontitalia.it
+2205	0	NULL		acquisti2@newhouse.it ; info@newhouse.it
+2206	0	NULL		molla@newl.it
+2207	0	NULL		dl.cusinato@hotmail.it
+2208	0	NULL		info@realvolley.it
+2209	0	NULL		andrea.busconi@newwave.it
+2210	0	NULL		federico.daverio@nexans.com
+2211	0	NULL		nora.el_hadeuf@nexans.com ; nicola.salzano@nexans.com
+2212	0	NULL		quality@maxiliftcrane.com
+2213	0	NULL		direzione@nexusemt.com
+2214	0	NULL		ordini@nicogen.it
+2215	0	NULL		petrarolo.nicola@libero.it
+2216	0	NULL		ivan.niedermair@gmail.com
+2217	0	NULL		info@nikamon.it
+2218	0	NULL		f.bellan@traconf.it
+2219	0	NULL		info@noccaro.it
+2220	0	NULL		massimiliano.masia@studionoema.it
+2221	0	NULL		g.grandate@vds.cri.it
+2222	0	NULL		n.rota@nolan.it
+2223	0	NULL		dininni@inwind.it
+2224	0	NULL		m.benaglia@idragroup.com
+2225	0	NULL		studioardito@gmail.com
+2226	0	NULL		emanuelafeletto@yahoo.it
+2227	0	NULL		info@sommozzatoriprotezionecivilemilano.it
+2228	0	NULL		andrea.chiereghini@bmw.it
+2229	0	NULL		umberto.colombini@nuovageneral.it
+2230	0	NULL		nip@nuova-idropress.com; massimov@nuova-idropress.com
+2231	0	NULL		francesco.zambon@stevanatogroup.com ; marco.rappo@stevanatogroup.com
+2232	0	NULL		ufficioacquisti@nuovasmi.it
+2233	0	NULL		info@farmaciabassetto.it
+2234	0	NULL		NUOVOCENTROTOTI@LIBERO.IT
+2235	0	NULL		aloise@aloise.biz
+2236	0	NULL		daniela.mocchetti@nupinet.com
+2237	0	NULL		neri@nursingproject.it; info@nursingproject.it; paoli@nursingproject.it; m.paoli@nursingproject.it
+2238	0	NULL		info@onlus-carminesperanza.org
+2239	0	NULL		elisabetta.gottifredi@oegsrl.it
+2240	0	NULL		omg@omgnet.it; jn@omgnet.it
+2241	0	NULL		caterina.musso@omt.torino.it
+2242	0	NULL		osa.tecla.amm@tin.it
+2243	0	NULL		osgbmarcignago@gmail.com
+2244	0	NULL		tecnico5@obiettivoambiente.com
+2245	0	NULL		giuseppe.rame@gcs.com
+2246	0	NULL		hoteloceanopeschiera@gmail.com
+2247	0	NULL		info@ocml.net
+2248	0	NULL		cupparig@gmail.com
+2249	0	NULL		anna.gisolo@oerlikon.com
+2250	0	NULL		michele@grafichecabria.it
+2251	0	NULL		mfondello@fondello.it
+2252	0	NULL		fbignardi@omsspa.com
+2253	0	NULL		marino.quaiat@quaiat.it
+2254	0	NULL		orsifernando@virgilio.it
+2255	0	NULL		officinadelleidee.monteisola@gmail.com; dalmeri@hotmail.it
+2256	0	NULL		acquisti@gruppojollyofficine.com
+2257	0	NULL		info@soresi.biz
+2258	0	NULL		giangiacomo.ciboldi@gmail.com
+2259	0	NULL		giovanni.bettuzzi@oiki.com
+2260	0	NULL		f.giaroli@oleoweb.com; sales@oleoweb.com
+2261	0	NULL		H9131-GL@accor.com
+2262	0	NULL		franco.profili@alice.it
+2263	0	NULL		basgo74@gmail.com
+2264	0	NULL		ivan.rossi@omproject.it
+2265	0	NULL		maura.colombo@omassrl.biz
+2266	0	NULL		cristina.pesavento@engie.com; omega.direzione.axima@engie.com
+2267	0	NULL		simonagrassi@omig.it; omig@omig.it
+2268	0	NULL		prof.elia@libero.it
+2269	0	NULL		walter.longoni@omniapiega.it
+2270	0	NULL		n.burchi@omniconnect.it, r.bagnoli@omniconnect.it
+2271	0	NULL		mfantaccione@oneonone.it
+2272	0	NULL		raffaele.deinnocentis@bancamediolanum.it; g.onetoone@gmail.com
+2273	0	NULL		m.douze@libero.it
+2274	0	NULL		tania@onostampi.it
+2275	0	NULL		stefano.cacchioli@opem.it; giuliano.montaguti@opem.it
+2276	0	NULL		info@openitaly.com
+2277	0	NULL		claudiaronzoni.ext@zambongroup.com
+2278	0	NULL		info@ofpts.org
+2279	0	NULL		rsa.padrepio@gmail.com
+2280	0	NULL		a.giordano@operazionefitness.it
+2281	0	NULL		fiosioterapia@operepiedionigo.it; 
+2282	0	NULL		info@oppimittienergy.it; r.boglioli@oppimittenergy.it
+2283	0	NULL		lucia.studiobruschi@gmail.com
+2284	0	NULL		oratoriooasi@tin.it
+2285	0	NULL		gianluca.taraschi@michelerua.it
+2286	0	NULL		gioconsolati@libero.it
+2287	0	NULL		consiglio@ordine avvocati.lecco.it
+2288	0	NULL		info@commercialistiagrigento.eu
+2289	0	NULL		omceo.ta@virgilio.it
+2290	0	NULL		mainasmichele@gmail.com
+2291	0	NULL		a.bassi@odg.bo.it
+2292	0	NULL		ufficioacquisti@orsa.it
+2293	0	NULL		erika.bartha@ortea.com
+2294	0	NULL		orthocentersassari@gmail.it ; oggianoantonio@yahoo.it
+2295	0	NULL		ufficio.tecnico@oscaautomazioni.it
+2296	0	NULL		oslbaggio@outlook.it
+2297	0	NULL		presidente@ospg.it; mario.pesce@gmail.com
+2298	0	NULL		polospiate@alice.it; davidem71@alice.it
+2299	0	NULL		info@o-tre.it
+2300	0	NULL		opit@otsuka.it
+2301	0	NULL		info@ozotek.it
+2302	0	NULL		tamagnini.emanuele@libero.it
+2303	0	NULL		info@pompeocatelli.it
+2304	0	NULL		mauro@sancarlo.va.it
+2305	0	NULL		admin@prtinnovation.com
+2306	0	NULL		lorena.fabaro@gmail.com
+2307	0	NULL		mary.malandrino@pagani.com; giacomo.baisi@pagani.com
+2308	0	NULL		ceguasco@iol.it
+2309	0	NULL		h3653-gl@accor.com
+2310	0	NULL		funefitness@alice.it; ggiovannini74@gmail.com
+2311	0	NULL		gimnasiumm@alice.it
+2312	0	NULL		info@palestraliving.com
+2313	0	NULL		antoninorusso.sanpaolo@gmail.com
+2314	0	NULL		info@palestravalentino.com
+2315	0	NULL		palestrina74@virgilio.it
+2316	0	NULL		m.fornasari@palfinger.com
+2317	0	NULL		tiziana_tudisca@europe.pall.com ; ketty_biondi@europe.pall.com
+2318	0	NULL		r.palombo@tiscali.it
+2319	0	NULL		franco.pretalli@eu.panasonic.com
+2320	0	NULL		pannocchia74@virgilio.it
+2321	0	NULL		roberto.bianchini1976@gmail.com ; info@pantasport.it
+2322	0	NULL		angelo.capriotti@itiscali.it
+2323	0	NULL		massimomeloni@parisienneitalia.it
+2324	0	NULL		egle.elli@parker.com ; fabio.longone@parker.com
+2325	0	NULL		m.vicentini@parmalat.net
+2326	0	NULL		calvi.mariarosa@hsr.it
+2327	0	NULL		medolago@diocesibg.it
+2328	0	NULL		rivergaro@diocesipc.it
+2329	0	NULL		rif: wbenedin@gmail.com
+2330	0	NULL		s.roccparr@gmail.com
+2331	0	NULL		alicevezzola@tiscali.it ; chiobe61@gmail.com
+2332	0	NULL		katiagreco1971@gmail.com
+2333	0	NULL		scuola_mater@libero.it
+2334	0	NULL		natalinobonazza@mac.com ; andreamemo72@gmail.com
+2335	0	NULL		giorgio.iapella@alice.it
+2336	0	NULL		dvdbs12@gmail.com
+2337	0	NULL		marco.pietra@unibo.it
+2338	0	NULL		arlin.salvadori@gmail.com
+2339	0	NULL		mariaregina1970@gmail.com
+2340	0	NULL		ivan.zanagnolo@gmail.com
+2341	0	NULL		giovannicominardi@yahoo.it
+2342	0	NULL		parrocchia-santandrea@alice.it
+2343	0	NULL		mcapelli1976@gmail.com
+2344	0	NULL		giombot@yahoo.it
+2345	0	NULL		granata_alessandro@yahoo.it ; parrocchie.villanterio@gmail.com
+2346	0	NULL		deris@tecnouno.it
+2347	0	NULL		gsochiesanuova@libero.it
+2348	0	NULL		sergiocagnini@gmail.com
+2349	0	NULL		SimonePirola@cleaf.it
+2350	0	NULL		segreteriaparrocchiavillanuova@gmail.com
+2351	0	NULL		sanbenedetto.pomezia@alice.it
+2352	0	NULL		oratorio.cellatica@live.it ; oratorio@parrocchiacellatica.it ; mrfrassine@gmail.com
+2353	0	NULL		a.edusi@alice.it
+2354	0	NULL		segreteria@sangiovannicrisostomo.it
+2355	0	NULL		gsoserenocalcio@hotmail.it
+2356	0	NULL		fiesse@diocesi.brescia.it
+2357	0	NULL		lanuovavocediniardo@hotmail.it
+2358	0	NULL		ass.cornelli@alice.it
+2359	0	NULL		baccatistocaru@yahoo.it
+2360	0	NULL		odolo@diocesi.brescia.it
+2361	0	NULL		calcio.oratoriopantigliate@outlook.it
+2362	0	NULL		carlo.conti@bancaeuro.it
+2363	0	NULL		alepe@protonmail.com
+2364	0	NULL		luisazanzottera@yahoo.it
+2365	0	NULL		calcio@santasilvia.it; felice.alborghetti@gmail.com
+2366	0	NULL		posta@parrocchiaconcorezzo.com ; stefano@parolebuone.it ; lauravilla_94@alice.it
+2367	0	NULL		verano@chiesadimilano.it
+2368	0	NULL		alessandro.t@email.it
+2369	0	NULL		giordano.pratesi1@alice.it
+2370	0	NULL		parrocchiacarnate@gmail.com
+2371	0	NULL		mlievo58@gmail.com
+2372	0	NULL		info@pasina.net
+2373	0	NULL		pasqualeariani@alice.it
+2374	0	NULL		rif. alettisonia64@gmail.com
+2375	0	NULL		g.cavallo@granoro.it
+2376	0	NULL		lafasanara@gmail.com
+2377	0	NULL		alboni@pavarinicomponents.com
+2378	0	NULL		info@pavianelcuore.it
+2379	0	NULL		veleblucharter@gmail.com
+2380	0	NULL		direzione@pcmotorsport.it
+2381	0	NULL		F.galati@pedrotec.com
+2382	0	NULL		info@bonsaglio.it
+2383	0	NULL		baldini79davide@gmail.com
+2384	0	NULL		info@pellizzari.com
+2385	0	NULL		matteopeloso@gmail.com
+2386	0	NULL		archivio@perani.com
+2387	0	NULL		mariangela.gresino@perardiegresino.com; chiara.cassoni@virgilio.it
+2388	0	NULL		marco.graci@perkinelmer.com
+2389	0	NULL		uff.acquisti@riccioneterme.it
+2390	0	NULL		sabrina.acquistapace70@gmail.com
+2391	0	NULL		chicco.luppi@libero.it
+2392	0	NULL		dewipeipei@gmail.com ; amministrazione@vivibistrot.it
+2393	0	NULL		p.dellavo@petazzi.it
+2394	0	NULL		ceriani.michela@petrolvalves.it; macchi.andrea@petrolvalves.it
+2395	0	NULL		rafpez@gmai.com
+2396	0	NULL		pgs@sambefe.it; franca.marzocchi@fastwebnet.it
+2397	0	NULL		acquisti1@pharmaliferesearch.com
+2398	0	NULL		g.barone@phoenixitalia.it
+2399	0	NULL		r.marenco@longlife.com ; m.gandini@pho.it
+2400	0	NULL		info@pialegno.it
+2401	0	NULL		manuela.stingo@gmail.com; info@pianetapadel.it
+2402	0	NULL		p.picceni@gmail.com
+2403	0	NULL		marchissimo68@libero.it
+2404	0	NULL		paolo.pirri@pichler.pro
+2405	0	NULL		doriano.serradura@fiorentini.com; alberto.decarli@fiorentini.com
+2406	0	NULL		alfredo.lanzarini@pietrogallianibrazing.com
+2407	0	NULL		Giulio.Motta@pilotitalia.com
+2408	0	NULL		p.scapuzzi@pinalli.it
+2409	0	NULL		coordinatore@pioricovero.net
+2410	0	NULL		claudio@pioli.it
+2411	0	NULL		spanupierpaolo75@gmail.com
+2412	0	NULL		PISANORTOFRUTTASRL@YAHOO.IT
+2413	0	NULL		dario.schettino@stevanelevatori.it
+2414	0	NULL		c.ferron@pizzoli.it ; s.bottardi@pizzoli.it
+2415	0	NULL		gesti1@pubblikoinos.com
+2416	0	NULL		HR@PLANETEK.IT
+2417	0	NULL		acq@plasmec.it; diego.sartori@plasmec.it
+2418	0	NULL		tess.gasco@plastiape.com
+2419	0	NULL		info@plastiroma.it
+2420	0	NULL		studioplescia@gmail.com
+2421	0	NULL		antotecnocontrol@gmail.com
+2422	0	NULL		info@polaris112.it
+2423	0	NULL		g.poletti@studiomedicopoletti.it
+2424	0	NULL		st.agogio@libero.it
+2425	0	NULL		amministrazione@poliambulatoriooro.it
+2426	0	NULL		nasser11@libero.it
+2427	0	NULL		caservamm@degenza.esercito.difesa.it
+2428	0	NULL		andrea.colombo@poliform.it; mariella.bosisio@poliform.it
+2429	0	NULL		b.moscato@gruppopolis.it ; f.salmaso@gruppopolis.it
+2430	0	NULL		poliscalve@gmail.com
+2431	0	NULL		info.olisald@gmail.com
+2432	0	NULL		michele.cappelli1@virgilio.it
+2433	0	NULL		info@polisportivavighenzi.it
+2434	0	NULL		polisportiva.cernuschese@gmail.com
+2435	0	NULL		luca.traverso@rcs.it
+2436	0	NULL		polisportiva.sf@gmail.com
+2437	0	NULL		ggalmozzi1@alice.it
+2438	0	NULL		polisportivarossino@gmail.com; stiko@libero.it
+2439	0	NULL		daniel_tg@libero.it
+2440	0	NULL		renatogozza@homail.it
+2441	0	NULL		formazione@pgslombardia.org 
+2442	0	NULL		loredanapolselli@hotmail.it
+2443	0	NULL		info.ts@polygon.eu
+2444	0	NULL		fabio.bonvini@pomodoro43044.it; francesco.bertoni@pomodoro43044.it;
+2445	0	NULL		l.rapetti@pompegarbarino.it
+2446	0	NULL		ponso@ponsofrutta.it
+2447	0	NULL		Rif. oscar.campari@bpci.it
+2448	0	NULL		luisella.bai@porettisolutions.it
+2449	0	NULL		pozzi45@hotmail.it
+2450	0	NULL		elena.medo@yahoo.it
+2451	0	NULL		pclavenna@pozzolispa.com
+2452	0	NULL		sara.piccinini@pradella.it
+2453	0	NULL		info@metalbase.it
+2454	0	NULL		mine.roberto@gmail.com
+2455	0	NULL		Gaia.Magni@Pratofinish.it
+2456	0	NULL		uffsan.ch@poliziadistato.it
+2457	0	NULL		uffsan.quest.fg@pecps.poliziadistato.it
+2458	0	NULL		fornitori@presstours.it
+2459	0	NULL		pierprig@gmail.com
+2460	0	NULL		gianfranco.colangelo@dorchestercollection.com ; Sabrina.Fasolato@dorchestercollection.com
+2461	0	NULL		direzione.qualita@prismaitalia.com
+2462	0	NULL		elenaturati@privius.com
+2463	0	NULL		cristianmondani@virgilio.it
+2464	0	NULL		mpaonessa@tiscali.it
+2465	0	NULL		lucianocasali@alice.it; monicacasali@alice.it
+2466	0	NULL		v.bragoli@virgilio.it
+2467	0	NULL		francogiusy.26@gmail.com
+2468	0	NULL		prolocobacedascoalto@virgilio.it
+2469	0	NULL		luigi.contini@libero.it
+2470	0	NULL		ascretese@virgilio.it
+2471	0	NULL		Rif. info@crocedorosannazzaro.org
+2472	0	NULL		enrico.baldi88@libero.it
+2473	0	NULL		marisella.loffi@libero.it; corvettigraziano@libero.it;
+2474	0	NULL		angelobertan@hotmail.it
+2475	0	NULL		gioss81@libero.it
+2476	0	NULL		proloco.monticelli@libero.it
+2477	0	NULL		prolocopellio@gmail.com
+2478	0	NULL		prolocopievese@gmail.com
+2479	0	NULL		renatoabbiati@libero.it
+2480	0	NULL		giancarlo@copysystemsrl.it
+2481	0	NULL		prolocospessa@libero.it
+2482	0	NULL		lioi.pino@gmail.com
+2483	0	NULL		prolocozeme@virgilio.it
+2484	0	NULL		centromedico.im@pg.com ; pancaldi.am@pg.com
+2485	0	NULL		augusto.schianchi@unipr.it
+2486	0	NULL		a.delmo@hotmail.it
+2487	0	NULL		info@studiofrancoprofili.it
+2488	0	NULL		progesco@libero.it
+2489	0	NULL		avv.patriziagentile@libero.it
+2490	0	NULL		vrconsul@tin.it
+2491	0	NULL		d.brugnoli@progettopersonaonlus.it
+2492	0	NULL		aprovvigionamenti@p-a.it
+2493	0	NULL		manzoni.ivan73@gmail.com
+2494	0	NULL		maricaperdersoli@yahoo.it
+2495	0	NULL		crovettigraziano@libero.it
+2496	0	NULL		info@prolococastello.com
+2497	0	NULL		proloco.cormano@nemomali.it
+2498	0	NULL		prolocoprarolo@gmail.com
+2499	0	NULL		milena.perini@pec.it; filippo.mabea@gmail.com
+2500	0	NULL		ennio@realstudio.it
+2501	0	NULL		info@promoit.org
+2502	0	NULL		amministrazione@promotergroup.eu
+2503	0	NULL		castronuovo@pcgl.it
+2504	0	NULL		prociv.alezio@alice.it; marcucciodaniele@virgilio.it
+2505	0	NULL		euanghelion2012@gmail.com
+2506	0	NULL		solideopoletti@gmail.com
+2507	0	NULL		ambulatorio@istitutodivinaprovvidenza.com
+2508	0	NULL		tecnico.smaria@sanmarziano.com ; annalisa.marcon@sanmarziano.com
+2509	0	NULL		b.fabbri@psmdrilling.it
+2510	0	NULL		info@vignatesoccorso.it 
+2511	0	NULL		info@apsalso.org
+2512	0	NULL		seirs@libero.it
+2513	0	NULL		alfredo.bernardini@publicober.it
+2514	0	NULL		gzambelli@puntomedico.eu
+2515	0	NULL		andpupilli@icloud.com
+2516	0	NULL		lceriani@quaser.q8.it
+2517	0	NULL		micchilino@hotmail.com
+2518	0	NULL		robertoscarparo@gmail.com
+2519	0	NULL		info@rivisrl.it; faraci.g@rivisrl.it
+2520	0	NULL		severino.taricco@rma.it
+2521	0	NULL		info@robiambiente.it
+2522	0	NULL		claudio.belotti@radicigroup.com
+2523	0	NULL		michela.mapelli@radicigroup.com
+2524	0	NULL		caruso@carusomenswear.com
+2525	0	NULL		rangers.emiliaromagna@gmail.com
+2526	0	NULL		rapisardagiovanni@libero.it
+2527	0	NULL		sissi250188@gmail.com; robertodallenogare@libero.it
+2528	0	NULL		Barbara.Vercellone@rcs.it
+2529	0	NULL		Rcs.Acquisti@rcs.it ; acquisti.rcs@integradm.it
+2530	0	NULL		rebigas@rebigas.it; cmatti@rebigas.it
+2531	0	NULL		arensimone@gmail.com
+2532	0	NULL		gianfrancocacia@libero.it
+2533	0	NULL		rebelsbiella@gmail.com
+2534	0	NULL		amministrazione@reconice.it
+2535	0	NULL		info@recura.it
+2536	0	NULL		alberto.bettini@redaelli.com; andrea.colosio@redaelli.it
+2537	0	NULL		mariachiara.2007@yahoo.it
+2538	0	NULL		laura.porta@redimec.com
+2539	0	NULL		luca.pivato@reel.it
+2540	0	NULL		area.sanitasociale@regione.veneto.it
+2541	0	NULL		r.polieri@regione.puglia.it
+2542	0	NULL		mauro.ria@gmail.com
+2543	0	NULL		fabiana.ceccarelli@yahoo.it
+2544	0	NULL		massimoresta2014@gmail.com
+2545	0	NULL		demarco.d@reys.it
+2546	0	NULL		gilli.r@rgsimpianti.com; righetti.e@rgsvs.com
+2547	0	NULL		info@ricosrl.com
+2548	0	NULL		dirsan@riccioneterme.it; amministrazione@riccioneterme.it
+2549	0	NULL		nicolo.russo@riccoboniholding.com ; fabrizio.cardone@riccoboniholding.com
+2550	0	NULL		paola@tenutaricrio.it; ilenia@tenutaricrio.it
+2551	0	NULL		magazzino.crsm@rifersrl.it
+2552	0	NULL		amministrazione@riminiterme.com
+2553	0	NULL		gabriella@rimplastic.it
+2554	0	NULL		paolo.serbi@rina.org
+2555	0	NULL		g.masiero@rinomastrottogroup.com
+2556	0	NULL		amministrazione@rinovadischi.it
+2557	0	NULL		info@grandhotelriviera.it
+2558	0	NULL		maovazu@libero.it
+2559	0	NULL		andreagonella@risoviazzo.com
+2560	0	NULL		info@villaggiobuturo.com
+2561	0	NULL		faggion@rde.it
+2562	0	NULL		studioshapesaronno@gmail.com
+2563	0	NULL		barbara@rizziimpianti.com
+2564	0	NULL		marinella@rizziimpianti.com ; barbara@rizziimpianti.com
+2565	0	NULL		monica.rizzoni@asi.it
+2566	0	NULL		paolo.plebani@rmtvalvomeccanica.com
+2567	0	NULL		info@rogaenna.it; fatturareroga@pec.it
+2568	0	NULL		lceschin@robertoalimentare.com 
+2569	0	NULL		ebellini@robur.it
+2570	0	NULL		serenella.luminari@roche.com
+2571	0	NULL		roberto.pavone@rockwool.it ; lorena.perissotto@rockwool.com
+2572	0	NULL		n.perretta@workingsafe.it
+2573	0	NULL		francesco.sughi@poderidalnespoli.com
+2574	0	NULL		dottromaniello@tiscali.it
+2575	0	NULL		lazzarella_it@yahoo.it
+2576	0	NULL		amministrazione@romecstampi.it
+2577	0	NULL		m.sangalli@safetyitalia.it; f.carbone@safetyitalia.it
+2578	0	NULL		egidio.romitelli@bonatti.it
+2579	0	NULL		carpenteriarpf@libero.it
+2580	0	NULL		P.Quirci@rosler.com
+2581	0	NULL		stefano.rossi625@libero.it
+2582	0	NULL		farmaciadellavalmaremola@virgilio.it
+2583	0	NULL		gabri.iannuzzi@hotmail.it
+2584	0	NULL		alessandro.banin@hotmail.it
+2585	0	NULL		urcastel@tin.it
+2586	0	NULL		Rif. donpaolofelice@libero.it
+2587	0	NULL		alessandro.alboni@yahoo.it
+2588	0	NULL		a.faglia@studiasa.com
+2589	0	NULL		e.braghini@eco-studiosrl.it
+2590	0	NULL		m.g.mancosu@wonderbyte.it
+2591	0	NULL		siega.nadia@libero.it; rospietro@libero.it
+2592	0	NULL		terry.pozzo@gmail.com
+2593	0	NULL		rotarypiombino@gmail.com
+2594	0	NULL		waianni@tin.it
+2595	0	NULL		segreteria.rotary.salerno@gmail.com
+2596	0	NULL		segreteria@itcniccolini.it
+2597	0	NULL		alberto.bgn@tiscali.it
+2598	0	NULL		denise.russo@rotomail.it
+2599	0	NULL		Raffaella.Miarelli@rotork.com
+2600	0	NULL		amministrazione@rotostampa.it
+2601	0	NULL		marco.dallo@rovagnati.it
+2602	0	NULL		m.longo@roveda1955.it
+2603	0	NULL		silvana.feci@rse-web.it ; Dolores.Colombo@rse-web.it
+2604	0	NULL		t.schiavon@rugbyparma.net
+2605	0	NULL		castelli.ivan72@gmail.com
+2606	0	NULL		antoniorusso1954@gmail.com
+2607	0	NULL		cippa971@libero.it
+2608	0	NULL		rdsoft1975@gmail.com
+2609	0	NULL		lorenzo.cristaudo@rwe.com
+2610	0	NULL		info@saimaranello.it; pgorzanelli@saimaranello.it
+2611	0	NULL		subacchi.m@saib.it; conti.g@saib.it
+2612	0	NULL		segreteria@essedia.it; roberta.groppetti@essedia.it
+2613	0	NULL		vinpal92@gmail.com
+2614	0	NULL		info@caviseis.it
+2615	0	NULL		info@sgbp.it ; simone.cammi@sgbp.it
+2616	0	NULL		meorali.francesco@gmail.com; formazione@siaform.it
+2617	0	NULL		service@sidemspa.it
+2618	0	NULL		uff.amministrazione@sifea.it
+2619	0	NULL		info@lamole.com
+2620	0	NULL		info@soslurago.org; 
+2621	0	NULL		telesoccorso@sosmalnate.it
+2622	0	NULL		info@sosnovate.it; formazione@sosnovate.it
+2623	0	NULL		rosanna.di-foggia@michelin.com
+2624	0	NULL		corfox@virgilio.it
+2625	0	NULL		manlio.gran@gmail.com
+2626	0	NULL		ssdbaggio2@gmail.com
+2627	0	NULL		luca.savardi@gmail.com
+2628	0	NULL		ga@guastallapilates.it
+2629	0	NULL		info@happyfitness.org
+2630	0	NULL		segreteria.carraro@ssdsportinsieme.it
+2631	0	NULL		tkdperdasdefogu@tiscali.it
+2632	0	NULL		ssi@stamperia-ssi.it
+2633	0	NULL		massimo.baldessarini@me.it
+2634	0	NULL		info@sttnet.it
+2635	0	NULL		commerciale@sabafer.it
+2636	0	NULL		alefperotti@gmail.com
+2637	0	NULL		monia.zanchi@sabo.com
+2638	0	NULL		f.benedetti@rde.it
+2639	0	NULL		luca.decian@sacchi.it
+2640	0	NULL		antonio@saccoassicurazioni.com
+2641	0	NULL		paolo.schiavolena@sacilese.it
+2642	0	NULL		daniele.marchi@sacmi.it
+2643	0	NULL		sante.avagliano@sadaspa.it
+2644	0	NULL		info@saescientifica.it; c.marchese@labteam.com
+2645	0	NULL		marcodangelo@safetyconsultingsrl.it
+2646	0	NULL		andrea.boiardi@safetypartner.it
+2647	0	NULL		sogni@saind.it
+2648	0	NULL		marco.galzignato@saint-gobain.com
+2649	0	NULL		luisa.tironi@saint-gobain.com; massimo.moretti@saint-gobain.com
+2650	0	NULL		gyproc.italia@saint-gobain.com
+2651	0	NULL		info@grandisalumificiitaliani.it
+2652	0	NULL		info@salumificioaurora.it
+2653	0	NULL		salvaterraeventi@gmail.com
+2654	0	NULL		veronica.chiappa@sami.it ; Monia.Buratti@sami.it
+2655	0	NULL		stefano.brentan@samiaitaly.com
+2656	0	NULL		caossio55@tiscali.it
+2657	0	NULL		c.cursio@tecnobionline.it
+2658	0	NULL		residenzaprotettahsf@gmail.com
+2659	0	NULL		sangiorgio.albairate@gmail.com
+2660	0	NULL		daninegri@alice.it
+2661	0	NULL		federico.viola@olioviola.it
+2662	0	NULL		pcavallari@sanvitale.ra.it
+2663	0	NULL		piva@sandrinita.it
+2664	0	NULL		info@sangallispa.it
+2665	0	NULL		camilla.crespi@sangregorio.com
+2666	0	NULL		Acquisti@sanofi-aventis.com
+2667	0	NULL		info@santamargherita.com
+2668	0	NULL		info@santagostinocremona.it
+2669	0	NULL		elenamingoni@santifabrizio.it
+2670	0	NULL		t.maniero@sapiselco.com; acquisti@sapiselco.com
+2671	0	NULL		massimo@franzil.com; giampaolo@arbataxhotels.com
+2672	0	NULL		canovi@sarce.it  ;   cris@sarce.it
+2673	0	NULL		cristian@satinoxacciai.it; commerciale@satinoxacciai.it
+2674	0	NULL		giovanni.speziani@gmail.com
+2675	0	NULL		michela.sbardellini@gmail.com
+2676	0	NULL		acquisti@it.indevagroup.com
+2677	0	NULL		farmscarcella@tiscali.it
+2678	0	NULL		pieroscarnera@gmail.com
+2679	0	NULL		scatolificioammattatelli@outlook.com
+2680	0	NULL		gabriella.baratella@cristina.it
+2681	0	NULL		ercolevecchi@katamail.com
+2682	0	NULL		info@schiavettatrasporti.it
+2683	0	NULL		andrea.schina@alice.it
+2684	0	NULL		alessandrascilletta@yahoo.it
+2685	0	NULL		robived@alice.it
+2686	0	NULL		cesarescn@gmail.com
+2687	0	NULL		l.borgia@wind.it.net
+2688	0	NULL		info@museodellauto.it
+2689	0	NULL		presidenzapiemonte@gmail.com
+2690	0	NULL		pippomaggi@gmail.com
+2691	0	NULL		laurapessina@scurati.it
+2692	0	NULL		spaggiari@ascom.pr.it
+2693	0	NULL		sebastiani.claudia@gmail.com
+2694	0	NULL		Lorella.Oppo@secotools.com ; federico.colombera@secotools.com
+2695	0	NULL		mauro@securityguard.it
+2696	0	NULL		info@securline.it
+2697	0	NULL		andrea.malatto@selectrasrl.it
+2698	0	NULL		jacopo.colombo@selerante.com
+2699	0	NULL		marcello@bola5.it
+2700	0	NULL		ettore.senes@seneco.it
+2701	0	NULL		Francesco.Vandelli@sensient.com
+2702	0	NULL		faenzaperte@alice.it
+2703	0	NULL		 francescamaria.sergi@gmail.com
+2704	0	NULL		enrico.frezza@serica1870.it
+2705	0	NULL		flavio.fusco@seristampa.eu; gisella.tanzini@seristampa.eu
+2706	0	NULL		g.grasso@serveco.it; serveco@serveco.it
+2707	0	NULL		eduardo.tarsitano@alice.it
+2708	0	NULL		julian.danelutti@serviflab.it
+2709	0	NULL		eleonora.sempreboni@serviziesistemi.it
+2710	0	NULL		malizialuigi@gmail.com
+2711	0	NULL		amministrazione@geirino.it
+2712	0	NULL		info@ambulanzaselvinoaviatico.com
+2713	0	NULL		massimo.ognibene@setaweb.it
+2714	0	NULL		giovanni.cagnani@settima.it; nicoletta.piselli@settima.it
+2715	0	NULL		d.riminucci@seymechamlou.it; b.savoia@seymechamlou.it ; c.fancello@seymechamlou.it
+2716	0	NULL		terrossa.comunale@avis.it; luzanetti@libero.it
+2717	0	NULL		amministrazione@sfa.it
+2718	0	NULL		carlofugazza51@gmail.com
+2719	0	NULL		gabriele.malagoli@sistemspa.it
+2720	0	NULL		f.pettenon@sicce.com
+2721	0	NULL		cesare.ghizzoni@sicim.eu; m.pinto@sicim.eu
+2722	0	NULL		bosisio@sicurema.it
+2723	0	NULL		info@sicurys.com
+2724	0	NULL		FABRIZIO.PERINI@SIFAINTL.COM
+2725	0	NULL		Rif. giancarlo.alinovi@cedacri.it
+2726	0	NULL		negroni.mauro@fastwebnet.it; paolo@siisub.com
+2727	0	NULL		Rif. parma@lilt.it
+2728	0	NULL		francesco.dissegna@silgandispensing.com
+2729	0	NULL		amministrazione@silter.net
+2730	0	NULL		silviaantonioni0@gmail.com
+2731	0	NULL		info@simitdental.it
+2732	0	NULL		smalaspina@npoliver.it
+2733	0	NULL		emanuele.ossani@simulaid.it; laura.bendoricchio@simulaid.it
+2734	0	NULL		domenico.siniscalco@morganstanley.com; francesca.alfieri@morganstanley.com
+2735	0	NULL		domsin@alice.it
+2736	0	NULL		cfs.sinthesis@tiscali.it
+2737	0	NULL		corrado.grasso@siospa.it
+2738	0	NULL		gianoscar-botteon@zoppas.com
+2739	0	NULL		info@sipex-cavagna.com
+2740	0	NULL		stuzzato@siram.it
+2741	0	NULL		g.esposto@sistemp.com
+2742	0	NULL		marketing@sistemi.com ; bruna.antonello@sistemi.com
+2743	0	NULL		scenosist@gmail.com
+2744	0	NULL		m.pellegrini@sitspa.it
+2745	0	NULL		acquisti2.pc@sitav.eu
+2746	0	NULL		sitma@sitma.it; machinery@legpec.it
+2747	0	NULL		info@sivag.com
+2748	0	NULL		bertoletti@sivag.com
+2749	0	NULL		info@skiteamfassa.it
+2750	0	NULL		presenze.italy@skidata.com
+2751	0	NULL		luca.gubbini@skyrope.it
+2752	0	NULL		sonroc71@gmail.com
+2753	0	NULL		info@smartworld.com
+2754	0	NULL		marco.sgargi@smcsmc.it
+2755	0	NULL		smeg@smeg.it
+2756	0	NULL		dolomite.srl@libero.it
+2757	0	NULL		 admin@smilingservice.it
+2758	0	NULL		smimmo82@gmail.com
+2759	0	NULL		luigi.codazza@snamretegas.it ; fabio.sciamanna@snam.it ; roberto.sangeniti@snam.it
+2760	0	NULL		Fabio.Sciamanna@snam.it
+2761	0	NULL		melissa.reggiani@snatt.it
+2762	0	NULL		r.gatto@sowen.it
+2763	0	NULL		Anna.facchini@softerspa.com
+2764	0	NULL		guizzo@sogin.it
+2765	0	NULL		studioantonioiodice@libero.it
+2766	0	NULL		account@sogeseitalia.it
+2767	0	NULL		r.ciccotelli@cantinatollo.it
+2768	0	NULL		cooplavignetta@tin.it
+2769	0	NULL		protezionecivilececina@gmail.com
+2770	0	NULL		francobisco@libero.it
+2771	0	NULL		roberto.polloni@prefel.it
+2772	0	NULL		barlettapaolo3@libero.it
+2773	0	NULL		segreteria@etrusco.org
+2774	0	NULL		info@tiziano-testori.it ; coordinatoreclinico@implantologiaitalia.it
+2775	0	NULL		info@immobilipolicar.it
+2776	0	NULL		romaintangibile@gmail.com
+2777	0	NULL		ORESTE_CINOTTI@SOGES-SPA.IT
+2778	0	NULL		f.muzzi@sol.it
+2779	0	NULL		info@solarisfitness.it
+2780	0	NULL		info@solemsrl.it; c.tommesani@solemsrl.it
+2781	0	NULL		stampa@puntograficopc.it
+2782	0	NULL		giovanni.naldi@sonoco-alcore.net
+2783	0	NULL		serena.raschetti@sopra.com; antonio.bonu@soprasteria.com; marco.schioppo@soprasteria.com
+2784	0	NULL		linda.altrocchi@sorgenia.it; ilaria.sorrentino@sorgenia.it; 
+2785	0	NULL		manganaro@sotecospa.com
+2786	0	NULL		fabrizio.sottile@gmail.com
+2787	0	NULL		sp@sp6group.it
+2788	0	NULL		ChiarelloR@spac-spa.it
+2789	0	NULL		info.home@comifar.it
+2790	0	NULL		spessanlorenzo@gmail.com
+2791	0	NULL		laura.speziali@speziali.net
+2792	0	NULL		matteo.spigaroli@gmail.com
+2793	0	NULL		franco.cossetti@gmail.com
+2794	0	NULL		annamaria.sanguedolce@sportesalute.eu ; alessandra.rozzi@sportesalute.eu
+2795	0	NULL		Sportlife@gmail.com
+2796	0	NULL		tennisrigamonti@gmail.com ; direzione@sportriga.it
+2797	0	NULL		henry1974@live.it
+2798	0	NULL		info@sportingclubparma.it
+2799	0	NULL		tennisclubmortara@gmail.com
+2800	0	NULL		info@palestrasporting.eu
+2801	0	NULL		squashinn@squashinn.it
+2802	0	NULL		amministrazioneparrocchiabreno@gmail.com
+2803	0	NULL		alessia.andretto@rcs.it
+2804	0	NULL		roberto.abba@crescereeducareagire.it ; giulia.giraldo@crescereeducareagire.it
+2805	0	NULL		deborah.demarchi@microtecnicatrevisana.com; sara.pizzolato@micrtoecnicatrevisana.com
+2806	0	NULL		milanosport_tt@centrobonacossa.com; marcellocicchitti@biverbroker.it
+2807	0	NULL		virtus.gallarate@virgilio.it; cooperativavirtus@virgilio.it
+2808	0	NULL		segreteria@palestrepatrick.it
+2809	0	NULL		damiano.magliozzi40@gmail.com
+2810	0	NULL		paolamitrano@libero.it
+2811	0	NULL		stefano@stafsrl.it
+2812	0	NULL		giorgio.grassi@stahl.com ; fabrizio.maneia@stahl.com
+2813	0	NULL		a.trevisan@stam.it; confermeordine@stam.it
+2814	0	NULL		f.stanzani@stanzani.it
+2815	0	NULL		alessio.vigilante@gmail.com
+2816	0	NULL		stef-trp_italia_dqs@stef.com ; Simona.Gruzza@stef.com
+2817	0	NULL		roberto.stellone@tiscali.it
+2818	0	NULL		b.maestroni@step.it
+2819	0	NULL		sterlinosc@virgilio.it
+2820	0	NULL		mlaino@stiferite.com
+2821	0	NULL		alessio.caimi@stillmed.com
+2822	0	NULL		Antonella.Membri@snam.it
+2823	0	NULL		stragliatialessandro@gmail.com
+2824	0	NULL		a.giommetti@struqture.it
+2825	0	NULL		arch.giorgiomassaccesi@gmail.com
+2826	0	NULL		devilofsky@gmail.com
+2827	0	NULL		f.sebastio@diocesi.taranto.it
+2828	0	NULL		mauroantonello62@gmail.com
+2829	0	NULL		dott.marcosimone@gmail.com
+2830	0	NULL		info@studiodentisticodlv.it
+2831	0	NULL		alvise.camurripiloni@gmail.com; rore.oospecialisti@gmail.com
+2832	0	NULL		baldinilorena@libero.it
+2833	0	NULL		andreadamiola@gmail.com
+2834	0	NULL		leonardocavallo@studiodentisticocavallo.it
+2835	0	NULL		studio.gpsabbioni@gmail.com
+2836	0	NULL		studio@dentisticoviberti.it
+2837	0	NULL		studiofabjan@gmail.com
+2838	0	NULL		m.lenci@inwind.it
+2839	0	NULL		albertoelia2@gmail.com
+2840	0	NULL		luigipolenghi@hotmail.com
+2841	0	NULL		francescomaione74@libero.it
+2842	0	NULL		segreteria@radiologiapasta.it
+2843	0	NULL		doc.mauri@libero.it
+2844	0	NULL		studio@morassigiovanni.191.it
+2845	0	NULL		medicolegale@studiodelantone.it
+2846	0	NULL		info@studiodentisticopanizza.it
+2847	0	NULL		alandini@notariato.it; giuseppe@landini.info
+2848	0	NULL		smperricone@gmail.com
+2849	0	NULL		studiogenovese@hotmail.it
+2850	0	NULL		toia.raimondi@libero.it
+2851	0	NULL		studiobarbero2016@gmail.com
+2852	0	NULL		studiodottlucameroni@alice.it
+2853	0	NULL		odontonicolosiepizzo@libero.it
+2854	0	NULL		astrofisico111@gmail.com
+2855	0	NULL		giuseppe@amministrazioniparisi.it
+2856	0	NULL		info@studiopilatesalessandria.com
+2857	0	NULL		elisabetta@studioradiologicoguidonia.it; claudia@studioradiologicoguidonia.it
+2858	0	NULL		info@studiosannino.it
+2859	0	NULL		massimo.cavina@studiocavina.it
+2860	0	NULL		lucasturari@gmail.com
+2861	0	NULL		sallj@inwind.it
+2862	0	NULL		info@suncini.it
+2863	0	NULL		rodolfo.longoni@libero.it
+2864	0	NULL		fcannava@superjetinternational.com; cgrando@superjetinternational.com
+2865	0	NULL		sandrosverzellati@alice.it
+2866	0	NULL		cristina.calati@symrise.com
+2867	0	NULL		rxdiagnosi@gmail.com
+2868	0	NULL		fcarnevali@system-group.it; rbellei@system-group.it
+2869	0	NULL		r.reggiori@tal.it
+2870	0	NULL		nicola.merlo@tfl-luisago.it; Giuseppina.Castelli@tfl-luisago.it
+2871	0	NULL		lorenzab@tmp-srl.it
+2872	0	NULL		alan.tabone87@gmail.com
+2873	0	NULL		altava3@hotmail.it
+2874	0	NULL		camilla.cortese@tafabrasivi.it ; frida.francucci@tafabrasivi.it
+2875	0	NULL		atleticovolpianomappano@gmail.com
+2876	0	NULL		ivdossena@taimilano.it
+2877	0	NULL		info@tankoa.com
+2878	0	NULL		andrea@tanziaureliopetroli.it; info@tanziaureliopetroli.it
+2879	0	NULL		a.loniglio@giustizia-amministrativa.it; rg.carnabuci@giustizia-amministrativa.it
+2880	0	NULL		info@omfastampi.it
+2881	0	NULL		info@targetstudio.net
+2882	0	NULL		emanuela.b@taroni.it
+2883	0	NULL		fornitori@tasgroup.it
+2884	0	NULL		taumetalli@taumetalli.it
+2885	0	NULL		carla.bisagni@tecoit.com; giampaolo.passerini@tecoit.com
+2886	0	NULL		temosasrl@tiscali.it ; cenza.zallu@temosa.it
+2887	0	NULL		tania.depieri@iper.it
+2888	0	NULL		soni73@hotmail.it
+2889	0	NULL		rossi@tec-eurolab.com
+2890	0	NULL		ftosti@technip.com
+2891	0	NULL		mepa@technosky.it
+2892	0	NULL		informazioni@technogym.com
+2893	0	NULL		kristina.65@vodafone.it
+2894	0	NULL		info@tecnoceramiche.srl
+2895	0	NULL		caresana@tecnogiplast.com ; massimo@tecnogiplast.com
+2896	0	NULL		info@tecno-servicespa.it
+2897	0	NULL		PASQUALE.DIGRAZIA@TECNOFORM.COM; Giovanni.Popolizio@tecnoform.com
+2898	0	NULL		sales@tecnoidea.it
+2899	0	NULL		adondi@tecnolamiera.it
+2900	0	NULL		segreteria@tecnolifesrl.com
+2901	0	NULL		giovannichiti111@gmail.com
+2902	0	NULL		chiara.frezzini@tecnoimp.it; lia.marzorati@tecnoimp.it
+2903	0	NULL		laura.pelloni@tecnostardue.it
+2904	0	NULL		tecsol@libero.it
+2905	0	NULL		elisa@tedaldi.it
+2906	0	NULL		info@tegolacanadese.com ; erika.braido@tegolacanadese.com ; manuela.tavian@tegolacanadese.com
+2907	0	NULL		eugenio.cardinali@leonardocompany.com
+2908	0	NULL		info@temacorporation.com ; erika.braido@tegolacanadese.com ; 
+2909	0	NULL		tensportcenter@gmail.com
+2910	0	NULL		segreteria@tennisclublecco.it
+2911	0	NULL		fama.buonmarche@tiscali.it
+2912	0	NULL		teraponsrl@teraponsrl.it
+2913	0	NULL		sonia@bluserena.it
+2914	0	NULL		mg.cavazzutti@termeditrescore.it
+2915	0	NULL		segreteria@termepompeo.it
+2916	0	NULL		termoidraulicastella@gmail.com
+2917	0	NULL		teresa.studioart@gmail.com
+2918	0	NULL		amarechiaro.novara@virgilio.it
+2919	0	NULL		noseda@tessituravalli.it
+2920	0	NULL		Fabrizio.Tarallo@tevaitalia.it
+2921	0	NULL		m.fioretti@texafoggia.it
+2922	0	NULL		comunicazione@thalesgroup.com
+2923	0	NULL		cmbetti@gmail.com
+2924	0	NULL		info@tcc.com; alberto.bartoli@tccglobal.com
+2925	0	NULL		thefamed@katamail.com
+2926	0	NULL		franca.andreolini@thermofisher.com; nicola.longo@thermofisher.com
+2927	0	NULL		a.villano@thermostick.com ; acquisti@thermostick.com
+2928	0	NULL		polimedica.srl@libero.it
+2929	0	NULL		info@timaf.net
+2930	0	NULL		alessandra@timedisplay.it
+2931	0	NULL		info@tinghinosiciliandelicacies.it
+2932	0	NULL		amministrazione@tintoriamoretti.it
+2933	0	NULL		camilla@tintoriajacchetti.it; info@tintoriajacchetti.it
+2934	0	NULL		info@tsntradate.com
+2935	0	NULL		assistenza@pmbspa.com
+2936	0	NULL		annaantonello@tmgimpianti.it
+2937	0	NULL		stefano.troccoli@todini.com
+2938	0	NULL		vendruscolo.r@tognanaporcellane.it ; cordaz.s@tognanaporcellane.it
+2939	0	NULL		marcello.tommaselli62@gmail.com
+2940	0	NULL		silvan@tomsic.it
+2941	0	NULL		matteo.maguzzano@tiscali.it
+2942	0	NULL		a.lago@torneriaferraro.com
+2943	0	NULL		francesca@torneriapesante.it
+2944	0	NULL		renatoorlandi@toscanagomma.it
+2945	0	NULL		tracmec@tracmec.com
+2946	0	NULL		adrianoguareschi@libero.it
+2947	0	NULL		marco.tranaso@libero.it
+2948	0	NULL		eugeniotrani@alice.it
+2949	0	NULL		maruska.transporent@libero.it
+2950	0	NULL		v.scandaliato@gmail.com
+2951	0	NULL		info@trasportirondi.it
+2952	0	NULL		info@tres.roma.it
+2953	0	NULL		andrea.pascalis@tiscali.it
+2954	0	NULL		francesco.treglia@yahoo.it
+2955	0	NULL		ceciliabertollo@yahoo.it
+2956	0	NULL		tremilvamea@libero.it
+2957	0	NULL		stetre1976@gmail.com
+2958	0	NULL		pamela.zuffi@trescal.com
+2959	0	NULL		trezzamaria07@gmail.com
+2960	0	NULL		fumagalli@triaplastics.com
+2961	0	NULL		risorse.finanziarie.tribunale.roma@giustizia.it 
+2962	0	NULL		matteo.sandrin@trieste-marine-terminal.com;
+2963	0	NULL		elena.accorinti@trilog.it
+2964	0	NULL		farm.trojani@email.it
+2965	0	NULL		giulianocainelli@hotmail.com ; info@cdcmilano.it
+2966	0	NULL		d.contiero@tuttoimballo.it
+2967	0	NULL		tw@teamware.it
+2968	0	NULL		info@universalbiomedical.it
+2969	0	NULL		debora.brera@uiainternational.net
+2970	0	NULL		r.nadini@sassuolocalcio.it
+2971	0	NULL		francescotopo85@gmail.com
+2972	0	NULL		gabriele.aresi@bpm.it
+2973	0	NULL		ussgb.sartirana.asd@gmail.com
+2974	0	NULL		busi@ebsrl.it
+2975	0	NULL		pietro.mocciaro@gmail.com
+2976	0	NULL		alessandro.panciera@crveneto.it; alessandro.panciera@intesasanpaolo.com
+2977	0	NULL		farina.snc@tiscali.it
+2978	0	NULL		mpassarella@expal.biz
+2979	0	NULL		unamicointe@gmail.com ; fabrab.1@gmail.com
+2980	0	NULL		ambrogio.maghini@alice.it
+2981	0	NULL		leda.zambelli@unicredit.eu; florindo.papa@unicredi.eu
+2982	0	NULL		segreteria@uniferspa.com
+2983	0	NULL		unikafitnessclub@gmail.com
+2984	0	NULL		claudio.zucconi@unilever.com
+2985	0	NULL		unimed@unimedpn.it; stefano.canton@unimedpn.it
+2986	0	NULL		usi@usinotaresco.it
+2987	0	NULL		a.grippa81@gmail.com
+2988	0	NULL		usopitergina@gmail.com
+2989	0	NULL		rota.fabio53@gmail.com
+2990	0	NULL		unitrefossano@interfree.it
+2991	0	NULL		vilma_dealessi@tiscali.it
+2992	0	NULL		rettore@unicatt.it; acquisti.ateneo@unicatt.it
+2993	0	NULL		tinamolt@libero.it
+2994	0	NULL		amministrazione@dicea.unipd.it
+2995	0	NULL		roberta.olivieri@unipr.it
+2996	0	NULL		ateneo@pec.unitn.it
+2997	0	NULL		francesco.lanorte@unibg.it
+2998	0	NULL		luisanna.salmaso@unipd.it
+2999	0	NULL		rome@nd.edu; bartolomei.2@nd.edu
+3000	0	NULL		nido123stella@hotmail.it
+3001	0	NULL		area.categorie@confartigianato.bs.it
+3002	0	NULL		aculotta@upmc.it
+3003	0	NULL		nursino@email.it
+3004	0	NULL		antonio.vecchino@tin.it
+3005	0	NULL		amministrazione@girodolomiti.com
+3006	0	NULL		COSIMO.USTRA@TISCALI.IT
+3007	0	NULL		info@utensilfergalbiati.it
+3008	0	NULL		info@vmelettrotecnica.it
+3009	0	NULL		gius2377@gmail.com
+3010	0	NULL		p.morandi@valcolatte.it
+3011	0	NULL		virna.valdre@studioladder.it
+3012	0	NULL		matteo.fiorio@gmail.com
+3013	0	NULL		anelli.m@valmar.pc.it
+3014	0	NULL		info@gymcenter.org
+3015	0	NULL		uff.tecnico@valvoinox.it
+3016	0	NULL		qualita@vancomimballaggi.com
+3017	0	NULL		palaghiaccio.va@gmail.com
+3018	0	NULL		gerardo.cavadini@varian.com
+3019	0	NULL		davide_vecchi@live.it
+3020	0	NULL		marcob113@gmail.com ; mcolombo1946@gmail.com ; veda-yoga-benessere@libero.it
+3021	0	NULL		amministrazione@vegaaccessori.it
+3022	0	NULL		fbigi@misericordia.firenze.it ; info@misericordia.firenze.it
+3023	0	NULL		sicurezza@abacoambiente.it
+3024	0	NULL		alessandro.turella@venetaengineering.it
+3025	0	NULL		cve.veneziani@libero.it
+3026	0	NULL		info@venicerealestate.it
+3027	0	NULL		segreteria@venicesurgery.it
+3028	0	NULL		pierluigi.menapace@venistar.com
+3029	0	NULL		venustas.tennis@libero.it
+3030	0	NULL		federica.colasanti@veratour.it ; Gianluca.Spisto@veratour.it
+3031	0	NULL		mauro.bernoni@verisure.it; valentina.ranaldi@verisure.it
+3032	0	NULL		franco.verrienti@libero.it
+3033	0	NULL		elena.meucci@ivertiv.com
+3034	0	NULL		damiano.bonometti@verxo.it
+3035	0	NULL		info@verisport.it
+3036	0	NULL		vesalius@email.com
+3037	0	NULL		luca.vettori@vetrispeciali.it
+3038	0	NULL		m.bussoni@vetromeccanica.it
+3039	0	NULL		francesco.torno@vetropack.com ; sabrina.suppa@vetropack.com
+3040	0	NULL		info@vfsicurezza.it
+3041	0	NULL		va007@fisdir.it
+3042	0	NULL		sebastian.calanducci@viappiani.it
+3043	0	NULL		f.golfarelli@vibolt.com
+3044	0	NULL		info@vibrotech.biz; amministrazione@ibrotech.biz
+3045	0	NULL		e.tecce@vicenzi.it
+3046	0	NULL		villadeicedri@villadeicedri.com; tecnico@villadeicedri.com
+3047	0	NULL		fabrizio.macchi@villaeste.it
+3048	0	NULL		moniprose@me.com
+3049	0	NULL		villaortiensesrl@virgilio.it
+3050	0	NULL		rsavillaniccolini@villamagli.it; segreteria@villamagli.it
+3051	0	NULL		gallimonica@hotmail.com
+3052	0	NULL		info@villaggiovalverde-coop.it
+3053	0	NULL		rav.ordini@vinavil.it; amministrazione@vinavil.it
+3054	0	NULL		enzo.donzella@tiscali.it
+3055	0	NULL		maria.battaglia@vinci-energies.com
+3056	0	NULL		fabio@vinicolavedovato.com
+3057	0	NULL		produzione@vircol.it
+3058	0	NULL		info@ambulanze.it
+3059	0	NULL		svismara@vismaravetro.it
+3060	0	NULL		m-ela-80@live.it
+3061	0	NULL		cricchetto_1@libero.it ; office@vitalexhc.it
+3062	0	NULL		direzione@parcodellecascate.it
+3063	0	NULL		a.chiavetta@vivisol.it
+3064	0	NULL		g.conti@vivisol.it
+3065	0	NULL		e.deidda@vivisol.it
+3066	0	NULL		a.diblasi@vivisol.it 
+3067	0	NULL		g.chiappa@vivisol.it
+3068	0	NULL		s.scalzullo@vivisol.it ; a.giribaldi@vivisol.it
+3069	0	NULL		a.giribaldi@vivisol.it ; s.candotti@vivisol.it 
+3070	0	NULL		a.giribaldi@vivisol.it ; m.coppari@vivisol.it
+3071	0	NULL		p.munafo@vivisol.it
+3072	0	NULL		a.tracanna@vivisol.it
+3073	0	NULL		a.giribaldi@vivisol.it ; f.garroni@vivisol.it
+3074	0	NULL		a.masoni@vivisol.it
+3075	0	NULL		a.carella@vivisol.it
+3076	0	NULL		pietro.farnedi@germoglivivo.it
+3077	0	NULL		VOGLIOVOLAREODV@YAHOO.COM
+3078	0	NULL		info@vrpengineering.com
+3079	0	NULL		info@watermanservizi.it
+3080	0	NULL		amministrazione@studiocoppola.com
+3081	0	NULL		ctonti@websolute.it
+3082	0	NULL		wellandfit@libero.it
+3083	0	NULL		info@wellness4life.it
+3084	0	NULL		matteo.corali@widerange.it
+3085	0	NULL		sabrina.vatteroni@wipak.com
+3086	0	NULL		franco.megliorali@wittur.com
+3087	0	NULL		antonella.gandolfi@working-process.com
+3088	0	NULL		rossella.astorino@we-online.com
+3089	0	NULL		viviana.osculati@wyscout.com
+3090	0	NULL		f.turano@xfs.li; consulting@xfs.li
+3091	0	NULL		bianchidavide@xanitalia.it
+3092	0	NULL		s.pittarelli@xantho.it
+3093	0	NULL		luciano.gianmoena@xchanging.it
+3094	0	NULL		info@crossfitcadeldrago.com
+3095	0	NULL		info@yogapurnima.it
+3096	0	NULL		chiara.travisi@gmail.com
+3097	0	NULL		ortalli@zacobi.it; stefano.orlandelli@zacobi.it
+3098	0	NULL		zanellasrl@zanellasrl.com
+3099	0	NULL		acarloni@zacmi.it; mboni@zacmi.it
+3100	0	NULL		cristina.longaretti@giuseppezanotti.com
+3101	0	NULL		cmozanotto@yahoo.it
+3102	0	NULL		Emiliozanzi@gmail.com
+3103	0	NULL		argentino.daniele@zapispa.it ; punghellini.stefano@zapispa.it
+3104	0	NULL		s.pittarelli@gruppozefiro.it
+3105	0	NULL		santino@zerboni.it
+3106	0	NULL		c.dusina@feinrohren.it; Antonella.Bazzacco@Zetaesse.it ; info@zetaesse.it
+3107	0	NULL		info@zignagopower.com ; segreteria@zignagopower.com ; r.fagotto@zignagopower.com
+3108	0	NULL		info@zignagopower.com ; c.gaiardo@zignagovetro.com
+3109	0	NULL		c.gaiardo@zignagovetro.com
+3110	0	NULL		asdbalancestation@libero.it
+3111	0	NULL		v.guglielmetti@zincaturaemetalli.it
+3112	0	NULL		amministrazione@zuarina.com

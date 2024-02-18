@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSListino" targetNamespace="http://tempuri.org/DSListino.xsd" xmlns:mstns="http://tempuri.org/DSListino.xsd" xmlns="http://tempuri.org/DSListino.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSListino" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSListino" msprop:Generator_DataSetName="DSListino" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListVenD" msprop:Generator_UserTableName="ListVenD" msprop:Generator_RowDeletedName="ListVenDRowDeleted" msprop:Generator_RowChangedName="ListVenDRowChanged" msprop:Generator_RowClassName="ListVenDRow" msprop:Generator_RowChangingName="ListVenDRowChanging" msprop:Generator_RowEvArgName="ListVenDRowChangeEvent" msprop:Generator_RowEvHandlerName="ListVenDRowChangeEventHandler" msprop:Generator_TableClassName="ListVenDDataTable" msprop:Generator_TableVarName="tableListVenD" msprop:Generator_RowDeletingName="ListVenDRowDeleting" msprop:Generator_TablePropName="ListVenD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Articolo" msprop:Generator_UserColumnName="Cod_Articolo" msprop:Generator_ColumnPropNameInRow="Cod_Articolo" msprop:Generator_ColumnVarNameInTable="columnCod_Articolo" msprop:Generator_ColumnPropNameInTable="Cod_ArticoloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Descrizione" msprop:Generator_UserColumnName="Descrizione" msprop:Generator_ColumnPropNameInRow="Descrizione" msprop:Generator_ColumnVarNameInTable="columnDescrizione" msprop:Generator_ColumnPropNameInTable="DescrizioneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Prezzo" msprop:Generator_UserColumnName="Prezzo" msprop:Generator_ColumnPropNameInRow="Prezzo" msprop:Generator_ColumnVarNameInTable="columnPrezzo" msprop:Generator_ColumnPropNameInTable="PrezzoColumn" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Prezzo_Valuta" msprop:Generator_UserColumnName="Prezzo_Valuta" msprop:Generator_ColumnPropNameInRow="Prezzo_Valuta" msprop:Generator_ColumnVarNameInTable="columnPrezzo_Valuta" msprop:Generator_ColumnPropNameInTable="Prezzo_ValutaColumn" type="xs:string" default="0" minOccurs="0" />
+              <xs:element name="Sconto_1" msprop:Generator_UserColumnName="Sconto_1" msprop:Generator_ColumnPropNameInRow="Sconto_1" msprop:Generator_ColumnVarNameInTable="columnSconto_1" msprop:Generator_ColumnPropNameInTable="Sconto_1Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Sconto_2" msprop:Generator_UserColumnName="Sconto_2" msprop:Generator_ColumnPropNameInRow="Sconto_2" msprop:Generator_ColumnVarNameInTable="columnSconto_2" msprop:Generator_ColumnPropNameInTable="Sconto_2Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Prezzo_Minimo" msprop:Generator_UserColumnName="Prezzo_Minimo" msprop:Generator_ColumnPropNameInRow="Prezzo_Minimo" msprop:Generator_ColumnVarNameInTable="columnPrezzo_Minimo" msprop:Generator_ColumnPropNameInTable="Prezzo_MinimoColumn" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="AziendaReport" msprop:Generator_UserColumnName="AziendaReport" msprop:Generator_ColumnPropNameInRow="AziendaReport" msprop:Generator_ColumnVarNameInTable="columnAziendaReport" msprop:Generator_ColumnPropNameInTable="AziendaReportColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TitoloReport" msprop:Generator_UserColumnName="TitoloReport" msprop:Generator_ColumnPropNameInRow="TitoloReport" msprop:Generator_ColumnVarNameInTable="columnTitoloReport" msprop:Generator_ColumnPropNameInTable="TitoloReportColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cod_Listino" msprop:Generator_UserColumnName="Cod_Listino" msprop:Generator_ColumnVarNameInTable="columnCod_Listino" msprop:Generator_ColumnPropNameInRow="Cod_Listino" msprop:Generator_ColumnPropNameInTable="Cod_ListinoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Descrizione_Listino" msprop:Generator_UserColumnName="Descrizione_Listino" msprop:Generator_ColumnVarNameInTable="columnDescrizione_Listino" msprop:Generator_ColumnPropNameInRow="Descrizione_Listino" msprop:Generator_ColumnPropNameInTable="Descrizione_ListinoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PrezzoAcquisto" msprop:Generator_UserColumnName="PrezzoAcquisto" msprop:Generator_ColumnPropNameInRow="PrezzoAcquisto" msprop:Generator_ColumnVarNameInTable="columnPrezzoAcquisto" msprop:Generator_ColumnPropNameInTable="PrezzoAcquistoColumn" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ScontoFornitore" msprop:Generator_UserColumnName="ScontoFornitore" msprop:Generator_ColumnPropNameInRow="ScontoFornitore" msprop:Generator_ColumnVarNameInTable="columnScontoFornitore" msprop:Generator_ColumnPropNameInTable="ScontoFornitoreColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

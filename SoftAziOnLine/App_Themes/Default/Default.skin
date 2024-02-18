@@ -1,0 +1,10 @@
+﻿<asp:Menu SkinID="MainMenu" StaticSubMenuIndent="10px" runat="server">
+    <LevelMenuItemStyles>       
+       <asp:MenuItemStyle CssClass="menu" />
+    </LevelMenuItemStyles>
+    <StaticMenuItemStyle CssClass="menuStatic" />
+    <StaticHoverStyle CssClass="menuStaticHover" />
+    <DynamicHoverStyle CssClass="menuDynamicHover" />
+    <DynamicMenuStyle CssClass="menuDynamic" />
+</asp:Menu>
+

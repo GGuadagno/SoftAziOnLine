@@ -1,0 +1,17 @@
+    function KeepSessionAlive() {
+                console.log('KeepSessionAlive');
+
+                url = "/sito/UIShop/KeepSessionAlive.ashx?"; // Modificare l'url in produzione
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", url, true);
+                xmlHttp.send();
+            }
+
+ function captureBarcode() {
+            
+                setInterval("KeepSessionAlive()", 5 * 60 * 1000) // 5 minuti
+
+            }
+
+
+<body onload="captureBarcode();">

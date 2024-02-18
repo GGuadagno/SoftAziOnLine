@@ -1,0 +1,231 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FE71E84-A95A-461C-8073-C90A15C7AE4E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/DataAccessLayer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DataAccessLayer.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DataAccessLayer.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="It\SoftAzi\Integration\Dao\AgentiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\AliquoteIvaDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\AnaMagCTVDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\AnaMagDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\AnaMagDesDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\BancheDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\CategorieDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ClientiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\DistBaseDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\FilialiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\FornSecondariDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\FornitoreDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\DataSource.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="It\SoftAzi\Integration\Dao\DitteDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\FactoryDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ListVenDDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ListVenTDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\NazioniDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\OperatoriDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\PagamentiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ParametriGeneraliAziDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\PianoDeiContiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ProgressiviDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ProvinceDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLAgentiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLAliquoteIvaDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLAnaMagCTVDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLBancheDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLCategorieDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLClientiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLDistBaseDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLFilialiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLFornSecondariDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLAnaMagDesDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLFornitoreDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLAnaMagDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLBaseDAO.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLDitteDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLFactoryDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLListVenDDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLListVenTDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLNazioniDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLOperatoriDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLPagamentiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLParametriGeneraliAziDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLPianoDeiContiDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLProgressiviDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLProvinceDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLTipoFattDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLUltimiPrezziAcquistoDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLVettoriDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\SqlDao\SQLZoneDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\TipoFattDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\UltimiPrezziAcquistoDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\VettoriDAO.vb" />
+    <Compile Include="It\SoftAzi\Integration\Dao\ZoneDAO.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelLayer\ModelLayer.vbproj">
+      <Project>{625ABE52-9A14-4BB8-BAEE-48E25212F8FF}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\SystemFramework.vbproj">
+      <Project>{3DE21D51-62EA-41FB-B0C1-926C811FBBBE}</Project>
+      <Name>SystemFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

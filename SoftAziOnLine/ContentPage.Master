@@ -1,0 +1,6 @@
+﻿<%@ Master MasterPageFile="~/MasterPage.Master" Language="VB" AutoEventWireup="true" CodeBehind="ContentPage.master.vb" Inherits="SoftAziOnLine.ContentPageApp" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,115 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.div 
+{ 
+   background-image: ../Immagini/soft_azienda.png;
+}
+
+#container {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#masthead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#navigation {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#content {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#sidebar {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.float_right{
+	float: inherit}
+
+.sfondopagine
+{
+	 background-color: Silver;	 	 
+}
+.nascondi
+{
+	display:none;
+}
+.styleBordato
+{
+    border: Groove;
+    border-width: medium;
+}
+.ajaxProgress 
+{
+    z-index:20;position:absolute;background:url('../Immagini/loading.gif') no-repeat center;
+}
+.styleCopyright
+{
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+	border:1 solid White;
+	background: #FFFF99;
+    width: 1240px;
+}
+.styleCopyright960
+{
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+	border:1 solid White;
+	background: #FFFF99;
+    width: 960px;
+}
+.boOverlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  filter: Alpha(Opacity=90);
+  opacity: 0.90;
+  -moz-opacity: 0.90; }
+
+.boLoaderCircle {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3a4f63;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
