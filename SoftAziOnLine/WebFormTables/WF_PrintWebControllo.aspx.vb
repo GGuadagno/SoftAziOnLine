@@ -18,6 +18,7 @@ Partial Public Class WF_PrintWebControllo
             Dim DSDiffPrezzoListino1 As New DSControlli
             DSDiffPrezzoListino1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DSDiffPrezzoListino1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTCONTROLLO) = TIPOSTAMPACONTROLLO.DiffImportoRiga Then
@@ -25,6 +26,7 @@ Partial Public Class WF_PrintWebControllo
             Dim DSDiffImportoRiga1 As New DSControlli
             DSDiffImportoRiga1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DSDiffImportoRiga1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTCONTROLLO) = TIPOSTAMPACONTROLLO.CKSerieLotto Then
@@ -32,6 +34,7 @@ Partial Public Class WF_PrintWebControllo
             Dim DSCKSerieLotto1 As New DSPrintWeb_Documenti
             DSCKSerieLotto1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DSCKSerieLotto1)
             CrystalReportViewer1.ReportSource = Rpt
         Else

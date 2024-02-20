@@ -60,7 +60,7 @@ Partial Public Class WF_PrintWeb_AICA
         End If
         '---------------------
         CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-
+        CrystalReportViewer1.DisplayGroupTree = False
         If SWTipoStampa = TipoStampaAICA.SingoloAICA Then
             Rpt = New SchedaAICA
             'Uguale per tutte le eventuali aziende, diversamente cambiare il RPT per il CodiceDitta

@@ -141,6 +141,8 @@
     <Content Include="App_Themes\StyleSheet.css" />
     <Content Include="App_Themes\WhiteChromeGridView.css" />
     <Content Include="App_Themes\YahooGridView.css" />
+    <Content Include="Immagini\CR\grouptree_toggle.gif" />
+    <Content Include="Immagini\CR\logo.gif" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

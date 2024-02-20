@@ -82,6 +82,7 @@ Partial Public Class WF_PrintWebCR_Clienti
             End If
 
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             rpt.SetDataSource(dsReport)
             CrystalReportViewer1.ReportSource = rpt
         Catch ex As Exception

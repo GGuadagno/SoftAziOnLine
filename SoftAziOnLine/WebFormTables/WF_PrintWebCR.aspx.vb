@@ -121,6 +121,7 @@ Partial Public Class WF_PrintWebCR
         End If
         '---------------------
         CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+        CrystalReportViewer1.DisplayGroupTree = False
         'GIU160415 documenti con intestazione vecchia sono identificati 05(ditta) 01(versione vecchia) 
         'per poter stampare la versione vecchia nella tabella operatori al campo
         'codiceditta impostarlo 0501

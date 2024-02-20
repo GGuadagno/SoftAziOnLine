@@ -60,7 +60,7 @@ Partial Public Class WF_PrintWeb_IN
         End If
         '---------------------
         CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-
+        CrystalReportViewer1.DisplayGroupTree = False
         If SWTipoStampa = TipoStampaIN.SingoloIN Then
             Rpt = New SchedaIN
             If CodiceDitta = "01" Then

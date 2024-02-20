@@ -22,12 +22,13 @@ Partial Public Class WF_PrintWebCR_Mag
                 Label1.Visible = False
             End If
         End If
-
+        '-
         If Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.Listini Then
             Dim Rpt As New Listino
             Dim dsListino1 As New DSListino
             dsListino1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsListino1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliAnalitica Then
@@ -35,6 +36,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliSintetica Then
@@ -42,6 +44,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliUbicazione Or _
@@ -50,6 +53,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliFornitoreCOD Then
@@ -57,6 +61,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliFornitoreDES Then
@@ -64,6 +69,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliFornitoreCODP Then
@@ -71,6 +77,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMAG) = TIPOSTAMPALISTINO.ArticoliFornitoreDESP Then
@@ -78,6 +85,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
         Else

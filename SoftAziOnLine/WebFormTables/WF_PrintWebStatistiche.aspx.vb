@@ -18,6 +18,7 @@ Partial Public Class WF_PrintWebStatistiche
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.VendutoArticoloCliente Then 'ORDINATO PER ARTICOLO DATA
@@ -25,6 +26,7 @@ Partial Public Class WF_PrintWebStatistiche
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
             'GIU161012
@@ -33,6 +35,7 @@ Partial Public Class WF_PrintWebStatistiche
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.VendutoArticoloClienteREG Then 'ORDINATO PER ARTICOLO DATA
@@ -40,6 +43,7 @@ Partial Public Class WF_PrintWebStatistiche
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
             'GIU051112
@@ -48,6 +52,7 @@ Partial Public Class WF_PrintWebStatistiche
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.VendutoDDT Then
@@ -234,7 +239,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsClienti1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsClienti1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.StatFattAnnoMeseInPr Then
             Dim Rpt As New StatFattAnnoMese
@@ -242,7 +247,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsClienti1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsClienti1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.StatFattAnnoMeseInPrArt Then
             Dim Rpt As New StatFattAnnoMeseArt
@@ -250,13 +255,14 @@ Partial Public Class WF_PrintWebStatistiche
             dsFattCliFatt1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFattCliFatt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.InstallatoClientiArticolo Then
             Dim Rpt As New ElencoInstallatoClienti
             Dim DsStatVendCliArt1 As New DsStatVendCliArt
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsStatVendCliArt1)
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTSTATISTICHE) = TIPOSTAMPASTATISTICA.StatTotaliContrattiAl Then
@@ -265,7 +271,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
         Else
             Chiudi("Errore: TIPO STAMPA STATISTICHE SCONOSCIUTA")
