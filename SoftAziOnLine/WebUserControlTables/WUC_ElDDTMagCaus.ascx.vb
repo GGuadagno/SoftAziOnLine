@@ -29,8 +29,6 @@ Partial Public Class WUC_ElDDTMagCaus
         ModalPopup.WucElement = Me
     End Sub
 
-
-
     Private Sub btnAnnulla_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAnnulla.Click
         Try
             Response.Redirect("WF_Menu.aspx?labelForm=Menu principale ")
@@ -140,7 +138,7 @@ Partial Public Class WUC_ElDDTMagCaus
 
         Try
             Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ElencoDDTMagCaus
-            If clsStampa.StampaMovMag(Session(CSTAZIENDARPT), myTitolo & " - Magazzino: " & ddlMagazzino.SelectedItem.Text.Trim & " - Causale: " & DDLCausale.SelectedItem.Text.Trim & "", selezione, dsMovMag1, Errore, filtri, -1, "", False, "", "", False, False, txtDataDa.Text, txtDataA.Text, Session("MinEser"), Session("MaxEser")) Then
+            If clsStampa.StampaMovMag(Session(CSTAZIENDARPT), myTitolo.Trim, selezione, dsMovMag1, Errore, filtri, -1, "", False, "", "", False, False, txtDataDa.Text, txtDataA.Text, Session("MinEser"), Session("MaxEser")) Then
 
                 If dsMovMag1.view_MovMag.Count > 0 Then
                     Session(CSTDsPrinWebDoc) = dsMovMag1
@@ -152,7 +150,6 @@ Partial Public Class WUC_ElDDTMagCaus
                     ModalPopup.Show("Attenzione", "Nessun dato soddisfa i criteri selezionati.", WUC_ModalPopup.TYPE_INFO)
                 End If
             Else
-                'Session(STAMPAMOVMAGTORNAAELENCO) = False
                 Session(MODALPOPUP_CALLBACK_METHOD) = ""
                 Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
                 ModalPopup.Show("Errore", Errore, WUC_ModalPopup.TYPE_ERROR)

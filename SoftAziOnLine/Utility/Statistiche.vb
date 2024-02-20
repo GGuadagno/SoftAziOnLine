@@ -593,6 +593,15 @@ Public Class Statistiche
                 dsMovMag1.DocumentiDLotti.Clear()
                 dsMovMag1.DocumentiD.Clear()
             End If
+            'giu200224 nuova stampa DDT con Magazzino da/a
+            SQLConn.ConnectionString = clsDB.getConnectionString(TipoDB.dbSoftAzi)
+            SQLCmd.CommandType = CommandType.Text
+            SQLCmd.Connection = SQLConn
+            SQLCmd.CommandText = "SELECT * FROM Magazzini"
+            SQLAdp.SelectCommand = SQLCmd
+            SQLAdp.Fill(dsMovMag1.Magazzini)
+            SQLConn.Close()
+            Dim rowMagazzini As DSMovMag.MagazziniRow = Nothing
             'giu120220 spostato qui
             Dim myIDPrec As Long = -1 'giu120220 per non stampare piu volte il DOC.REFINT MA SOLO 1 VOLTA
             For Each row As DSMovMag.view_MovMagRow In dsMovMag1.view_MovMag.Rows
@@ -600,6 +609,28 @@ Public Class Statistiche
                 row.AziendaRpt = AzReport
                 row.TitoloRpt = TitoloReport
                 row.Filtri = Filtri 'alb07052012
+                'giu200224
+                row.DesMagazzino = ""
+                row.DesMagazzino2 = ""
+                If Not row.IsCodiceMagazzinoNull Then
+                    If row.CodiceMagazzino <> 0 Then
+                        rowMagazzini = Nothing
+                        rowMagazzini = dsMovMag1.Magazzini.FindByCodice(row.CodiceMagazzino)
+                        If Not rowMagazzini Is Nothing Then
+                            row.DesMagazzino = rowMagazzini.Descrizione.Trim
+                        End If
+                    End If
+                End If
+                If Not row.IsCodiceMagazzinoM2Null Then
+                    If row.CodiceMagazzinoM2 <> 0 Then
+                        rowMagazzini = Nothing
+                        rowMagazzini = dsMovMag1.Magazzini.FindByCodice(row.CodiceMagazzinoM2)
+                        If Not rowMagazzini Is Nothing Then
+                            row.DesMagazzino2 = rowMagazzini.Descrizione.Trim
+                        End If
+                    End If
+                End If
+                '---------
                 row.NSerieLotto = NSerieLotto 'alb07052012
                 row.SWStampaLotti = SWStampaLotti
                 row.SWStDocRF = SWStDocRF

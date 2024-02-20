@@ -394,6 +394,12 @@
       <DependentUpon>ECC.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\ElDDTMagCaus.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElDDTMagCaus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\ElencoAIArtCliNSerie.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3940,6 +3946,10 @@
     <EmbeddedResource Include="Report\ECC.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ECC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ElDDTMagCaus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ElDDTMagCaus.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ElencoAIArtCliNSerie.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

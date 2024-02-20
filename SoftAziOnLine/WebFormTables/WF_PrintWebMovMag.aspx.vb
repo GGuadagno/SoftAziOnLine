@@ -13,12 +13,19 @@ Partial Public Class WF_PrintWebMovMag
             End If
         End If
 
-        If Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagDaDataAData Or _
-            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagByIDDocumenti Or _
-            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceA Or _
-            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceS Or _
-            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ElencoDDTMagCaus Then
+        If Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagDaDataAData Or
+            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagByIDDocumenti Or
+            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceA Or
+            Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceS Then
             Dim Rpt As New MovMag
+            Dim DsMovMag1 As New DSMovMag
+            DsMovMag1 = Session(CSTDsPrinWebDoc)
+            CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+            CrystalReportViewer1.DisplayGroupTree = False
+            Rpt.SetDataSource(DsMovMag1)
+            CrystalReportViewer1.ReportSource = Rpt
+        ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ElencoDDTMagCaus Then
+            Dim Rpt As New ElDDTMagCaus
             Dim DsMovMag1 As New DSMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
