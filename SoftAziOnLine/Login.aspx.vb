@@ -280,6 +280,7 @@ Partial Public Class Login
         " - 15/02/2024 Gestione documenti/Causale Magazzino: movimenti tra Magazzini, abilitato oltre alla 2 Causale anche il 2 Magazzino" +
         " - Corretto Gestione ricerca Cliente da gestionale esterno: la Combo clienti non veniva caricata correttamente" +
         " - 11/02/2024 Corretto errore in aggiornamento Parametri Generali "
+        lblRelease.BackColor = Drawing.Color.Red 'GIU210224
         lblRelease.ToolTip = "26/01/2024 12.00 Modifica funzione carico N° Serie e N° Lotto in DDT/FA/MM/... in automatico: Aggiunto anche il N° Lotto " +
         " - 25/01/2024 18.10 Nuova Stampa: Elenco DDT Clienti per Magazzino/Causale - Controllo Email: implementato nuova verifica " +
         " - 21/01/2024 14.00 Corretto funzione rigenerazione periodo attività, dopo modifica N° Serie " +
@@ -544,6 +545,11 @@ Partial Public Class Login
                     MessaggioInfo5.Visible = True
                 End If
             End If
+            MessaggioInfo1.Visible = True
+            MessaggioInfo2.Visible = True
+            MessaggioInfo3.Visible = True
+            MessaggioInfo4.Visible = True
+            MessaggioInfo5.Visible = True
             '----------------------
             ' ''Dim swSessione As String = Request.QueryString("SessioneScaduta")
             ' ''If IsNothing(swSessione) Then
