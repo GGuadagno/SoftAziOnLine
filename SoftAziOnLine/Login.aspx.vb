@@ -32,11 +32,13 @@ Partial Public Class Login
         '-
         'giu150518 ATTIVARE LE SUCCESSIVE RIGHE QUANDO LE MODIFICHE SONO PER IL TEST
         ' in WEBCONFIG c'èil parametro DEBUG, se è True si attivano altrimenti No
-        ' ''MessaggioInfo1.Visible = True
-        ' ''MessaggioInfo2.Visible = True
-        ' ''MessaggioInfo3.Visible = True
-        ' ''MessaggioInfo4.Visible = True
-        ' ''MessaggioInfo5.Visible = True
+        'giu220224 DEBUG FINO A CHE NON E' A REGIME
+        MessaggioInfo1.Visible = True
+        MessaggioInfo2.Visible = True
+        MessaggioInfo3.Visible = True
+        MessaggioInfo4.Visible = True
+        MessaggioInfo5.Visible = True
+        '----------------------
         '---------------------------------------------------------------------------
         'lblRelease.ToolTip = "Ultima modifica 21 DICEMBRE 2014: Fatture per servizi (Ordine)"
         'lblRelease.ToolTip = "Ultima modifica 08 GENNAIO 2015: Sconto fornitore per articolo"
@@ -545,11 +547,6 @@ Partial Public Class Login
                     MessaggioInfo5.Visible = True
                 End If
             End If
-            MessaggioInfo1.Visible = True
-            MessaggioInfo2.Visible = True
-            MessaggioInfo3.Visible = True
-            MessaggioInfo4.Visible = True
-            MessaggioInfo5.Visible = True
             '----------------------
             ' ''Dim swSessione As String = Request.QueryString("SessioneScaduta")
             ' ''If IsNothing(swSessione) Then
