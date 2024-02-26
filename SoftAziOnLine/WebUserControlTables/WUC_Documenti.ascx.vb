@@ -1556,7 +1556,7 @@ Partial Public Class WUC_Documenti
         End If
     End Function
     'giu170412
-    Public Function CKPrezzoALCSG(ByRef _PrezzoAL As String, ByRef _strErrore As String) As Boolean
+    Public Function CKPrezzoALCSG(ByRef _PrezzoAL As String, ByRef _strErrore As String, Optional ByVal swPosDDLM2 As Boolean = False) As Boolean
         'SG=CSTSEGNOGIACENZA
         'A=Acquisto
         'L=Listino
@@ -1599,10 +1599,10 @@ Partial Public Class WUC_Documenti
         'giu190412
         Dim Segno_Giacenza As String = RKCausMag.Segno_Giacenza
         Session(CSTSEGNOGIACENZA) = Segno_Giacenza 'GIU270412
-        If TipoDoc = SWTD(TD.OrdFornitori) Or TipoDoc = SWTD(TD.DocTrasportoFornitori) Or _
-           TipoDoc = SWTD(TD.PropOrdFornitori) Or _
-           TipoDoc = SWTD(TD.CaricoMagazzino) Or _
-           (TipoDoc = SWTD(TD.MovimentoMagazzino) And Segno_Giacenza = "+") Or _
+        If TipoDoc = SWTD(TD.OrdFornitori) Or TipoDoc = SWTD(TD.DocTrasportoFornitori) Or
+           TipoDoc = SWTD(TD.PropOrdFornitori) Or
+           TipoDoc = SWTD(TD.CaricoMagazzino) Or
+           (TipoDoc = SWTD(TD.MovimentoMagazzino) And Segno_Giacenza = "+") Or
            TabCliFor = "For" Then
             _PrezzoAL = "A"
         End If
@@ -1610,9 +1610,13 @@ Partial Public Class WUC_Documenti
         If RKCausMag.Movimento_Magazzini Then
             lblMagazzino2.Visible = True : DDLMagazzino2.Visible = True
             lblCausale2.Visible = True : DDLCausali2.Visible = True
-            Call PosizionaItemDDL(RKCausMag.CausMag2, DDLCausali2)
-            'giu150224 CausCVenditaDaCVisione
-            Call PosizionaItemDDL(RKCausMag.CausCVenditaDaCVisione, DDLMagazzino2)
+            'GIU260224
+            If swPosDDLM2 = True Then
+                Call PosizionaItemDDL(RKCausMag.CausMag2, DDLCausali2)
+                'giu150224 CausCVenditaDaCVisione
+                Call PosizionaItemDDL(RKCausMag.CausCVenditaDaCVisione, DDLMagazzino2)
+            End If
+            '------------
         Else
             DDLMagazzino2.SelectedIndex = 0 : DDLCausali2.SelectedIndex = 0
             lblMagazzino2.Visible = False : DDLMagazzino2.Visible = False
@@ -7449,9 +7453,9 @@ Partial Public Class WUC_Documenti
         txtCodCausale.Text = DDLCausali.SelectedValue
         txtCodCausale.AutoPostBack = True 'giu1219
         Session(SWMODIFICATO) = SWSI
-        WUC_DocumentiDett1.SetSWPrezzoALCSG() 'GIU190412
-        If DDLCausali2.Visible = False Then Exit Sub
+        Call CKPrezzoALCSG("", "", True) 'GIU260224
         Session(SWMODIFICATO) = SWSI
+        If DDLCausali2.Visible = False Then Exit Sub
         If DDLCausali.SelectedValue = DDLCausali2.SelectedValue Then
             DDLCausali.BackColor = SEGNALA_KO : DDLCausali2.BackColor = SEGNALA_KO
         Else
@@ -7607,7 +7611,7 @@ Partial Public Class WUC_Documenti
     Private Sub txtCodCausale_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodCausale.TextChanged
         PosizionaItemDDLByTxt(txtCodCausale, DDLCausali)
         Session(SWMODIFICATO) = SWSI
-        WUC_DocumentiDett1.SetSWPrezzoALCSG() 'GIU190412
+        Call CKPrezzoALCSG("", "", True) 'GIU260224
         txtListino.Focus()
     End Sub
 

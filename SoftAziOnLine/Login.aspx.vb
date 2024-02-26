@@ -278,12 +278,12 @@ Partial Public Class Login
         '"09/08/2022 16.00 Controllo obbligo N° Telefono per singolo DDT in spedizione"
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & _
-        lblRelease.Text = "Release 20/02/2024 Modifica Nuova stampa Elenco DDT per Magazzino/Causale: Aggiunto Dal/Al Magazzino quando è un Trasferimento" +
+        lblRelease.Text = "Release 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
+        lblRelease.ToolTip = " - 20/02/2024 Modifica Nuova stampa Elenco DDT per Magazzino/Causale: Aggiunto Dal/Al Magazzino quando è un Trasferimento" +
         " - 15/02/2024 Gestione documenti/Causale Magazzino: movimenti tra Magazzini, abilitato oltre alla 2 Causale anche il 2 Magazzino" +
         " - Corretto Gestione ricerca Cliente da gestionale esterno: la Combo clienti non veniva caricata correttamente" +
-        " - 11/02/2024 Corretto errore in aggiornamento Parametri Generali "
-        lblRelease.BackColor = Drawing.Color.Red 'GIU210224
-        lblRelease.ToolTip = "26/01/2024 12.00 Modifica funzione carico N° Serie e N° Lotto in DDT/FA/MM/... in automatico: Aggiunto anche il N° Lotto " +
+        " - 11/02/2024 Corretto errore in aggiornamento Parametri Generali " +
+        " - 26/01/2024 12.00 Modifica funzione carico N° Serie e N° Lotto in DDT/FA/MM/... in automatico: Aggiunto anche il N° Lotto " +
         " - 25/01/2024 18.10 Nuova Stampa: Elenco DDT Clienti per Magazzino/Causale - Controllo Email: implementato nuova verifica " +
         " - 21/01/2024 14.00 Corretto funzione rigenerazione periodo attività, dopo modifica N° Serie " +
         " - 18/01/2024 17.20 Modifica Controllo Totale Documento con Totale Rate in emissione Fattura da Contratto" +
