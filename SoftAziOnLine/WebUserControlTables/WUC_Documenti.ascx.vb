@@ -7452,7 +7452,6 @@ Partial Public Class WUC_Documenti
         txtCodCausale.AutoPostBack = False 'giu1219
         txtCodCausale.Text = DDLCausali.SelectedValue
         txtCodCausale.AutoPostBack = True 'giu1219
-        Session(SWMODIFICATO) = SWSI
         Call CKPrezzoALCSG("", "", True) 'GIU260224
         Session(SWMODIFICATO) = SWSI
         If DDLCausali2.Visible = False Then Exit Sub
