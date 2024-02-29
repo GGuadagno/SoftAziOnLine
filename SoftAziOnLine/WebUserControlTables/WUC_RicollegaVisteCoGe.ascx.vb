@@ -834,6 +834,14 @@ Partial Public Class WUC_RicollegaVisteCoGe
             NomeFunz = "Clienti"
             strSP = "DROP VIEW " & NomeFunz
             Call ExecDelete(SQLCmd, strSP)
+            '-giu280224
+            NomeFunz = "Categorie"
+            strSP = "DROP VIEW " & NomeFunz
+            Call ExecDelete(SQLCmd, strSP)
+            '-giu280224
+            NomeFunz = "Agenti"
+            strSP = "DROP VIEW " & NomeFunz
+            Call ExecDelete(SQLCmd, strSP)
             '-
             NomeFunz = "Fornitori"
             strSP = "DROP VIEW " & NomeFunz
@@ -844,6 +852,10 @@ Partial Public Class WUC_RicollegaVisteCoGe
             Call ExecDelete(SQLCmd, strSP)
             '-
             NomeFunz = "DestClienti"
+            strSP = "DROP VIEW " & NomeFunz
+            Call ExecDelete(SQLCmd, strSP)
+            '-giu280224
+            NomeFunz = "Regioni"
             strSP = "DROP VIEW " & NomeFunz
             Call ExecDelete(SQLCmd, strSP)
             '-
@@ -878,6 +890,21 @@ Partial Public Class WUC_RicollegaVisteCoGe
                 SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " & _
                 "CREATE VIEW Clienti AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.Clienti"
                 SQLCmd.ExecuteNonQuery()
+                '-giu280224
+                NomeFunz = "Categorie"
+                strSP = "DROP VIEW " & NomeFunz
+                Call ExecDelete(SQLCmd, strSP)
+                SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " &
+                "CREATE VIEW Categorie AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.Categorie"
+                SQLCmd.ExecuteNonQuery()
+                '-giu280224
+                NomeFunz = "Agenti"
+                strSP = "DROP VIEW " & NomeFunz
+                Call ExecDelete(SQLCmd, strSP)
+                SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " &
+                "CREATE VIEW Agenti AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.Agenti"
+                SQLCmd.ExecuteNonQuery()
+                '-
                 'GIU271119
                 NomeFunz = "Fornitori"
                 strSP = "DROP VIEW " & NomeFunz
@@ -899,11 +926,18 @@ Partial Public Class WUC_RicollegaVisteCoGe
                 SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " & _
                 "CREATE VIEW DestClienti AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.DestClienti"
                 SQLCmd.ExecuteNonQuery()
+                '-giu280224
+                NomeFunz = "Regioni"
+                strSP = "DROP VIEW " & NomeFunz
+                Call ExecDelete(SQLCmd, strSP)
+                SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " &
+                "CREATE VIEW Regioni AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.Regioni"
+                SQLCmd.ExecuteNonQuery()
                 '-
                 NomeFunz = "Province"
                 strSP = "DROP VIEW " & NomeFunz
                 Call ExecDelete(SQLCmd, strSP)
-                SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " & _
+                SQLCmd.CommandText = "/* ATTENZIONE GENERATA DA UTILITY RICOLLEGA */ " &
                 "CREATE VIEW Province AS SELECT * FROM [" & Session(CSTCODDITTA) & EserPrec.Trim & "CoGe].dbo.Province"
                 SQLCmd.ExecuteNonQuery()
                 '-

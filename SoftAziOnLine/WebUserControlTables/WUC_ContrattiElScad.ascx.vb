@@ -2315,9 +2315,9 @@ Partial Public Class WUC_ContrattiElScad
             Exit Sub
         End Try
         If Session(CSTTASTOST) = btnElencoSc.ID Then
-            lnkElencoSc.Visible = True : btnOKModInviati.Visible = True
+            lnkElencoSc.Visible = True 'giu280224 : btnOKModInviati.Visible = True
         Else
-            lnkElencoSc.Visible = True : btnOKModInviati.Visible = True
+            lnkElencoSc.Visible = True 'giu280224 : btnOKModInviati.Visible = True
         End If
 
         Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)

@@ -188,7 +188,7 @@
                     <a ID="lnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>
                     <br />
                     <asp:Label ID="Label14" runat="server" Width="415px"></asp:Label>
-                    <asp:CheckBox ID="chkScadAnno" runat="server" Font-Bold="true" ForeColor="Blue" Text="Stampa scadenze Anno" Checked="true" AutoPostBack="true"/>
+                    <asp:CheckBox ID="chkScadAnno" runat="server" Font-Bold="true" ForeColor="Blue" Text="Stampa scadenze Anno" Checked="false" AutoPostBack="true"/>
                     <asp:Label ID="Label16" runat="server" Width="50px"></asp:Label>
                     <asp:CheckBox ID="chkIncludiCliBlocco" runat="server" Font-Bold="true" ForeColor="Blue" Text="Includi anche i Clienti bloccati" Checked="true" AutoPostBack="true"/>
                 </div>
