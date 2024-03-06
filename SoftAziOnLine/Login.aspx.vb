@@ -33,11 +33,11 @@ Partial Public Class Login
         'giu150518 ATTIVARE LE SUCCESSIVE RIGHE QUANDO LE MODIFICHE SONO PER IL TEST
         ' in WEBCONFIG c'èil parametro DEBUG, se è True si attivano altrimenti No
         'giu220224 DEBUG FINO A CHE NON E' A REGIME
-        MessaggioInfo1.Visible = True
-        MessaggioInfo2.Visible = True
-        MessaggioInfo3.Visible = True
-        MessaggioInfo4.Visible = True
-        MessaggioInfo5.Visible = True
+        '''MessaggioInfo1.Visible = True
+        '''MessaggioInfo2.Visible = True
+        '''MessaggioInfo3.Visible = True
+        '''MessaggioInfo4.Visible = True
+        '''MessaggioInfo5.Visible = True
         '----------------------
         '---------------------------------------------------------------------------
         'lblRelease.ToolTip = "Ultima modifica 21 DICEMBRE 2014: Fatture per servizi (Ordine)"
@@ -278,8 +278,9 @@ Partial Public Class Login
         '"09/08/2022 16.00 Controllo obbligo N° Telefono per singolo DDT in spedizione"
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & _
-        lblRelease.Text = "Release 29/02/2024 - Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti "
-        lblRelease.ToolTip = " - 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
+        lblRelease.Text = "Release 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività"
+        lblRelease.ToolTip = " - 29/02/2024 - Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
+        " - 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
         " - 20/02/2024 Modifica Nuova stampa Elenco DDT per Magazzino/Causale: Aggiunto Dal/Al Magazzino quando è un Trasferimento" +
         " - 15/02/2024 Gestione documenti/Causale Magazzino: movimenti tra Magazzini, abilitato oltre alla 2 Causale anche il 2 Magazzino" +
         " - Corretto Gestione ricerca Cliente da gestionale esterno: la Combo clienti non veniva caricata correttamente" +
@@ -760,10 +761,10 @@ Partial Public Class Login
                         ModalPopup.Show("Errore", "Cancella operatore connesso; chiudere tutte le finetre attive e riprovare.", WUC_ModalPopup.TYPE_CONFIRM_Y)
                         Exit Sub
                     End If
-                    Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-                    Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-                    ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
-                    Exit Sub
+                    '''Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
+                    '''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                    '''ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
+                    '''Exit Sub
                 End If
                 '--------------------------------------------------------------
                 '-

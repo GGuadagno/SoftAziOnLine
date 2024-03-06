@@ -9866,7 +9866,8 @@ Partial Public Class WUC_ContrattiDett
         '---------
         Dim ObjDB As New DataBaseUtility
         Try
-            SWOk = ObjDB.ExecUpgNoteRitiro(myID.Trim, Controlla_Apice(OKNoteRitiro), myErrore)
+            'giu040324 corretto errore ''''''' aggiungeva ad ogni agg un apice in piu tolto il contolla_apice
+            SWOk = ObjDB.ExecUpgNoteRitiro(myID.Trim, OKNoteRitiro.Trim, myErrore)
             If SWOk = False Then
                 ObjDB = Nothing
                 strErrore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento)"

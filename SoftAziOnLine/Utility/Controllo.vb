@@ -349,7 +349,8 @@ Public Class Controllo
                     If SWCKSerieLotto And SWAggiorna Then
                         rsTestata!Iniziali = rsTestata!NoteRitiro.ToString.Trim
                         Try
-                            SWOk = ObjDB.ExecUpgNoteRitiro(myIDDoc.Trim, Controlla_Apice(rsTestata!NoteRitiro.ToString.Trim), Errore)
+                            'giu040324 corretto errore ''''''' aggiungeva ad ogni agg un apice in piu tolto il contolla_apice
+                            SWOk = ObjDB.ExecUpgNoteRitiro(myIDDoc.Trim, rsTestata!NoteRitiro.ToString.Trim, Errore)
                             If SWOk = False Then
                                 ObjDB = Nothing
                                 Errore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento)"

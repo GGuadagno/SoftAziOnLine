@@ -3953,8 +3953,8 @@ Partial Public Class WF_MenuCA
             composeChiave = String.Format("{0}_{1}",
                 "OKNoteRitiro", UtenteConnesso.Codice)
             SetObjectToCache(composeChiave, myObject)
-            '-
-            SWOk = ObjDB.ExecUpgNoteRitiro(myID.Trim, Controlla_Apice(OKNoteRitiro), myErrore)
+            'giu040324 corretto errore ''''''' aggiungeva ad ogni agg un apice in piu tolto il contolla_apice
+            SWOk = ObjDB.ExecUpgNoteRitiro(myID.Trim, OKNoteRitiro.Trim, myErrore)
             If SWOk = False Then
                 ObjDB = Nothing
                 strErrore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento)"
