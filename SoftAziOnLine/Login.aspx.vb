@@ -278,8 +278,9 @@ Partial Public Class Login
         '"09/08/2022 16.00 Controllo obbligo N° Telefono per singolo DDT in spedizione"
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & _
-        lblRelease.Text = "Release 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività"
-        lblRelease.ToolTip = " - 29/02/2024 - Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
+        lblRelease.Text = "Release 06/03/2024"
+        lblRelease.ToolTip = " - 06/03/2024 Ottimizzato accesso al gestionale - 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività" +
+        " - 29/02/2024 Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
         " - 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
         " - 20/02/2024 Modifica Nuova stampa Elenco DDT per Magazzino/Causale: Aggiunto Dal/Al Magazzino quando è un Trasferimento" +
         " - 15/02/2024 Gestione documenti/Causale Magazzino: movimenti tra Magazzini, abilitato oltre alla 2 Causale anche il 2 Magazzino" +
@@ -761,10 +762,14 @@ Partial Public Class Login
                         ModalPopup.Show("Errore", "Cancella operatore connesso; chiudere tutte le finetre attive e riprovare.", WUC_ModalPopup.TYPE_CONFIRM_Y)
                         Exit Sub
                     End If
-                    '''Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-                    '''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-                    '''ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
-                    '''Exit Sub
+                    If myOp.Livello = "V" Then 'GIU06032024
+                        'OK PROSEGUO PER IL SW ESTERNO SU TABLET
+                    Else
+                        Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
+                        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                        ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
+                        Exit Sub
+                    End If
                 End If
                 '--------------------------------------------------------------
                 '-
