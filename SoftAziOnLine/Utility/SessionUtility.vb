@@ -32,16 +32,17 @@ Public Class SessionUtility
                         GetLogOnUtente = ut
                         Exit Function
                     End If
-                    If Postazione.Trim <> "" Then
-                        For Each ut2 As OperatoreConnessoEntity In ArrLogOnUtente
-                            If (ut.Postazione.Equals(Postazione)) Then
-                                If (ut.Modulo.Equals(NomeModulo)) Then
-                                    GetLogOnUtente = ut2
-                                    Exit Function
-                                End If
-                            End If
-                        Next
-                    End If
+                    'giu070324 no IP si Session
+                    '''If Postazione.Trim <> "" Then
+                    '''    For Each ut2 As OperatoreConnessoEntity In ArrLogOnUtente
+                    '''        If (ut.Postazione.Equals(Postazione)) Then
+                    '''            If (ut.Modulo.Equals(NomeModulo)) Then
+                    '''                GetLogOnUtente = ut2
+                    '''                Exit Function
+                    '''            End If
+                    '''        End If
+                    '''    Next
+                    '''End If
                 Next
             End If
         Catch ex As Exception

@@ -117,7 +117,7 @@ Partial Public Class WF_MenuCA
 
                 myObject = True
                 composeChiave = String.Format("{0}_{1}",
-                "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+                "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok Sessione
                 SetObjectToCache(composeChiave, myObject)
 
             End If
@@ -125,25 +125,25 @@ Partial Public Class WF_MenuCA
 
         Try
             composeChiave = String.Format("{0}_{1}",
-            "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok Sessione
             GetObjectToCache(composeChiave, myObject)
             SWGetUltSess = myObject
             '-
             myObject = False
             composeChiave = String.Format("{0}_{1}",
-            "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok Sessione
             SetObjectToCache(composeChiave, myObject)
         Catch ex As Exception
             SWGetUltSess = False
             myObject = False
             composeChiave = String.Format("{0}_{1}",
-            "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok Sessione
             SetObjectToCache(composeChiave, myObject)
         End Try
         UtenteConnesso = SessionUtility.GetLogOnUtente("", "", Mid(Request.UserHostAddress.Trim, 1, 50), NomeModulo, Mid(Session.SessionID, 1, 50), -1, "", "", "", "")
         If (UtenteConnesso Is Nothing) Then
             composeChiave = String.Format("{0}_{1}",
-            "UtenteConnesso", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "UtenteConnesso", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no ip si session
             GetObjectToCache(composeChiave, myObject)
             UtenteConnesso = myObject
             If (UtenteConnesso Is Nothing) Then
@@ -153,7 +153,7 @@ Partial Public Class WF_MenuCA
         Else
             myObject = UtenteConnesso
             composeChiave = String.Format("{0}_{1}",
-            "UtenteConnesso", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "UtenteConnesso", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no ip si session
             SetObjectToCache(composeChiave, myObject)
         End If
         'giu031122 verifico se la sessione in cache è scaduta
@@ -165,7 +165,7 @@ Partial Public Class WF_MenuCA
         End If
         myObject = SWGetUltSess
         composeChiave = String.Format("{0}_{1}",
-        "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+        "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok Sessione
         SetObjectToCache(composeChiave, myObject)
         '-----------------------------------------------------
         If (Not IsPostBack) And SWGetUltSess = False Then
@@ -257,7 +257,14 @@ Partial Public Class WF_MenuCA
         ' ''    Response.Redirect("WF_ErroreUtenteConnesso.aspx?labelForm=Errore: Sessione non valida: ID Sessione diversa dalla sessione corrente.")
         ' ''    Exit Sub
         ' ''End If
-        '-
+        'giu070324 per ora segnalazione per capire se serve
+        If (Not Mid(UtenteConnesso.SessionID.Trim, 1, 50).Trim.Equals(Mid(Session.SessionID.Trim, 1, 50))) Then
+            lblMessDebug.Visible = True
+            lblMessDebug.Text = "ERRORE: Sessione non valida: ID Sessione diversa dalla sessione corrente."
+            labelIdentificaUtente.BackColor = Drawing.Color.Red
+            labelIdentificaUtente.Text = "ERRORE: Sessione non valida: ID Sessione diversa dalla sessione corrente."
+        End If
+        '---------------------------------------------------
         labelIdentificaUtente.Text = UtenteConnesso.NomeOperatore
         'GIU150319
         If String.IsNullOrEmpty(Session(ERRORE)) Then
@@ -437,7 +444,7 @@ Partial Public Class WF_MenuCA
             SWGetUltSess = False
             myObject = False
             composeChiave = String.Format("{0}_{1}",
-            "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no IP ok session
             SetObjectToCache(composeChiave, myObject)
 
             BuidDett()
@@ -3360,7 +3367,7 @@ Partial Public Class WF_MenuCA
         Dim Utente As OperatoreConnessoEntity = SessionUtility.GetLogOnUtente("", "", Mid(Request.UserHostAddress.Trim, 1, 50), NomeModulo, Session.SessionID, -1, "", "", "", "")
         If (Utente Is Nothing) Then
             composeChiave = String.Format("{0}_{1}",
-            "UtenteConnesso", Mid(Request.UserHostAddress.Trim, 1, 50))
+            "UtenteConnesso", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no ip si session
             GetObjectToCache(composeChiave, myObject)
             Utente = myObject
             If (Utente Is Nothing) Then

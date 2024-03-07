@@ -497,10 +497,9 @@ Partial Public Class Login
                     Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
                     Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
                     ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Se si proseguisse verrà disconnessa la sessione precedente.", WUC_ModalPopup.TYPE_CONFIRM_Y)
-                    'Session("SWGetUltSess") = True
                     myObject = True
                     composeChiave = String.Format("{0}_{1}",
-                    "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+                    "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 non piu l'ip ma la sessione
                     App.SetObjectToCache(composeChiave, myObject)
                     Exit Sub
                 Else 'giu120124 NON PERMETTO L'ACCESSO UNA SECONDA VOLTA E CANCELLO LA CONNESSIONE ?
@@ -550,60 +549,6 @@ Partial Public Class Login
                     MessaggioInfo5.Visible = True
                 End If
             End If
-            '----------------------
-            ' ''Dim swSessione As String = Request.QueryString("SessioneScaduta")
-            ' ''If IsNothing(swSessione) Then
-            ' ''    swSessione = ""
-            ' ''End If
-            ' ''If String.IsNullOrEmpty(swSessione) Then
-            ' ''    swSessione = ""
-            ' ''End If
-            '' ''giu21102011 per capire l'errore in gestione anagrafica Clienti
-            ' ''If Mid(swSessione, 1, 1) = "1" Then
-            ' ''    'MessageLabel.Text = "Sessione scaduta: Accesso non autorizzato su una pagina web disponibile solo effettuando il login"
-            ' ''    Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-            ' ''    Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ' ''    ModalPopup.Show("ATTENZIONE", "Sessione scaduta: Accesso non autorizzato su una pagina web disponibile solo effettuando il login", WUC_ModalPopup.TYPE_CONFIRM_Y)
-            ' ''    Exit Sub
-            ' ''ElseIf Mid(swSessione, 1, 1) <> "" Then
-            ' ''    If swSessione.Trim <> "0" Then
-            ' ''        'MessageLabel.Text = swSessione
-            ' ''        Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-            ' ''        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ' ''        ModalPopup.Show("ATTENZIONE", swSessione, WUC_ModalPopup.TYPE_CONFIRM_Y)
-            ' ''        Exit Sub
-            ' ''    End If
-            ' ''End If
-            '' ''GIU051219
-            ' ''Dim myCodDitta As String = ""
-            ' ''If IsNothing(Session(CSTCODDITTA)) Then
-            ' ''    Session(CSTCODDITTA) = ""
-            ' ''End If
-            ' ''If String.IsNullOrEmpty(Session(CSTCODDITTA)) Then
-            ' ''    Session(CSTCODDITTA) = ""
-            ' ''End If
-            ' ''If myCodDitta.Trim = "" Then 'NON FUNZ LA PRIMA VOLTA
-            ' ''    ' ''Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-            ' ''    ' ''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ' ''    ' ''ModalPopup.Show("Errore", "Nessuna Società definita.", WUC_ModalPopup.TYPE_CONFIRM_Y)
-            ' ''    ' ''Exit Sub
-            ' ''ElseIf myCodDitta.Trim = "00" Then
-            ' ''    MessaggioInfo1.Visible = True
-            ' ''    MessaggioInfo2.Visible = True
-            ' ''    MessaggioInfo3.Visible = True
-            ' ''    MessaggioInfo4.Visible = True
-            ' ''    MessaggioInfo5.Visible = True
-            ' ''End If
-            ' ''Dim SWDebug As String = ConfigurationManager.AppSettings("debug")
-            ' ''If Not String.IsNullOrEmpty(SWDebug) Then
-            ' ''    If SWDebug.Trim.ToUpper = "TRUE" Then
-            ' ''        MessaggioInfo1.Visible = True
-            ' ''        MessaggioInfo2.Visible = True
-            ' ''        MessaggioInfo3.Visible = True
-            ' ''        MessaggioInfo4.Visible = True
-            ' ''        MessaggioInfo5.Visible = True
-            ' ''    End If
-            ' ''End If
         End If
 
         Login1.Focus()
@@ -893,10 +838,9 @@ Partial Public Class Login
                     Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
                     Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
                     ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Se si proseguisse verrà disconnessa la sessione precedente.", WUC_ModalPopup.TYPE_CONFIRM_Y)
-                    'Session("SWGetUltSess") = True
                     myObject = True
                     composeChiave = String.Format("{0}_{1}",
-                    "SWGetUltSess", Mid(Request.UserHostAddress.Trim, 1, 50))
+                    "SWGetUltSess", Mid(Session.SessionID.Trim, 1, 50)) 'giu070324 no ip ok sessione
                     App.SetObjectToCache(composeChiave, myObject)
                     Exit Sub
                 ElseIf AccessoLogin = "1" Then
