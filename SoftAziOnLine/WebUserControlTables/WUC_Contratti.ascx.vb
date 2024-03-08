@@ -12,7 +12,7 @@ Imports SoftAziOnLine.App
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
-Imports Microsoft.Reporting.WebForms
+
 Imports System.Web.Services.WebService
 Imports System.Web.Script.Serialization
 
@@ -9312,282 +9312,283 @@ Partial Public Class WUC_Contratti
         'GIU160415 documenti con intestazione vecchia sono identificati 05(ditta) 01(versione vecchia) 
         'per poter stampare la versione vecchia nella tabella operatori al campo
         'codiceditta impostarlo 0501
-        If Session(CSTTIPODOC) = SWTD(TD.Preventivi) Then
-            NomeStampa = "PREVOFF.PDF"
-            SubDirDOC = "Preventivi"
-            If SWSconti = 1 Then
-                Rpt = New Preventivo
-                If CodiceDitta = "01" Then
-                    Rpt = New Preventivo01
-                ElseIf CodiceDitta = "05" Then
-                    Rpt = New Preventivo05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New Preventivo0501
-                End If
-            Else
-                Rpt = New PreventivoNOSconti
-                If CodiceDitta = "01" Then
-                    Rpt = New PreventivoNOSconti01
-                ElseIf CodiceDitta = "05" Then
-                    Rpt = New PreventivoNOSconti05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New PreventivoNOSconti0501
-                End If
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.OrdClienti) Then
-            NomeStampa = "ORDINE.PDF"
-            SubDirDOC = "Ordini"
-            If SWSconti = 1 Then
-                Rpt = New Ordine
-                If CodiceDitta = "01" Then
-                    Rpt = New Ordine01
-                ElseIf CodiceDitta = "05" Then
-                    Rpt = New Ordine05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New Ordine0501
-                End If
-                '''If SWConfermaDoc = 0 Then
-                '''    Rpt = New Ordine
-                '''    If CodiceDitta = "01" Then
-                '''        Rpt = New Ordine01
-                '''    ElseIf CodiceDitta = "05" Then
-                '''        Rpt = New Ordine05
-                '''    ElseIf CodiceDitta = "0501" Then
-                '''        Rpt = New Ordine0501
-                '''    End If
-                '''Else
-                '''    NomeStampa = "CONFORDINE.PDF"
-                '''    Rpt = New ConfermaOrdine
-                '''    If CodiceDitta = "01" Then
-                '''        Rpt = New ConfermaOrdine01
-                '''    ElseIf CodiceDitta = "05" Then
-                '''        Rpt = New ConfermaOrdine05
-                '''    ElseIf CodiceDitta = "0501" Then
-                '''        Rpt = New ConfermaOrdine0501
-                '''    End If
-                '''End If
-            Else
-                Rpt = New OrdineNoSconti
-                If CodiceDitta = "01" Then
-                    Rpt = New OrdineNoSconti01
-                ElseIf CodiceDitta = "05" Then
-                    Rpt = New OrdineNoSconti05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New OrdineNoSconti0501
-                End If
-                '''If SWConfermaDoc = 0 Then
-                '''    Rpt = New OrdineNoSconti
-                '''    If CodiceDitta = "01" Then
-                '''        Rpt = New OrdineNoSconti01
-                '''    ElseIf CodiceDitta = "05" Then
-                '''        Rpt = New OrdineNoSconti05
-                '''    ElseIf CodiceDitta = "0501" Then
-                '''        Rpt = New OrdineNoSconti0501
-                '''    End If
-                '''Else
-                '''    NomeStampa = "CONFORDINE.PDF"
-                '''    Rpt = New ConfermaOrdineNoSconti
-                '''    If CodiceDitta = "01" Then
-                '''        Rpt = New ConfermaOrdineNoSconti01
-                '''    ElseIf CodiceDitta = "05" Then
-                '''        Rpt = New ConfermaOrdineNoSconti05
-                '''    ElseIf CodiceDitta = "0501" Then
-                '''        Rpt = New ConfermaOrdineNoSconti0501
-                '''    End If
-                '''End If
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.DocTrasportoClienti) Then
-            SubDirDOC = "DDTClienti"
-            NomeStampa = "DDTCLIENTE.PDF"
-            Rpt = New DDTNoPrezzi
-            If CodiceDitta = "01" Then
-                Rpt = New DDTNoPrezzi01
-            ElseIf CodiceDitta = "05" Then
-                If SWStampaDocLotti = False Then
-                    Rpt = New DDTNoPrezzi05
+        Try 'giu080324 giu281112 errore che il file Ã¨ gia aperto
+            If Session(CSTTIPODOC) = SWTD(TD.Preventivi) Then
+                NomeStampa = "PREVOFF.PDF"
+                SubDirDOC = "Preventivi"
+                If SWSconti = 1 Then
+                    Rpt = New Preventivo
+                    If CodiceDitta = "01" Then
+                        Rpt = New Preventivo01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New Preventivo05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New Preventivo0501
+                    End If
                 Else
-                    Rpt = New DDTNoPrezzi05LT
+                    Rpt = New PreventivoNOSconti
+                    If CodiceDitta = "01" Then
+                        Rpt = New PreventivoNOSconti01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New PreventivoNOSconti05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New PreventivoNOSconti0501
+                    End If
                 End If
-            ElseIf CodiceDitta = "0501" Then
-                Rpt = New DDTNoPrezzi0501
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.DocTrasportoFornitori) Then
-            SubDirDOC = "DDTFornit"
-            NomeStampa = "DDTFORNIT.PDF"
-            Rpt = New DDTNoPrezzi
-            If CodiceDitta = "01" Then
-                Rpt = New DDTNoPrezzi01
-            ElseIf CodiceDitta = "05" Then
-                If SWStampaDocLotti = False Then
-                    Rpt = New DDTNoPrezzi05
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.OrdClienti) Then
+                NomeStampa = "ORDINE.PDF"
+                SubDirDOC = "Ordini"
+                If SWSconti = 1 Then
+                    Rpt = New Ordine
+                    If CodiceDitta = "01" Then
+                        Rpt = New Ordine01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New Ordine05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New Ordine0501
+                    End If
+                    '''If SWConfermaDoc = 0 Then
+                    '''    Rpt = New Ordine
+                    '''    If CodiceDitta = "01" Then
+                    '''        Rpt = New Ordine01
+                    '''    ElseIf CodiceDitta = "05" Then
+                    '''        Rpt = New Ordine05
+                    '''    ElseIf CodiceDitta = "0501" Then
+                    '''        Rpt = New Ordine0501
+                    '''    End If
+                    '''Else
+                    '''    NomeStampa = "CONFORDINE.PDF"
+                    '''    Rpt = New ConfermaOrdine
+                    '''    If CodiceDitta = "01" Then
+                    '''        Rpt = New ConfermaOrdine01
+                    '''    ElseIf CodiceDitta = "05" Then
+                    '''        Rpt = New ConfermaOrdine05
+                    '''    ElseIf CodiceDitta = "0501" Then
+                    '''        Rpt = New ConfermaOrdine0501
+                    '''    End If
+                    '''End If
                 Else
-                    Rpt = New DDTNoPrezzi05LT
+                    Rpt = New OrdineNoSconti
+                    If CodiceDitta = "01" Then
+                        Rpt = New OrdineNoSconti01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New OrdineNoSconti05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New OrdineNoSconti0501
+                    End If
+                    '''If SWConfermaDoc = 0 Then
+                    '''    Rpt = New OrdineNoSconti
+                    '''    If CodiceDitta = "01" Then
+                    '''        Rpt = New OrdineNoSconti01
+                    '''    ElseIf CodiceDitta = "05" Then
+                    '''        Rpt = New OrdineNoSconti05
+                    '''    ElseIf CodiceDitta = "0501" Then
+                    '''        Rpt = New OrdineNoSconti0501
+                    '''    End If
+                    '''Else
+                    '''    NomeStampa = "CONFORDINE.PDF"
+                    '''    Rpt = New ConfermaOrdineNoSconti
+                    '''    If CodiceDitta = "01" Then
+                    '''        Rpt = New ConfermaOrdineNoSconti01
+                    '''    ElseIf CodiceDitta = "05" Then
+                    '''        Rpt = New ConfermaOrdineNoSconti05
+                    '''    ElseIf CodiceDitta = "0501" Then
+                    '''        Rpt = New ConfermaOrdineNoSconti0501
+                    '''    End If
+                    '''End If
                 End If
-            ElseIf CodiceDitta = "0501" Then
-                Rpt = New DDTNoPrezzi0501
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.FatturaCommerciale) Then
-            NomeStampa = "FATTURA.PDF"
-            SubDirDOC = "Fatture"
-            'giu251211
-            If SWSconti = 1 Then
-                Rpt = New Fattura
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.DocTrasportoClienti) Then
+                SubDirDOC = "DDTClienti"
+                NomeStampa = "DDTCLIENTE.PDF"
+                Rpt = New DDTNoPrezzi
                 If CodiceDitta = "01" Then
-                    Rpt = New Fattura01
+                    Rpt = New DDTNoPrezzi01
                 ElseIf CodiceDitta = "05" Then
                     If SWStampaDocLotti = False Then
-                        Rpt = New Fattura05
+                        Rpt = New DDTNoPrezzi05
                     Else
-                        Rpt = New Fattura05LT
-                    End If
-                    '-
-                    If SWRitAcc <> 0 Then
-                        If SWStampaDocLotti = False Then
-                            Rpt = New Fattura05RA
-                        Else
-                            Rpt = New Fattura05RALT
-                        End If
+                        Rpt = New DDTNoPrezzi05LT
                     End If
                 ElseIf CodiceDitta = "0501" Then
-                    Rpt = New Fattura0501
-                    If SWRitAcc <> 0 Then
-                        If SWStampaDocLotti = False Then
-                            Rpt = New Fattura05RA
-                        Else
-                            Rpt = New Fattura05RALT
-                        End If
-                    End If
+                    Rpt = New DDTNoPrezzi0501
                 End If
-            Else
-                Rpt = New FatturaNoSconti
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.DocTrasportoFornitori) Then
+                SubDirDOC = "DDTFornit"
+                NomeStampa = "DDTFORNIT.PDF"
+                Rpt = New DDTNoPrezzi
                 If CodiceDitta = "01" Then
-                    Rpt = New FatturaNoSconti01
+                    Rpt = New DDTNoPrezzi01
                 ElseIf CodiceDitta = "05" Then
                     If SWStampaDocLotti = False Then
-                        Rpt = New FatturaNoSconti05
+                        Rpt = New DDTNoPrezzi05
                     Else
-                        Rpt = New FatturaNoSconti05LT
-                    End If
-                    '-
-                    If SWRitAcc <> 0 Then
-                        If SWStampaDocLotti = False Then
-                            Rpt = New Fattura05RA
-                        Else
-                            Rpt = New Fattura05RALT
-                        End If
+                        Rpt = New DDTNoPrezzi05LT
                     End If
                 ElseIf CodiceDitta = "0501" Then
-                    Rpt = New FatturaNoSconti0501
-                    If SWRitAcc = True <> 0 Then
+                    Rpt = New DDTNoPrezzi0501
+                End If
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.FatturaCommerciale) Then
+                NomeStampa = "FATTURA.PDF"
+                SubDirDOC = "Fatture"
+                'giu251211
+                If SWSconti = 1 Then
+                    Rpt = New Fattura
+                    If CodiceDitta = "01" Then
+                        Rpt = New Fattura01
+                    ElseIf CodiceDitta = "05" Then
                         If SWStampaDocLotti = False Then
-                            Rpt = New Fattura05RA
+                            Rpt = New Fattura05
                         Else
-                            Rpt = New Fattura05RALT
+                            Rpt = New Fattura05LT
+                        End If
+                        '-
+                        If SWRitAcc <> 0 Then
+                            If SWStampaDocLotti = False Then
+                                Rpt = New Fattura05RA
+                            Else
+                                Rpt = New Fattura05RALT
+                            End If
+                        End If
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New Fattura0501
+                        If SWRitAcc <> 0 Then
+                            If SWStampaDocLotti = False Then
+                                Rpt = New Fattura05RA
+                            Else
+                                Rpt = New Fattura05RALT
+                            End If
+                        End If
+                    End If
+                Else
+                    Rpt = New FatturaNoSconti
+                    If CodiceDitta = "01" Then
+                        Rpt = New FatturaNoSconti01
+                    ElseIf CodiceDitta = "05" Then
+                        If SWStampaDocLotti = False Then
+                            Rpt = New FatturaNoSconti05
+                        Else
+                            Rpt = New FatturaNoSconti05LT
+                        End If
+                        '-
+                        If SWRitAcc <> 0 Then
+                            If SWStampaDocLotti = False Then
+                                Rpt = New Fattura05RA
+                            Else
+                                Rpt = New Fattura05RALT
+                            End If
+                        End If
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New FatturaNoSconti0501
+                        If SWRitAcc = True <> 0 Then
+                            If SWStampaDocLotti = False Then
+                                Rpt = New Fattura05RA
+                            Else
+                                Rpt = New Fattura05RALT
+                            End If
                         End If
                     End If
                 End If
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.NotaCredito) Then
-            NomeStampa = "NOTACREDITO.PDF"
-            SubDirDOC = "NoteCredito"
-            Rpt = New NotaCredito
-            If CodiceDitta = "01" Then
-                Rpt = New NotaCredito01
-            ElseIf CodiceDitta = "05" Then
-                If SWStampaDocLotti = False Then
-                    Rpt = New NotaCredito05
-                Else
-                    Rpt = New NotaCredito05LT
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.NotaCredito) Then
+                NomeStampa = "NOTACREDITO.PDF"
+                SubDirDOC = "NoteCredito"
+                Rpt = New NotaCredito
+                If CodiceDitta = "01" Then
+                    Rpt = New NotaCredito01
+                ElseIf CodiceDitta = "05" Then
+                    If SWStampaDocLotti = False Then
+                        Rpt = New NotaCredito05
+                    Else
+                        Rpt = New NotaCredito05LT
+                    End If
+                ElseIf CodiceDitta = "0501" Then
+                    Rpt = New NotaCredito0501
                 End If
-            ElseIf CodiceDitta = "0501" Then
-                Rpt = New NotaCredito0501
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.OrdFornitori) Then
-            NomeStampa = "ORDINEFOR.PDF"
-            SubDirDOC = "Ordini"
-            Rpt = New OrdineFornitore
-            If CodiceDitta = "01" Then
-                Rpt = New OrdineFornitore01
-            ElseIf CodiceDitta = "05" Then
-                Rpt = New OrdineFornitore05
-            ElseIf CodiceDitta = "0501" Then
-                Rpt = New OrdineFornitore0501
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or _
-                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or _
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.OrdFornitori) Then
+                NomeStampa = "ORDINEFOR.PDF"
+                SubDirDOC = "Ordini"
+                Rpt = New OrdineFornitore
+                If CodiceDitta = "01" Then
+                    Rpt = New OrdineFornitore01
+                ElseIf CodiceDitta = "05" Then
+                    Rpt = New OrdineFornitore05
+                ElseIf CodiceDitta = "0501" Then
+                    Rpt = New OrdineFornitore0501
+                End If
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or
+                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or
                 Session(CSTTIPODOC) = SWTD(TD.ScaricoMagazzino) Then
-            NomeStampa = "MOVMAG.PDF"
-            SubDirDOC = "MovMag"
-            Rpt = New MMNoPrezzi
-            If CodiceDitta = "01" Then
-                Rpt = New MMNoPrezzi01
-            ElseIf CodiceDitta = "05" Then
-                If SWStampaDocLotti = False Then
-                    Rpt = New MMNoPrezzi05
-                Else
-                    Rpt = New MMNoPrezzi05LT
+                NomeStampa = "MOVMAG.PDF"
+                SubDirDOC = "MovMag"
+                Rpt = New MMNoPrezzi
+                If CodiceDitta = "01" Then
+                    Rpt = New MMNoPrezzi01
+                ElseIf CodiceDitta = "05" Then
+                    If SWStampaDocLotti = False Then
+                        Rpt = New MMNoPrezzi05
+                    Else
+                        Rpt = New MMNoPrezzi05LT
+                    End If
+                ElseIf CodiceDitta = "0501" Then
+                    Rpt = New MMNoPrezzi0501
                 End If
-            ElseIf CodiceDitta = "0501" Then
-                Rpt = New MMNoPrezzi0501
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or _
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or
                 Session(CSTTIPODOC) = SWTD(TD.TipoContratto) Then
-            SubDirDOC = "Contratti"
-            If Session(CSTTASTOST) = btnStampa.ID Then
-                NomeStampa = "PROFORMACA.PDF"
-                Rpt = New ProformaCA05 'Contratti
-                If CodiceDitta = "01" Then
-                    Rpt = New ProformaCA05 '01
-                ElseIf CodiceDitta = "05" Then
-                    Rpt = New ProformaCA05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New ProformaCA05 '0501
-                End If
-            ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
-                NomeStampa = "VERBALE.PDF"
-                Rpt = New VerbaleVACA05
-                If CodiceDitta = "01" Then
-                    Rpt = New VerbaleVACA05 '01
-                ElseIf CodiceDitta = "05" Then
+                SubDirDOC = "Contratti"
+                If Session(CSTTASTOST) = btnStampa.ID Then
+                    NomeStampa = "PROFORMACA.PDF"
+                    Rpt = New ProformaCA05 'Contratti
+                    If CodiceDitta = "01" Then
+                        Rpt = New ProformaCA05 '01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New ProformaCA05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New ProformaCA05 '0501
+                    End If
+                ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
+                    NomeStampa = "VERBALE.PDF"
                     Rpt = New VerbaleVACA05
-                ElseIf CodiceDitta = "0501" Then
-                    Rpt = New VerbaleVACA05 '0501
+                    If CodiceDitta = "01" Then
+                        Rpt = New VerbaleVACA05 '01
+                    ElseIf CodiceDitta = "05" Then
+                        Rpt = New VerbaleVACA05
+                    ElseIf CodiceDitta = "0501" Then
+                        Rpt = New VerbaleVACA05 '0501
+                    End If
                 End If
-            End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or _
-            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or _
+            ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or
+            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or
             Session(CSTTIPODOC) = SWTD(TD.NotaCorrispondenza) Then
-            Dim strRitorno As String = "WF_Menu.aspx?labelForm=Menu principale STAMPA DOCUMENTO DA COMPLETARE"
-            Try
-                Response.Redirect(strRitorno)
+                Dim strRitorno As String = "WF_Menu.aspx?labelForm=Menu principale STAMPA DOCUMENTO DA COMPLETARE"
+                Try
+                    Response.Redirect(strRitorno)
+                    Exit Sub
+                Catch ex As Exception
+                    Response.Redirect(strRitorno)
+                    Exit Sub
+                End Try
+            Else
+                Try
+                    Response.Redirect("..\Login.aspx?SessioneScaduta=1")
+                    Exit Sub
+                Catch ex As Exception
+                    Response.Redirect("..\Login.aspx?SessioneScaduta=1")
+                    Exit Sub
+                End Try
                 Exit Sub
-            Catch ex As Exception
-                Response.Redirect(strRitorno)
-                Exit Sub
-            End Try
-        Else
-            Try
-                Response.Redirect("..\Login.aspx?SessioneScaduta=1")
-                Exit Sub
-            Catch ex As Exception
-                Response.Redirect("..\Login.aspx?SessioneScaduta=1")
-                Exit Sub
-            End Try
-            Exit Sub
-        End If
-        'ok
-        '-----------------------------------
-        Rpt.SetDataSource(DsPrinWebDoc)
-        Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-        '---------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
+            End If
+            'ok
+            '-----------------------------------
+            Rpt.SetDataSource(DsPrinWebDoc)
+            Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
+            '---------
+            'giu140615 prova con binary 
+            '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
+            Session(CSTESPORTAPDF) = True
+            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            Dim stPathReport As String = Session(CSTPATHPDF)
+
             Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
             'giu140124
             Rpt.Close()

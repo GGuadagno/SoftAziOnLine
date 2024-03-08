@@ -20,7 +20,7 @@
     <div>
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" 
             AutoDataBind="True" Height="50px" ReportSourceID="CrystalReportSource1" 
-            Width="350px" />
+            Width="350px" ClientIDMode="AutoID" HasCrystalLogo="False" EnableDrillDown="False" />
         <CR:CrystalReportSource ID="CrystalReportSource1" runat="server">
             <Report FileName="..\Report\Report.rpt">
             </Report>

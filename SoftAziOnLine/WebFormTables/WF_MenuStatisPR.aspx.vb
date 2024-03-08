@@ -12,7 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+
 Partial Public Class WF_MenuStatisPR
     Inherits System.Web.UI.Page
     Private InizialiUT As String = ""
@@ -981,47 +981,49 @@ Partial Public Class WF_MenuStatisPR
         Dim Rpt As Object = Nothing
         Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
         DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
-        If Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevClienteOrdineAGCA Then 'giu080421
-            Rpt = New PrevClienteOrdineAG
-            '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
-            '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
-            '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-            '''CrystalReportViewer1.DisplayGroupTree = True
-            '''CrystalReportViewer1.ReportSource = Rpt
-        ElseIf Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevOrdineClienteAGCA Then 'giu050722
-            Rpt = New PrevClienteOrdineAGPrev
-            '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
-            '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
-            '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-            '''CrystalReportViewer1.DisplayGroupTree = True
-            '''CrystalReportViewer1.ReportSource = Rpt
-            '''ElseIf Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevClienteOrdineLS Then 'giu190421
-            '''    Rpt = New PrevClienteOrdineLS
-            '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
-            '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
-            '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-            '''CrystalReportViewer1.DisplayGroupTree = True
-            '''CrystalReportViewer1.ReportSource = Rpt
-        Else
-            lblMessAttivita.Text = "Errore: TIPO STAMPA ORDINATO SCONOSCIUTA"
-            Exit Sub
-        End If
-        '---------
-        Dim NomeStampa As String = "ELENCO_PREV_" + Format(Now, "yyyyMMddHHmmss") + ".PDF"
-        Session(CSTNOMEPDF) = NomeStampa
         Dim SubDirDOC As String = "Preventivi"
-        '-
-        Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-        '-----------------------------------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
+        Try 'giu080324 giu281112 errore che il file Ã¨ gia aperto
+            If Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevClienteOrdineAGCA Then 'giu080421
+                Rpt = New PrevClienteOrdineAG
+                '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
+                '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
+                '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+                '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
+                '''CrystalReportViewer1.DisplayGroupTree = True
+                '''CrystalReportViewer1.ReportSource = Rpt
+            ElseIf Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevOrdineClienteAGCA Then 'giu050722
+                Rpt = New PrevClienteOrdineAGPrev
+                '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
+                '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
+                '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+                '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
+                '''CrystalReportViewer1.DisplayGroupTree = True
+                '''CrystalReportViewer1.ReportSource = Rpt
+                '''ElseIf Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevClienteOrdineLS Then 'giu190421
+                '''    Rpt = New PrevClienteOrdineLS
+                '''Dim DSOrdinatoClienteOrdine1 As New DSOrdinatoClienteOrdine
+                '''DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
+                '''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
+                '''Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
+                '''CrystalReportViewer1.DisplayGroupTree = True
+                '''CrystalReportViewer1.ReportSource = Rpt
+            Else
+                lblMessAttivita.Text = "Errore: TIPO STAMPA ORDINATO SCONOSCIUTA"
+                Exit Sub
+            End If
+            '---------
+            Dim NomeStampa As String = "ELENCO_PREV_" + Format(Now, "yyyyMMddHHmmss") + ".PDF"
+            Session(CSTNOMEPDF) = NomeStampa
+            SubDirDOC = "Preventivi"
+            '-
+            Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
+            '-----------------------------------
+            'giu140615 prova con binary 
+            '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
+            Session(CSTESPORTAPDF) = True
+            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            Dim stPathReport As String = Session(CSTPATHPDF)
+
             Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
             'giu140124
             Rpt.Close()
