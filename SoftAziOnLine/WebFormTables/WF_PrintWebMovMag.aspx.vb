@@ -8,16 +8,12 @@ Imports CrystalDecisions.CrystalReports.Engine
 
 Partial Public Class WF_PrintWebMovMag
     Inherits System.Web.UI.Page
-    Private Enum ReportFormatEnum
-        Pdf = 1
-        Excel = 2
-    End Enum
 
     Private Sub WF_PrintWebMovMag_Load(sender As Object, e As EventArgs) Handles Me.Load
         If IsPostBack Then
             If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
                 'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
-                VisualizzaRpt(Session("StampaMovMag"), "StampaMovMag")
+                VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
                 Exit Sub
             End If
             If Request.Params.Get("__EVENTTARGET").ToString = "LnkRitornoOK" Then
@@ -55,13 +51,14 @@ Partial Public Class WF_PrintWebMovMag
             CrystalReportViewer1.ReportSource = Rpt
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagByArticolo Then
             Dim Rpt As New MovMagPerArt
+            Session("NomeRpt") = "MovMagPerArticolo"
             Dim DsMovMag1 As New DSMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             CrystalReportViewer1.DisplayGroupTree = True
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.ReportSource = Rpt
-            getOutputRPT(Rpt, "MovMagByArticolo")
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ValCMSMOrdineSortCliForNDoc Then
             Dim Rpt As New ValCMSMCliForNDoc 'FatturatoClienteFattura
             Dim DsMovMag1 As New DSMovMag
@@ -99,15 +96,16 @@ Partial Public Class WF_PrintWebMovMag
         End If
     End Sub
 
-    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _NomeRpt As String, Optional _Formato As Integer = 1) As Boolean
+    Private Function getOutputRPT(ByVal _Rpt As Object) As Boolean
         '_Rpt.Refresh()
         Dim myStream As Stream
         Try
-            If _Formato = ReportFormatEnum.Pdf Then
-                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
-            ElseIf _Formato = ReportFormatEnum.Excel Then
-                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
-            End If
+            '''If _Formato = ReportFormatEnum.Pdf Then
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            '''ElseIf _Formato = ReportFormatEnum.Excel Then
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            '''End If
+            myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
             Session("StampaMovMag") = byteReport
         Catch ex As Exception
@@ -121,7 +119,6 @@ Partial Public Class WF_PrintWebMovMag
         End Try
         getOutputRPT = True
     End Function
-
     Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
 
         Dim streamLength As Integer = Convert.ToInt32(stream.Length)
