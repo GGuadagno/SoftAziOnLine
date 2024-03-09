@@ -59,7 +59,7 @@ Public Class Controllo
 
             If DSDiffPrezzoListino1.DiffPrezzoListino.Count > 0 Then
                 For Each row As DSControlli.DiffPrezzoListinoRow In DSDiffPrezzoListino1.DiffPrezzoListino
-                    row.AziendaRpt = Esercizio
+                    row.AziendaRpt = ESERCIZIO
                     row.TitoloRpt = "Controllo differenza prezzo / prezzo di listino"
                     row.PiedeRpt = ""
                     If Tipo_Doc.Trim.Length > 0 Then
@@ -134,7 +134,7 @@ Public Class Controllo
 
             If DSDiffImportoRiga1.DiffImportoRiga.Count > 0 Then
                 For Each row As DSControlli.DiffImportoRigaRow In DSDiffImportoRiga1.DiffImportoRiga
-                    row.AziendaRpt = Esercizio
+                    row.AziendaRpt = ESERCIZIO
                     row.TitoloRpt = "Controllo differenza importo riga diverso dall'importo ricalcolato"
                     row.PiedeRpt = ""
                     If Tipo_Doc.Trim.Length > 0 Then
@@ -172,11 +172,11 @@ Public Class Controllo
             Exit Function
         End If
 
-        Dim strSQL As String = "SELECT   ISNULL(Clienti.NoFatt, 0) AS NoFatt, ISNULL(Clienti.Codice_Fiscale, '') AS CF, ISNULL(Clienti.Partita_IVA, '') AS PIVA, " & _
-                " ISNULL(Clienti.IPA, N'') AS CodIPA, ISNULL(DocumentiT.Cod_Filiale,0) AS Cod_Filiale, ISNULL(DestClienti.Progressivo,0) AS Progressivo, " & _
-                " ISNULL(DestClienti.Ragione_Sociale35,'') AS RagSoc35, ISNULL(DestClienti.Riferimento35,'') AS Rif35, ISNULL(DocumentiT.Vettore_1,0) AS CVett " & _
-                " FROM Clienti INNER JOIN DocumentiT ON Clienti.Codice_CoGe = DocumentiT.Cod_Cliente LEFT OUTER JOIN " & _
-                " DestClienti ON DocumentiT.Cod_Cliente = DestClienti.Codice AND DocumentiT.Cod_Filiale = DestClienti.Progressivo " & _
+        Dim strSQL As String = "SELECT   ISNULL(Clienti.NoFatt, 0) AS NoFatt, ISNULL(Clienti.Codice_Fiscale, '') AS CF, ISNULL(Clienti.Partita_IVA, '') AS PIVA, " &
+                " ISNULL(Clienti.IPA, N'') AS CodIPA, ISNULL(DocumentiT.Cod_Filiale,0) AS Cod_Filiale, ISNULL(DestClienti.Progressivo,0) AS Progressivo, " &
+                " ISNULL(DestClienti.Ragione_Sociale35,'') AS RagSoc35, ISNULL(DestClienti.Riferimento35,'') AS Rif35, ISNULL(DocumentiT.Vettore_1,0) AS CVett " &
+                " FROM Clienti INNER JOIN DocumentiT ON Clienti.Codice_CoGe = DocumentiT.Cod_Cliente LEFT OUTER JOIN " &
+                " DestClienti ON DocumentiT.Cod_Cliente = DestClienti.Codice AND DocumentiT.Cod_Filiale = DestClienti.Progressivo " &
                 " WHERE (DocumentiT.IDDocumenti = " & myID.Trim & ")"
         Dim ObjDB As New DataBaseUtility
         Dim ds As New DataSet
@@ -198,7 +198,7 @@ Public Class Controllo
                     If row(0).Item("CodIPA").ToString.Trim = "" Then
                         NoCodIPA = True
                     End If
-                    If row(0).Item("Cod_Filiale").ToString.Trim = "" Or row(0).Item("Cod_Filiale").ToString.Trim = "0" Or _
+                    If row(0).Item("Cod_Filiale").ToString.Trim = "" Or row(0).Item("Cod_Filiale").ToString.Trim = "0" Or
                        row(0).Item("Progressivo").ToString.Trim = "" Or row(0).Item("Progressivo").ToString.Trim = "0" Then
                         NODestM = True
                     ElseIf row(0).Item("RagSoc35").ToString.Trim = "" Or row(0).Item("Rif35").ToString.Trim = "" Then
@@ -335,21 +335,31 @@ Public Class Controllo
                     myNDoc = IIf(IsDBNull(rsTestata!Numero), "", rsTestata!Numero)
                     myTipoDoc = IIf(IsDBNull(rsTestata!Tipo_Doc), "", rsTestata!Tipo_Doc)
                     '
-                    rsTestata.BeginEdit()
-                    If IsDBNull(rsTestata!Cod_Filiale) Then rsTestata!Cod_Filiale = 0
-                    If IsDBNull(rsTestata!Destinazione1) Then rsTestata!Destinazione1 = ""
-                    If IsDBNull(rsTestata!Destinazione3) Then rsTestata!Destinazione2 = ""
-                    If IsDBNull(rsTestata!Destinazione3) Then rsTestata!Destinazione3 = ""
-                    rsTestata!Iniziali = ""
+                    '''rsTestata.BeginEdit()
+                    '''If IsDBNull(rsTestata!Cod_Filiale) Then rsTestata!Cod_Filiale = 0
+                    '''If IsDBNull(rsTestata!Destinazione1) Then rsTestata!Destinazione1 = ""
+                    '''If IsDBNull(rsTestata!Destinazione3) Then rsTestata!Destinazione2 = ""
+                    '''If IsDBNull(rsTestata!Destinazione3) Then rsTestata!Destinazione3 = ""
+                    '''rsTestata!Iniziali = ""
+                    ''''---------
+                    '''If IsDBNull(rsTestata!NoteRitiro) Then rsTestata!NoteRitiro = ""
+                    '''strSaveDato = rsTestata!NoteRitiro.ToString.Trim
                     '---------
-                    If IsDBNull(rsTestata!NoteRitiro) Then rsTestata!NoteRitiro = ""
-                    strSaveDato = rsTestata!NoteRitiro.ToString.Trim
-                    '---------
-                    rsTestata!NoteRitiro = NoCarSpecNoteSL(rsTestata!NoteRitiro.ToString.Trim, SWCKSerieLotto)
-                    If SWCKSerieLotto And SWAggiorna Then
-                        rsTestata!Iniziali = rsTestata!NoteRitiro.ToString.Trim
+                    '''rsTestata!NoteRitiro = NoCarSpecNoteSL(rsTestata!NoteRitiro.ToString.Trim, SWCKSerieLotto)
+                    'giu040325
+                    Dim x As Integer = InStr(rsTestata!NoteRitiro.ToString.Trim, "'")
+                    If x > 0 Then
+                        x += 1
+                        x = InStr(Mid(rsTestata!NoteRitiro.ToString.Trim, x), "'")
+                        If x > 0 Then
+                            rsTestata!NoteRitiro = rsTestata!NoteRitiro.ToString.Replace("'", "")
+                        End If
+                    End If
+                    If x > 0 Then
                         Try
-                            'giu040324 corretto errore ''''''' aggiungeva ad ogni agg un apice in piu tolto il contolla_apice
+                            If ObjDB Is Nothing Then
+                                ObjDB = New DataBaseUtility
+                            End If
                             SWOk = ObjDB.ExecUpgNoteRitiro(myIDDoc.Trim, rsTestata!NoteRitiro.ToString.Trim, Errore)
                             If SWOk = False Then
                                 ObjDB = Nothing
@@ -357,88 +367,110 @@ Public Class Controllo
                                 Return False
                                 Exit Function
                             End If
-                            ObjDB = Nothing
+                            '''ObjDB = Nothing
                         Catch Ex As Exception
                             Errore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento) - " & Ex.Message.Trim & " -  " & Errore
                             Return False
                             Exit Function
                         End Try
-                    ElseIf SWCKSerieLotto Then
-                        rsTestata!Iniziali = rsTestata!NoteRitiro.ToString.Trim
                     End If
-                    '-Dettagli
-                    If SWAggiorna Then
-                        DsPrinWebDoc.ContrattiD.Clear()
-                        SqlDbSelectDettCmd.Parameters.Item("@IDDocumenti").Value = myIDDoc
-                        SqlDbSelectDettCmd.Parameters.Item("@DurataNum").Value = DBNull.Value '1 'fisso per le attività per periodo
-                        SqlDbSelectDettCmd.Parameters.Item("@DurataNumRiga").Value = DBNull.Value
-                        SqlAdapDocDett.Fill(DsPrinWebDoc.ContrattiD)
-                        '-
-                        Passo = 3
+                    '---------
+                    '''If SWCKSerieLotto And SWAggiorna Then
+                    '''    rsTestata!Iniziali = rsTestata!NoteRitiro.ToString.Trim
+                    '''    Try
+                    '''        If ObjDB Is Nothing Then
+                    '''            ObjDB = New DataBaseUtility
+                    '''        End If
+                    '''        SWOk = ObjDB.ExecUpgNoteRitiro(myIDDoc.Trim, rsTestata!NoteRitiro.ToString.Trim, Errore)
+                    '''        If SWOk = False Then
+                    '''            ObjDB = Nothing
+                    '''            Errore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento)"
+                    '''            Return False
+                    '''            Exit Function
+                    '''        End If
+                    '''        '''ObjDB = Nothing
+                    '''    Catch Ex As Exception
+                    '''        Errore = "Errore: Si è verificato un errore durante l'aggiornamento testata (UpgNoteIntervento) - " & Ex.Message.Trim & " -  " & Errore
+                    '''        Return False
+                    '''        Exit Function
+                    '''    End Try
+                    '''ElseIf SWCKSerieLotto Then
+                    '''    rsTestata!Iniziali = rsTestata!NoteRitiro.ToString.Trim
+                    '''End If
 
-                        If (DsPrinWebDoc.Tables("ContrattiD").Rows.Count > 0) Then
-                            For Each rsDettagli In DsPrinWebDoc.Tables("ContrattiD").Select("", "Riga")
-                                SWCKSerieLotto = False
-                                myDurataNum = IIf(IsDBNull(rsDettagli!DurataNum), "", rsDettagli!DurataNum)
-                                myDurataNumRiga = IIf(IsDBNull(rsDettagli!DurataNumRiga), "", rsDettagli!DurataNumRiga)
-                                myRiga = IIf(IsDBNull(rsDettagli!Riga), "", rsDettagli!Riga)
-                                '-
-                                rsDettagli.BeginEdit()
-                                If IsDBNull(rsDettagli!Serie) Then rsDettagli!Serie = ""
-                                strSaveDato = rsDettagli!Serie.ToString.Trim
-                                rsDettagli!Serie = Formatta.FormattaNomeFile(rsDettagli!Serie)
-                                If strSaveDato <> rsDettagli!Serie.ToString.Trim Then
-                                    SWCKSerieLotto = True
-                                    If rsTestata!Iniziali.ToString.Trim = "" Then
-                                        rsTestata!Iniziali = rsDettagli!Serie
-                                    End If
-                                End If
-                                '-
-                                If IsDBNull(rsDettagli!Lotto) Then rsDettagli!Lotto = ""
-                                strSaveDato = rsDettagli!Lotto.ToString.Trim
-                                rsDettagli!Lotto = Formatta.FormattaNomeFile(rsDettagli!Lotto)
-                                If strSaveDato <> rsDettagli!Lotto.ToString.Trim Then
-                                    SWCKSerieLotto = True
-                                    If rsTestata!Iniziali.ToString.Trim = "" Then
-                                        rsTestata!Iniziali = rsDettagli!Lotto
-                                    End If
-                                End If
-                                '-
-                                rsDettagli.EndEdit()
-                                rsDettagli.AcceptChanges()
-                                '-
-                                If SWCKSerieLotto = True And SWAggiorna Then
-                                    Try
-                                        StrSql = "Update ContrattiD Set Lotto = '" & rsDettagli!Lotto.ToString.Trim & "', Serie = '" & rsDettagli!Serie.ToString.Trim & "'" & _
-                                        " Where IdDocumenti = " & myIDDoc.Trim & " And DurataNum = " & myDurataNum.Trim & " And DurataNumRiga = " & myDurataNumRiga & _
-                                        " And Riga = " & myRiga
-                                        If ObjDB Is Nothing Then
-                                            ObjDB = New DataBaseUtility
-                                        End If
-                                        ObjDB.ExecuteQueryUpdate(TipoDB.dbScadenzario, StrSql)
-                                    Catch ex As Exception
-                                        Errore = ex.Message & " - Errore - Aggiorna Dettagli. Passo: " & Passo.ToString & " <br> " & _
-                                        "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
-                                        Return False
-                                        Exit Function
-                                    End Try
-                                End If
-                            Next
-                        End If
-                    End If
+                    '-Dettagli
+                    '''If SWAggiorna Then
+                    '''    DsPrinWebDoc.ContrattiD.Clear()
+                    '''    SqlDbSelectDettCmd.Parameters.Item("@IDDocumenti").Value = myIDDoc
+                    '''    SqlDbSelectDettCmd.Parameters.Item("@DurataNum").Value = DBNull.Value '1 'fisso per le attività per periodo
+                    '''    SqlDbSelectDettCmd.Parameters.Item("@DurataNumRiga").Value = DBNull.Value
+                    '''    SqlAdapDocDett.Fill(DsPrinWebDoc.ContrattiD)
+                    '''    '-
+                    '''    Passo = 3
+
+                    '''    If (DsPrinWebDoc.Tables("ContrattiD").Rows.Count > 0) Then
+                    '''        For Each rsDettagli In DsPrinWebDoc.Tables("ContrattiD").Select("", "Riga")
+                    '''            SWCKSerieLotto = False
+                    '''            myDurataNum = IIf(IsDBNull(rsDettagli!DurataNum), "", rsDettagli!DurataNum)
+                    '''            myDurataNumRiga = IIf(IsDBNull(rsDettagli!DurataNumRiga), "", rsDettagli!DurataNumRiga)
+                    '''            myRiga = IIf(IsDBNull(rsDettagli!Riga), "", rsDettagli!Riga)
+                    '''            '-
+                    '''            rsDettagli.BeginEdit()
+                    '''            If IsDBNull(rsDettagli!Serie) Then rsDettagli!Serie = ""
+                    '''            strSaveDato = rsDettagli!Serie.ToString.Trim
+                    '''            rsDettagli!Serie = Formatta.FormattaNomeFile(rsDettagli!Serie)
+                    '''            If strSaveDato <> rsDettagli!Serie.ToString.Trim Then
+                    '''                SWCKSerieLotto = True
+                    '''                If rsTestata!Iniziali.ToString.Trim = "" Then
+                    '''                    rsTestata!Iniziali = rsDettagli!Serie
+                    '''                End If
+                    '''            End If
+                    '''            '-
+                    '''            If IsDBNull(rsDettagli!Lotto) Then rsDettagli!Lotto = ""
+                    '''            strSaveDato = rsDettagli!Lotto.ToString.Trim
+                    '''            rsDettagli!Lotto = Formatta.FormattaNomeFile(rsDettagli!Lotto)
+                    '''            If strSaveDato <> rsDettagli!Lotto.ToString.Trim Then
+                    '''                SWCKSerieLotto = True
+                    '''                If rsTestata!Iniziali.ToString.Trim = "" Then
+                    '''                    rsTestata!Iniziali = rsDettagli!Lotto
+                    '''                End If
+                    '''            End If
+                    '''            '-
+                    '''            rsDettagli.EndEdit()
+                    '''            rsDettagli.AcceptChanges()
+                    '''            '-
+                    '''            If SWCKSerieLotto = True And SWAggiorna Then
+                    '''                Try
+                    '''                    StrSql = "Update ContrattiD Set Lotto = '" & rsDettagli!Lotto.ToString.Trim & "', Serie = '" & rsDettagli!Serie.ToString.Trim & "'" & _
+                    '''                    " Where IdDocumenti = " & myIDDoc.Trim & " And DurataNum = " & myDurataNum.Trim & " And DurataNumRiga = " & myDurataNumRiga & _
+                    '''                    " And Riga = " & myRiga
+                    '''                    If ObjDB Is Nothing Then
+                    '''                        ObjDB = New DataBaseUtility
+                    '''                    End If
+                    '''                    ObjDB.ExecuteQueryUpdate(TipoDB.dbScadenzario, StrSql)
+                    '''                Catch ex As Exception
+                    '''                    Errore = ex.Message & " - Errore - Aggiorna Dettagli. Passo: " & Passo.ToString & " <br> " & _
+                    '''                    "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
+                    '''                    Return False
+                    '''                    Exit Function
+                    '''                End Try
+                    '''            End If
+                    '''        Next
+                    '''    End If
+                    '''End If
                     '-
-                    rsTestata.EndEdit()
-                    rsTestata.AcceptChanges()
+                    '''rsTestata.EndEdit()
+                    '''rsTestata.AcceptChanges()
                     '-
                 Next
             Else
-                Errore = "Errore - Contratto lettura testata+CaricoDettagli. Passo: " & Passo.ToString & " <br> " & _
+                Errore = "Errore - Contratto lettura testata+CaricoDettagli. Passo: " & Passo.ToString & " <br> " &
                 "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
                 Return False
                 Exit Function
             End If
         Catch ex As Exception
-            Errore = ex.Message & " - Errore - Contratto lettura testata+CaricoDettagli. Passo: " & Passo.ToString & " <br> " & _
+            Errore = ex.Message & " - Errore - Contratto lettura testata+CaricoDettagli. Passo: " & Passo.ToString & " <br> " &
             "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
             Return False
             Exit Function
@@ -566,7 +598,7 @@ Public Class Controllo
                             End If
                             '-
                         Catch ex As Exception
-                            Errore = ex.Message & " - Tab. ScadPagCA" & " <br> " & _
+                            Errore = ex.Message & " - Tab. ScadPagCA" & " <br> " &
                                 "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
                             Return False
                             Exit Function
@@ -609,7 +641,7 @@ Public Class Controllo
                 Exit Function
             End If
         Catch ex As Exception
-            Errore = ex.Message & " - Errore - Contratto lettura Testata. Passo: " & Passo.ToString & " <br> " & _
+            Errore = ex.Message & " - Errore - Contratto lettura Testata. Passo: " & Passo.ToString & " <br> " &
             "IDDocumento: " & myIDDoc.Trim & " N°Contratto: " & myNDoc & " Tipo: " & myTipoDoc & " Data: " & myDataDoc
             Return False
             Exit Function

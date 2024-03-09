@@ -278,7 +278,7 @@ Partial Public Class Login
         '"09/08/2022 16.00 Controllo obbligo N° Telefono per singolo DDT in spedizione"
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & _
-        lblRelease.Text = "Release 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server"
+        lblRelease.Text = "Release 09/03/2024 - Gestione anteprima Stampe ed esporta in PDF - 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server"
         lblRelease.ToolTip = "07/03/2024 Ultima Sessione solo con SESSION e non IP - 06/03/2024 Ottimizzato accesso al gestionale - 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività" +
         " - 29/02/2024 Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
         " - 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
@@ -695,6 +695,18 @@ Partial Public Class Login
                 End If
                 'giu120124
                 If Session("AccessoLogin") = "1" And MessageLabel.Text = "" Then
+                    'giu090324 controllo se esiste la stessa sessione di adesso
+                    If SessionUtility.CTROpBySessionePostazione(Session.SessionID, Mid(Request.UserHostAddress.Trim, 1, 50), NomeModulo) = True Then
+                        If myOp.Livello = "V" Then 'GIU06032024
+                            'OK PROSEGUO PER IL SW ESTERNO SU TABLET
+                        Else
+                            Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
+                            Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                            ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
+                            Exit Sub
+                        End If
+                    End If
+                    '---------
                     'giu120124 NON PERMETTO L'ACCESSO UNA SECONDA VOLTA E CANCELLO LA CONNESSIONE ?
                     SessionUtility.DelOpBySessionePostazione(Session.SessionID, Mid(Request.UserHostAddress.Trim, 1, 50), NomeModulo)
                     '---------
@@ -707,14 +719,14 @@ Partial Public Class Login
                         ModalPopup.Show("Errore", "Cancella operatore connesso; chiudere tutte le finetre attive e riprovare.", WUC_ModalPopup.TYPE_CONFIRM_Y)
                         Exit Sub
                     End If
-                    If myOp.Livello = "V" Then 'GIU06032024
-                        'OK PROSEGUO PER IL SW ESTERNO SU TABLET
-                    Else
-                        Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
-                        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-                        ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
-                        Exit Sub
-                    End If
+                    '''If myOp.Livello = "V" Then 'GIU06032024
+                    '''    'OK PROSEGUO PER IL SW ESTERNO SU TABLET
+                    '''Else
+                    '''    Session(MODALPOPUP_CALLBACK_METHOD) = "SetImgAzienda"
+                    '''    Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                    '''    ModalPopup.Show("ATTENZIONE", "Postazione già connessa. Impossibile eseguire l'accesso.<br><b>CHIUDERE IL BROWSER E RIAPRIRLO PER POTER ACCEDERE</b>", WUC_ModalPopup.TYPE_CONFIRM_Y)
+                    '''    Exit Sub
+                    '''End If
                 End If
                 '--------------------------------------------------------------
                 '-

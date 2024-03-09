@@ -23,22 +23,22 @@ Partial Public Class WF_PrintWebMovMag
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Controllo btnRitorno.
+    '''Controllo LnkRitorno.
     '''</summary>
     '''<remarks>
     '''Campo generato automaticamente.
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
-    Protected WithEvents btnRitorno As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents LnkRitorno As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Controllo Label1.
+    '''Controllo LabelInfo.
     '''</summary>
     '''<remarks>
     '''Campo generato automaticamente.
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents LabelInfo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Controllo CrystalReportViewer1.
