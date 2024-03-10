@@ -9,13 +9,13 @@ Partial Public Class WF_PrintWebStatistiche
     Private Sub WF_PrintWebStatistiche_Load(sender As Object, e As EventArgs) Handles Me.Load
         'GIU100324
         Try
-            Dim strLabelForm As String = Request.QueryString("labelForm")
-            If InStr(strLabelForm.Trim.ToUpper, "ESPORTA") > 0 Then
-                'OK PROSEGUO
-            Else
-                VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
-                Exit Sub
-            End If
+            '''Dim strLabelForm As String = Request.QueryString("labelForm")
+            '''If InStr(strLabelForm.Trim.ToUpper, "ESPORTA") > 0 Then
+            '''    'OK PROSEGUO
+            '''Else
+            '''    VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+            '''    Exit Sub
+            '''End If
             '-NON va bene per il NOBACK 
             '''If Not String.IsNullOrEmpty(Session(CSTNOBACK)) Then
             '''    If Session(CSTNOBACK) = 1 Then
