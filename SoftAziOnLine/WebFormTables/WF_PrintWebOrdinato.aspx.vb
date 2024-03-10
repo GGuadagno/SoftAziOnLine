@@ -342,7 +342,7 @@ Partial Public Class WF_PrintWebOrdinato
         Else
             Chiudi("Errore: TIPO STAMPA ORDINATO SCONOSCIUTA")
         End If
-        If String.IsNullOrEmpty(Session("MovMag")) Then
+        If IsNothing(Session("StampaMovMag")) Then
             lblVuota.Visible = True
         End If
     End Sub

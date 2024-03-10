@@ -18,7 +18,7 @@
     }
 </script>
 </head>
-<body onload="javascript:window.history.forward(1);">
+<body> <%--onload="javascript:window.history.forward(1);">--%>
     <form id="form1" runat="server">
     <table>
     <tr>

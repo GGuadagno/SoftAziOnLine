@@ -125,7 +125,7 @@ Partial Public Class WF_PrintWebMovMag
         Else
             Chiudi("Errore: TIPO STAMPA MOVIMENTI DI MAGAZZINO SCONOSCIUTA")
         End If
-        If String.IsNullOrEmpty(Session("MovMag")) Then
+        If IsNothing(Session("StampaMovMag")) Then
             lblVuota.Visible = True
         End If
     End Sub
