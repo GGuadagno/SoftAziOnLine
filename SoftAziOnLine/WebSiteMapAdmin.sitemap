@@ -130,8 +130,8 @@
     <siteMapNode title="Statistiche Clienti" description="Statistiche Clienti" >
       <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
       <siteMapNode title="Preventivi/Offerte Clienti" description="Preventivi/Offerte Clienti" >
-        <siteMapNode url="WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
-        <siteMapNode url="WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
+        <siteMapNode url="WebFormTables\WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
+        <siteMapNode url="WebFormTables\WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
       </siteMapNode>
       <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
       <siteMapNode title="Ordinato Clienti" description="Ordinato Clienti" >
