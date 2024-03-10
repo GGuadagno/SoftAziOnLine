@@ -41,15 +41,6 @@ Partial Public Class WF_PrintWebMovMag
     Protected WithEvents lblVuota As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Controllo LabelInfo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generato automaticamente.
-    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-    '''</remarks>
-    Protected WithEvents LabelInfo As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''Controllo CrystalReportViewer1.
     '''</summary>
     '''<remarks>
