@@ -5,6 +5,8 @@ Imports It.SoftAzi.Model.Facade 'Ho tutte le funzioni es. get_Operatori
 Imports It.SoftAzi.Model.Entity.OperatoriEntity
 
 Imports It.SoftAzi.SystemFramework
+Imports CrystalDecisions.Shared
+Imports System.IO
 
 Partial Public Class WF_PrintWebCA
     Inherits System.Web.UI.Page
@@ -13,17 +15,45 @@ Partial Public Class WF_PrintWebCA
     Private TipoDoc As String = "" : Private TabCliFor As String = ""
     'giu200423 non modificare mai Session(CSTTIPODOC) USATO IN GEST. DOC.
     Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'GIU100324
         Try
-            Me.Title = Request.QueryString("labelForm")
+            Dim strLabelForm As String = Request.QueryString("labelForm")
+            If InStr(strLabelForm.Trim.ToUpper, "ESPORTA") > 0 Then
+                'OK PROSEGUO
+            Else
+                VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+                Exit Sub
+            End If
+            '-NON va bene per il NOBACK 
+            '''If Not String.IsNullOrEmpty(Session(CSTNOBACK)) Then
+            '''    If Session(CSTNOBACK) = 1 Then
+            '''        LnkRitorno.Visible = False
+            '''        VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+            '''        Exit Sub
+            '''    End If
+            '''End If
         Catch ex As Exception
         End Try
+        '-
+        If IsPostBack Then
+            If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
+                'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
+                VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+                Exit Sub
+            End If
+            If Request.Params.Get("__EVENTTARGET").ToString = "LnkRitornoOK" Then
+                'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
+                subRitorno()
+                Exit Sub
+            End If
+        End If
     End Sub
    
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         If Not String.IsNullOrEmpty(Session(CSTNOBACK)) Then
             If Session(CSTNOBACK) = 1 Then
-                btnRitorno.Visible = False
-                Label1.Visible = False
+                LnkRitorno.Visible = False
+                'Label1.Visible = False
             End If
         End If
         Dim SWSconti As Integer = 1
@@ -119,7 +149,7 @@ Partial Public Class WF_PrintWebCA
         'codiceditta impostarlo 0501
         'giu200520 sapere chi mi ha chiamato per eventuali differenza stampa elenco se SCAD. ATT. o SCAD.PAG.ATT.
         If Session("TipoDocInStampa") = SWTD(TD.ContrattoAssistenza) Then
-            If Session(CSTTASTOST) = "btnStampa" Or _
+            If Session(CSTTASTOST) = "btnStampa" Or
                 Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.Proforma Then
                 Rpt = New ProformaCA05 'Contratti
                 If CodiceDitta = "01" Then
@@ -129,7 +159,9 @@ Partial Public Class WF_PrintWebCA
                 ElseIf CodiceDitta = "0501" Then
                     Rpt = New ProformaCA05 '0501
                 End If
-            ElseIf Session(CSTTASTOST) = "btnVerbale" Or _
+                'giu090324
+                Session("NomeRpt") = "Proforma"
+            ElseIf Session(CSTTASTOST) = "btnVerbale" Or
                 Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.Verbale Then
                 Rpt = New VerbaleVACA05
                 If CodiceDitta = "01" Then
@@ -139,8 +171,10 @@ Partial Public Class WF_PrintWebCA
                 ElseIf CodiceDitta = "0501" Then
                     Rpt = New VerbaleVACA05 '0501
                 End If
-            ElseIf Session(CSTTASTOST) = "btnElencoSc" Or _
-                Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ScadAttivitaPag Or _
+                'giu090324
+                Session("NomeRpt") = "Verbale"
+            ElseIf Session(CSTTASTOST) = "btnElencoSc" Or
+                Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ScadAttivitaPag Or
                 Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ScadAttivita Then
 
                 If Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ScadAttivita Then
@@ -152,6 +186,8 @@ Partial Public Class WF_PrintWebCA
                     ElseIf CodiceDitta = "0501" Then
                         Rpt = New ElencoScadCA05 '0501
                     End If
+                    'giu090324
+                    Session("NomeRpt") = "ScadAttivita"
                 ElseIf Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ScadAttivitaPag Then
                     Rpt = New ElencoScadPagCA05
                     If CodiceDitta = "01" Then
@@ -161,10 +197,16 @@ Partial Public Class WF_PrintWebCA
                     ElseIf CodiceDitta = "0501" Then
                         Rpt = New ElencoScadPagCA05 '0501
                     End If
+                    'giu090324
+                    Session("NomeRpt") = "ScadAttivitaPag"
                 ElseIf Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ElArtCliRespVis Then
                     Rpt = New StOrdArtCliRespVisite
+                    'giu090324
+                    Session("NomeRpt") = "ElArtCliRespVis"
                 ElseIf Session("TipoDocInStampa") = SWTD(TD.TipoContratto) Then
                     Rpt = New ProformaCA05
+                    'giu090324
+                    Session("NomeRpt") = "Proforma"
                 Else
                     Try
                         'Response.Redirect("..\Login.aspx?SessioneScaduta=Errore in esecuzione stampa Contratti: stampa non prevista")
@@ -179,8 +221,12 @@ Partial Public Class WF_PrintWebCA
                 End If
             ElseIf Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ElArtCliRespVis Then
                 Rpt = New StOrdArtCliRespVisite
+                'giu090324
+                Session("NomeRpt") = "ElArtCliRespVis"
             ElseIf Session("TipoDocInStampa") = SWTD(TD.TipoContratto) Then
                 Rpt = New ProformaCA05
+                'giu090324
+                Session("NomeRpt") = "Proforma"
             Else
                 Try
                     'Response.Redirect("..\Login.aspx?SessioneScaduta=Errore in esecuzione stampa Contratti: stampa non prevista")
@@ -195,8 +241,12 @@ Partial Public Class WF_PrintWebCA
             End If
         ElseIf Session(CSTTIPOELENCOSCATT) = TIPOELENCOSCATT.ElArtCliRespVis Then
             Rpt = New StOrdArtCliRespVisite
+            'giu090324
+            Session("NomeRpt") = "ElArtCliRespVis"
         ElseIf Session("TipoDocInStampa") = SWTD(TD.TipoContratto) Then
             Rpt = New ProformaCA05
+            'giu090324
+            Session("NomeRpt") = "Proforma"
         Else
             Try
                 'Response.Redirect("..\Login.aspx?SessioneScaduta=Errore in esecuzione stampa Contratti: stampa non prevista")
@@ -222,12 +272,19 @@ Partial Public Class WF_PrintWebCA
         Catch ex As Exception
             Rpt.SetDataSource(DsPrinWebDoc)
         End Try
-        
+
         CrystalReportViewer1.ReportSource = Rpt
+        'giu090324
+        'assegnato sopra  Session("NomeRpt") = "Stampa"
+        getOutputRPT(Rpt)
+        If IsNothing(Session("StampaMovMag")) Then
+            lblVuota.Visible = True
+        End If
     End Sub
 
 
-    Private Sub btnRitorno_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnRitorno.Click
+    Private Sub subRitorno()
+
         Dim strRitorno As String = ""
         Try
             strRitorno = "WF_ContrattiElenco.aspx?labelForm=Elenco CONTRATTI"
@@ -306,4 +363,71 @@ Partial Public Class WF_PrintWebCA
         '-------------------------------------------------------------------
     End Function
 
+
+    Private Function getOutputRPT(ByVal _Rpt As Object) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            '''If _Formato = ReportFormatEnum.Pdf Then
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            '''ElseIf _Formato = ReportFormatEnum.Excel Then
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            '''End If
+            myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("StampaMovMag") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String)
+        Dim sErrore As String = ""
+        Try
+            If byteReport.Length > 0 Then
+                With Me.Page
+                    Response.Clear()
+                    Response.Buffer = True
+                    Response.ClearHeaders()
+
+                    Response.AddHeader("Accept-Header", byteReport.Length.ToString())
+                    Response.AddHeader("Cache-Control", "private")
+                    Response.AddHeader("cache-control", "max-age=1")
+                    Response.AddHeader("content-length", byteReport.Length.ToString())
+                    Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
+                    'Response.AppendHeader("content-disposition", "attachment; filename=" & "RicevutaAcquisto_" & sCodiceTransazione & ".pdf")      ' per download diretto
+                    Response.AddHeader("Expires", "0")
+                    Response.ContentType = "application/pdf"
+                    Response.AddHeader("Accept-Ranges", "bytes")
+
+                    Response.BinaryWrite(byteReport)
+                    Response.Flush()
+                    Response.End()
+                End With
+            Else
+                lblVuota.Visible = True
+            End If
+        Catch ex As Exception
+            lblVuota.Visible = True
+        End Try
+    End Sub
 End Class

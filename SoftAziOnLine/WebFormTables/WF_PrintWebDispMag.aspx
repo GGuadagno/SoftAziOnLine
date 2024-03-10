@@ -14,8 +14,8 @@
         <asp:LinkButton ID="LinkStampa" runat="server" Visible="false">Visualizza Stampa</asp:LinkButton>&nbsp;&nbsp  
         <asp:Button ID="btnRitorno" runat="server" class="btnstyle" 
                                     Text="Ritorno Menu precedente" Visible="True"/>&nbsp;&nbsp
-        <asp:Label ID="lblMess" runat="server" Font-Bold="True" Font-Size="Large" 
-            ForeColor="Red" Text="Chiudere eventuali stampe create in precedenza"></asp:Label>
+       <%-- <asp:Label ID="lblMess" runat="server" Font-Bold="True" Font-Size="Large" 
+            ForeColor="Red" Text="Chiudere eventuali stampe create in precedenza"></asp:Label>--%>
     </td>
     </tr>
     </table>

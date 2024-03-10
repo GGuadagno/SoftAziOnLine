@@ -349,6 +349,7 @@
                             <div style="height: 40px">
                                 <asp:CheckBox ID="chkFatturaRA" runat="server" Text="Seleziona Fattura Rit.Acc." Checked="false" AutoPostBack="true" Font-Bold="true"/>
                             </div>
+                            
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </td>
@@ -421,6 +422,9 @@
                 </td>
                 <td align="left" class="style6">
                     <div style="height: 15px">
+                    </div>
+                    <div>
+                        <asp:CheckBox ID="chkEsporta" runat="server" Text="Possibilità di esportare la STAMPA" Checked="false" ForeColor="Blue" Font-Bold="true"/>
                     </div>
                     <div style="height: 15px">
                     </div>

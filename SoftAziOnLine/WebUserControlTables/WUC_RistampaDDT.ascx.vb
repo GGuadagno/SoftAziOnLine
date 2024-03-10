@@ -952,7 +952,13 @@ Partial Public Class WUC_RistampaDDT
                 ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=" & Session(IDDOCUMENTI).ToString.Trim)
                 Session(ATTESA_CALLBACK_METHOD) = ""
                 Session(CSTNOBACK) = 1
-                Attesa.ShowStampaAll2("Stampa singolo DDT. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa singolo DDT. N° " & strNDoc)
+                'giu100324
+                If chkEsporta.Checked = False Then
+                    Attesa.ShowStampaAll2("Stampa singolo DDT. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa singolo DDT. N° " & strNDoc)
+                Else
+                    Attesa.ShowStampaAll2("Stampa singolo DDT. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Stampa singolo DDT. N° " & strNDoc)
+                End If
+                '---------
             Else
                 Session(MODALPOPUP_CALLBACK_METHOD) = ""
                 Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -1383,8 +1389,13 @@ Partial Public Class WUC_RistampaDDT
         '' ''---------
         Session(ATTESA_CALLBACK_METHOD) = "CallChiudi"
         Session(CSTNOBACK) = 1
-        Attesa.ShowStampaAll("Totale DDT: " & FormattaNumero(TotDDT), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa DDT")
-        '
+        'giu100324
+        If chkEsporta.Checked = False Then
+            Attesa.ShowStampaAll("Totale DDT: " & FormattaNumero(TotDDT), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa DDT")
+        Else
+            Attesa.ShowStampaAll("Totale DDT: " & FormattaNumero(TotDDT), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Stampa DDT")
+        End If
+        '---------
         ' ''Session(CSTNOBACK) = 0
         ' ''Response.Redirect("WF_PrintWebCR.aspx?labelForm=Totale DDT: " & FormattaNumero(TotDDT))
     End Sub

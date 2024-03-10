@@ -335,14 +335,13 @@
                             </div>
                             <div style="height: 15px">
                             </div>
-                            <div style="height: 15px">
-                            </div>
                             <div>
                                 <asp:Button ID="btnStampaDTT" runat="server" class="btnstyle" Text="Singolo DDT" CausesValidation="False"/>
                             </div>
                             <div style="height: 15px">
                             </div>
-                            <div style="height: 15px">
+                            <div>
+                                <asp:CheckBox ID="chkEsporta" runat="server" Text="Possibilità di esportare la STAMPA" Checked="false" ForeColor="Blue" Font-Bold="true"/>
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>

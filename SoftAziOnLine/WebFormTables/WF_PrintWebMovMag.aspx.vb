@@ -11,6 +11,26 @@ Partial Public Class WF_PrintWebMovMag
     Inherits System.Web.UI.Page
 
     Private Sub WF_PrintWebMovMag_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'GIU100324
+        Try
+            Dim strLabelForm As String = Request.QueryString("labelForm")
+            If InStr(strLabelForm.Trim.ToUpper, "ESPORTA") > 0 Then
+                'OK PROSEGUO
+            Else
+                VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+                Exit Sub
+            End If
+            '-NON va bene per il NOBACK 
+            '''If Not String.IsNullOrEmpty(Session(CSTNOBACK)) Then
+            '''    If Session(CSTNOBACK) = 1 Then
+            '''        LnkRitorno.Visible = False
+            '''        VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
+            '''        Exit Sub
+            '''    End If
+            '''End If
+        Catch ex As Exception
+        End Try
+        '-
         If IsPostBack Then
             If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
                 'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString

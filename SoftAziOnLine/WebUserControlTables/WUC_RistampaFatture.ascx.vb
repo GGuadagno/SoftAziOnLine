@@ -1024,7 +1024,13 @@ Partial Public Class WUC_RistampaFatture
                 ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=" & Session(IDDOCUMENTI).ToString.Trim)
                 Session(ATTESA_CALLBACK_METHOD) = ""
                 Session(CSTNOBACK) = 1
-                Attesa.ShowStampaAll2("Stampa singola Fattura. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa singola Fattura. N° " & strNDoc)
+                'giu100324
+                If chkEsporta.Checked = False Then
+                    Attesa.ShowStampaAll2("Stampa singola Fattura. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa singola Fattura. N° " & strNDoc)
+                Else
+                    Attesa.ShowStampaAll2("Stampa singola Fattura. N° " & strNDoc, "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Stampa singola Fattura. N° " & strNDoc)
+                End If
+                '-
             Else
                 Session(MODALPOPUP_CALLBACK_METHOD) = ""
                 Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -1565,9 +1571,21 @@ Partial Public Class WUC_RistampaFatture
             End If
         End If
         If SWOKAll2 = True Then
-            Attesa.ShowStampaAll1("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture con SCONTI")
+            'giu100324
+            If chkEsporta.Checked = False Then
+                Attesa.ShowStampaAll1("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture con SCONTI")
+            Else
+                Attesa.ShowStampaAll1("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Fatture con SCONTI")
+            End If
+            '-
         Else
-            Attesa.ShowStampaAll2("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture con SCONTI")
+            'giu100324
+            If chkEsporta.Checked = False Then
+                Attesa.ShowStampaAll2("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture con SCONTI")
+            Else
+                Attesa.ShowStampaAll2("Totale Fatture con SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Fatture con SCONTI")
+            End If
+            '-
         End If
     End Sub
     Public Sub StampaDocumentiAll2()
@@ -1625,7 +1643,13 @@ Partial Public Class WUC_RistampaFatture
         '---------
         Session(ATTESA_CALLBACK_METHOD) = "CallChiudi"
         Session(CSTNOBACK) = 1
-        Attesa.ShowStampaAll2("Totale Fatture NO SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture NO SCONTI")
+        'giu100324
+        If chkEsporta.Checked = False Then
+            Attesa.ShowStampaAll2("Totale Fatture NO SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Fatture NO SCONTI")
+        Else
+            Attesa.ShowStampaAll2("Totale Fatture NO SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Fatture NO SCONTI")
+        End If
+        '-
     End Sub
     Public Sub CallChiudi()
         Chiudi("")
