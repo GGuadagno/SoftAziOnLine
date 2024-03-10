@@ -5,6 +5,7 @@ Imports CrystalDecisions.Shared
 Imports Microsoft.SqlServer.Server
 Imports System.IO
 Imports CrystalDecisions.CrystalReports.Engine
+Imports AjaxControlToolkit.AsyncFileUpload.Constants
 
 Partial Public Class WF_PrintWebMovMag
     Inherits System.Web.UI.Page
@@ -41,6 +42,20 @@ Partial Public Class WF_PrintWebMovMag
             CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            If Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagDaDataAData Then
+                Session("NomeRpt") = "MovMagDaDataAData"
+            ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagByIDDocumenti Then
+                Session("NomeRpt") = "MovMagByIDDocumenti"
+            ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceA Then
+                Session("NomeRpt") = "VendutoLeadSourceA"
+            ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.VendutoLeadSourceS Then
+                Session("NomeRpt") = "VendutoLeadSourceS"
+            Else
+                Session("NomeRpt") = "MovMagazzino"
+            End If
+            '-
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ElencoDDTMagCaus Then
             Dim Rpt As New ElDDTMagCaus
             Dim DsMovMag1 As New DSMovMag
@@ -49,15 +64,19 @@ Partial Public Class WF_PrintWebMovMag
             CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "ElencoDDTMagCaus"
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.MovMagByArticolo Then
             Dim Rpt As New MovMagPerArt
-            Session("NomeRpt") = "MovMagPerArticolo"
             Dim DsMovMag1 As New DSMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             CrystalReportViewer1.DisplayGroupTree = True
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "MovMagPerArticolo"
             getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ValCMSMOrdineSortCliForNDoc Then
             Dim Rpt As New ValCMSMCliForNDoc 'FatturatoClienteFattura
@@ -67,6 +86,9 @@ Partial Public Class WF_PrintWebMovMag
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "FatturatoClienteFattura"
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ValCMSMOrdineSortByNDoc Then
             Dim Rpt As New ValCMSMOrdineSortByNDoc 'FatturatoOrdineSortByNDoc
             Dim DsMovMag1 As New DSMovMag
@@ -75,6 +97,9 @@ Partial Public Class WF_PrintWebMovMag
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "FatturatoOrdineSortByNDoc"
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ValCMSMOrdineSortByDataDoc Then
             Dim Rpt As New ValCMSMOrdineSortByDataDoc 'FatturatoOrdineSortByDataDoc
             Dim DsMovMag1 As New DSMovMag
@@ -83,6 +108,9 @@ Partial Public Class WF_PrintWebMovMag
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "FatturatoOrdineSortByDataDoc"
+            getOutputRPT(Rpt)
         ElseIf Session(CSTTIPORPTMOVMAG) = TIPOSTAMPAMOVMAG.ValCMSMSintOrdineSortByNDoc Then
             Dim Rpt As New ValCMSMSintOrdineSortByNDoc 'FattSintOrdineSortByNDoc
             Dim DsMovMag1 As New DSMovMag
@@ -91,8 +119,14 @@ Partial Public Class WF_PrintWebMovMag
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
+            'giu090324
+            Session("NomeRpt") = "FattSintOrdineSortByNDoc"
+            getOutputRPT(Rpt)
         Else
             Chiudi("Errore: TIPO STAMPA MOVIMENTI DI MAGAZZINO SCONOSCIUTA")
+        End If
+        If String.IsNullOrEmpty(Session("MovMag")) Then
+            lblVuota.Visible = True
         End If
     End Sub
 
@@ -155,14 +189,10 @@ Partial Public Class WF_PrintWebMovMag
                     Response.End()
                 End With
             Else
-                Dim titolo As String = "Attenzione!"
-                sErrore = sErrore.Replace("'", " ")
-                sErrore = sErrore.Replace(vbCrLf, "\n")
-                Dim messaggio As String = "La stampa risulta vuota"
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), Guid.NewGuid().ToString(), String.Format("avvisoErroreGenerico('{0}', '{1}');", titolo, messaggio), True)
+                lblVuota.Visible = True
             End If
         Catch ex As Exception
-
+            lblVuota.Visible = True
         End Try
     End Sub
 
