@@ -2095,11 +2095,11 @@ Partial Public Class WUC_DocumentiElenco
                     End If
                     Session(CSTSWConfermaDoc) = 0
                     ' ''Session(CSTNOBACK) = 0 
-                    ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=" & Session(IDDOCUMENTI).ToString.Trim)
+                    ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA: " & Session(IDDOCUMENTI).ToString.Trim)
                     Session(ATTESA_CALLBACK_METHOD) = ""
                     Session(CSTNOBACK) = 1
                     'giu150320
-                    ' ''Attesa.ShowStampaAll2("Stampa documento", "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=Stampa documento")
+                    ' ''Attesa.ShowStampaAll2("Stampa documento", "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA Stampa documento")
                     ' ''Exit Sub
                 Else
                     myID = ""

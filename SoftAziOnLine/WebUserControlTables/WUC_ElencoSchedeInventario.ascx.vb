@@ -1639,7 +1639,7 @@ Partial Public Class WUC_ElencoSchedeInventario
         ' ''        End If
         ' ''        Session(CSTSWConfermaDoc) = 0
         ' ''        Session(CSTNOBACK) = 0 'giu040512
-        ' ''        Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?TUTTI")
+        ' ''        Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?ESPORTA TUTTI")
         ' ''    Catch ex As Exception
         ' ''        Session(MODALPOPUP_CALLBACK_METHOD) = ""
         ' ''        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""

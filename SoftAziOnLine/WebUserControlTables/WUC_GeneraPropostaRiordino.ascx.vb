@@ -1002,7 +1002,7 @@ Partial Public Class WUC_GeneraPropostaRiordino
                 End If
                 Session(CSTSWConfermaDoc) = 1
                 Session(CSTNOBACK) = 0 'giu040512
-                Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx")
+                Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA")
             Else
                 Session(MODALPOPUP_CALLBACK_METHOD) = ""
                 Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -1051,7 +1051,7 @@ Partial Public Class WUC_GeneraPropostaRiordino
                 End If
                 Session(CSTSWConfermaDoc) = 0
                 Session(CSTNOBACK) = 0 'giu040512
-                Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx")
+                Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA")
             Else
                 Session(MODALPOPUP_CALLBACK_METHOD) = ""
                 Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""

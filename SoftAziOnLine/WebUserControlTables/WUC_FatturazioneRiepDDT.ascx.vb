@@ -2295,7 +2295,7 @@ Partial Public Class WUC_FatturazioneRiepDDT
                     Session(EL_DOC_TOPRINT_SCN) = ELDocToPrintSCN
                 End If
                 Session(CSTSWConfermaDoc) = 0
-                ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?" & Session(IDDOCUMENTI).ToString.Trim)
+                ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?ESPORTA: " & Session(IDDOCUMENTI).ToString.Trim)
                 'giu160512
                 CreaFattureTutte()
                 ' ''If ChkStampaSingFC.Checked = True Then

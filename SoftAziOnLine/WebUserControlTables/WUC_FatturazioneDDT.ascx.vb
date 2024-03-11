@@ -2396,7 +2396,7 @@ Partial Public Class WUC_FatturazioneDDT
     '            '''If ChkStampaSingFC.Checked = True Then
     '            '''    Session(ATTESA_CALLBACK_METHOD) = "CreaFattureTutte"
     '            '''    Session(CSTNOBACK) = 1
-    '            '''    Attesa.ShowStampa("Stampa Fattura N° : " & FormattaNumero(NDoc.ToString), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=" & Session(IDDOCUMENTI).ToString.Trim)
+    '            '''    Attesa.ShowStampa("Stampa Fattura N° : " & FormattaNumero(NDoc.ToString), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, "..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA: " & Session(IDDOCUMENTI).ToString.Trim)
     '            '''Else
     '            '''    CreaFattureTutte()
     '            '''End If

@@ -1021,7 +1021,7 @@ Partial Public Class WUC_RistampaFatture
                 End If
                 Session(CSTSWConfermaDoc) = 0
                 ' ''Session(CSTNOBACK) = 0 
-                ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=" & Session(IDDOCUMENTI).ToString.Trim)
+                ' ''Response.Redirect("..\WebFormTables\WF_PrintWebCR.aspx?labelForm=ESPORTA: " & Session(IDDOCUMENTI).ToString.Trim)
                 Session(ATTESA_CALLBACK_METHOD) = ""
                 Session(CSTNOBACK) = 1
                 'giu100324
