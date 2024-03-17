@@ -2447,11 +2447,11 @@
       <DependentUpon>WUC_CambiaStatoPR.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti1.ascx.designer.vb">
-      <DependentUpon>WUC_CambioRespAreaVisiteContratti1.ascx</DependentUpon>
+    <Compile Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti.ascx.designer.vb">
+      <DependentUpon>WUC_CambioRespAreaVisiteContratti.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti1.ascx.vb">
-      <DependentUpon>WUC_CambioRespAreaVisiteContratti1.ascx</DependentUpon>
+    <Compile Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti.ascx.vb">
+      <DependentUpon>WUC_CambioRespAreaVisiteContratti.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebUserControlTables\WUC_CapiGruppo.ascx.designer.vb">
@@ -5225,7 +5225,7 @@
     <Content Include="WebUserControlTables\WUC_CambiaStatoOC.ascx" />
     <Content Include="WebUserControlTables\WUC_CambiaStatoOF.ascx" />
     <Content Include="WebUserControlTables\WUC_CambiaStatoPR.ascx" />
-    <Content Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti1.ascx" />
+    <Content Include="WebUserControlTables\WUC_CambioRespAreaVisiteContratti.ascx" />
     <Content Include="WebUserControlTables\WUC_CapiGruppo.ascx" />
     <Content Include="WebUserControlTables\WUC_Categorie.ascx" />
     <Content Include="WebUserControlTables\WUC_CategorieArt.ascx" />

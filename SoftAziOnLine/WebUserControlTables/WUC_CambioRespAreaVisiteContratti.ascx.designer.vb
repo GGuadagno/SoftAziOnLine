@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WUC_CambioRespAreaVisiteContratti1
+Partial Public Class WUC_CambioRespAreaVisiteContratti
 
     '''<summary>
     '''Controllo panelPrincipale.

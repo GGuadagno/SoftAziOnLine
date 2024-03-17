@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="WUC_CambioRespAreaVisiteContratti1.ascx.vb" Inherits="SoftAziOnLine.WUC_CambioRespAreaVisiteContratti1" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="WUC_CambioRespAreaVisiteContratti.ascx.vb" Inherits="SoftAziOnLine.WUC_CambioRespAreaVisiteContratti" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <%@ Register src="../WebUserControl/WUC_ModalPopup.ascx" tagname="ModalPopup" tagprefix="uc1" %>
 <style type="text/css">

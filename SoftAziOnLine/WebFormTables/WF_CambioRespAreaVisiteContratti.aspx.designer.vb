@@ -20,5 +20,5 @@ Partial Public Class WF_CambioRespAreaVisiteContratti
     '''Campo generato automaticamente.
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
-    Protected WithEvents WUC_CambioRespAreaVisiteContratti1 As Global.System.Web.UI.UserControl
+    Protected WithEvents WUC_CambioRespAreaVisiteContratti1 As Global.SoftAziOnLine.WUC_CambioRespAreaVisiteContratti
 End Class

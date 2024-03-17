@@ -13,7 +13,7 @@ Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WebForms
-Partial Public Class WUC_CambioRespAreaVisiteContratti1
+Partial Public Class WUC_CambioRespAreaVisiteContratti
     Inherits System.Web.UI.UserControl
     Private CodiceDitta As String = ""
     Private InizialiUT As String = ""
