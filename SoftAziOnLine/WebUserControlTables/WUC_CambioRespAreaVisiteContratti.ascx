@@ -36,6 +36,15 @@
         height: 185px;
     }
 </style>    
+<script language="javascript" type="text/javascript">
+    // Per visualizzare pdf in una nuova scheda
+    function SetTarget() {
+        document.forms[0].target = "_blank";
+        setTimeout(function () {
+            document.forms[0].target = "";
+        }, 1000);
+    }
+</script>
 <br />
 <asp:Panel ID="panelPrincipale" runat="server" Width="980px" Height="500px" BackColor="white">
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -122,7 +131,8 @@
                         <asp:Label ID="Label8" runat="server" Width="5px">&nbsp;</asp:Label>
                         <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" Checked="true" GroupName="TipoST" />
                         <asp:Label ID="Label7" runat="server" Width="50px"></asp:Label>
-                        <a ID="lnkElenco" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>
+                        <%--<a ID="lnkElenco" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>--%>
+                        <a onclick="SetTarget();" id="lnkElenco" runat="server" href="javascript:__doPostBack('LnkStampaOK','');" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco</a>                  
                     </asp:Panel>
                 </td>
                     <td align="left" class="style7">
