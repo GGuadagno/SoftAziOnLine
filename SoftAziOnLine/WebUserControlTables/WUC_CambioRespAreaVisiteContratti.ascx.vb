@@ -21,7 +21,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Dim dbCon As New dbStringaConnesioneFacade(Session(ESERCIZIO))
         SqlDa_Regioni.ConnectionString = dbCon.getConnectionString(TipoDB.dbSoftCoge)
         SqlDSProvince.ConnectionString = dbCon.getConnectionString(TipoDB.dbSoftCoge)
-        SqlDa_CatCli.ConnectionString = dbCon.getConnectionString(TipoDB.dbSoftCoge)
         '---------------------------------
         Dim sTipoUtente As String = ""
         If String.IsNullOrEmpty(Session(CSTTIPOUTENTE)) Then
@@ -37,12 +36,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         End If
         '-----------
         If (Not IsPostBack) Then
-            chkTuttiModelli.Checked = True
-            'DDLModello.SelectedIndex = -1
-            'DDLModello.Enabled = False
-            chkTuttiCategorie.Checked = True
-
-            AbilitaDisabilitaCampiCat(False)
             txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
             txtDataA.Text = "31/12/" & Session(ESERCIZIO)
             '-
@@ -92,27 +85,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
                 End If
             End If
         End If
-        If chkTuttiCategorie.Checked = False Then
-            If (ddlCatCli.SelectedValue = "" Or ddlCatCli.SelectedIndex = -1) Then
-                StrErroreCampi = StrErroreCampi & "<BR>- selezionare la categoria"
-                ErroreCampi = True
-            End If
-        End If
 
-        If chkTuttiModelli.Checked = True Then
-            If chkC1.Checked Or chkC2.Checked Or chkFR2.Checked Or chkFR3.Checked Or chkFRX.Checked Or chkHS1.Checked Or chkMisti.Checked Then
-                chkC1.Checked = False
-                chkC2.Checked = False : chkFR2.Checked = False : chkFR3.Checked = False : chkFRX.Checked = False : chkHS1.Checked = False
-                chkMisti.Checked = False
-                'StrErroreCampi = StrErroreCampi & "<BR>- Seleziona tutti i modelli "
-                'ErroreCampi = True
-            End If
-        Else
-            If Not chkC1.Checked And Not chkC2.Checked And Not chkFR2.Checked And Not chkFR3.Checked And Not chkFRX.Checked And Not chkHS1.Checked And Not chkMisti.Checked Then
-                StrErroreCampi = StrErroreCampi & "<BR>- Selezionare almeno un modello"
-                ErroreCampi = True
-            End If
-        End If
         If ErroreCampi Then
             ModalPopup.Show("Attenzione", StrErroreCampi, WUC_ModalPopup.TYPE_ALERT)
             Exit Sub
@@ -129,57 +102,13 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Provincia = ddlProvince.SelectedValue
         End If
 
-        If chkTuttiCategorie.Checked Then
-            CodCateg = -1
-        Else
-            CodCateg = ddlCatCli.SelectedValue
-        End If
-        If chkRaggrCatCli.Checked Then
-            SWRaggrCatCli = True
-        Else
-            SWRaggrCatCli = False
-        End If
+        CodCateg = -1
+        SWRaggrCatCli = False
         Dim strCategRagg As String = ""
-        Dim SWTratt As Integer = 0
         Dim AccorpaCR As Boolean = False
-        SWTratt = InStr(ddlCatCli.SelectedItem.Text.Trim, " - ")
-        If chkTuttiCategorie.Checked = False And chkRaggrCatCli.Checked = True Then
-            If SWTratt = 0 Then
-                strCategRagg = ddlCatCli.SelectedItem.Text.Trim
-            Else
-                'VA BENE ANCHE QUESTA strCategRagg = Mid(ddlCatCli.SelectedItem.Text.Trim, 1, SWTratt - 1)
-                strCategRagg = Left(ddlCatCli.SelectedItem.Text.Trim, SWTratt - 1)
-            End If
-            AccorpaCR = chkAccorpaCC.Checked
-        Else
-            strCategRagg = ""
-            AccorpaCR = False
-        End If
-        Dim Modello As String = ""
-        If chkTuttiModelli.Checked Then
-            Modello = "ZZZ"
-        ElseIf chkMisti.Checked Then
-            Modello = "XXX"
-        Else
-            If chkC1.Checked = True Then
-                Modello += chkC1.Text + ","
-            End If
-            If chkC2.Checked = True Then
-                Modello += chkC2.Text + ","
-            End If
-            If chkFR2.Checked = True Then
-                Modello += chkFR2.Text + ","
-            End If
-            If chkFR3.Checked = True Then
-                Modello += chkFR3.Text + ","
-            End If
-            If chkFRX.Checked = True Then
-                Modello += chkFRX.Text + ","
-            End If
-            If chkHS1.Checked = True Then
-                Modello += chkHS1.Text + ","
-            End If
-        End If
+        AccorpaCR = False
+        Dim Modello As String = "ZZZ"
+
         Try
             If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", Session(CSTSTATODOC), Modello) Then
                 If DsStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
@@ -282,29 +211,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             ModalPopup.Show("Errore", ex.Message, WUC_ModalPopup.TYPE_ERROR)
         End Try
     End Sub
-    Private Sub chkTuttiCategorie_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkTuttiCategorie.CheckedChanged
-        pulisciCampiCategoria()
-        If chkTuttiCategorie.Checked Then
-            AbilitaDisabilitaCampiCat(False)
-            chkRaggrCatCli.Enabled = False
-            chkRaggrCatCli.Checked = False
-            chkAccorpaCC.Enabled = False
-            chkAccorpaCC.Checked = False
-        Else
-            AbilitaDisabilitaCampiCat(True)
-            chkRaggrCatCli.Enabled = True
-            ddlCatCli.Focus()
-        End If
-        lnkElenco.Visible = False
-    End Sub
-
-    Private Sub AbilitaDisabilitaCampiCat(ByVal Abilita As Boolean)
-        ddlCatCli.Enabled = Abilita
-    End Sub
-    Private Sub pulisciCampiCategoria()
-        ddlCatCli.SelectedIndex = -1
-    End Sub
-
     Private Sub chkTuttiRegioni_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkTutteRegioni.CheckedChanged
         If chkTutteRegioni.Checked Then
             ddlRegioni.Enabled = False
@@ -317,16 +223,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Session("CodRegione") = ddlRegioni.SelectedValue 'alb080213
             ddlRegioni.Enabled = True
             ddlRegioni.Focus()
-        End If
-        lnkElenco.Visible = False
-    End Sub
-
-    Private Sub chkRaggrCatCli_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkRaggrCatCli.CheckedChanged
-        If chkRaggrCatCli.Checked = True Then
-            chkAccorpaCC.Enabled = True
-        Else
-            chkAccorpaCC.Enabled = False
-            chkAccorpaCC.Checked = False
         End If
         lnkElenco.Visible = False
     End Sub
@@ -387,36 +283,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         lnkElenco.Visible = False
     End Sub
     '-
-
-    Private Sub chkModelli_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkC1.CheckedChanged,
-        chkC2.CheckedChanged, chkFR2.CheckedChanged, chkFR3.CheckedChanged, chkFRX.CheckedChanged, chkHS1.CheckedChanged
-        If chkC1.Checked Or chkC2.Checked Or chkFR2.Checked Or chkFR3.Checked Or chkFRX.Checked Or chkHS1.Checked Then
-            chkTuttiModelli.Checked = False
-            chkMisti.Checked = False
-        ElseIf chkMisti.Checked = False Then
-            chkTuttiModelli.Checked = True
-        Else
-            chkTuttiModelli.Checked = False
-        End If
-        lnkElenco.Visible = False
-    End Sub
-    Private Sub chkMisti_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkMisti.CheckedChanged
-        If chkMisti.Checked Then
-            chkTuttiModelli.Checked = False
-            chkC1.Checked = False
-            chkC2.Checked = False : chkFR2.Checked = False : chkFR3.Checked = False : chkFRX.Checked = False : chkHS1.Checked = False
-        End If
-        lnkElenco.Visible = False
-    End Sub
-    Private Sub chkTuttiModelli_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkTuttiModelli.CheckedChanged
-        If chkTuttiModelli.Checked Then
-            chkC1.Checked = False
-            chkC2.Checked = False : chkFR2.Checked = False : chkFR3.Checked = False : chkFRX.Checked = False : chkHS1.Checked = False
-            chkMisti.Checked = False
-        End If
-        lnkElenco.Visible = False
-    End Sub
-
     Private Sub rbtnPDFXLS_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnPDF.CheckedChanged, rbtnXLS.CheckedChanged
         lnkElenco.Visible = False
     End Sub

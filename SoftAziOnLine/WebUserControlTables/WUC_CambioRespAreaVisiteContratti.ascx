@@ -80,7 +80,7 @@
                         </tr>
                     </table>
                     </asp:Panel>
-                    <asp:Panel ID="PanelSelezionaDate" style="margin-top: 0px;" runat="server" GroupingText="Date Contratto / Tipo evasione">
+                    <asp:Panel ID="PanelSelezionaDate" style="margin-top: 0px;" runat="server" GroupingText="Date Scadenze Attività">
                         <div>
                             <asp:Label ID="lblDallaData" runat="server" Height="16px" Width="100px">Dalla data</asp:Label>
                             <asp:TextBox ID="txtDataDa" runat="server" Width="80px" MaxLength="10" AutoPostBack="false" TabIndex="1"></asp:TextBox>
@@ -106,68 +106,17 @@
                         <div>&nbsp;</div>
                         <div>
                             <asp:Label ID="Label1" runat="server" Height="16px"  Width="100px">Tipo evasione</asp:Label>
-                            <asp:RadioButton ID="rbtnEvaso" runat="server" Text="Evasi" AutoPostBack="true" GroupName="Tipo" />
+                            <asp:RadioButton ID="rbtnEvaso" runat="server" Text="Evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
                             <asp:Label ID="Label0" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnDaEvadere" runat="server" Text="Da evadere" AutoPostBack="true" GroupName="Tipo" />
+                            <asp:RadioButton ID="rbtnDaEvadere" runat="server" Text="Da evadere" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
                             <asp:Label ID="Label2" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnParzEvaso" runat="server" Text="Parzialmente evasi" AutoPostBack="true" GroupName="Tipo" />
+                            <asp:RadioButton ID="rbtnParzEvaso" runat="server" Text="Parzialmente evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
                             <asp:Label ID="Label3" runat="server" Width="5px">&nbsp;</asp:Label>
-                             <asp:RadioButton ID="rbtnDaEvParEv" runat="server" Text="Da evadere + Parzialmente evasi" AutoPostBack="true" GroupName="Tipo"  Checked="true" />
+                             <asp:RadioButton ID="rbtnDaEvParEv" runat="server" Text="Da evadere + Parzialmente evasi" AutoPostBack="true" GroupName="Tipo"  Checked="true" Enabled="false" />
                             <asp:Label ID="Label4" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnTutti" runat="server" Text="Tutti" Checked="false" AutoPostBack="true" GroupName="Tipo" />
+                            <asp:RadioButton ID="rbtnTutti" runat="server" Text="Tutti" Checked="false" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
                         </div>
                      </asp:Panel>
-                     <asp:Panel ID="PanelCategoria" style="margin-top: 0px;" runat="server" GroupingText="Categoria Clienti">
-                    <table width="100%">
-                        <tr>
-                            <td align="left">Singola categoria</td><td>
-                            <asp:DropDownList ID="ddlCatCli" runat="server" DataSourceID="SqlDa_CatCli" 
-                                DataTextField="Descrizione" DataValueField="Codice" Width="400px" 
-                                AppendDataBoundItems="true" Enabled="False">
-                                <asp:ListItem Value="0" Text="Categoria non definita"></asp:ListItem>
-                            </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDa_CatCli" runat="server" 
-                                SelectCommand="SELECT [Codice], [Descrizione] FROM [Categorie]">
-                            </asp:SqlDataSource>
-                            </td>
-                            <td>
-                            <asp:CheckBox ID="chkTuttiCategorie" runat="server" Text="Seleziona tutte le categorie" AutoPostBack="true" Checked="True" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left"></td>
-                            <td>
-                            <asp:CheckBox ID="chkRaggrCatCli" runat="server" Text="Seleziona tutte le categorie per descrizione iniziale uguale" AutoPostBack="true" Checked="False" Enabled="false" />
-                            </td>
-                            <td>
-                            <asp:CheckBox ID="chkAccorpaCC" runat="server" Text="Accorpa le categorie" AutoPostBack="False" Checked="False" Enabled="false" />
-                            </td>
-                        </tr>
-                    </table>
-                    </asp:Panel>
-                    <asp:Panel ID="PanelModello" runat="server" groupingtext="Modello" style="margin-top: 0px;" Height="55px" Width="859px">
-                        <%--<asp:Label ID="Label23" runat="server" BorderStyle="None" Font-Bold="false" Text="Modello"></asp:Label>--%>
-                        <asp:CheckBox ID="chkHS1" runat="server" AutoPostBack="True" TabIndex="10" Text="HS1" TextAlign="Left" ToolTip="1" />
-                        <asp:CheckBox ID="chkFR2" runat="server" AutoPostBack="True" TabIndex="10" Text="FR2" TextAlign="Left" ToolTip="2" />
-                        <asp:CheckBox ID="chkFR3" runat="server" AutoPostBack="True" TabIndex="10" Text="FR3" TextAlign="Left" ToolTip="3" />
-                        <asp:CheckBox ID="chkFRX" runat="server" AutoPostBack="True" TabIndex="10" Text="FRX" TextAlign="Left" ToolTip="4" />
-                        <asp:CheckBox ID="chkC1" runat="server" AutoPostBack="True" TabIndex="10" Text="C1" TextAlign="Left" ToolTip="5" />
-                        <asp:CheckBox ID="chkC2" runat="server" AutoPostBack="True" TabIndex="10" Text="C2" TextAlign="Left" ToolTip="6" />
-                        <asp:Label ID="Label5" runat="server" Width="50px"></asp:Label>
-                        <asp:CheckBox ID="chkMisti" runat="server" AutoPostBack="True" TabIndex="10" Font-Bold="true" ForeColor="Blue" Text="Misti" TextAlign="Left" ToolTip="8" />
-                        <%--<asp:DropDownList ID="DDLModello" runat="server" Width="60px" AutoPostBack="false">
-                                        <asp:ListItem Text="" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="HS1" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="FR2" Value="2"></asp:ListItem>
-                                        <asp:ListItem Text="FR3" Value="3"></asp:ListItem>
-                                        <asp:ListItem Text="FRX" Value="4"></asp:ListItem>
-                                        <asp:ListItem Text="C1" Value="5"></asp:ListItem>
-                                        <asp:ListItem Text="C2" Value="6"></asp:ListItem>
-                                        <asp:ListItem Text="Misti" Value="9"></asp:ListItem>
-                                  </asp:DropDownList>--%>
-                         <asp:Label ID="Label6" runat="server" Width="50px"></asp:Label>
-                        <asp:CheckBox ID="chkTuttiModelli" runat="server" AutoPostBack="True" TabIndex="10" Font-Bold="true" ForeColor="Blue" Text="Seleziona tutti" TextAlign="Left" ToolTip="9" /> 
-                    </asp:Panel>
                     <asp:Panel ID="Panel1" runat="server" groupingtext="Tipo stampa" style="margin-top: 0px;" Height="55px" Width="859px">
                         <asp:RadioButton ID="rbtnPDF" runat="server" Text="PDF" AutoPostBack="true" GroupName="TipoST" />
                         <asp:Label ID="Label8" runat="server" Width="5px">&nbsp;</asp:Label>
