@@ -20,6 +20,7 @@ Partial Public Class Login
     Dim myObject As Object = Nothing
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+#Region "Note modiche"
         'giu311018 nel caso servisse sapere il CLIENTE
         'Dim myAzi As New It.SoftAzi.SystemFramework.ApplicationConfiguration
         'lblRelease.Text += " (" & myAzi.DbCliente.Trim & ")"
@@ -277,9 +278,11 @@ Partial Public Class Login
         '"24/08/2022 11.20 Controllo Cliente NON FATTURABILE, segnalazione in: Allestimento / Em.Fattura / Em.DDT / Contratto e da Preventivo>>Ordine - " & _
         '"09/08/2022 16.00 Controllo obbligo N° Telefono per singolo DDT in spedizione"
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
-        '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & _
-        lblRelease.Text = "Release 10-11/03/2024 - Gestione anteprima Stampe ed esporta in PDF - 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server"
-        lblRelease.ToolTip = "07/03/2024 Ultima Sessione solo con SESSION e non IP - 06/03/2024 Ottimizzato accesso al gestionale - 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività" +
+        '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & 
+#End Region
+        lblRelease.Text = "Release 17/03/2024 - Nuova funzione cambio Responsabili Area/Visite nei contratti"
+        lblRelease.ToolTip = "10-11/03/2024 - Gestione anteprima Stampe ed esporta in PDF - 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server" +
+        " - 07/03/2024 Ultima Sessione solo con SESSION e non IP - 06/03/2024 Ottimizzato accesso al gestionale - 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività" +
         " - 29/02/2024 Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
         " - 26/02/2024 Corretto documenti/Causale Magazzino: movimenti tra Magazzini, non deve cambiare la Causale 2 e Magazzino 2 in aggiornamento" +
         " - 20/02/2024 Modifica Nuova stampa Elenco DDT per Magazzino/Causale: Aggiunto Dal/Al Magazzino quando è un Trasferimento" +
