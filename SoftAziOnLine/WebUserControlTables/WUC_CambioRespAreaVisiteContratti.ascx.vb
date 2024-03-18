@@ -39,7 +39,11 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         If IsPostBack Then
             If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
                 'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
-                VisualizzaRpt(Session("CRAVCSstampa"), Session(CSTNOMEPDF))
+                If rbtnPDF.Checked Then
+                    VisualizzaRpt(Session("CRAVCSstampa"), Session(CSTNOMEPDF), "PDF")
+                Else
+                    VisualizzaRpt(Session("CRAVCSstampa"), Session(CSTNOMEPDF), "EXEL")
+                End If
                 Exit Sub
             End If
             '''If Request.Params.Get("__EVENTTARGET").ToString = "LnkRitornoOK" Then
@@ -52,8 +56,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
             txtDataA.Text = "31/12/" & Session(ESERCIZIO)
             '-
-            chkTutteRegioni.Checked = True
-            ddlRegioni.Enabled = False
+            chkTutteRegioni.Checked = False
+            ddlRegioni.Enabled = True
             chkTutteProvince.Checked = True
             ddlProvince.Enabled = False
             Session("CodRegione") = 0
@@ -81,6 +85,15 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Dim CodCateg As Integer
         Dim SWRaggrCatCli As Boolean
         'CONTROLLI PRIMA DI AVVIARE LA STAMPA
+        If chkTutteRegioni.Checked Then
+            'NON CAPITERA'MAI
+        Else
+            CodRegione = ddlRegioni.SelectedValue
+            If CodRegione = 0 Then
+                StrErroreCampi = StrErroreCampi & "<BR>- Selezionare una Regione"
+                ErroreCampi = True
+            End If
+        End If
         If txtDataDa.Text = "" Then
             StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di inizio periodo"
             ErroreCampi = True
@@ -229,6 +242,9 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         End Try
 
         Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
             GC.WaitForPendingFinalizers()
             GC.Collect()
         Catch
@@ -248,7 +264,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
 
         Return fileData
     End Function
-    Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String)
+    Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String, ByVal _Formato As String)
         Dim sErrore As String = ""
         Try
             If byteReport.Length > 0 Then
@@ -261,10 +277,16 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
                     Response.AddHeader("Cache-Control", "private")
                     Response.AddHeader("cache-control", "max-age=1")
                     Response.AddHeader("content-length", byteReport.Length.ToString())
-                    Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
-                    'Response.AppendHeader("content-disposition", "attachment; filename=" & "RicevutaAcquisto_" & sCodiceTransazione & ".pdf")      ' per download diretto
+
                     Response.AddHeader("Expires", "0")
-                    Response.ContentType = "application/pdf"
+                    If _Formato = "PDF" Then
+                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
+                        Response.ContentType = "application/pdf"
+                    Else
+                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
+                        Response.ContentType = "application/vnd.ms-excel"
+                    End If
+                    '-
                     Response.AddHeader("Accept-Ranges", "bytes")
 
                     Response.BinaryWrite(byteReport)

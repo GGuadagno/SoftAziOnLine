@@ -74,7 +74,7 @@
                             </asp:DropDownList>
                             </td>
                             <td>
-                            <asp:CheckBox ID="chkTutteRegioni" runat="server" Text="Seleziona tutte le regioni" AutoPostBack="true" Checked="True" />
+                            <asp:CheckBox ID="chkTutteRegioni" runat="server" Text="Seleziona tutte le regioni" AutoPostBack="true" Checked="false" visible="false"/>
                             </td>
                          </tr>
                          <tr>
@@ -115,24 +115,24 @@
                         <div>&nbsp;</div>
                         <div>
                             <asp:Label ID="Label1" runat="server" Height="16px"  Width="100px">Tipo evasione</asp:Label>
-                            <asp:RadioButton ID="rbtnEvaso" runat="server" Text="Evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
-                            <asp:Label ID="Label0" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnDaEvadere" runat="server" Text="Da evadere" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
-                            <asp:Label ID="Label2" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnParzEvaso" runat="server" Text="Parzialmente evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
-                            <asp:Label ID="Label3" runat="server" Width="5px">&nbsp;</asp:Label>
+                            <asp:RadioButton ID="rbtnEvaso" runat="server" Text="Evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" visible="false" />
+                            <asp:Label ID="Label0" runat="server" Width="5px" visible="false">&nbsp;</asp:Label>
+                            <asp:RadioButton ID="rbtnDaEvadere" runat="server" Text="Da evadere" AutoPostBack="true" GroupName="Tipo" Enabled="false" visible="false" />
+                            <asp:Label ID="Label2" runat="server" Width="5px" visible="false">&nbsp;</asp:Label>
+                            <asp:RadioButton ID="rbtnParzEvaso" runat="server" Text="Parzialmente evasi" AutoPostBack="true" GroupName="Tipo" Enabled="false" visible="false" />
+                            <asp:Label ID="Label3" runat="server" Width="5px" visible="false">&nbsp;</asp:Label>
                              <asp:RadioButton ID="rbtnDaEvParEv" runat="server" Text="Da evadere + Parzialmente evasi" AutoPostBack="true" GroupName="Tipo"  Checked="true" Enabled="false" />
-                            <asp:Label ID="Label4" runat="server" Width="5px">&nbsp;</asp:Label>
-                            <asp:RadioButton ID="rbtnTutti" runat="server" Text="Tutti" Checked="false" AutoPostBack="true" GroupName="Tipo" Enabled="false" />
+                            <asp:Label ID="Label4" runat="server" Width="5px" visible="false">&nbsp;</asp:Label>
+                            <asp:RadioButton ID="rbtnTutti" runat="server" Text="Tutti" Checked="false" AutoPostBack="true" GroupName="Tipo" Enabled="false" visible="false" />
                         </div>
                      </asp:Panel>
                     <asp:Panel ID="Panel1" runat="server" groupingtext="Tipo stampa" style="margin-top: 0px;" Height="55px" Width="859px">
-                        <asp:RadioButton ID="rbtnPDF" runat="server" Text="PDF" AutoPostBack="true" GroupName="TipoST" />
+                        <asp:RadioButton ID="rbtnPDF" runat="server" Text="PDF" AutoPostBack="true" Checked="true" GroupName="TipoST" />
                         <asp:Label ID="Label8" runat="server" Width="5px">&nbsp;</asp:Label>
-                        <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" Checked="true" GroupName="TipoST" />
+                        <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" Checked="false" GroupName="TipoST" visible="true" />
                         <asp:Label ID="Label7" runat="server" Width="50px"></asp:Label>
                         <%--<a ID="lnkElenco" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>--%>
-                        <a onclick="SetTarget();" id="lnkElenco" runat="server" href="javascript:__doPostBack('LnkStampaOK','');" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco</a>                  
+                        <a onclick="SetTarget();" id="lnkElenco" runat="server" href="javascript:__doPostBack('LnkStampaOK','');" style="border-color:snow;border-style:outset;background-color:yellow;" visible="false">Apri Elenco</a>                  
                     </asp:Panel>
                 </td>
                     <td align="left" class="style7">

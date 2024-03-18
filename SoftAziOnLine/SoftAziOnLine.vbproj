@@ -258,9 +258,9 @@
     </Compile>
     <Compile Include="Report\ConfermaOrdine0501.vb">
       <DependentUpon>ConfermaOrdine0501.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ConfermaOrdineNoSconti.vb">
       <AutoGen>True</AutoGen>
@@ -282,9 +282,9 @@
     </Compile>
     <Compile Include="Report\ConfermaOrdineNoSconti0501.vb">
       <DependentUpon>ConfermaOrdineNoSconti0501.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ContrattiCKSerieLotto.vb">
       <AutoGen>True</AutoGen>
@@ -307,14 +307,14 @@
     <Compile Include="Report\AnagArticFornCODP.vb">
       <DependentUpon>AnagArticFornCODP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\AnagArticFornDESP.vb">
       <DependentUpon>AnagArticFornDESP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\DDTLottiSub.vb">
       <AutoGen>True</AutoGen>
@@ -342,9 +342,9 @@
     </Compile>
     <Compile Include="Report\DDTNoPrezzi0501.vb">
       <DependentUpon>DDTNoPrezzi0501.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\DDTNoPrezzi05LT.vb">
       <AutoGen>True</AutoGen>
@@ -456,9 +456,9 @@
     </Compile>
     <Compile Include="Report\ElencoScadCA05.vb">
       <DependentUpon>ElencoScadCA05.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ElencoScadCAOrdCli05.vb">
       <AutoGen>True</AutoGen>
@@ -702,9 +702,9 @@
     </Compile>
     <Compile Include="Report\ListaCarico.vb">
       <DependentUpon>ListaCarico.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ListaCaricoSpedizione.vb">
       <AutoGen>True</AutoGen>
@@ -996,9 +996,9 @@
     </Compile>
     <Compile Include="Report\Preventivo0501.vb">
       <DependentUpon>Preventivo0501.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\PreventivoNOSconti.vb">
       <AutoGen>True</AutoGen>
@@ -1014,15 +1014,15 @@
     </Compile>
     <Compile Include="Report\PreventivoNOSconti05.vb">
       <DependentUpon>PreventivoNOSconti05.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\PreventivoNOSconti0501.vb">
       <DependentUpon>PreventivoNOSconti0501.rpt</DependentUpon>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ProformaCA05.vb">
       <AutoGen>True</AutoGen>
