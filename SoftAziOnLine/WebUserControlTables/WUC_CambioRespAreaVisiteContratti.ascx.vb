@@ -279,12 +279,22 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
                     Response.AddHeader("content-length", byteReport.Length.ToString())
 
                     Response.AddHeader("Expires", "0")
-                    If _Formato = "PDF" Then
-                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
-                        Response.ContentType = "application/pdf"
+                    If Right(_NomeRpt, 4).ToString.ToUpper = ".PDF" Or Right(_NomeRpt, 4).ToString.ToUpper = ".XLS" Then
+                        If _Formato = "PDF" Then
+                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
+                            Response.ContentType = "application/pdf"
+                        Else
+                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
+                            Response.ContentType = "application/vnd.ms-excel"
+                        End If
                     Else
-                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
-                        Response.ContentType = "application/vnd.ms-excel"
+                        If _Formato = "PDF" Then
+                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
+                            Response.ContentType = "application/pdf"
+                        Else
+                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
+                            Response.ContentType = "application/vnd.ms-excel"
+                        End If
                     End If
                     '-
                     Response.AddHeader("Accept-Ranges", "bytes")
