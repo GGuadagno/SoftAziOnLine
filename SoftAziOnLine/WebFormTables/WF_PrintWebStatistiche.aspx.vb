@@ -102,7 +102,7 @@ Partial Public Class WF_PrintWebStatistiche
             dsReport = Session("dsVendutoDDT")
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             rpt.SetDataSource(dsReport)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = rpt
             'giu090324
             Session("NomeRpt") = "VendutoDDT"
@@ -113,7 +113,7 @@ Partial Public Class WF_PrintWebStatistiche
             dsReport = Session("dsFattAgente")
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             rpt.SetDataSource(dsReport)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = rpt
             'giu090324
             Session("NomeRpt") = "FatturatoAgenteAnalitico"
@@ -124,7 +124,7 @@ Partial Public Class WF_PrintWebStatistiche
             dsReport = Session("dsFattAgente")
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             rpt.SetDataSource(dsReport)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = rpt
             'giu090324
             Session("NomeRpt") = "FatturatoAgenteSintetico"
@@ -135,7 +135,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoClienteArticoloAG"
@@ -146,7 +146,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoArticoloClienteAG"
@@ -157,7 +157,7 @@ Partial Public Class WF_PrintWebStatistiche
             dsReport = Session("dsVendutoDDT")
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             rpt.SetDataSource(dsReport)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = rpt
             'giu090324
             Session("NomeRpt") = "VendutoDDTAG"
@@ -168,7 +168,7 @@ Partial Public Class WF_PrintWebStatistiche
             dsReport = Session("DSIncNCFatt")
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             rpt.SetDataSource(dsReport)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = rpt
             'giu090324
             Session("NomeRpt") = "IncidenzaNCFatturato"
@@ -179,7 +179,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoForArt"
@@ -190,7 +190,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoForArtCli"
@@ -202,7 +202,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoClienteArticoloCC"
@@ -213,7 +213,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoArticoloClienteCC"
@@ -224,7 +224,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoAgFortArt"
@@ -235,7 +235,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoRegFortArt"
@@ -246,7 +246,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoRegioneCateg"
@@ -257,7 +257,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoRegioneCategSintetico"
@@ -268,7 +268,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoCliForArt"
@@ -279,7 +279,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoArticoloClienteCCSintetico"
@@ -290,7 +290,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoAgenteCateg"
@@ -301,7 +301,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoCliForArtSintetico"
@@ -312,7 +312,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoAgenteCategSintetico"
@@ -323,7 +323,7 @@ Partial Public Class WF_PrintWebStatistiche
             DsStatVendCliArt1 = Session(CSTDSStatVendCliArt)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsStatVendCliArt1)
-            CrystalReportViewer1.DisplayGroupTree = True
+           ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "VendutoRegionePRCategCliArt"

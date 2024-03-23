@@ -2397,57 +2397,6 @@ Partial Public Class WUC_ContrattiElScad
 
         Return fileData
     End Function
-    'giu230324 chiamo WebFormStampe
-    '''Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String, ByVal _Formato As String)
-    '''    Dim sErrore As String = ""
-    '''    Try
-    '''        If byteReport.Length > 0 Then
-    '''            With Me.Page
-    '''                Response.Clear()
-    '''                Response.Buffer = True
-    '''                Response.ClearHeaders()
-
-    '''                Response.AddHeader("Accept-Header", byteReport.Length.ToString())
-    '''                Response.AddHeader("Cache-Control", "private")
-    '''                Response.AddHeader("cache-control", "max-age=1")
-    '''                Response.AddHeader("content-length", byteReport.Length.ToString())
-
-    '''                Response.AddHeader("Expires", "0")
-    '''                If Right(_NomeRpt, 4).ToString.ToUpper = ".PDF" Or Right(_NomeRpt, 4).ToString.ToUpper = ".XLS" Then
-    '''                    If _Formato = "PDF" Then
-    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
-    '''                        Response.ContentType = "application/pdf"
-    '''                    Else
-    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
-    '''                        Response.ContentType = "application/vnd.ms-excel"
-    '''                    End If
-    '''                Else
-    '''                    If _Formato = "PDF" Then
-    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
-    '''                        Response.ContentType = "application/pdf"
-    '''                    Else
-    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
-    '''                        Response.ContentType = "application/vnd.ms-excel"
-    '''                    End If
-    '''                End If
-    '''                '-
-    '''                Response.AddHeader("Accept-Ranges", "bytes")
-
-    '''                Response.BinaryWrite(byteReport)
-    '''                Response.Flush()
-    '''                Response.End()
-    '''            End With
-    '''        Else
-    '''            lnkElencoSc.Visible = False
-    '''            LnkStampa.Visible = False
-    '''            LnkVerbale.Visible = False
-    '''        End If
-    '''    Catch ex As Exception
-    '''        lnkElencoSc.Visible = False
-    '''        LnkStampa.Visible = False
-    '''        LnkVerbale.Visible = False
-    '''    End Try
-    '''End Sub
     '@@@@@
 
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean

@@ -92,7 +92,7 @@ Partial Public Class WF_PrintWebMovMag
             Dim DsMovMag1 As New DSMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = True
+            ' CrystalReportViewer1.DisplayGroupTree = True
             Rpt.SetDataSource(DsMovMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -104,7 +104,7 @@ Partial Public Class WF_PrintWebMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsMovMag1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FatturatoClienteFattura"
@@ -115,7 +115,7 @@ Partial Public Class WF_PrintWebMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsMovMag1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FatturatoOrdineSortByNDoc"
@@ -126,7 +126,7 @@ Partial Public Class WF_PrintWebMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsMovMag1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FatturatoOrdineSortByDataDoc"
@@ -137,7 +137,7 @@ Partial Public Class WF_PrintWebMovMag
             DsMovMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DsMovMag1)
-            CrystalReportViewer1.DisplayGroupTree = True
+            ' CrystalReportViewer1.DisplayGroupTree = True
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattSintOrdineSortByNDoc"
