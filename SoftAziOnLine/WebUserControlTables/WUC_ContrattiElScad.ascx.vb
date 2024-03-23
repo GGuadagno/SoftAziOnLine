@@ -12,8 +12,8 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
-
+'Imports Microsoft.Reporting.WebForms
+Imports System.IO
 Partial Public Class WUC_ContrattiElScad
     Inherits System.Web.UI.UserControl
 
@@ -50,7 +50,7 @@ Partial Public Class WUC_ContrattiElScad
         Riga = 18
         DataDoc = 19
         CodCliForProvv = 20
-        
+
         Loc = 21
         Pr = 22
         CAP = 23
@@ -134,8 +134,25 @@ Partial Public Class WUC_ContrattiElScad
             Chiudi("Errore: ESERCIZIO SCONOSCIUTO")
             Exit Sub
         End If
-       
         '-
+        ''''@@@ risolto in modo diverso - apro una pagina solo per le stampe da riportare per tutte le altre - NO ANTEPRIMA (WF_PrintWebCR)
+        '''If IsPostBack Then
+        '''    If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaPDF" Then
+        '''        'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
+        '''        VisualizzaRpt(Session("ContrattiElScadStampa"), Session(CSTNOMEPDF), "PDF")
+        '''        Exit Sub
+        '''    End If
+        '''    If Request.Params.Get("__EVENTTARGET").ToString = "lnkElencoScOK" Then
+        '''        'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
+        '''        If chkVisElenco.Checked Then
+        '''            VisualizzaRpt(Session("ContrattiElScadStampa"), Session(CSTNOMEPDF), "PDF")
+        '''        Else
+        '''            VisualizzaRpt(Session("ContrattiElScadStampa"), Session(CSTNOMEPDF), "EXEL")
+        '''        End If
+        '''        Exit Sub
+        '''    End If
+        '''End If
+        '@@@
         If (Not IsPostBack) Then
             Try
                 Session(CSTNUOVOCADAOC) = SWNO
@@ -244,10 +261,10 @@ Partial Public Class WUC_ContrattiElScad
     Private Function GetPrimaDataSc() As String
         Dim strSQL As String = ""
         Dim ObjDB As New DataBaseUtility
-        strSQL = "SELECT TOP 1 MIN(ContrattiD.DataSc) AS DataSc " & _
-                        "FROM     ContrattiT INNER JOIN " & _
-                        "ContrattiD ON ContrattiT.IDDocumenti = ContrattiD.IDDocumenti " & _
-                        "WHERE(ContrattiT.StatoDoc < 3) AND ContrattiD.Qta_Ordinata <> ContrattiD.Qta_Evasa  " & _
+        strSQL = "SELECT TOP 1 MIN(ContrattiD.DataSc) AS DataSc " &
+                        "FROM     ContrattiT INNER JOIN " &
+                        "ContrattiD ON ContrattiT.IDDocumenti = ContrattiD.IDDocumenti " &
+                        "WHERE(ContrattiT.StatoDoc < 3) AND ContrattiD.Qta_Ordinata <> ContrattiD.Qta_Evasa  " &
                         "GROUP BY ContrattiD.DataSc"
         Dim ds As New DataSet
         Try
@@ -275,9 +292,9 @@ Partial Public Class WUC_ContrattiElScad
         Dim SWBloccoCambiaStato As Boolean = False
         '--
         BtnSetEnabledTo(True)
-        If myStato.Trim = "Evaso" Or _
-                        myStato.Trim = "Chiuso non evaso" Or _
-                        myStato.Trim = "Non evadibile" Or _
+        If myStato.Trim = "Evaso" Or
+                        myStato.Trim = "Chiuso non evaso" Or
+                        myStato.Trim = "Non evadibile" Or
                         myStato.Trim = "Parz. evaso" Then
             btnCambiaStato.Enabled = False : SWBloccoCambiaStato = True
             btnModifica.Enabled = False : SWBloccoModifica = True
@@ -387,9 +404,9 @@ Partial Public Class WUC_ContrattiElScad
             If Not IsNumeric(txtRicerca.Text.Trim) Then
                 txtRicerca.Text = ""
             End If
-        ElseIf ddlRicerca.SelectedValue = "D" Or _
-               ddlRicerca.SelectedValue = "DI" Or _
-               ddlRicerca.SelectedValue = "DF" Or _
+        ElseIf ddlRicerca.SelectedValue = "D" Or
+               ddlRicerca.SelectedValue = "DI" Or
+               ddlRicerca.SelectedValue = "DF" Or
                ddlRicerca.SelectedValue = "DA" Then
             checkParoleContenute.Text = ">= Alla Data"
             If Not IsDate(txtRicerca.Text.Trim) Then
@@ -473,9 +490,9 @@ Partial Public Class WUC_ContrattiElScad
             If Not IsNumeric(txtRicerca.Text.Trim) Then
                 txtRicerca.Text = ""
             End If
-        ElseIf ddlRicerca.SelectedValue = "D" Or _
-               ddlRicerca.SelectedValue = "DI" Or _
-               ddlRicerca.SelectedValue = "DF" Or _
+        ElseIf ddlRicerca.SelectedValue = "D" Or
+               ddlRicerca.SelectedValue = "DI" Or
+               ddlRicerca.SelectedValue = "DF" Or
                ddlRicerca.SelectedValue = "DA" Then
             If Not IsDate(txtRicerca.Text.Trim) Then
                 txtRicerca.Text = ""
@@ -658,9 +675,9 @@ Partial Public Class WUC_ContrattiElScad
             If Not IsNumeric(txtRicerca.Text.Trim) Then
                 txtRicerca.Text = ""
             End If
-        ElseIf ddlRicerca.SelectedValue = "D" Or _
-               ddlRicerca.SelectedValue = "DI" Or _
-               ddlRicerca.SelectedValue = "DF" Or _
+        ElseIf ddlRicerca.SelectedValue = "D" Or
+               ddlRicerca.SelectedValue = "DI" Or
+               ddlRicerca.SelectedValue = "DF" Or
                ddlRicerca.SelectedValue = "DA" Then
             If Not IsDate(txtRicerca.Text.Trim) Then
                 txtRicerca.Text = ""
@@ -1419,7 +1436,7 @@ Partial Public Class WUC_ContrattiElScad
         Dim findRow As DSDocumenti.ScadAttRow
         Dim RowScadAtt As DSDocumenti.ScadAttRow
         For Each RowScadAtt In DsPrinWebDoc.ScadAtt.Select("", "DataSc,Cod_Cliente,SerieLotto")
-            
+
             If InStr(myCodVisita, RowScadAtt.Cod_Articolo.Trim) > 0 Then
                 RowScadAtt.BeginEdit()
                 RowScadAtt.SWNoVisita = 0
@@ -1563,7 +1580,7 @@ Partial Public Class WUC_ContrattiElScad
             BuidDett()
         End If
         Call OKApriStampaElScadCA(DsPrinWebDoc, strElencoClientiBloccati)
-        
+
     End Sub
     '----------
     Public Sub Chiudi(ByVal strErrore As String)
@@ -1610,7 +1627,7 @@ Partial Public Class WUC_ContrattiElScad
             sTipoUtente = Session(CSTTIPOUTENTE)
         End If
 
-        If Not (sTipoUtente.Equals(CSTAMMINISTRATORE)) And _
+        If Not (sTipoUtente.Equals(CSTAMMINISTRATORE)) And
             Not (sTipoUtente.Equals(CSTTECNICO)) Then
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -2065,8 +2082,8 @@ Partial Public Class WUC_ContrattiElScad
             ElseIf CodiceDitta = "0501" Then
                 Rpt = New OrdineFornitore0501
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or _
-                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or
+                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or
                 Session(CSTTIPODOC) = SWTD(TD.ScaricoMagazzino) Then
             NomeStampa = "MOVMAG.PDF"
             SubDirDOC = "MovMag"
@@ -2082,7 +2099,7 @@ Partial Public Class WUC_ContrattiElScad
             ElseIf CodiceDitta = "0501" Then
                 Rpt = New MMNoPrezzi0501
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or
                 Session(CSTTIPODOC) = SWTD(TD.TipoContratto) Then
             SubDirDOC = "Contratti"
             If Session(CSTTASTOST) = btnStampa.ID Then
@@ -2106,10 +2123,10 @@ Partial Public Class WUC_ContrattiElScad
                     Rpt = New VerbaleVACA05 '0501
                 End If
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or _
-            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or
+            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or
             Session(CSTTIPODOC) = SWTD(TD.NotaCorrispondenza) Then
             Dim strRitorno As String = "WF_Menu.aspx?labelForm=Menu principale STAMPA DOCUMENTO DA COMPLETARE"
             Try
@@ -2140,31 +2157,32 @@ Partial Public Class WUC_ContrattiElScad
         ' ''    Exit Sub
         ' ''End If
         Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
+        'giu210324
+        getOutputRPT(Rpt, "PDF")
         '---------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
-            '-------------
-        Catch ex As Exception
-            Rpt = Nothing
-            ' ''Session(MODALPOPUP_CALLBACK_METHOD) = ""
-            ' ''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ' ''ModalPopup.Show("Stampa valorizzazione magazzino", "Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message, WUC_ModalPopup.TYPE_ERROR)
-            Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
-            Exit Sub
-        End Try
-        'giu140615 Dim LnkName As String = ConfigurationManager.AppSettings("AppPath") & "/Documenti/StatMag/" & Session(CSTNOMEPDF)
+        ''''giu140615 prova con binary 
+        ''''' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Try 'giu281112 errore che il file Ã¨ gia aperto
+        '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+        '''    'giu140124
+        '''    Rpt.Close()
+        '''    Rpt.Dispose()
+        '''    Rpt = Nothing
+        '''    '-
+        '''    GC.WaitForPendingFinalizers()
+        '''    GC.Collect()
+        '''    '-------------
+        '''Catch ex As Exception
+        '''    Rpt = Nothing
+        '''    ' ''Session(MODALPOPUP_CALLBACK_METHOD) = ""
+        '''    ' ''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+        '''    ' ''ModalPopup.Show("Stampa valorizzazione magazzino", "Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message, WUC_ModalPopup.TYPE_ERROR)
+        '''    Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
+        '''    Exit Sub
+        '''End Try
         If Session(CSTTASTOST) = btnStampa.ID Then
             LnkStampa.Visible = True
         ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
@@ -2174,17 +2192,17 @@ Partial Public Class WUC_ContrattiElScad
         Else
             LnkStampa.Visible = True
         End If
-
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
-            LnkVerbale.HRef = LnkName
-            ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            ' ''    LnkListaCarico.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        'giu210324
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
+        '''    LnkVerbale.HRef = LnkName
+        '''    ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
+        '''    ' ''    LnkListaCarico.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
     'giu120520
     Private Sub OKApriStampaElScadCA(ByRef DsPrinWebDoc As DSDocumenti, ByVal strElencoClientiBloccati As String)
@@ -2221,7 +2239,7 @@ Partial Public Class WUC_ContrattiElScad
         ' ''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
         Dim NomeStampa As String = Session(CSTTIPODOC)
         Dim SubDirDOC As String = ""
-        If Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or _
+        If Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or
                 Session(CSTTIPODOC) = SWTD(TD.TipoContratto) Then
             SubDirDOC = "Contratti"
             If Session(CSTTASTOST) = btnElencoSc.ID Then
@@ -2290,42 +2308,49 @@ Partial Public Class WUC_ContrattiElScad
             Session(CSTNOMEPDF) = strDalAl.Trim & "_" & InizialiUT.Trim & NomeStampa.Trim
         End If
         '---------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
-            If chkVisElenco.Checked Then
-                Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            Else
-                Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
-            End If
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
-            '-------------
-        Catch ex As Exception
-            Rpt = Nothing
-            Chiudi("Errore in esporta: " & Session(CSTNOMEPDF) & " " & ex.Message)
-            Exit Sub
-        End Try
-        If Session(CSTTASTOST) = btnElencoSc.ID Then
-            lnkElencoSc.Visible = True 'giu280224 : btnOKModInviati.Visible = True
+        'giu210324
+        If chkVisElenco.Checked Then
+            getOutputRPT(Rpt, "PDF")
         Else
-            lnkElencoSc.Visible = True 'giu280224 : btnOKModInviati.Visible = True
+            getOutputRPT(Rpt, "EXCEL")
+        End If
+        '---------
+        ''''giu140615 prova con binary 
+        ''''' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Try 'giu281112 errore che il file Ã¨ gia aperto
+        '''    If chkVisElenco.Checked Then
+        '''        Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+        '''    Else
+        '''        Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+        '''    End If
+        '''    'giu140124
+        '''    Rpt.Close()
+        '''    Rpt.Dispose()
+        '''    Rpt = Nothing
+        '''    '-
+        '''    GC.WaitForPendingFinalizers()
+        '''    GC.Collect()
+        '''    '-------------
+        '''Catch ex As Exception
+        '''    Rpt = Nothing
+        '''    Chiudi("Errore in esporta: " & Session(CSTNOMEPDF) & " " & ex.Message)
+        '''    Exit Sub
+        '''End Try
+        If Session(CSTTASTOST) = btnElencoSc.ID Then
+            lnkElenco.Visible = True 'giu280224 : btnOKModInviati.Visible = True
+        Else
+            lnkElenco.Visible = True 'giu280224 : btnOKModInviati.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnElencoSc.ID Then
-            lnkElencoSc.HRef = LnkName
-        Else
-            lnkElencoSc.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnElencoSc.ID Then
+        '''    lnkElencoSc.HRef = LnkName
+        '''Else
+        '''    lnkElencoSc.HRef = LnkName
+        '''End If
         If strElencoClientiBloccati.Trim <> "" Then
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -2333,6 +2358,98 @@ Partial Public Class WUC_ContrattiElScad
             ModalPopup.Show("Attenzione", strElencoClientiBloccati.Trim + "<br>Sono presenti Clienti Bloccati. " + IIf(chkIncludiCliBlocco.Checked = True, "(Inclusi nella stampa)", "(Esclusi dalla stampa) "), WUC_ModalPopup.TYPE_INFO)
         End If
     End Sub
+
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    'giu230324 chiamo WebFormStampe
+    '''Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String, ByVal _Formato As String)
+    '''    Dim sErrore As String = ""
+    '''    Try
+    '''        If byteReport.Length > 0 Then
+    '''            With Me.Page
+    '''                Response.Clear()
+    '''                Response.Buffer = True
+    '''                Response.ClearHeaders()
+
+    '''                Response.AddHeader("Accept-Header", byteReport.Length.ToString())
+    '''                Response.AddHeader("Cache-Control", "private")
+    '''                Response.AddHeader("cache-control", "max-age=1")
+    '''                Response.AddHeader("content-length", byteReport.Length.ToString())
+
+    '''                Response.AddHeader("Expires", "0")
+    '''                If Right(_NomeRpt, 4).ToString.ToUpper = ".PDF" Or Right(_NomeRpt, 4).ToString.ToUpper = ".XLS" Then
+    '''                    If _Formato = "PDF" Then
+    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
+    '''                        Response.ContentType = "application/pdf"
+    '''                    Else
+    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
+    '''                        Response.ContentType = "application/vnd.ms-excel"
+    '''                    End If
+    '''                Else
+    '''                    If _Formato = "PDF" Then
+    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
+    '''                        Response.ContentType = "application/pdf"
+    '''                    Else
+    '''                        Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
+    '''                        Response.ContentType = "application/vnd.ms-excel"
+    '''                    End If
+    '''                End If
+    '''                '-
+    '''                Response.AddHeader("Accept-Ranges", "bytes")
+
+    '''                Response.BinaryWrite(byteReport)
+    '''                Response.Flush()
+    '''                Response.End()
+    '''            End With
+    '''        Else
+    '''            lnkElencoSc.Visible = False
+    '''            LnkStampa.Visible = False
+    '''            LnkVerbale.Visible = False
+    '''        End If
+    '''    Catch ex As Exception
+    '''        lnkElencoSc.Visible = False
+    '''        LnkStampa.Visible = False
+    '''        LnkVerbale.Visible = False
+    '''    End Try
+    '''End Sub
+    '@@@@@
+
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
         TipoDoc = Session(CSTTIPODOC)
@@ -2568,10 +2685,10 @@ Partial Public Class WUC_ContrattiElScad
     '''End Sub
 
     Private Sub SetLnk()
-        LnkStampa.Visible = False : LnkVerbale.Visible = False : lnkElencoSc.Visible = False : btnOKModInviati.Visible = False
+        LnkStampa.Visible = False : LnkVerbale.Visible = False : lnkElenco.Visible = False : btnOKModInviati.Visible = False
         chkVisElenco.Visible = True
     End Sub
-    
+
     Private Sub btnOKModInviati_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnOKModInviati.Click
         If Session(SWOP) <> SWOPNESSUNA Then Exit Sub
         If GridViewPrevT.Rows.Count = 0 Then
@@ -2673,15 +2790,15 @@ Partial Public Class WUC_ContrattiElScad
     End Sub
 
     Private Sub rbtnOrdCliente_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnOrdCliente.CheckedChanged
-        lnkElencoSc.Visible = False
+        lnkElenco.Visible = False
     End Sub
 
     Private Sub rbtnOrdScadenza_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnOrdScadenza.CheckedChanged
-        lnkElencoSc.Visible = False
+        lnkElenco.Visible = False
     End Sub
 
     Private Sub chkVisElenco_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkVisElenco.CheckedChanged
-        lnkElencoSc.Visible = False
+        lnkElenco.Visible = False
     End Sub
 
     Private Sub chkScadAnno_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkScadAnno.CheckedChanged
@@ -2691,4 +2808,5 @@ Partial Public Class WUC_ContrattiElScad
     Private Sub chkIncludiCliBlocco_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkIncludiCliBlocco.CheckedChanged
         SetLnk()
     End Sub
+
 End Class

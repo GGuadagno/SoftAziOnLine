@@ -1593,6 +1593,13 @@
     <Compile Include="Utility\TemplateGridViewGenerica.vb" />
     <Compile Include="Utility\Utility.vb" />
     <Compile Include="Utility\WebFormUtility.vb" />
+    <Compile Include="WebFormTables\WebFormStampe.aspx.designer.vb">
+      <DependentUpon>WebFormStampe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormTables\WebFormStampe.aspx.vb">
+      <DependentUpon>WebFormStampe.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="WebFormTables\WF_AnagraficaArticoli.aspx.designer.vb">
       <DependentUpon>WF_AnagraficaArticoli.aspx</DependentUpon>
     </Compile>
@@ -4969,6 +4976,7 @@
     <None Include="TableMap\DsStatVendCliArt.xss">
       <DependentUpon>DsStatVendCliArt.xsd</DependentUpon>
     </None>
+    <Content Include="WebFormTables\WebFormStampe.aspx" />
     <Content Include="WebFormTables\WF_CambioRespAreaVisiteContratti.aspx" />
     <Content Include="WebFormTables\WF_ContrattiCKSerieLotto.aspx" />
     <Content Include="WebFormTables\WF_ContrattiElScadStampe.aspx" />

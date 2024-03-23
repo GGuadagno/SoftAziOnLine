@@ -185,7 +185,7 @@
                     <asp:CheckBox ID="chkVisElenco" runat="server" Font-Bold="false" Text="Visualizza Elenco Scadenze altrimenti crea foglio EXCEL" Checked="false" AutoPostBack="true"/>
                     <asp:Label ID="Label13" runat="server" Width="20px"></asp:Label>
                     <asp:Button ID="btnElencoSc" runat="server" class="btnstyle1RL" Text="Elenco Scadenze" Visible="true"/>
-                    <a ID="lnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>
+                    <a ID="lnkElenco" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco</a>
                     <br />
                     <asp:Label ID="Label14" runat="server" Width="415px"></asp:Label>
                     <asp:CheckBox ID="chkScadAnno" runat="server" Font-Bold="true" ForeColor="Blue" Text="Stampa scadenze Anno" Checked="false" AutoPostBack="true"/>
@@ -420,7 +420,7 @@
                             </div>
                     <div style="height:5px">&nbsp;</div>
                     <div>
-                        <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma">Apri Proforma</a>
+                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Proforma</a>
                     </div>
                      <div style="height:5px">&nbsp;</div>
                     <div>
@@ -428,15 +428,13 @@
                             </div>
                      <div style="height:5px">&nbsp;</div>
                     <div>
-                        <a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale">Apri Verbale</a>
-                    </div>
+                        <a ID="LnkVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Verbale</a>
+                     </div>
                      <div style="height:5px">&nbsp;</div>
                      <div>
-                        
                             </div>
                      <div style="height:5px">&nbsp;</div>
                      <div>
-                        
                     </div>
                      <div style="height:5px">&nbsp;</div>
                      <div>

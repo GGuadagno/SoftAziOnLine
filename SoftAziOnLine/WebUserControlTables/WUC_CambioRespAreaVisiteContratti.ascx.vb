@@ -12,7 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 Imports System.IO
 Partial Public Class WUC_CambioRespAreaVisiteContratti
     Inherits System.Web.UI.UserControl
@@ -35,7 +35,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Else
             sTipoUtente = Session(CSTTIPOUTENTE)
         End If
-        '-----------
+        '@@@
         If IsPostBack Then
             If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
                 'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
@@ -52,6 +52,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             '''    Exit Sub
             '''End If
         End If
+        '@@@
         If (Not IsPostBack) Then
             txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
             txtDataA.Text = "31/12/" & Session(ESERCIZIO)
@@ -251,7 +252,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         End Try
         getOutputRPT = True
     End Function
-
     Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
 
         Dim streamLength As Integer = Convert.ToInt32(stream.Length)

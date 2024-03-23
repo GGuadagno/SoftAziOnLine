@@ -464,13 +464,13 @@ Partial Public Class WUC_ContrattiElScad
     Protected WithEvents btnElencoSc As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Controllo lnkElencoSc.
+    '''Controllo lnkElenco.
     '''</summary>
     '''<remarks>
     '''Campo generato automaticamente.
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
-    Protected WithEvents lnkElencoSc As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents lnkElenco As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
     '''Controllo Label14.
