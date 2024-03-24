@@ -4313,6 +4313,7 @@ Partial Public Class WUC_DocumentiElenco
             '-----------------------------------
             Rpt.SetDataSource(DsPrinWebDoc)
             getOutputRPT(Rpt, "PDF") 'giu240324
+            Session(CSTNOMEPDF) = NomeStampa
             '-
             '''Session(CSTESPORTAPDF) = True
             '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")

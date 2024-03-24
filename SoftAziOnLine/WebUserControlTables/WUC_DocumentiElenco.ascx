@@ -500,8 +500,7 @@
                     <div>
                         <asp:Button ID="btnResoClienteFornitore" runat="server" class="btnstyle2R" Text="Reso da Cliente" Enabled="false" />
                     </div>
-                    <div style="height: 5px">&nbsp;</div> 
-                    <div style="height: 15px">
+                    <div style="height: 10px">
                          <asp:Button ID="btnCopia" runat="server" class="btnstyle1R" Text="Copia" />
                     </div>
                     <div style="height: 20px">&nbsp;</div>                  
@@ -509,19 +508,17 @@
                                 <asp:Label ID="lblStampe" runat="server" BorderColor="White"
                                 BorderStyle="None" Font-Bold="True" ForeColor="Black">Stampe</asp:Label>
                             </div> 
-                    <div style="height: 5px">&nbsp;</div> 
                     <div style="height: 15px">
                         <asp:Button ID="btnStampa" runat="server" class="btnstyle1R" Text="Documento" />
                     </div>  
-                    <div style="height:15px">&nbsp;</div>
+                    <div style="height:25px">&nbsp;</div>
                     <div>
                         <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Documento</a>
                     </div>
-                    <div style="height: 10px">&nbsp;</div>
+                    <div style="height: 05px">&nbsp;</div>
                     <div style="height: 15px;">                        
                         <asp:Button ID="btnStampaEti" runat="server" class="btnstyle2R" Text="Etichette" />
                     </div>
-                    <div style="height:10px"></div>
                 </td>
         </tr>
 </table>
