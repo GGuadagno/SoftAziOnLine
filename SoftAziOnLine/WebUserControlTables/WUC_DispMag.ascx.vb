@@ -11,7 +11,7 @@ Imports SoftAziOnLine.App
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 Imports SoftAziOnLine.Magazzino
 
 Imports System.IO 'giu140615
@@ -253,35 +253,73 @@ Partial Public Class WUC_DispMag
         End If
         Session(CSTNOMEPDF) = Format(Now, "yyyyMMddHHmmss") + Utente.Codice.Trim & Session(CSTNOMEPDF)
         '---------
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & "StatMag\"
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & "StatMag\"
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Try 'giu281112 errore che il file Ã¨ gia aperto
+        '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+        '''    'giu140124
+        '''    Rpt.Close()
+        '''    Rpt.Dispose()
+        '''    Rpt = Nothing
+        '''    '-
+        '''    GC.WaitForPendingFinalizers()
+        '''    GC.Collect()
+        '''    '-------------
+        '''Catch ex As Exception
+        '''    Rpt = Nothing
+        '''    Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
+        '''    Exit Sub
+        '''End Try
+        LnkStampa.Visible = True
+        '''Dim LnkName As String = "~/Documenti/StatMag/" & Session(CSTNOMEPDF)
+        '''LnkStampa.HRef = LnkName
+        Session(CSTTIPORPTDISPMAG) = Session("SAVETIPOSTAMPA")
+        getOutputRPT(Rpt, "PDF")
+    End Sub
+    '''Public Sub OKStampa()
+    '''    Session(CSTNOBACK) = 0 'giu040512
+    '''    Response.Redirect("..\WebFormTables\WF_PrintWebDispMag.aspx")
+    '''End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
             GC.WaitForPendingFinalizers()
             GC.Collect()
-            '-------------
-        Catch ex As Exception
-            Rpt = Nothing
-            Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
-            Exit Sub
+        Catch
         End Try
-        'giu140615 Dim LnkName As String = ConfigurationManager.AppSettings("AppPath") & "/Documenti/StatMag/" & Session(CSTNOMEPDF)
-        LnkStampa.Visible = True
-        Dim LnkName As String = "~/Documenti/StatMag/" & Session(CSTNOMEPDF)
-        LnkStampa.HRef = LnkName
-        Session(CSTTIPORPTDISPMAG) = Session("SAVETIPOSTAMPA")
-    End Sub
-    Public Sub OKStampa()
-        Session(CSTNOBACK) = 0 'giu040512
-        Response.Redirect("..\WebFormTables\WF_PrintWebDispMag.aspx")
-    End Sub
-    
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Private Sub Chiudi(ByVal strErrore As String)
         If strErrore.Trim <> "" Then
             Try

@@ -203,8 +203,10 @@
                                     <asp:Button ID="btnStampa" runat="server" class="btnstyle" Text="Stampa" 
                                           TabIndex="14" /><%--OnClientClick="apristampa();"--%>
                                 </div>
+                                <div style="height: 15px">
+                                </div>
                                 <div>
-                                    <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Stampa">Apri Stampa</a>
+                                    <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Proforma</a>
                                 </div>
                                 <div style="height: 15px">
                                 </div>
