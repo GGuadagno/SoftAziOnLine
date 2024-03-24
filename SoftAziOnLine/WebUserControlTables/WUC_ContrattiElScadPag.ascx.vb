@@ -13,7 +13,8 @@ Imports SoftAziOnLine.Documenti
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
+Imports System.IO
 
 Partial Public Class WUC_ContrattiElScadPag
     Inherits System.Web.UI.UserControl
@@ -2141,12 +2142,7 @@ Partial Public Class WUC_ContrattiElScadPag
 
     'GIU210120
     Private Sub OKApriStampa(ByRef DsPrinWebDoc As DSPrintWeb_Documenti)
-        ' ''If Not String.IsNullOrEmpty(Session(CSTNOBACK)) Then
-        ' ''    If Session(CSTNOBACK) = 1 Then
-        ' ''        btnRitorno.Visible = False
-        ' ''        Label1.Visible = False
-        ' ''    End If
-        ' ''End If
+
         Dim SWSconti As Integer = 1
         If Not String.IsNullOrEmpty(Session(CSTSWScontiDoc)) Then
             If IsNumeric(Session(CSTSWScontiDoc)) Then
@@ -2391,8 +2387,8 @@ Partial Public Class WUC_ContrattiElScadPag
             ElseIf CodiceDitta = "0501" Then
                 Rpt = New OrdineFornitore0501
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or _
-                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.MovimentoMagazzino) Or
+                Session(CSTTIPODOC) = SWTD(TD.CaricoMagazzino) Or
                 Session(CSTTIPODOC) = SWTD(TD.ScaricoMagazzino) Then
             NomeStampa = "MOVMAG.PDF"
             SubDirDOC = "MovMag"
@@ -2404,7 +2400,7 @@ Partial Public Class WUC_ContrattiElScadPag
             ElseIf CodiceDitta = "0501" Then
                 Rpt = New MMNoPrezzi0501
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.ContrattoAssistenza) Or
                 Session(CSTTIPODOC) = SWTD(TD.TipoContratto) Then
             SubDirDOC = "Contratti"
             If Session(CSTTASTOST) = btnStampa.ID Then
@@ -2428,10 +2424,10 @@ Partial Public Class WUC_ContrattiElScadPag
                     Rpt = New VerbaleVACA05 '0501
                 End If
             End If
-        ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or _
-            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or _
-            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or _
+        ElseIf Session(CSTTIPODOC) = SWTD(TD.BuonoConsegna) Or
+            Session(CSTTIPODOC) = SWTD(TD.DocTrasportoCLavoro) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaAccompagnatoria) Or
+            Session(CSTTIPODOC) = SWTD(TD.FatturaScontrino) Or
             Session(CSTTIPODOC) = SWTD(TD.NotaCorrispondenza) Then
             Dim strRitorno As String = "WF_Menu.aspx?labelForm=Menu principale STAMPA DOCUMENTO DA COMPLETARE"
             Try
@@ -2454,29 +2450,21 @@ Partial Public Class WUC_ContrattiElScadPag
         'ok
         '-----------------------------------
         Rpt.SetDataSource(DsPrinWebDoc)
-        'GIU210120 ESEGUITO IN CKSTTipoDocST
-        'Per evitare che solo un utente possa elaborare le stampe
-        ' ''Dim Utente As OperatoreConnessoEntity = SessionUtility.GetLogOnUtente("", "", "", NomeModulo, Session.SessionID, -1, "", "", "", "")
-        ' ''If (Utente Is Nothing) Then
-        ' ''    Response.Redirect("WF_ErroreUtenteConnesso.aspx?labelForm=Errore: Sessione scaduta: utente non valido.")
-        ' ''    Exit Sub
-        ' ''End If
         Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
         '---------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
         Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            getOutputRPT(Rpt, "PDF")
+            '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''    'giu140124
+            '''    Rpt.Close()
+            '''    Rpt.Dispose()
+            '''    Rpt = Nothing
+            '''    '-
+            '''    GC.WaitForPendingFinalizers()
+            '''    GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -2497,17 +2485,57 @@ Partial Public Class WUC_ContrattiElScadPag
             LnkStampa.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
-            LnkVerbale.HRef = LnkName
-            ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            ' ''    LnkListaCarico.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
+        '''    LnkVerbale.HRef = LnkName
+        '''    ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
+        '''    ' ''    LnkListaCarico.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
+
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     'giu120520
     Private Sub OKApriStampaElScadCA(ByRef DsPrinWebDoc As DSDocumenti)
 
@@ -2583,24 +2611,27 @@ Partial Public Class WUC_ContrattiElScadPag
         strDalAl = strDalAl.ToString.Replace("/", "")
         Session(CSTNOMEPDF) = IIf(strRespArea.Trim <> "", strRespArea.Trim & "_", "") & strDalAl.Trim & "_" & InizialiUT.Trim & NomeStampa.Trim
         '---------
-        'giu140615 prova con binary 
-        '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
         Try 'giu281112 errore che il file Ã¨ gia aperto
-            If chkVisElenco.Checked = False Then
-                Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            If chkVisElenco.Checked Then
+                getOutputRPT(Rpt, "XLS")
             Else
-                Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+                getOutputRPT(Rpt, "PDF")
             End If
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''If chkVisElenco.Checked = False Then
+            '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''Else
+            '''    Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''End If
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -2613,12 +2644,12 @@ Partial Public Class WUC_ContrattiElScadPag
             LnkElencoSc.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnElencoSc.ID Then
-            LnkElencoSc.HRef = LnkName
-        Else
-            LnkElencoSc.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnElencoSc.ID Then
+        '''    LnkElencoSc.HRef = LnkName
+        '''Else
+        '''    LnkElencoSc.HRef = LnkName
+        '''End If
     End Sub
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
@@ -5257,18 +5288,20 @@ Partial Public Class WUC_ContrattiElScadPag
         'giu010223 no perche credo il PDF CrystalReportViewer1.ReportSource = Rpt
         Dim SubDirDOC = "Fatture"
         Session(CSTNOMEPDF) = "FattContratti" & Format(Now, "yyyyMMddHHmmss") + ".PDF"
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
+
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
         Try
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            getOutputRPT(Rpt, "PDF")
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -5277,16 +5310,9 @@ Partial Public Class WUC_ContrattiElScadPag
         End Try
         LnkFatturePDF.Visible = True
         LnkElencoSc.Visible = True
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        LnkFatturePDF.HRef = LnkName
-        LnkElencoSc.HRef = LnkName
-        'LnkFatture.Title = "TOTALE: " + FormattaNumero(TotFatture)
-        'LnkFatture.HRef = pLnkRef
-        'LnkFatture.Visible = True
-
-        ' ''Session(ATTESA_CALLBACK_METHOD) = "CallChiudi"
-        ' ''Session(CSTNOBACK) = 1
-        ' ''Attesa.ShowStampaAll2("Totale Fatture NO SCONTI: " & FormattaNumero(TotFatture), "Richiesta dell'apertura di una nuova pagina per la stampa.", Attesa.TYPE_CONFIRM, pLnkRef)
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''LnkFatturePDF.HRef = LnkName
+        '''LnkElencoSc.HRef = LnkName
     End Function
 
 #End Region

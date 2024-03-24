@@ -688,9 +688,10 @@
                                 <asp:Button ID="btnStampa" runat="server" class="btnstyle05R" Text="Proforma" Visible="true"/>
                                 <asp:Button ID="btnVerbale" runat="server" class="btnstyle05R" Text="Verbale" Visible="true"/>
                             </div>
+                             <div style="height: 5px"></div>
                             <div>
-                                <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma">Apri Proforma</a>
-                                <a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale">Apri Verbale</a>
+                                <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Proforma</a>
+                                <a ID="LnkVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Verbale</a>
                             </div>
                             <div style="height: 5px"></div>
                             <div style="overflow-x:hidden; overflow-y:auto;height:220px;width:105px;text-align:center;">

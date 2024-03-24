@@ -539,10 +539,10 @@
              <%--<div style="height:5px">&nbsp;</div>--%>
              <div style="height:50px; text-align:center">
                 <asp:Label ID="lblStampe" runat="server" BorderStyle="Outset" ForeColor="Blue" Width="100px" text="Stampe">
-                    <a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI VERBALE">APRI VERBALE</a>
-                    <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI PROFORMA">APRI PROFORMA</a>
-                    <a ID="LnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI ELENCO SCADENZE">APRI ELENCO SCADENZE</a>
-                    <a ID="LnkFatturePDF" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI PDF FATTURE">APRI PDF FATTURE</a>
+                    <a ID="LnkVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI VERBALE" style="border-color:snow;border-style:outset;background-color:yellow;">APRI VERBALE</a>
+                    <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI PROFORMA" style="border-color:snow;border-style:outset;background-color:yellow;">APRI PROFORMA</a>
+                    <a ID="LnkElencoSc" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI ELENCO SCADENZE" style="border-color:snow;border-style:outset;background-color:yellow;">APRI ELENCO SCADENZE</a>
+                    <a ID="LnkFatturePDF" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="APRI PDF FATTURE" style="border-color:snow;border-style:outset;background-color:yellow;">APRI PDF FATTURE</a>
                 </asp:Label>
             </div> 
             <div style="height:10px">&nbsp;</div>

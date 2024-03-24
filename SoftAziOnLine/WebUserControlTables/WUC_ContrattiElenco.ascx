@@ -528,7 +528,7 @@
                             </div>
                     <div style="height:5px">&nbsp;</div>
                     <div>
-                        <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma">Apri Proforma</a>
+                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Proforma</a>
                     </div>
                      <div style="height:5px">&nbsp;</div>
                     <div>
@@ -536,7 +536,7 @@
                             </div>
                      <div style="height:5px">&nbsp;</div>
                     <div>
-                        <a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale">Apri Verbale</a>
+                        <a ID="LnkVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Verbale</a>
                     </div>
                      <div style="height:5px">&nbsp;</div>
                 </td>

@@ -12,6 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
+Imports System.IO
 
 Partial Public Class WUC_ContrattiElenco
     Inherits System.Web.UI.UserControl
@@ -3979,18 +3980,20 @@ Partial Public Class WUC_ContrattiElenco
             '-----------------------------------
             Rpt.SetDataSource(DsPrinWebDoc)
             Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-            Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
+            getOutputRPT(Rpt, "PDF")
 
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''Session(CSTESPORTAPDF) = True
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
+
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -4006,15 +4009,54 @@ Partial Public Class WUC_ContrattiElenco
             LnkStampa.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
-            LnkVerbale.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnVerbale.ID Then
+        '''    LnkVerbale.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
         TipoDoc = Session(CSTTIPODOC)
