@@ -164,7 +164,7 @@
                 </div>
                 <div style="height:15px">&nbsp;</div>
                     <div>
-                        <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento">Apri Documento</a>
+                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Stampa" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Stampa</a>
                     </div>
                 <div style="height: 15px">
                 </div>

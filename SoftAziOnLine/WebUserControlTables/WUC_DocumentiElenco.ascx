@@ -513,9 +513,8 @@
                     </div>  
                     <div style="height:25px">&nbsp;</div>
                     <div>
-                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Documento</a>
+                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Stampa" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Stampa</a>
                     </div>
-                    <div style="height: 05px">&nbsp;</div>
                     <div style="height: 15px;">                        
                         <asp:Button ID="btnStampaEti" runat="server" class="btnstyle2R" Text="Etichette" />
                     </div>

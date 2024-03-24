@@ -9601,63 +9601,21 @@ Partial Public Class WUC_Documenti
             'ok
             '-----------------------------------
             Rpt.SetDataSource(DsPrinWebDoc)
-            'GIU210120 ESEGUITO IN CKSTTipoDocST
-            'Per evitare che solo un utente possa elaborare le stampe
-            ' ''Dim Utente As OperatoreConnessoEntity = SessionUtility.GetLogOnUtente("", "", "", NomeModulo, Session.SessionID, -1, "", "", "", "")
-            ' ''If (Utente Is Nothing) Then
-            ' ''    Response.Redirect("WF_ErroreUtenteConnesso.aspx?labelForm=Errore: Sessione scaduta: utente non valido.")
-            ' ''    Exit Sub
-            ' ''End If
             Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-            'giu150320 GIU180320 TROPP LENTO
-            ' ''LnkStampa.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkConfOrdine.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkListaCarico.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''Dim myStream As Stream
-            ' ''Dim ms As New MemoryStream
-            ' ''Dim myOBJ() As Byte = Nothing
-            ' ''Try
-            ' ''    myStream = Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            getOutputRPT(Rpt, "PDF")
+            'giu240324
+            '''Session(CSTESPORTAPDF) = True
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
 
-            ' ''    Dim Ret As Integer
-            ' ''    Do
-            ' ''        Ret = myStream.ReadByte() 'netstream.Read(Bytes, 0, Bytes.Length)
-            ' ''        If Ret > 0 Then
-            ' ''            ReDim Preserve myOBJ(myStream.Position - 1)
-            ' ''            myOBJ(myStream.Position - 1) = Ret
-            ' ''        End If
-            ' ''    Loop Until Ret = -1
-
-            ' ''Catch ex As Exception
-            ' ''    Chiudi("Errore in elaborazione stampa: " & ex.Message)
-            ' ''End Try
-            ' ''Session("objReport") = myOBJ
-            ' ''If Session(CSTTASTOST) = btnStampa.ID Then
-            ' ''    LnkStampa.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            ' ''    LnkConfOrdine.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            ' ''    LnkListaCarico.Visible = True
-            ' ''Else
-            ' ''    LnkStampa.Visible = True
-            ' ''End If
-            ' ''Exit Sub
-            '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            '' ''---------
-            '' ''giu140615 prova con binary 
-            ' '' '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-            Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
-
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -9675,17 +9633,56 @@ Partial Public Class WUC_Documenti
         Else
             LnkStampa.Visible = True
         End If
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            LnkConfOrdine.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            LnkListaCarico.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
+        '''    LnkConfOrdine.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
+        '''    LnkListaCarico.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Private Sub OKApriStampaOrdinato(ByRef DSListaCarico1 As DSListaCarico)
         'da inserire nel load della pagina
         Dim Rpt As Object = Nothing
@@ -9725,52 +9722,20 @@ Partial Public Class WUC_Documenti
             NomeStampa = "ORDINE.PDF"
             SubDirDOC = "Ordini"
             Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-            'giu150320 GIU180320 TROPPO LENTO
-            ' ''LnkStampa.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkConfOrdine.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkListaCarico.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''Dim myStream As Stream
-            ' ''Dim ms As New MemoryStream
-            ' ''Dim myOBJ() As Byte = Nothing
-            ' ''Try
-            ' ''    myStream = Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
-
-            ' ''    Dim Ret As Integer
-            ' ''    Do
-            ' ''        Ret = myStream.ReadByte() 'netstream.Read(Bytes, 0, Bytes.Length)
-            ' ''        If Ret > 0 Then
-            ' ''            ReDim Preserve myOBJ(myStream.Position - 1)
-            ' ''            myOBJ(myStream.Position - 1) = Ret
-            ' ''        End If
-            ' ''    Loop Until Ret = -1
-
-            ' ''Catch ex As Exception
-            ' ''    Chiudi("Errore in elaborazione stampa: " & ex.Message)
-            ' ''End Try
-            ' ''Session("objReport") = myOBJ
-            ' ''If Session(CSTTASTOST) = btnStampa.ID Then
-            ' ''    LnkStampa.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            ' ''    LnkConfOrdine.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            ' ''    LnkListaCarico.Visible = True
-            ' ''Else
-            ' ''    LnkStampa.Visible = True
-            ' ''End If
-            ' ''Exit Sub
+            getOutputRPT(Rpt, "PDF")
             '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
+            '''Session(CSTESPORTAPDF) = True
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
 
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -9788,16 +9753,16 @@ Partial Public Class WUC_Documenti
         Else
             LnkStampa.Visible = True
         End If
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            LnkConfOrdine.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            LnkListaCarico.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
+        '''    LnkConfOrdine.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
+        '''    LnkListaCarico.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
     Private Sub OKApriStampaMovMag(ByRef DsMovMag1 As DSMovMag)
         Dim Rpt As Object = Nothing
@@ -9870,59 +9835,26 @@ Partial Public Class WUC_Documenti
             NomeStampa = "MOVMAG.PDF"
             SubDirDOC = "MovMag"
             Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-            'giu150320 GIU180320 TROPPO LENTO
-            ' ''LnkStampa.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkConfOrdine.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''LnkListaCarico.HRef = "~/WebFormTables/Stampa.aspx"
-            ' ''Dim myStream As Stream
-            ' ''Dim ms As New MemoryStream
-            ' ''Dim myOBJ() As Byte = Nothing
-            ' ''Try
-            ' ''    myStream = Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
-
-            ' ''    Dim Ret As Integer
-            ' ''    Do
-            ' ''        Ret = myStream.ReadByte() 'netstream.Read(Bytes, 0, Bytes.Length)
-            ' ''        If Ret > 0 Then
-            ' ''            ReDim Preserve myOBJ(myStream.Position - 1)
-            ' ''            myOBJ(myStream.Position - 1) = Ret
-            ' ''        End If
-            ' ''    Loop Until Ret = -1
-
-            ' ''Catch ex As Exception
-            ' ''    Chiudi("Errore in elaborazione stampa: " & ex.Message)
-            ' ''End Try
-            ' ''Session("objReport") = myOBJ
-            ' ''If Session(CSTTASTOST) = btnStampa.ID Then
-            ' ''    LnkStampa.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            ' ''    LnkConfOrdine.Visible = True
-            ' ''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            ' ''    LnkListaCarico.Visible = True
-            ' ''Else
-            ' ''    LnkStampa.Visible = True
-            ' ''End If
-            ' ''Exit Sub
+            getOutputRPT(Rpt, "PDF")
             '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             ' ''Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
 
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
             ModalPopup.Show("Eroore", "Esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message, WUC_ModalPopup.TYPE_ERROR)
-            ' ''Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
             Exit Sub
         End Try
         If Session(CSTTASTOST) = btnStampa.ID Then
@@ -9935,16 +9867,16 @@ Partial Public Class WUC_Documenti
             LnkStampa.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnStampa.ID Then
-            LnkStampa.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
-            LnkConfOrdine.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
-            LnkListaCarico.HRef = LnkName
-        Else
-            LnkStampa.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnStampa.ID Then
+        '''    LnkStampa.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnConfOrdine.ID Then
+        '''    LnkConfOrdine.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnListaCarico.ID Then
+        '''    LnkListaCarico.HRef = LnkName
+        '''Else
+        '''    LnkStampa.HRef = LnkName
+        '''End If
     End Sub
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True

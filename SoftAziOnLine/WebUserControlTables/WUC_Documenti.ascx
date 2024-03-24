@@ -555,23 +555,25 @@
                             <div>
                                 <asp:Button ID="btnStampa" runat="server" class="btnstyle1R" Text="Documento" />
                             </div>
-                            <%--<div style="height: 5px"></div>--%>
+                            <div style="height: 15px"></div>
                             <div>
-                                <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento">Apri Documento</a>
+                                <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Documento</a>
                             </div>
                             <div style="height: 5px"></div>
                             <div>
                                 <asp:Button ID="btnConfOrdine" runat="server" class="btnstyle" Text="Conferma" visible="false"  />
                             </div>
+                            <div style="height: 15px"></div>
                             <div>
-                                <a ID="LnkConfOrdine" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Conferma Ordine">Apri Conferma Ordine</a>
+                                <a ID="LnkConfOrdine" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Conferma Ordine" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Conferma Ordine</a>
                             </div>
                             <div style="height: 5px"></div>
                             <div>
                                 <asp:Button ID="btnListaCarico" runat="server" class="btnstyle" Text="Lista di carico" visible="false" />
                             </div>
+                            <div style="height: 15px"></div>
                             <div>
-                                <a ID="LnkListaCarico" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Lista di carico">Apri Lista di carico</a>
+                                <a ID="LnkListaCarico" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Lista di carico" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Lista di carico</a>
                             </div>
                             <div style="height: 5px"></div>
                             <div>
@@ -581,17 +583,10 @@
                             <div>
                                 <asp:Button ID="btnCaricoLotti" runat="server" Text="Lettore Lotti" ToolTip="Carico lotti con lettore" class="btnstyle" Visible="false" />
                             </div>
-                            <%--<div style="height: 15px"></div>--%>
                             <div style="height: 15px"></div>
                             <div style="height: 15px"></div>
                             <div style="height: 15px"></div>
                             <div style="height: 15px"></div>
-                            <div style="height: 15px"></div>
-                            <div style="height: 15px"></div>
-                            <div style="height: 15px"></div>
-                            <div style="height: 15px"></div>
-                            <%--<div style="height: 15px"></div>
-                            <div style="height: 10px"></div>--%>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </td>

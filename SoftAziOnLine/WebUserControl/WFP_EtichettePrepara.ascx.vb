@@ -11,7 +11,7 @@ Imports SoftAziOnLine.App
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 Imports System.IO 'giu140615
 
 Partial Public Class WFP_EtichettePrepara
@@ -443,33 +443,74 @@ Partial Public Class WFP_EtichettePrepara
                 Rpt = New EtichetteCollo0502
             End If
         End If
-        
+
         Dim DsEtichette1 As New DSPrintWeb_Documenti
         DsEtichette1 = Session(CSTDsPrepEtichette)
         Rpt.SetDataSource(DsEtichette1)
         Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
-        Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
-            '-------------
-        Catch ex As Exception
-            Rpt = Nothing
-            lblErrore.Text = "Errore Esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message : lblErrore.Visible = True
-            Exit Sub
-        End Try
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        LnkStampa.HRef = LnkName
+        'GIU240324
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Try 'giu281112 errore che il file Ã¨ gia aperto
+        '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+        '''    'giu140124
+        '''    Rpt.Close()
+        '''    Rpt.Dispose()
+        '''    Rpt = Nothing
+        '''    '-
+        '''    GC.WaitForPendingFinalizers()
+        '''    GC.Collect()
+        '''    '-------------
+        '''Catch ex As Exception
+        '''    Rpt = Nothing
+        '''    lblErrore.Text = "Errore Esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message : lblErrore.Visible = True
+        '''    Exit Sub
+        '''End Try
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''LnkStampa.HRef = LnkName
+        getOutputRPT(Rpt, "PDF")
         LnkStampa.Visible = True
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
         TipoDoc = Session(CSTTIPODOC)
