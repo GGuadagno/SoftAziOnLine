@@ -449,7 +449,7 @@
                         BorderStyle="None" Font-Bold="True" ForeColor="Black">Stampe</asp:Label>
                     </div> 
                     <div>
-                        <a ID="LnkStampa" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento">Apri Documento</a>
+                        <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Documento" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Documento</a>
                     </div>
                     <div style="height: 5px">&nbsp;</div> 
                     <div>
