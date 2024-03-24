@@ -426,7 +426,7 @@
                     </div>                    
                     <div style="height: 15px">&nbsp;</div>  
                     <div>
-                        <a ID="LnkStampaSing" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Lista di carico">Apri Lista di carico</a>
+                        <a ID="LnkStampaSing" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Lista di carico" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Lista di carico</a>
                     </div>              
                     <div style="height: 15px">&nbsp;</div>   
                     <div>
@@ -434,8 +434,8 @@
                     </div>                    
                     <div style="height: 15px">&nbsp;</div>  
                     <div>
-                        <a ID="LnkStampaAll" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri TUTTE le lista di carico">Apri TUTTE le lista di carico</a>
-                    </div>              
+                        <a ID="LnkStampaAll" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri TUTTE le lista di carico" style="border-color:snow;border-style:outset;background-color:yellow;">Apri TUTTE le lista di carico</a>
+                    </div>               
                     <div style="height: 15px">&nbsp;</div>    
                     <div>
                         <asp:Button ID="btnChiudiAll" runat="server" class="btnstyle" Text="Chiudi allestimento" Visible ="False" />

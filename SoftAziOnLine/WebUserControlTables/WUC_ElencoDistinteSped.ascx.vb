@@ -12,6 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WebForms
+Imports System.IO
 
 Partial Public Class WUC_ElencoDistinteSped
     Inherits System.Web.UI.UserControl
@@ -581,7 +582,7 @@ Partial Public Class WUC_ElencoDistinteSped
                 ModalPopup.Show("Errore verifica Cliente", strErrore, WUC_ModalPopup.TYPE_ALERT)
                 Exit Sub
             End If
-            
+
         End If
         'GIU200323
         If SWNoPIVACF Or SWNoCodIPA Or swNoDestM Or swNODatiCorr Then
@@ -612,7 +613,7 @@ Partial Public Class WUC_ElencoDistinteSped
                         & "DOCUMENTO DI TRASPORTO CLIENTI" & "</span></strong> <br> Nuovo numero: <strong><span>" _
                         & FormattaNumero(myNuovoNumero) & "</span></strong>", WUC_ModalPopup.TYPE_CONFIRM)
         End If
- 
+
     End Sub
     'giu080814 GIU090814
     Public Sub CreaDDT()
@@ -620,8 +621,8 @@ Partial Public Class WUC_ElencoDistinteSped
     End Sub
     Private Function CheckNumDoc(ByVal myTipoDoc As String, ByRef strErrore As String) As Long
         Dim strSQL As String = "Select COUNT(IDDocumenti) AS TotDoc, MAX(CONVERT(INT, Numero)) AS Numero From DocumentiT WHERE "
-        If myTipoDoc = SWTD(TD.DocTrasportoClienti) Or _
-            myTipoDoc = SWTD(TD.DocTrasportoFornitori) Or _
+        If myTipoDoc = SWTD(TD.DocTrasportoClienti) Or
+            myTipoDoc = SWTD(TD.DocTrasportoFornitori) Or
             myTipoDoc = SWTD(TD.DocTrasportoCLavoro) Then
             strSQL += "Tipo_Doc = '" & SWTD(TD.DocTrasportoClienti) & "' OR "
             strSQL += "Tipo_Doc = '" & SWTD(TD.DocTrasportoFornitori) & "' OR "
@@ -1978,18 +1979,19 @@ Partial Public Class WUC_ElencoDistinteSped
         Dim NomeStampa As String = "LISTACARICORDINE.PDF"
         Dim SubDirDOC As String = "Ordini"
         Session(CSTNOMEPDF) = InizialiUT.Trim & NomeStampa.Trim
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
         Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            getOutputRPT(Rpt, "PDF")
+            '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''    'giu140124
+            '''    Rpt.Close()
+            '''    Rpt.Dispose()
+            '''    Rpt = Nothing
+            '''    '-
+            '''    GC.WaitForPendingFinalizers()
+            '''    GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -1999,7 +2001,6 @@ Partial Public Class WUC_ElencoDistinteSped
             Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
             Exit Sub
         End Try
-        'giu140615 Dim LnkName As String = ConfigurationManager.AppSettings("AppPath") & "/Documenti/StatMag/" & Session(CSTNOMEPDF)
         If Session(CSTTASTOST) = btnPrintBrogl.ID Then
             LnkStampaSing.Visible = True
         ElseIf Session(CSTTASTOST) = btnPrintBroglALL.ID Then
@@ -2008,15 +2009,54 @@ Partial Public Class WUC_ElencoDistinteSped
             LnkStampaSing.Visible = True
         End If
 
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnPrintBrogl.ID Then
-            LnkStampaSing.HRef = LnkName
-        ElseIf Session(CSTTASTOST) = btnPrintBroglALL.ID Then
-            LnkStampaAll.HRef = LnkName
-        Else
-            LnkStampaSing.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnPrintBrogl.ID Then
+        '''    LnkStampaSing.HRef = LnkName
+        '''ElseIf Session(CSTTASTOST) = btnPrintBroglALL.ID Then
+        '''    LnkStampaAll.HRef = LnkName
+        '''Else
+        '''    LnkStampaSing.HRef = LnkName
+        '''End If
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Private Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
         TipoDoc = Session(CSTTIPODOC)
@@ -2079,5 +2119,5 @@ Partial Public Class WUC_ElencoDistinteSped
         End If
         '-------------------------------------------------------------------
     End Function
-    '----
+
 End Class
