@@ -34,14 +34,10 @@ Public Class WebFormStampe
                     Response.End()
                 End With
             Else
-                'lnkElencoSc.Visible = False
-                'LnkStampa.Visible = False
-                'LnkVerbale.Visible = False
+                lblMessaggi.Text = "Nessun dato presente"
             End If
         Catch ex As Exception
-            'lnkElencoSc.Visible = False
-            'LnkStampa.Visible = False
-            'LnkVerbale.Visible = False
+            lblMessaggi.Text = "ERRORE in fase di stampa <br>" + ex.Message.Trim
         End Try
     End Sub
 End Class

@@ -133,9 +133,9 @@
                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                             <ContentTemplate>
                                  <div>
-                                    <asp:CheckBox ID="cbSintetico" runat="server" AutoPostBack="True" TabIndex="21" Text="Sintetico" TextAlign="Right" />
-                                    <a ID="lnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco XLS"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Elenco XLS</a>
-                                 </div> 
+                                     <asp:CheckBox ID="cbSintetico" runat="server" AutoPostBack="True" TabIndex="21" Text="Sintetico" TextAlign="Right" />
+                                     <a ID="lnkElencoSc" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco XLS" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco XLS</a>
+                                 </div>  
                                  <br>  
                                  <div id="noradio">
                                     <asp:Button ID="btnStampa" runat="server" class="btnstyle" Text="Stampa" 

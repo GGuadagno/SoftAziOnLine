@@ -10,6 +10,7 @@
 <body onload="javascript:window.history.forward(1);">
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblMessaggi" runat="server" Font-Bold="true"></asp:Label>
         </div>
     </form>
 </body>

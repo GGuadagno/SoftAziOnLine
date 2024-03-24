@@ -12,7 +12,7 @@ Imports SoftAziOnLine.App
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 
 Partial Public Class WUC_StatVendCliForArt
     Inherits System.Web.UI.UserControl
@@ -242,25 +242,24 @@ Partial Public Class WUC_StatVendCliForArt
         Session(CSTNOMEPDF) = Format(Now, "yyyyMMddHHmmss") + "_ELENCOINSTALLATO.XLS"
         Dim Rpt As Object = Nothing
         '---------------------
-        ' ''CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-        Dim NomeStampa As String = Session(CSTTIPODOC)
-        Dim SubDirDOC As String = ""
+        '''Dim SubDirDOC As String = ""
 
-        SubDirDOC = "StatFatt"
+        '''SubDirDOC = "StatFatt"
         Rpt = New ElencoInstallatoClienti
         Rpt.SetDataSource(DsPrinWebDoc)
-        Session(CSTESPORTAPDF) = True
-        Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-        Dim stPathReport As String = Session(CSTPATHPDF)
+        '''Session(CSTESPORTAPDF) = True
+        '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+        '''Dim stPathReport As String = Session(CSTPATHPDF)
         Try 'giu281112 errore che il file Ã¨ gia aperto
-            Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            getOutputRPT(Rpt, "XLS")
+            '''Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             Rpt = Nothing
@@ -270,9 +269,48 @@ Partial Public Class WUC_StatVendCliForArt
             Exit Sub
         End Try
         lnkElencoSc.Visible = True
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        lnkElencoSc.HRef = LnkName
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''lnkElencoSc.HRef = LnkName
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
 #Region " Routine e controlli"
     Private Sub AbilitaDisabilitaCampiCliente(ByVal Abilita As Boolean)
         txtCodCliente.Enabled = Abilita
