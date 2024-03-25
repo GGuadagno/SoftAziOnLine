@@ -103,7 +103,7 @@ Partial Public Class WUC_StatClientiMovimNuovi
             Dim AccorpaCR As Boolean = False
             Dim Modello As String = "ZZZ"
             Dim StatoDOC As String = "999"
-            If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Trim, txtDataA.Trim, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", StatoDOC, Modello, True) Then
+            If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Trim, txtDataA.Trim, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", StatoDOC, Modello, True, "") Then
                 If DsStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
                     Session(CSTObjReport) = ObjReport
                     Session(CSTDsPrinWebDoc) = DsStatVendCliArt1

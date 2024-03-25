@@ -3051,7 +3051,7 @@ Public Class Statistiche
     End Function
 
     'giu311023
-    Public Function StampaContrattiRegPrCatCli(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal Azienda As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt, ByRef ObjReport As Object, ByRef Errore As String, ByVal CodRegione As Integer, ByVal Provincia As String, ByVal CodCatCli As Integer, ByVal strCategRagg As String, ByVal AccorpaCR As Boolean, ByVal TipoDoc As String, ByVal StatoDoc As String, ByVal Modello As String, Optional ByVal StampaCMAttiviNuovi As Boolean = False) As Boolean
+    Public Function StampaContrattiRegPrCatCli(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal Azienda As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt, ByRef ObjReport As Object, ByRef Errore As String, ByVal CodRegione As Integer, ByVal Provincia As String, ByVal CodCatCli As Integer, ByVal strCategRagg As String, ByVal AccorpaCR As Boolean, ByVal TipoDoc As String, ByVal StatoDoc As String, ByVal Modello As String, ByVal StampaCMAttiviNuovi As Boolean, ByVal CodCliente As String) As Boolean
         Dim dbCon As New dbStringaConnesioneFacade(HttpContext.Current.Session(ESERCIZIO))
         Dim SqlConnOrd As SqlConnection
         Dim SqlAdapStatVendCliArt As SqlDataAdapter
@@ -3091,6 +3091,7 @@ Public Class Statistiche
             SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodCategoria", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
             SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@RaggrCatCli", System.Data.SqlDbType.NVarChar, 30, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
             SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@AccorpaCC", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodCliente", System.Data.SqlDbType.NVarChar, 16, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
             'OK ASSEGNO I PARAMETRI
             SqlDbSelectStatVendCliArt.Parameters.Item("@DAllaData").Value = Format(DateTime.Parse(txtDataDa), FormatoData)
             SqlDbSelectStatVendCliArt.Parameters.Item("@AllaData").Value = Format(DateTime.Parse(txtDataA), FormatoData)
@@ -3113,6 +3114,11 @@ Public Class Statistiche
                 SqlDbSelectStatVendCliArt.Parameters.Item("@AccorpaCC").Value = 0
             End If
             '------
+            If CodCliente.Trim <> "" Then
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodCliente").Value = CodCliente.Trim
+            Else
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodCliente").Value = System.DBNull.Value
+            End If
             Try
                 SqlAdapStatVendCliArt.Fill(DSStatVendCliArt1.StatCMRegPrCCliStato)
             Catch Ex As Exception
@@ -3193,6 +3199,7 @@ Public Class Statistiche
                         End If
                     End If
                     '-
+                    Dim strDesRegione As String = "" 'giu250324
                     If row.IsPrAppNull Then
                         row.DesRegione = "Sconosciuta"
                     Else
@@ -3213,6 +3220,7 @@ Public Class Statistiche
                             If Not rowRegione Is Nothing Then
                                 row.Regione = rowProvince.Regione
                                 row.DesRegione = rowRegione.Descrizione
+                                strDesRegione = rowRegione.Descrizione
                             Else
                                 row.DesRegione = "Sconosciuta " & row.Provincia.Trim
                             End If
@@ -3251,7 +3259,11 @@ Public Class Statistiche
                         row.TitoloReport += " - Modelli: " + Modello.Trim
                     End If
                     If CodRegione <> -1 Then
-                        row.TitoloReport += " - Cod.Regione: " & Str(CodRegione).Trim
+                        If strDesRegione.Trim = "" Then
+                            row.TitoloReport += " - Cod.Regione: " & Str(CodRegione).Trim
+                        Else
+                            row.TitoloReport += " - Regione: " & strDesRegione.Trim
+                        End If
                     Else
                         row.TitoloReport += " - Tutte le regioni "
                     End If

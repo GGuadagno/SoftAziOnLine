@@ -494,6 +494,10 @@ Partial Public Class WUC_StatVendCliForArt
         End If
     End Sub
 
+    Private Sub txtCodCliente_TextChanged(sender As Object, e As EventArgs) Handles txtCodCliente.TextChanged
+        txtDescCliente.Text = App.GetValoreFromChiave(txtCodCliente.Text, Def.CLIENTI, Session(ESERCIZIO))
+    End Sub
+
 #End Region
 
 End Class

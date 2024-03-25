@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="WUC_StatContrRegCatCliModStato.ascx.vb" Inherits="SoftAziOnLine.WUC_StatContrRegCatCliModStato" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <%@ Register src="../WebUserControl/WUC_ModalPopup.ascx" tagname="ModalPopup" tagprefix="uc1" %>
+<%@ Register src="../WebUserControl/WFP_ElencoCliForn.ascx" tagname="WFP_ElencoCliForn" tagprefix="uc2" %>
 <style type="text/css">
     .styleTDBTN
     {
@@ -41,6 +42,7 @@
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
     <uc1:ModalPopup ID="ModalPopup" runat="server" />
+    <uc2:WFP_ElencoCliForn ID="WFP_ElencoCli" runat="server" Elenco="ListaClienti" Titolo="Elenco clienti" />
     <asp:SqlDataSource ID="SqlDa_Regioni" runat="server" 
         SelectCommand="SELECT [Codice], [Descrizione] FROM [Regioni]">
     </asp:SqlDataSource>
@@ -54,6 +56,15 @@
 <table style="vertical-align:middle; background-color:Silver; border-style:double; height: 350px; width: 927px;" >
             <tr>
                 <td>
+                    <asp:Panel ID="Panel2" runat="server" groupingtext="Clienti" style="margin-top: 0px;" Height="78px" Width="859px">
+                        <asp:Label ID="lblCliente" runat="server" Width="100px" Height="17px" Enabled="false">Cliente</asp:Label>
+                        <asp:Button ID="btnCliente" runat="server" class="btnstyle" Width="25px" Height="25px" Text="?" ToolTip="Ricerca cliente" Enabled="false"/>
+                        &nbsp;&nbsp;<asp:TextBox ID="txtCodCliente" runat="server"  Width="100px" MaxLength="16" AutoPostBack="True" TabIndex="7" Enabled="false"></asp:TextBox>
+                        &nbsp;&nbsp;<asp:TextBox ID="txtDescCliente" runat="server" Width="400px" MaxLength="50" TabIndex="8" Enabled="False"  ></asp:TextBox>
+                        <br>
+                        <asp:CheckBox ID="chkTuttiClienti" runat="server" AutoPostBack="True" Checked="true" TabIndex="9" Text="Seleziona tutti i clienti" TextAlign="Left" />
+                        <br>
+                    </asp:Panel>
                     <asp:Panel ID="PanelSelezionaRegioneProv" style="margin-top: 0px;" runat="server" GroupingText="Regioni/Provincia">
                     <table width="100%">
                         <tr>
@@ -173,7 +184,7 @@
                         <asp:Label ID="Label8" runat="server" Width="5px">&nbsp;</asp:Label>
                         <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" Checked="true" GroupName="TipoST" />
                         <asp:Label ID="Label7" runat="server" Width="50px"></asp:Label>
-                        <a ID="lnkElenco" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco">Apri Elenco</a>
+                        <a ID="lnkElenco" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco</a>
                     </asp:Panel>
                 </td>
                     <td align="left" class="style7">

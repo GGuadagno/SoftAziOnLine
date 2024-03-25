@@ -97,11 +97,6 @@
         <siteMapNode title="----------------------------------------" description=""></siteMapNode>
         <siteMapNode url="WebFormTables\WF_CambioRespAreaVisiteContratti.aspx?labelForm=Cambio Responsbile AreaVisite nei Contratti" title="Cambio Responsbile AreaVisite nei Contratti"  description="Cambio Responsbile AreaVisite nei Contratti" />
       </siteMapNode>
-      <siteMapNode title="----------------------------------------" description=""></siteMapNode>
-      <siteMapNode title="Controlli" description="Controlli" >
-        <siteMapNode url="WebFormTables\WF_ContrattiCKSerieLotto.aspx?labelForm=Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti" title="Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti"  description="Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti" />
-        <siteMapNode url="WebFormTables\WF_ModScadenzario.aspx?labelForm=Modifica Elenco Scadenzario per il nuovo campo Totale Fatturato in tutti i Contratti" title="Modifica Elenco Scadenzario per il nuovo campo Totale Fatturato in tutti i Contratti"  description="Modifica Elenco Scadenzario per il nuovo campo Totale Fatturato in tutti i Contratti" />
-      </siteMapNode>  
     </siteMapNode>
     
     <siteMapNode title="Fornitori" description="Fornitori" >
@@ -229,14 +224,6 @@
         <siteMapNode url="WebFormTables\WF_FatturatoClienteDocumento.aspx?labelForm=Differenze Fatture con DDT" title="Differenze Fatture con DDT"  description="Differenze Fatture con DDT" />
         <siteMapNode url="WebFormTables\WF_FatturatoClienteDocumento.aspx?labelForm=DDT Fatturati in Fatture diverse" title="DDT Fatturati in Fatture diverse"  description="DDT Fatturati in Fatture diverse" />
         <siteMapNode url="WebFormTables\WF_FatturatoClienteDocumento.aspx?labelForm=Fatture/N.C. con Codice Causale errata" title="Fatture/N.C. con Codice Causale errata"  description="Fatture/N.C. con Codice Causale errata" />
-      </siteMapNode>
-      <!--<siteMapNode url="WebFormTables\WF_UtilityImpGiac.aspx?labelForm=Impegna giacenza da ordini clienti" title="Impegna giacenza da ordini clienti"  description="Impegna giacenza da ordini clienti" />-->
-      <siteMapNode title="Utility" description="Utility" >
-        <!--Fabio17032016______Provvisorio-->
-        <!--<siteMapNode url="WebFormTables\WF_UploadLotti.aspx?labelForm=Upload lotti" title="Upload lotti"  description="Upload lotti" />-->
-        <!--Fine_Fabio17032016-->
-        <!--<siteMapNode url="WebFormTables\WF_Tabelle.aspx?labelForm=Utility (1) Inizializzazione DataBase MySQL" title="Inizializzazione DataBase MySQL" description="Inizializzazione DataBase MySQL"  />-->
-        <siteMapNode url="WebFormTables\WF_RicollegaVisteCoGe.aspx" title="Ricollega viste che puntano a CoGe/GesAzi/Scadenzario" description="Ricollega viste che puntano a CoGe/GesAzi/Scadenzario"></siteMapNode>
       </siteMapNode>
     </siteMapNode>
     

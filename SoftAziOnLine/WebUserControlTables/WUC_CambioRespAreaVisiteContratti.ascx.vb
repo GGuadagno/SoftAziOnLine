@@ -35,24 +35,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Else
             sTipoUtente = Session(CSTTIPOUTENTE)
         End If
-        '@@@
-        If IsPostBack Then
-            If Request.Params.Get("__EVENTTARGET").ToString = "LnkStampaOK" Then
-                'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
-                If rbtnPDF.Checked Then
-                    VisualizzaRpt(Session("CRAVCSstampa"), Session(CSTNOMEPDF), "PDF")
-                Else
-                    VisualizzaRpt(Session("CRAVCSstampa"), Session(CSTNOMEPDF), "EXEL")
-                End If
-                Exit Sub
-            End If
-            '''If Request.Params.Get("__EVENTTARGET").ToString = "LnkRitornoOK" Then
-            '''    'Dim arg As String = Request.Form("__EVENTARGUMENT").ToString
-            '''    subRitorno()
-            '''    Exit Sub
-            '''End If
-        End If
-        '@@@
         If (Not IsPostBack) Then
             txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
             txtDataA.Text = "31/12/" & Session(ESERCIZIO)
@@ -137,7 +119,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Dim Modello As String = "ZZZ"
 
         Try
-            If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", Session(CSTSTATODOC), Modello) Then
+            If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", Session(CSTSTATODOC), Modello, False, "") Then
                 If DsStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
                     '''Session(CSTObjReport) = ObjReport
                     '''Session(CSTDSStatVendCliArt) = DsStatVendCliArt1
@@ -197,8 +179,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         strDalAl = strDalAl.ToString.Replace("/", "")
         Session(CSTNOMEPDF) = strDalAl.Trim & "_" & InizialiUT.Trim & NomeStampa.Trim
         ''''---------
-        ''''giu140615 prova con binary 
-        ''''' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
         '''Session(CSTESPORTAPDF) = True
         '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
         '''Dim stPathReport As String = Session(CSTPATHPDF)
@@ -235,9 +215,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Else
                 myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
             End If
-            '''myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
-            Session("CRAVCSstampa") = byteReport
+            Session("WebFormStampe") = byteReport
         Catch ex As Exception
             Return False
         End Try
@@ -264,52 +243,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
 
         Return fileData
     End Function
-    Private Sub VisualizzaRpt(ByVal byteReport() As Byte, ByVal _NomeRpt As String, ByVal _Formato As String)
-        Dim sErrore As String = ""
-        Try
-            If byteReport.Length > 0 Then
-                With Me.Page
-                    Response.Clear()
-                    Response.Buffer = True
-                    Response.ClearHeaders()
-
-                    Response.AddHeader("Accept-Header", byteReport.Length.ToString())
-                    Response.AddHeader("Cache-Control", "private")
-                    Response.AddHeader("cache-control", "max-age=1")
-                    Response.AddHeader("content-length", byteReport.Length.ToString())
-
-                    Response.AddHeader("Expires", "0")
-                    If Right(_NomeRpt, 4).ToString.ToUpper = ".PDF" Or Right(_NomeRpt, 4).ToString.ToUpper = ".XLS" Then
-                        If _Formato = "PDF" Then
-                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
-                            Response.ContentType = "application/pdf"
-                        Else
-                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt)
-                            Response.ContentType = "application/vnd.ms-excel"
-                        End If
-                    Else
-                        If _Formato = "PDF" Then
-                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".pdf")
-                            Response.ContentType = "application/pdf"
-                        Else
-                            Response.AppendHeader("content-disposition", "inline; filename=" & "" & _NomeRpt & ".xls")
-                            Response.ContentType = "application/vnd.ms-excel"
-                        End If
-                    End If
-                    '-
-                    Response.AddHeader("Accept-Ranges", "bytes")
-
-                    Response.BinaryWrite(byteReport)
-                    Response.Flush()
-                    Response.End()
-                End With
-            Else
-                lnkElenco.Visible = False
-            End If
-        Catch ex As Exception
-            lnkElenco.Visible = False
-        End Try
-    End Sub
     '@@@@@
     Public Sub Chiudi(ByVal strErrore As String)
 

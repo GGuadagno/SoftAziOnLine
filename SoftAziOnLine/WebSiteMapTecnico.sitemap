@@ -99,7 +99,7 @@
       </siteMapNode>
       <siteMapNode title="----------------------------------------" description=""></siteMapNode>
       <siteMapNode title="Controlli" description="Controlli" >
-        <siteMapNode url="WebFormTables\WF_ContrattiCKSerieLotto.aspx?labelForm=Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti" title="Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti"  description="Controllo Caratteri speciali N° Serie/Lotto in tutti i Contratti" />
+        <siteMapNode url="WebFormTables\WF_ContrattiCKSerieLotto.aspx?labelForm=Controllo e aggiorna tutti i Contratti: Apice nelle note Intervento e caratteri Speciali" title="Controllo e aggiorna tutti i Contratti: Apice nelle note Intervento e caratteri Speciali"  description="Controllo e aggiorna tutti i Contratti: Apice nelle note Intervento e caratteri Speciali" />
       </siteMapNode>
     </siteMapNode>
 
