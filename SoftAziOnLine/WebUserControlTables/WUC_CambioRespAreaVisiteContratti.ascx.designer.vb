@@ -59,6 +59,87 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     Protected WithEvents SqlDSProvince As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
+    '''Controllo SqlDSRespVisite.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDSRespVisite As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Controllo SqlDSRegPrElenco.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents SqlDSRegPrElenco As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Controllo Panel2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents Panel2 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Controllo ddlRespVisiteOLD.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents ddlRespVisiteOLD As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Controllo Label5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Controllo GridViewBody.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents GridViewBody As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Controllo btnAbbinaRegPr.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents btnAbbinaRegPr As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Controllo lblMessUtente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents lblMessUtente As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Controllo ddlRespVisiteNEW.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents ddlRespVisiteNEW As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Controllo PanelSelezionaRegioneProv.
     '''</summary>
     '''<remarks>

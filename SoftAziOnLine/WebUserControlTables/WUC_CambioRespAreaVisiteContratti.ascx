@@ -37,7 +37,7 @@
     }
 </style>    
 <br />
-<asp:Panel ID="panelPrincipale" runat="server" Width="980px" Height="500px" BackColor="white">
+<asp:Panel ID="panelPrincipale" runat="server" Width="980px" Height="550px" BackColor="white">
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
     <uc1:ModalPopup ID="ModalPopup" runat="server" />
@@ -50,11 +50,91 @@
             <asp:SessionParameter Name="CodRegione" DbType="Int32" Direction="Input" SessionField="CodRegione" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDSRespVisite" runat="server" 
+        SelectCommand="Get_RespVisiteArea"> 
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDSRegPrElenco" runat="server" 
+        SelectCommand="SELECT RespVisiteRegPr.Codice, CodRespVisite, CodRegione, Provincia, Regioni.Descrizione AS DesRegione FROM RespVisiteRegPr LEFT OUTER JOIN Regioni ON RespVisiteRegPr.CodRegione = Regioni.Codice WHERE CodRespVisite = @IDRespVisite ORDER BY Regioni.Descrizione,Provincia">
+        <SelectParameters>
+            <asp:SessionParameter Name="IDRespVisite" DbType="Int32" Direction="Input" SessionField="IDRespVisite" />
+        </SelectParameters>
+    </asp:SqlDataSource> 
     <br>
-<table style="vertical-align:middle; background-color:Silver; border-style:double; height: 350px; width: 927px;" >
+<table style="vertical-align:middle; background-color:Silver; border-style:double; height: 500px; width: 927px;" >
             <tr>
                 <td>
-                    <asp:Panel ID="PanelSelezionaRegioneProv" style="margin-top: 0px;" runat="server" GroupingText="Regioni/Provincia">
+                    <asp:Panel ID="Panel2" style="margin-top: 0px;" runat="server" GroupingText="Seleziona il Responsabile Visita da cambiare nel NUOVO Responsabile Visita">
+                        <table width="100%">
+                            <td align="left" style="width:270px">Responsabile Visita da cambiare</td>
+                            <td>
+                                <asp:DropDownList ID="ddlRespVisiteOLD" runat="server" AppendDataBoundItems="True" 
+                                AutoPostBack="True" Width="550px"
+                                DataSourceID="SqlDSRespVisite" DataTextField="DesRespVisiteArea" 
+                                DataValueField="Codice" Height="22px"><asp:ListItem Text="" Value=""></asp:ListItem></asp:DropDownList>
+                            </td>
+                        </table>
+                        <table width="100%">
+                            <td>
+                            <div style="height:25px;">
+                                <asp:Label ID="Label5" 
+                                    runat="server" BorderStyle="Outset" Font-Bold="false" Font-Overline="False" 
+                                    Style="text-align:center" Text="Elenco abbinamenti Regioni/Province del Responsabile Visita da cambiare" Width="99%"></asp:Label>
+                            </div>
+                            <div id="divGridRegProv" style="overflow: auto; height:110px; border-style:groove">
+                                <asp:GridView ID="GridViewBody" runat="server" 
+                                    GridLines="None" CssClass="GridViewStyle" 
+                                    AllowSorting="False" AutoGenerateColumns="False" 
+                                    EmptyDataText="Nessun dato disponibile."  
+                                    DataKeyNames="Codice"
+                                    ShowFooter="false"
+                                    DataSourceID="SqlDSRegPrElenco" BackColor="Silver">
+                                    <RowStyle CssClass="RowStyle" />
+                                    <PagerStyle CssClass="PagerStyle" />
+                                    <HeaderStyle CssClass="HeaderStyle" />
+                                    <AlternatingRowStyle CssClass="AltRowStyle" />
+                                    <SelectedRowStyle CssClass="SelectedRowStyle"/>         
+                                    <PagerSettings Mode="NextPrevious" Visible="false"/>
+                                    <Columns>
+                                        <asp:CommandField ButtonType="Button" CausesValidation="False" 
+                                            ControlStyle-Font-Size="XX-Small" InsertVisible="False" SelectText="&gt;" 
+                                            ShowCancelButton="False" ShowHeader="True" ShowSelectButton="true">
+                                            <ControlStyle Font-Size="XX-Small" />
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="05px" />
+                                        </asp:CommandField>
+                                        <asp:BoundField DataField="DesRegione" HeaderText="Regione" 
+                                            SortExpression="DesRegione"><HeaderStyle Wrap="false" />
+                                                    <ItemStyle Width="250px" /></asp:BoundField>
+                                        <asp:BoundField DataField="Provincia" HeaderText="Provincia" 
+                                            SortExpression="Provincia">
+                                            <HeaderStyle Wrap="false" />
+                                            <ItemStyle Width="50px" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Codice" HeaderText="Codice"  
+                                            SortExpression="Codice"><HeaderStyle Wrap="True" Width="10px" CssClass="nascondi"/><ItemStyle 
+                                            Width="10px" CssClass="nascondi" /></asp:BoundField>
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                            <div>
+                                <asp:Button ID="btnAbbinaRegPr" runat="server" Text="Abbina Regione/Provincia al NUOVO Responsabile Visita" Enabled="false" />
+                                <asp:Label ID="lblMessUtente" 
+                                    runat="server" BorderStyle="Outset" Font-Bold="true" Font-Overline="False" 
+                                    Style="text-align:center" Text="" Width="99%"></asp:Label>
+                            </div>
+                            </td>
+                            </table>
+                        <table width="100%">
+                            <td align="left" style="width:270px">NUOVO Responsabile Visita</td>
+                            <td>
+                                <asp:DropDownList ID="ddlRespVisiteNEW" runat="server" AppendDataBoundItems="True" 
+                                AutoPostBack="True" Width="550px"
+                                DataSourceID="SqlDSRespVisite" DataTextField="DesRespVisiteArea" 
+                                DataValueField="Codice" Height="22px"><asp:ListItem Text="" Value=""></asp:ListItem></asp:DropDownList>
+                            </td>
+                        </table>
+                    </asp:Panel>
+                   
+                    <asp:Panel ID="PanelSelezionaRegioneProv" style="margin-top: 0px;" runat="server" GroupingText="Seleziona la Regione/Provincia per il cambio Responsabile Visita">
                     <table width="100%">
                         <tr>
                             <td align="left">Singola regione</td><td>

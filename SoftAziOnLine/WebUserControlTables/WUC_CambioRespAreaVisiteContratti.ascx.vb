@@ -20,6 +20,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     Private InizialiUT As String = ""
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim dbCon As New dbStringaConnesioneFacade(Session(ESERCIZIO))
+        SqlDSRespVisite.ConnectionString = dbCon.getConnectionString(TipoDB.dbScadenzario)
+        SqlDSRegPrElenco.ConnectionString = dbCon.getConnectionString(TipoDB.dbScadenzario)
         SqlDa_Regioni.ConnectionString = dbCon.getConnectionString(TipoDB.dbSoftCoge)
         SqlDSProvince.ConnectionString = dbCon.getConnectionString(TipoDB.dbSoftCoge)
         '---------------------------------
@@ -36,6 +38,15 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             sTipoUtente = Session(CSTTIPOUTENTE)
         End If
         If (Not IsPostBack) Then
+            Session(IDRESPVISITE) = 0
+            ddlRespVisiteOLD.Items.Clear()
+            ddlRespVisiteOLD.Items.Add("")
+            ddlRespVisiteOLD.DataBind()
+            '--
+            ddlRespVisiteNEW.Items.Clear()
+            ddlRespVisiteNEW.Items.Add("")
+            ddlRespVisiteNEW.DataBind()
+            '--
             txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
             txtDataA.Text = "31/12/" & Session(ESERCIZIO)
             '-
@@ -293,6 +304,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Session("CodRegione") = ddlRegioni.SelectedValue
         lnkElenco.Visible = False
     End Sub
+#Region "RBTN"
 
     Private Sub rbtnDaEvadere_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles _
         rbtnDaEvadere.CheckedChanged
@@ -334,7 +346,105 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         lnkElenco.Visible = False
     End Sub
     '-
+#End Region
+
     Private Sub rbtnPDFXLS_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnPDF.CheckedChanged, rbtnXLS.CheckedChanged
         lnkElenco.Visible = False
+    End Sub
+
+    Private Sub ddlRespVisiteOLD_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteOLD.SelectedIndexChanged
+        Session(IDRESPVISITE) = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
+        If CKCodResVisitaOLDNEW() = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+            Try
+                If Session("CodRespVisiteRegPr") > 0 Then
+                    btnAbbinaRegPr.Enabled = True
+                End If
+            Catch ex As Exception
+                btnAbbinaRegPr.Enabled = False
+            End Try
+        Else
+            btnAbbinaRegPr.Enabled = False
+        End If
+    End Sub
+
+    Private Sub ddlRespVisiteNEW_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteNEW.SelectedIndexChanged
+        If CKCodResVisitaOLDNEW() = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+            Try
+                If Session("CodRespVisiteRegPr") > 0 Then
+                    btnAbbinaRegPr.Enabled = True
+                End If
+            Catch ex As Exception
+                btnAbbinaRegPr.Enabled = False
+            End Try
+        Else
+            btnAbbinaRegPr.Enabled = False
+        End If
+    End Sub
+
+    Private Function CKCodResVisitaOLDNEW(Optional ByVal NoMess As Boolean = False) As Boolean
+        CKCodResVisitaOLDNEW = True
+        If IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) = Session(IDRESPVISITE) Then
+            CKCodResVisitaOLDNEW = False
+            If NoMess = False Then
+                Session(MODALPOPUP_CALLBACK_METHOD) = ""
+                Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                ModalPopup.Show("ATTENZIONE", "Responsabile di Visita da cambiare dev'essere diverso dal NUOVO Responsabile Visita", WUC_ModalPopup.TYPE_ERROR)
+            End If
+        End If
+    End Function
+
+    Private Sub btnAbbinaRegPr_Click(sender As Object, e As EventArgs) Handles btnAbbinaRegPr.Click
+
+    End Sub
+    Private Function OKExecute(ByVal strSQL As String, ByRef strErrore As String) As Boolean
+        strErrore = ""
+        Dim ObjDB As New DataBaseUtility
+        Try
+            ObjDB.ExecuteQueryUpdate(TipoDB.dbScadenzario, strSQL)
+            ObjDB = Nothing
+            OKExecute = True
+        Catch Ex As Exception
+            strErrore = Ex.Message.Trim
+            OKExecute = False
+            Exit Function
+        End Try
+    End Function
+    Protected Sub btnEliminaRegPr_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Dim Riga As Integer = GridViewBody.SelectedDataKey.Value
+            If Riga <> 0 Then
+                Dim strSQL As String = "delete from RespVisiteRegPr where codice=" + Riga.ToString.Trim
+                Dim strErrore As String = ""
+                If OKExecute(strSQL, strErrore) = True Then
+                    lblMessUtente.Text = "Abbinamento eliminato"
+                ElseIf strErrore.Trim <> "" Then
+                    lblMessUtente.Text = strErrore.Trim
+                    Exit Sub
+                End If
+                SqlDSRegPrElenco.DataBind()
+                GridViewBody.DataBind()
+            End If
+        Catch Ex As Exception
+            lblMessUtente.Text = "Nessun elemento selezionato. (Elimina)"
+            Exit Sub
+        End Try
+    End Sub
+    Private Sub GridViewBody_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewBody.SelectedIndexChanged
+        Try
+            Dim Riga As Integer = GridViewBody.SelectedDataKey.Value
+            Session("CodRespVisiteRegPr") = Riga
+            If Riga > 0 Then
+                If CKCodResVisitaOLDNEW(True) = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+                    btnAbbinaRegPr.Enabled = True
+                Else
+                    btnAbbinaRegPr.Enabled = False
+                End If
+            End If
+        Catch ex As Exception
+            Session(MODALPOPUP_CALLBACK_METHOD) = ""
+            Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+            ModalPopup.Show("Errore seleziona Regione/Provincia", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+        End Try
+
     End Sub
 End Class
