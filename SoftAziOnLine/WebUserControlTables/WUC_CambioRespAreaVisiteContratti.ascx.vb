@@ -55,6 +55,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             chkTutteProvince.Checked = True
             ddlProvince.Enabled = False
             Session("CodRegione") = 0
+            Session("CodRespVisiteRegPr") = 0
             Session(CSTSTATODOC) = "6"
             Session(CSTSTATODOCSEL) = "6"
             SqlDSProvince.DataBind()
@@ -122,20 +123,11 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Provincia = ddlProvince.SelectedValue
         End If
 
-        CodCateg = -1
-        SWRaggrCatCli = False
-        Dim strCategRagg As String = ""
-        Dim AccorpaCR As Boolean = False
-        AccorpaCR = False
-        Dim Modello As String = "ZZZ"
-
         Try
-            If ClsPrint.StampaContrattiRegPrCatCli(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, ObjReport, StrErrore, CodRegione, Provincia, CodCateg, strCategRagg, AccorpaCR, "CM", Session(CSTSTATODOC), Modello, False, "") Then
+            If ClsPrint.StampaContrattiCambioRespVisite(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, StrErrore,
+                                                   CodRegione, Provincia, "CM", Session(CSTSTATODOC),
+                                                   "", Session(IDRESPVISITE), " CAMBIO da " + ddlRespVisiteOLD.SelectedItem.Text + " a NUOVO " + ddlRespVisiteNEW.SelectedItem.Text) Then
                 If DsStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
-                    '''Session(CSTObjReport) = ObjReport
-                    '''Session(CSTDSStatVendCliArt) = DsStatVendCliArt1
-                    '''Session(CSTNOBACK) = 0 'giu040512
-                    '''Response.Redirect("..\WebFormTables\WF_PrintWebStatistiche.aspx")
                     Session(CSTDsPrinWebDoc) = DsStatVendCliArt1
                     Call OKApriStampa(DsStatVendCliArt1)
                 Else
@@ -353,11 +345,16 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     End Sub
 
     Private Sub ddlRespVisiteOLD_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteOLD.SelectedIndexChanged
+        Session("CodRespVisiteRegPr") = 0
+        GridViewBody.SelectedIndex = -1
+        lblMessUtente.Text = ""
         Session(IDRESPVISITE) = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
         If CKCodResVisitaOLDNEW() = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
             Try
                 If Session("CodRespVisiteRegPr") > 0 Then
                     btnAbbinaRegPr.Enabled = True
+                Else
+                    btnAbbinaRegPr.Enabled = False
                 End If
             Catch ex As Exception
                 btnAbbinaRegPr.Enabled = False
@@ -372,6 +369,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Try
                 If Session("CodRespVisiteRegPr") > 0 Then
                     btnAbbinaRegPr.Enabled = True
+                Else
+                    btnAbbinaRegPr.Enabled = False
                 End If
             Catch ex As Exception
                 btnAbbinaRegPr.Enabled = False
@@ -439,7 +438,15 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
                 Else
                     btnAbbinaRegPr.Enabled = False
                 End If
+            Else
+                lblMessUtente.Text = "Nessun dato selezionato."
+                Exit Sub
             End If
+            Dim row As GridViewRow = GridViewBody.SelectedRow
+            Dim DesRegione As String = NormalizzaStringa(row.Cells(1).Text.Trim)
+            Dim DesProvincia As String = NormalizzaStringa(row.Cells(2).Text.Trim)
+            lblMessUtente.Text = "Regione/Provincia selezionata per l'abbinamento al NUOVO Responsabile Visita: " + DesRegione
+            lblMessUtente.Text += IIf(Trim(DesProvincia) <> "", " (" + DesProvincia.Trim + ")", "")
         Catch ex As Exception
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""

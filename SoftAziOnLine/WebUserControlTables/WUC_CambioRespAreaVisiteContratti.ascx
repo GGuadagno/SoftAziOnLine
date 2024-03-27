@@ -37,7 +37,7 @@
     }
 </style>    
 <br />
-<asp:Panel ID="panelPrincipale" runat="server" Width="980px" Height="550px" BackColor="white">
+<asp:Panel ID="panelPrincipale" runat="server" Width="980px" Height="600px" BackColor="white">
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
     <uc1:ModalPopup ID="ModalPopup" runat="server" />
@@ -60,15 +60,15 @@
         </SelectParameters>
     </asp:SqlDataSource> 
     <br>
-<table style="vertical-align:middle; background-color:Silver; border-style:double; height: 500px; width: 927px;" >
+<table style="vertical-align:middle; background-color:Silver; border-style:double; height: 550px; width: 927px;" >
             <tr>
                 <td>
                     <asp:Panel ID="Panel2" style="margin-top: 0px;" runat="server" GroupingText="Seleziona il Responsabile Visita da cambiare nel NUOVO Responsabile Visita">
                         <table width="100%">
-                            <td align="left" style="width:270px">Responsabile Visita da cambiare</td>
+                            <td align="left" style="width:230px">Responsabile Visita da cambiare</td>
                             <td>
                                 <asp:DropDownList ID="ddlRespVisiteOLD" runat="server" AppendDataBoundItems="True" 
-                                AutoPostBack="True" Width="550px"
+                                AutoPostBack="True" Width="590px"
                                 DataSourceID="SqlDSRespVisite" DataTextField="DesRespVisiteArea" 
                                 DataValueField="Codice" Height="22px"><asp:ListItem Text="" Value=""></asp:ListItem></asp:DropDownList>
                             </td>
@@ -118,16 +118,16 @@
                             <div>
                                 <asp:Button ID="btnAbbinaRegPr" runat="server" Text="Abbina Regione/Provincia al NUOVO Responsabile Visita" Enabled="false" />
                                 <asp:Label ID="lblMessUtente" 
-                                    runat="server" BorderStyle="Outset" Font-Bold="true" Font-Overline="False" 
-                                    Style="text-align:center" Text="" Width="99%"></asp:Label>
+                                    runat="server" BorderStyle="Outset" Font-Bold="false" Font-Overline="False" 
+                                    Style="text-align:left" Text="" Width="99%"></asp:Label>
                             </div>
                             </td>
                             </table>
                         <table width="100%">
-                            <td align="left" style="width:270px">NUOVO Responsabile Visita</td>
+                            <td align="left" style="width:230px">NUOVO Responsabile Visita</td>
                             <td>
                                 <asp:DropDownList ID="ddlRespVisiteNEW" runat="server" AppendDataBoundItems="True" 
-                                AutoPostBack="True" Width="550px"
+                                AutoPostBack="True" Width="590px"
                                 DataSourceID="SqlDSRespVisite" DataTextField="DesRespVisiteArea" 
                                 DataValueField="Codice" Height="22px"><asp:ListItem Text="" Value=""></asp:ListItem></asp:DropDownList>
                             </td>

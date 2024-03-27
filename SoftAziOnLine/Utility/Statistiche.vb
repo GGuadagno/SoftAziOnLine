@@ -3050,8 +3050,13 @@ Public Class Statistiche
         '-
     End Function
 
-    'giu311023
-    Public Function StampaContrattiRegPrCatCli(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal Azienda As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt, ByRef ObjReport As Object, ByRef Errore As String, ByVal CodRegione As Integer, ByVal Provincia As String, ByVal CodCatCli As Integer, ByVal strCategRagg As String, ByVal AccorpaCR As Boolean, ByVal TipoDoc As String, ByVal StatoDoc As String, ByVal Modello As String, ByVal StampaCMAttiviNuovi As Boolean, ByVal CodCliente As String) As Boolean
+    'giu311023 GIU270324 AGGIUNTO CodCliente
+    Public Function StampaContrattiRegPrCatCli(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal Azienda As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt,
+                                               ByRef ObjReport As Object, ByRef Errore As String,
+                                               ByVal CodRegione As Integer, ByVal Provincia As String,
+                                               ByVal CodCatCli As Integer, ByVal strCategRagg As String, ByVal AccorpaCR As Boolean,
+                                               ByVal TipoDoc As String, ByVal StatoDoc As String,
+                                               ByVal Modello As String, ByVal StampaCMAttiviNuovi As Boolean, ByVal CodCliente As String) As Boolean
         Dim dbCon As New dbStringaConnesioneFacade(HttpContext.Current.Session(ESERCIZIO))
         Dim SqlConnOrd As SqlConnection
         Dim SqlAdapStatVendCliArt As SqlDataAdapter
@@ -3168,6 +3173,61 @@ Public Class Statistiche
             Dim TOTNSerie As Integer = 0 : Dim strSeriePrec As String = ","
             Dim TOTContrattiNEW As Integer = 0
             Dim TOTContrattiSCA As Integer = 0
+            'giu270324
+            Dim strDesRegione As String = ""
+            If CodRegione <> -1 Then
+                rowRegione = DSStatVendCliArt1.Regioni.FindByCodice(CodRegione)
+                If Not rowRegione Is Nothing Then
+                    strDesRegione = rowRegione.Descrizione
+                Else
+                    strDesRegione = "Sconosciuta "
+                End If
+            End If
+            '--------------------------------
+            Dim strTitoloReport As String = ""
+            '-
+            strTitoloReport = "STATISTICA CONTRATTI per Tipo evasione/Categoria cliente/Modello (Dal " & txtDataDa & " al " & txtDataA & ")"
+            If CodCliente.Trim <> "" Then
+                strTitoloReport += " - Cod.Cliente: " + CodCliente.Trim
+            Else
+                strTitoloReport += " - Tutti i Clienti"
+            End If
+            If Modello = "ZZZ" Then 'tutti
+                strTitoloReport += " - Tutti i Modelli"
+            ElseIf Modello = "XXX" Then 'misti
+                strTitoloReport += " - Modelli Misti"
+            Else
+                strTitoloReport += " - Modelli: " + Modello.Trim
+            End If
+            If CodRegione <> -1 Then
+                If strDesRegione.Trim = "" Then
+                    strTitoloReport += " - Cod.Regione: " & Str(CodRegione).Trim
+                Else
+                    strTitoloReport += " - Regione: " & strDesRegione.Trim
+                End If
+            Else
+                strTitoloReport += " - Tutte le regioni "
+            End If
+            If Provincia.Trim <> "" Then
+                strTitoloReport += " - Provincia: " & Provincia.Trim
+            Else
+                strTitoloReport += " - Tutte le provincie "
+            End If
+            If CodCatCli <> -1 Then
+                strTitoloReport += " - Cod.Categ.Cliente: " & Str(CodCatCli).Trim
+            Else
+                strTitoloReport += " - Tutte le Categorie Cliente "
+            End If
+            If strCategRagg.Trim <> "" Then
+                strTitoloReport += " - Seleziona tutte le Categorie Cliente che iniziano per: " & strCategRagg.Trim
+            End If
+            If AccorpaCR = True Then
+                strTitoloReport += " - Accorpa tutte le Categorie Cliente in: " & strCategRagg.Trim
+            End If
+            If StampaCMAttiviNuovi = True Then
+                strTitoloReport = "TOTALI Contratti Attivi/Nuovi/In Scadenza - Esercizio " & CDate(txtDataA).Year.ToString.Trim
+            End If
+            '    
             '--------
             If DSStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
                 For Each row As DsStatVendCliArt.StatCMRegPrCCliStatoRow In DSStatVendCliArt1.StatCMRegPrCCliStato.Rows
@@ -3199,7 +3259,6 @@ Public Class Statistiche
                         End If
                     End If
                     '-
-                    Dim strDesRegione As String = "" 'giu250324
                     If row.IsPrAppNull Then
                         row.DesRegione = "Sconosciuta"
                     Else
@@ -3220,7 +3279,6 @@ Public Class Statistiche
                             If Not rowRegione Is Nothing Then
                                 row.Regione = rowProvince.Regione
                                 row.DesRegione = rowRegione.Descrizione
-                                strDesRegione = rowRegione.Descrizione
                             Else
                                 row.DesRegione = "Sconosciuta " & row.Provincia.Trim
                             End If
@@ -3250,43 +3308,7 @@ Public Class Statistiche
                     End If
                     'OK
                     row.Azienda = Azienda
-                    row.TitoloReport = "STATISTICA CONTRATTI per Tipo evasione/Categoria cliente/Modello (Dal " & txtDataDa & " al " & txtDataA & ")"
-                    If Modello = "ZZZ" Then 'tutti
-                        row.TitoloReport += " - Tutti i Modelli"
-                    ElseIf Modello = "XXX" Then 'misti
-                        row.TitoloReport += " - Modelli Misti"
-                    Else
-                        row.TitoloReport += " - Modelli: " + Modello.Trim
-                    End If
-                    If CodRegione <> -1 Then
-                        If strDesRegione.Trim = "" Then
-                            row.TitoloReport += " - Cod.Regione: " & Str(CodRegione).Trim
-                        Else
-                            row.TitoloReport += " - Regione: " & strDesRegione.Trim
-                        End If
-                    Else
-                        row.TitoloReport += " - Tutte le regioni "
-                    End If
-                    If Provincia.Trim <> "" Then
-                        row.TitoloReport += " - Provincia: " & Provincia.Trim
-                    Else
-                        row.TitoloReport += " - Tutte le provincie "
-                    End If
-                    If CodCatCli <> -1 Then
-                        row.TitoloReport += " - Cod.Categ.Cliente: " & Str(CodCatCli).Trim
-                    Else
-                        row.TitoloReport += " - Tutte le Categorie Cliente "
-                    End If
-                    If strCategRagg.Trim <> "" Then
-                        row.TitoloReport += " - Seleziona tutte le Categorie Cliente che iniziano per: " & strCategRagg.Trim
-                    End If
-                    If AccorpaCR = True Then
-                        row.TitoloReport += " - Accorpa tutte le Categorie Cliente in: " & strCategRagg.Trim
-                    End If
-                    If StampaCMAttiviNuovi = True Then
-                        row.TitoloReport = "TOTALI Contratti Attivi/Nuovi/In Scadenza - Esercizio " & CDate(txtDataA).Year.ToString.Trim
-                    End If
-                    '    
+                    row.TitoloReport = strTitoloReport
                     If AccorpaCR = False Then
                         If row.IsCod_CategoriaNull Then
                             row.Categoria = "Sconosciuta"
@@ -3326,6 +3348,236 @@ Public Class Statistiche
             End If
         Catch ex As Exception
             Errore = ex.Message & " - Statistica Contratti(StampaContrattiRegPrCatCli)"
+            Return False
+            Exit Function
+        End Try
+
+        Return True
+
+    End Function
+
+    Public Function StampaContrattiCambioRespVisite(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal Azienda As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt,
+                                               ByRef Errore As String,
+                                               ByVal CodRegione As Integer, ByVal Provincia As String,
+                                               ByVal TipoDoc As String, ByVal StatoDoc As String,
+                                               ByVal CodCliente As String,
+                                               ByVal CodRespVisite As Integer,
+                                               ByVal DesRespVisitaOLDNEW As String) As Boolean
+        Dim dbCon As New dbStringaConnesioneFacade(HttpContext.Current.Session(ESERCIZIO))
+        Dim SqlConnOrd As SqlConnection
+        Dim SqlAdapStatVendCliArt As SqlDataAdapter
+        Dim SqlDbSelectStatVendCliArt As SqlCommand
+        Try
+            DSStatVendCliArt1.Clear()
+
+            SqlConnOrd = New SqlConnection
+            SqlAdapStatVendCliArt = New SqlDataAdapter
+            SqlDbSelectStatVendCliArt = New SqlCommand
+
+            'giu190617
+            Dim strValore As String = ""
+            Dim strErrore As String = ""
+            Dim myTimeOUT As Long = 5000
+            If App.GetDatiAbilitazioni(CSTABILCOGE, "TimeOUTST", strValore, strErrore) = True Then
+                If IsNumeric(strValore.Trim) Then
+                    If CLng(strValore.Trim) > myTimeOUT Then
+                        myTimeOUT = CLng(strValore.Trim)
+                    End If
+                End If
+            End If
+            SqlDbSelectStatVendCliArt.CommandTimeout = myTimeOUT
+            '---------------------------
+            SqlAdapStatVendCliArt.SelectCommand = SqlDbSelectStatVendCliArt
+            SqlConnOrd.ConnectionString = dbCon.getConnectionString(TipoDB.dbScadenzario)
+            SqlDbSelectStatVendCliArt.CommandType = System.Data.CommandType.StoredProcedure
+            SqlDbSelectStatVendCliArt.CommandText = "get_ElencoCMCambioRespVisite"
+
+            SqlDbSelectStatVendCliArt.Connection = SqlConnOrd
+
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DAllaData", System.Data.SqlDbType.NVarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@AllaData", System.Data.SqlDbType.NVarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TipoDoc", System.Data.SqlDbType.NVarChar, 2, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@StatoDoc", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodCliente", System.Data.SqlDbType.NVarChar, 16, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbSelectStatVendCliArt.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodRespVisite", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            'OK ASSEGNO I PARAMETRI
+            SqlDbSelectStatVendCliArt.Parameters.Item("@DAllaData").Value = Format(DateTime.Parse(txtDataDa), FormatoData)
+            SqlDbSelectStatVendCliArt.Parameters.Item("@AllaData").Value = Format(DateTime.Parse(txtDataA), FormatoData)
+            SqlDbSelectStatVendCliArt.Parameters.Item("@TipoDoc").Value = TipoDoc
+            SqlDbSelectStatVendCliArt.Parameters.Item("@StatoDoc").Value = StatoDoc
+            '------
+            If CodCliente.Trim <> "" Then
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodCliente").Value = CodCliente.Trim
+            Else
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodCliente").Value = System.DBNull.Value
+            End If
+            If CodRespVisite <> 0 Then
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodRespVisite").Value = CodRespVisite
+            Else
+                SqlDbSelectStatVendCliArt.Parameters.Item("@CodRespVisite").Value = System.DBNull.Value
+            End If
+            Try
+                SqlAdapStatVendCliArt.Fill(DSStatVendCliArt1.StatCMRegPrCCliStato)
+            Catch Ex As Exception
+                Errore = Ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area "
+                Return False
+                Exit Function
+            End Try
+            '-
+            Dim ObjDB As New DataBaseUtility
+            Dim strSQL As String = "Select * From Regioni"
+            Try
+                ObjDB.PopulateDatasetFromQuery(TipoDB.dbSoftAzi, strSQL, DSStatVendCliArt1, "Regioni")
+            Catch Ex As Exception
+                ObjDB = Nothing
+                Errore = Ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area REGIONI"
+                Return False
+                Exit Function
+            End Try
+            strSQL = "Select * From Province"
+            Try
+                ObjDB.PopulateDatasetFromQuery(TipoDB.dbSoftAzi, strSQL, DSStatVendCliArt1, "Province")
+            Catch Ex As Exception
+                ObjDB = Nothing
+                Errore = Ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area PROVINCE"
+                Return False
+                Exit Function
+            End Try
+            strSQL = "Select * From Categorie"
+            Try
+                ObjDB.PopulateDatasetFromQuery(TipoDB.dbSoftAzi, strSQL, DSStatVendCliArt1, "Categorie")
+            Catch Ex As Exception
+                ObjDB = Nothing
+                Errore = Ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area CATEGORIE"
+                Return False
+                Exit Function
+            End Try
+            '-
+            ObjDB = Nothing
+            '---------
+            Dim rowRegione As DsStatVendCliArt.RegioniRow = Nothing
+            Dim rowProvince As DsStatVendCliArt.ProvinceRow = Nothing
+            Dim rowCategorie As DsStatVendCliArt.CategorieRow = Nothing
+            Dim IDDocPrec As String = "" : Dim ModelloPrec As String = ""
+            '-
+            Dim TOTClienti As Integer = 0 : Dim strCClientePrec As String = ","
+            Dim TOTContratti As Integer = 0 : Dim strIDDocPrec = ","
+            Dim TOTNSerie As Integer = 0 : Dim strSeriePrec As String = ","
+            'giu270324
+            Dim strDesRegione As String = ""
+            If CodRegione <> -1 Then
+                rowRegione = DSStatVendCliArt1.Regioni.FindByCodice(CodRegione)
+                If Not rowRegione Is Nothing Then
+                    strDesRegione = rowRegione.Descrizione
+                Else
+                    strDesRegione = "Sconosciuta "
+                End If
+            End If
+            '--------------------------------
+            Dim strTitoloReport As String = ""
+            '-
+            strTitoloReport = "ELENCO CONTRATTI per CAMBIO Responsabile Visita/Area " + DesRespVisitaOLDNEW +
+                " (Dal " & txtDataDa & " al " & txtDataA & ")"
+            If CodCliente.Trim <> "" Then
+                strTitoloReport += " - Cod.Cliente: " + CodCliente.Trim
+            Else
+                'PER ADESSO NON è GESTITO strTitoloReport += " - Tutti i Clienti"
+            End If
+            '-
+            If CodRegione <> -1 Then
+                If strDesRegione.Trim = "" Then
+                    strTitoloReport += " - Cod.Regione: " & Str(CodRegione).Trim
+                Else
+                    strTitoloReport += " - Regione: " & strDesRegione.Trim
+                End If
+            Else
+                strTitoloReport += " - Tutte le regioni "
+            End If
+            If Provincia.Trim <> "" Then
+                strTitoloReport += " - Provincia: " & Provincia.Trim
+            Else
+                strTitoloReport += " - Tutte le provincie "
+            End If
+            '--------
+            If DSStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
+                For Each row As DsStatVendCliArt.StatCMRegPrCCliStatoRow In DSStatVendCliArt1.StatCMRegPrCCliStato.Rows
+                    If row.RowState = DataRowState.Deleted Then
+                        Continue For
+                    End If
+                    '.
+                    If row.IsPrAppNull Then
+                        row.DesRegione = "Sconosciuta"
+                    Else
+                        If Provincia.Trim <> row.PrApp.Trim And Provincia.Trim <> "" Then
+                            row.Delete()
+                            Continue For
+                        End If
+                        rowProvince = DSStatVendCliArt1.Province.FindByCodice(row.PrApp.Trim)
+                        If Not rowProvince Is Nothing Then
+                            If CodRegione > 0 Then
+                                If CodRegione <> rowProvince.Regione Then
+                                    row.Delete()
+                                    Continue For
+                                End If
+                            End If
+                            row.DesProvincia = rowProvince.Descrizione
+                            rowRegione = DSStatVendCliArt1.Regioni.FindByCodice(rowProvince.Regione)
+                            If Not rowRegione Is Nothing Then
+                                row.Regione = rowProvince.Regione
+                                row.DesRegione = rowRegione.Descrizione
+                            Else
+                                row.DesRegione = "Sconosciuta " & row.Provincia.Trim
+                            End If
+                        Else
+                            row.DesProvincia = "Sconosciuta " & row.Provincia.Trim
+                            row.DesRegione = "Sconosciuta " & row.Provincia.Trim
+                        End If
+                    End If
+                    '-TOTALI
+                    If Not strIDDocPrec.Contains("," + row.IDDocumenti.ToString.Trim + ",") Then
+                        strIDDocPrec += row.IDDocumenti.ToString.Trim + ","
+                        TOTContratti += 1
+                    End If
+                    If Not strCClientePrec.Contains("," + row.Cod_Cliente.ToString.Trim + ",") Then
+                        strCClientePrec += row.Cod_Cliente.ToString.Trim + ","
+                        TOTClienti += 1
+                    End If
+                    If Not strSeriePrec.Contains("," + row.Serie.ToString.Trim + ",") Then
+                        strSeriePrec += row.Serie.ToString.Trim + ","
+                        TOTNSerie += 1
+                    End If
+                    'OK
+                    row.Azienda = Azienda
+                    row.TitoloReport = strTitoloReport
+                    If row.IsCod_CategoriaNull Then
+                        row.Categoria = "Sconosciuta"
+                    Else
+                        rowCategorie = DSStatVendCliArt1.Categorie.FindByCodice(row.Cod_Categoria)
+                        If Not rowCategorie Is Nothing Then
+                            row.Categoria = rowCategorie.Descrizione.Trim
+                        Else
+                            row.Categoria = "Sconosciuta " & row.Cod_Categoria.ToString.Trim
+                        End If
+                    End If
+                Next
+                DSStatVendCliArt1.AcceptChanges()
+                'totali
+                '"Dal " & txtDataDa & " al " & txtDataA & " "
+                For Each rowTot As DsStatVendCliArt.StatCMRegPrCCliStatoRow In DSStatVendCliArt1.StatCMRegPrCCliStato.Rows
+                    If rowTot.RowState = DataRowState.Deleted Then
+                        Continue For
+                    End If
+                    '.
+                    rowTot.PiedeReport = ""
+                    rowTot.PiedeReport += "Totale Clienti:       " + TOTClienti.ToString.Trim + vbCr
+                    rowTot.PiedeReport += "Totale Contratti:     " + TOTContratti.ToString.Trim + vbCr
+                    rowTot.PiedeReport += "Totale N° Serie DAE:  " + TOTNSerie.ToString.Trim + vbCr
+                Next
+                DSStatVendCliArt1.AcceptChanges()
+            End If
+        Catch ex As Exception
+            Errore = ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area"
             Return False
             Exit Function
         End Try
