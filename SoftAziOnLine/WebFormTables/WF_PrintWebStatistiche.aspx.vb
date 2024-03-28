@@ -10,9 +10,7 @@ Partial Public Class WF_PrintWebStatistiche
         'GIU100324
         Try
             '''Dim strLabelForm As String = Request.QueryString("labelForm")
-            '''If InStr(strLabelForm.Trim.ToUpper, "ESPORTA") > 0 Then
-            '''    'OK PROSEGUO
-            '''Else
+            '''If InStr(strLabelForm.Trim.ToUpper, "ESPORTAPDF") > 0 Then
             '''    VisualizzaRpt(Session("StampaMovMag"), Session("NomeRpt"))
             '''    Exit Sub
             '''End If

@@ -12,7 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 Imports System.IO
 Partial Public Class WUC_StatContrRegCatCliModStato
     Inherits System.Web.UI.UserControl
@@ -117,23 +117,24 @@ Partial Public Class WUC_StatContrRegCatCliModStato
         Dim SWRaggrCatCli As Boolean
         Dim CodCliente As String = "" 'giu250324
         'CONTROLLI PRIMA DI AVVIARE LA STAMPA
-        If txtDataDa.Text = "" Then
+        If Not IsDate(txtDataDa.Text) Then
             StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di inizio periodo"
             ErroreCampi = True
         End If
-        If txtDataA.Text = "" Then
+        If Not IsDate(txtDataA.Text) Then
             StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di fine periodo"
             ErroreCampi = True
         End If
-
-        If txtDataDa.Text <> "" And txtDataA.Text <> "" Then
-            If IsDate(txtDataDa.Text) And IsDate(txtDataA.Text) Then
-                If CDate(txtDataDa.Text) > CDate(txtDataA.Text) Then
-                    StrErroreCampi = StrErroreCampi & "<BR>- data inizio periodo superiore alla data fine periodo"
-                    ErroreCampi = True
-                End If
+        If IsDate(txtDataDa.Text) And IsDate(txtDataA.Text) Then
+            If CDate(txtDataDa.Text) > CDate(txtDataA.Text) Then
+                StrErroreCampi = StrErroreCampi & "<BR>- data inizio periodo superiore alla data fine periodo"
+                ErroreCampi = True
             End If
+        Else
+            StrErroreCampi = StrErroreCampi & "<BR>- date inizio/fine periodo non valide"
+            ErroreCampi = True
         End If
+        '--
         If chkTuttiClienti.Checked = False Then 'giu250324
             If (txtCodCliente.Text.Trim = "" Or txtDescCliente.Text.Trim = "") Then
                 StrErroreCampi = StrErroreCampi & "<BR>- selezionare il Cliente"

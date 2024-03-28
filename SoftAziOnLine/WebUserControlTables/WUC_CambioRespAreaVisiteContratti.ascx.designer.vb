@@ -230,15 +230,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     Protected WithEvents txtDataDa_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
-    '''Controllo DateRegexValidator.
-    '''</summary>
-    '''<remarks>
-    '''Campo generato automaticamente.
-    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-    '''</remarks>
-    Protected WithEvents DateRegexValidator As Global.System.Web.UI.WebControls.RegularExpressionValidator
-
-    '''<summary>
     '''Controllo lblAllaData.
     '''</summary>
     '''<remarks>
@@ -273,15 +264,6 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
     Protected WithEvents txtDataA_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
-
-    '''<summary>
-    '''Controllo RegularExpressionValidator1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generato automaticamente.
-    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-    '''</remarks>
-    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
     '''Controllo Label1.

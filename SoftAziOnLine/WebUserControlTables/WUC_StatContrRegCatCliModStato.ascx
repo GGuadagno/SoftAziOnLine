@@ -100,9 +100,9 @@
                                                     Enabled="True" Format="dd/MM/yyyy" PopupButtonID="imgBtnShowCalendarDa" 
                                                     TargetControlID="txtDataDa">
                                                 </asp:CalendarExtender>
-                                                <asp:RegularExpressionValidator ID="DateRegexValidator" runat="server" 
+                                                <%--<asp:RegularExpressionValidator ID="DateRegexValidator" runat="server" 
                                                     ControlToValidate="txtDataDa" ErrorMessage="*" 
-                                                    ValidationExpression="(((0[1-9]|[12][0-9]|3[01])([/])(0[13578]|10|12)([/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([/])(0[469]|11)([/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([/])(02)([/])(\d{4}))|((29)(\.|-|\/)(02)([/])([02468][048]00))|((29)([/])(02)([/])([13579][26]00))|((29)([/])(02)([/])([0-9][0-9][0][48]))|((29)([/])(02)([/])([0-9][0-9][2468][048]))|((29)([/])(02)([/])([0-9][0-9][13579][26])))" />
+                                                    ValidationExpression="(((0[1-9]|[12][0-9]|3[01])([/])(0[13578]|10|12)([/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([/])(0[469]|11)([/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([/])(02)([/])(\d{4}))|((29)(\.|-|\/)(02)([/])([02468][048]00))|((29)([/])(02)([/])([13579][26]00))|((29)([/])(02)([/])([0-9][0-9][0][48]))|((29)([/])(02)([/])([0-9][0-9][2468][048]))|((29)([/])(02)([/])([0-9][0-9][13579][26])))" />--%>
                             &nbsp;<asp:Label ID="lblAllaData" runat="server" Height="20px" Width="66px">Alla data</asp:Label>
                             <asp:TextBox ID="txtDataA" runat="server" Width="80px" MaxLength="10" AutoPostBack="false" TabIndex="3"></asp:TextBox>
                             <asp:ImageButton ID="imgBtnShowCalendarA" runat="server" ImageUrl="~/Immagini/Icone/Calendar_scheduleHS.png" ToolTip="apri il calendario" TabIndex="4" />
@@ -110,9 +110,9 @@
                                                     Enabled="True" Format="dd/MM/yyyy" PopupButtonID="imgBtnShowCalendarA" 
                                                     TargetControlID="txtDataA">
                                                 </asp:CalendarExtender>
-                                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                                                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                                                     ControlToValidate="txtDataA" ErrorMessage="*" 
-                            ValidationExpression="(((0[1-9]|[12][0-9]|3[01])([/])(0[13578]|10|12)([/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([/])(0[469]|11)([/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([/])(02)([/])(\d{4}))|((29)(\.|-|\/)(02)([/])([02468][048]00))|((29)([/])(02)([/])([13579][26]00))|((29)([/])(02)([/])([0-9][0-9][0][48]))|((29)([/])(02)([/])([0-9][0-9][2468][048]))|((29)([/])(02)([/])([0-9][0-9][13579][26])))" />
+                            ValidationExpression="(((0[1-9]|[12][0-9]|3[01])([/])(0[13578]|10|12)([/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([/])(0[469]|11)([/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([/])(02)([/])(\d{4}))|((29)(\.|-|\/)(02)([/])([02468][048]00))|((29)([/])(02)([/])([13579][26]00))|((29)([/])(02)([/])([0-9][0-9][0][48]))|((29)([/])(02)([/])([0-9][0-9][2468][048]))|((29)([/])(02)([/])([0-9][0-9][13579][26])))" />--%>
                         </div>
                         <div>&nbsp;</div>
                         <div>
@@ -180,9 +180,9 @@
                         <asp:CheckBox ID="chkTuttiModelli" runat="server" AutoPostBack="True" TabIndex="10" Font-Bold="true" ForeColor="Blue" Text="Seleziona tutti" TextAlign="Left" ToolTip="9" /> 
                     </asp:Panel>
                     <asp:Panel ID="Panel1" runat="server" groupingtext="Tipo stampa" style="margin-top: 0px;" Height="55px" Width="859px">
-                        <asp:RadioButton ID="rbtnPDF" runat="server" Text="PDF" AutoPostBack="true" GroupName="TipoST" />
+                        <asp:RadioButton ID="rbtnPDF" runat="server" Text="PDF" AutoPostBack="true" Checked="true" GroupName="TipoST" />
                         <asp:Label ID="Label8" runat="server" Width="5px">&nbsp;</asp:Label>
-                        <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" Checked="true" GroupName="TipoST" />
+                        <asp:RadioButton ID="rbtnXLS" runat="server" Text="EXCEL" AutoPostBack="true" GroupName="TipoST" />
                         <asp:Label ID="Label7" runat="server" Width="50px"></asp:Label>
                         <a ID="lnkElenco" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Elenco</a>
                     </asp:Panel>

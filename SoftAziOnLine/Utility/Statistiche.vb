@@ -3192,6 +3192,17 @@ Public Class Statistiche
             Else
                 strTitoloReport += " - Tutti i Clienti"
             End If
+            If StatoDoc = "0" Then
+                strTitoloReport += " - Stato: Da Evadere"
+            ElseIf StatoDoc = "1" Then
+                strTitoloReport += " - Stato: Evaso"
+            ElseIf StatoDoc = "2" Then
+                strTitoloReport += " - Stato: Parz.Evaso"
+            ElseIf StatoDoc = "6" Then
+                strTitoloReport += " - Stato: Da Evadere+Parz.Evaso"
+            Else
+                strTitoloReport += " - Stato: TUTTI"
+            End If
             If Modello = "ZZZ" Then 'tutti
                 strTitoloReport += " - Tutti i Modelli"
             ElseIf Modello = "XXX" Then 'misti

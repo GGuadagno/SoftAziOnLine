@@ -7,7 +7,7 @@ Imports SoftAziOnLine.App
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports System.Data.SqlClient
-Imports Microsoft.Reporting.WebForms
+'Imports Microsoft.Reporting.WebForms
 
 Partial Public Class WUC_StatClientiMovimNuovi
     Inherits System.Web.UI.UserControl

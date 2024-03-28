@@ -77,9 +77,11 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Dim StrErrore As String = ""
         Dim CodRegione As Integer
         Dim Provincia As String
-        Dim CodCateg As Integer
-        Dim SWRaggrCatCli As Boolean
         'CONTROLLI PRIMA DI AVVIARE LA STAMPA
+        If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) = 0 Then
+            StrErroreCampi = StrErroreCampi & "<BR>- Selezionare il Responsabile Visita da cambiare"
+            ErroreCampi = True
+        End If
         If chkTutteRegioni.Checked Then
             'NON CAPITERA'MAI
         Else
@@ -98,15 +100,24 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             ErroreCampi = True
         End If
 
-        If txtDataDa.Text <> "" And txtDataA.Text <> "" Then
-            If IsDate(txtDataDa.Text) And IsDate(txtDataA.Text) Then
-                If CDate(txtDataDa.Text) > CDate(txtDataA.Text) Then
-                    StrErroreCampi = StrErroreCampi & "<BR>- data inizio periodo superiore alla data fine periodo"
-                    ErroreCampi = True
-                End If
-            End If
+        If Not IsDate(txtDataDa.Text) Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di inizio periodo"
+            ErroreCampi = True
         End If
-
+        If Not IsDate(txtDataA.Text) Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di fine periodo"
+            ErroreCampi = True
+        End If
+        If IsDate(txtDataDa.Text) And IsDate(txtDataA.Text) Then
+            If CDate(txtDataDa.Text) > CDate(txtDataA.Text) Then
+                StrErroreCampi = StrErroreCampi & "<BR>- data inizio periodo superiore alla data fine periodo"
+                ErroreCampi = True
+            End If
+        Else
+            StrErroreCampi = StrErroreCampi & "<BR>- date inizio/fine periodo non valide"
+            ErroreCampi = True
+        End If
+        '--
         If ErroreCampi Then
             ModalPopup.Show("Attenzione", StrErroreCampi, WUC_ModalPopup.TYPE_ALERT)
             Exit Sub
@@ -126,7 +137,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         Try
             If ClsPrint.StampaContrattiCambioRespVisite(txtDataDa.Text, txtDataA.Text, Session(CSTAZIENDARPT), DsStatVendCliArt1, StrErrore,
                                                    CodRegione, Provincia, "CM", Session(CSTSTATODOC),
-                                                   "", Session(IDRESPVISITE), " CAMBIO da " + ddlRespVisiteOLD.SelectedItem.Text + " a NUOVO " + ddlRespVisiteNEW.SelectedItem.Text) Then
+                                                   "", Session(IDRESPVISITE), " da " + ddlRespVisiteOLD.SelectedItem.Text + " a NUOVO " + ddlRespVisiteNEW.SelectedItem.Text) Then
                 If DsStatVendCliArt1.StatCMRegPrCCliStato.Count > 0 Then
                     Session(CSTDsPrinWebDoc) = DsStatVendCliArt1
                     Call OKApriStampa(DsStatVendCliArt1)
@@ -138,7 +149,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             End If
         Catch ex As Exception
             ' ''Chiudi("Errore:" & ex.Message)
-            ModalPopup.Show("Errore in Statistiche.btnStampa", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+            ModalPopup.Show("Errore in ElencoContrattiCAMBIORespVisite.btnStampa", ex.Message, WUC_ModalPopup.TYPE_ERROR)
         End Try
 
     End Sub
@@ -345,51 +356,59 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     End Sub
 
     Private Sub ddlRespVisiteOLD_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteOLD.SelectedIndexChanged
+        Session(IDRESPVISITE) = 0
         Session("CodRespVisiteRegPr") = 0
         GridViewBody.SelectedIndex = -1
+        btnAbbinaRegPr.Enabled = False
         lblMessUtente.Text = ""
-        Session(IDRESPVISITE) = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
-        If CKCodResVisitaOLDNEW() = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
-            Try
-                If Session("CodRespVisiteRegPr") > 0 Then
-                    btnAbbinaRegPr.Enabled = True
-                Else
-                    btnAbbinaRegPr.Enabled = False
-                End If
-            Catch ex As Exception
-                btnAbbinaRegPr.Enabled = False
-            End Try
-        Else
-            btnAbbinaRegPr.Enabled = False
-        End If
+        Try
+            Session(IDRESPVISITE) = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
+            If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
+               IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+                Call CKCodResVisitaOLDNEW()
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub ddlRespVisiteNEW_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteNEW.SelectedIndexChanged
-        If CKCodResVisitaOLDNEW() = True And IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
-            Try
-                If Session("CodRespVisiteRegPr") > 0 Then
-                    btnAbbinaRegPr.Enabled = True
+        Try
+            If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
+               IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+                If CKCodResVisitaOLDNEW() = True Then
+                    If Session("CodRespVisiteRegPr") > 0 Then
+                        btnAbbinaRegPr.Enabled = True
+                    Else
+                        btnAbbinaRegPr.Enabled = False
+                    End If
                 Else
                     btnAbbinaRegPr.Enabled = False
                 End If
-            Catch ex As Exception
+            Else
                 btnAbbinaRegPr.Enabled = False
-            End Try
-        Else
-            btnAbbinaRegPr.Enabled = False
-        End If
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Function CKCodResVisitaOLDNEW(Optional ByVal NoMess As Boolean = False) As Boolean
         CKCodResVisitaOLDNEW = True
-        If IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) = Session(IDRESPVISITE) Then
-            CKCodResVisitaOLDNEW = False
-            If NoMess = False Then
-                Session(MODALPOPUP_CALLBACK_METHOD) = ""
-                Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-                ModalPopup.Show("ATTENZIONE", "Responsabile di Visita da cambiare dev'essere diverso dal NUOVO Responsabile Visita", WUC_ModalPopup.TYPE_ERROR)
+        Try
+            If IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) = Session(IDRESPVISITE) Then
+                CKCodResVisitaOLDNEW = False
+                btnAbbinaRegPr.Enabled = False
+                If NoMess = False Then
+                    Session(MODALPOPUP_CALLBACK_METHOD) = ""
+                    Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+                    ModalPopup.Show("ATTENZIONE", "Responsabile di Visita da cambiare dev'essere diverso dal NUOVO Responsabile Visita", WUC_ModalPopup.TYPE_ERROR)
+                End If
             End If
-        End If
+        Catch ex As Exception
+            btnAbbinaRegPr.Enabled = False
+        End Try
+
     End Function
 
     Private Sub btnAbbinaRegPr_Click(sender As Object, e As EventArgs) Handles btnAbbinaRegPr.Click

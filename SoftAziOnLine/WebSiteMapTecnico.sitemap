@@ -95,7 +95,7 @@
         <siteMapNode url="WebFormTables\WF_Tabelle.aspx?labelForm=Gestione Tabelle Responsabili Visite/Abbina Regioni-Province" title="Responsabili Visite/Abbina Regioni-Province" description="Responsabili Visite/Abbina Regioni-Province" />
         <siteMapNode url="WebFormTables\WF_TipoContratto.aspx?labelForm=Tabella Tipo Contratto" title="Tipo Contratto" description="Tipo Contratto" />
         <siteMapNode title="----------------------------------------" description=""></siteMapNode>
-        <siteMapNode url="WebFormTables\WF_CambioRespAreaVisiteContratti.aspx?labelForm=Cambio Responsbile AreaVisite nei Contratti" title="Cambio Responsbile AreaVisite nei Contratti"  description="Cambio Responsbile AreaVisite nei Contratti" />
+        <siteMapNode url="WebFormTables\WF_CambioRespAreaVisiteContratti.aspx?labelForm=Cambio Responsbile Visite/Area nei Contratti" title="Cambio Responsbile Visite/Area nei Contratti" description="Cambio Responsbile Visite/Area nei Contratti" />
       </siteMapNode>
       <siteMapNode title="----------------------------------------" description=""></siteMapNode>
       <siteMapNode title="Controlli" description="Controlli" >
