@@ -464,8 +464,12 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Dim row As GridViewRow = GridViewBody.SelectedRow
             Dim DesRegione As String = NormalizzaStringa(row.Cells(1).Text.Trim)
             Dim DesProvincia As String = NormalizzaStringa(row.Cells(2).Text.Trim)
+            Dim CodRegione As String = NormalizzaStringa(row.Cells(3).Text.Trim)
             lblMessUtente.Text = "Regione/Provincia selezionata per l'abbinamento al NUOVO Responsabile Visita: " + DesRegione
             lblMessUtente.Text += IIf(Trim(DesProvincia) <> "", " (" + DesProvincia.Trim + ")", "")
+            If IsNumeric(CodRegione) Then
+                PosizionaItemDDL(CodRegione, ddlRegioni)
+            End If
         Catch ex As Exception
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""

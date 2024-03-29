@@ -109,8 +109,8 @@
                                             <HeaderStyle Wrap="false" />
                                             <ItemStyle Width="50px" />
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="Codice" HeaderText="Codice"  
-                                            SortExpression="Codice"><HeaderStyle Wrap="True" Width="10px" CssClass="nascondi"/><ItemStyle 
+                                        <asp:BoundField DataField="Codice" HeaderText="CodRegione"  
+                                            SortExpression="CodRegione"><HeaderStyle Wrap="True" Width="10px" CssClass="nascondi"/><ItemStyle 
                                             Width="10px" CssClass="nascondi" /></asp:BoundField>
                                     </Columns>
                                 </asp:GridView>
