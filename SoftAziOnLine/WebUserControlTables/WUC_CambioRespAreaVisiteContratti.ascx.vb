@@ -357,6 +357,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
 
     Private Sub ddlRespVisiteOLD_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteOLD.SelectedIndexChanged
         Session(IDRESPVISITE) = 0
+        ddlRegioni.SelectedIndex = -1
+        ddlProvince.SelectedIndex = -1
         Session("CodRespVisiteRegPr") = 0
         GridViewBody.SelectedIndex = -1
         btnAbbinaRegPr.Enabled = False
@@ -468,7 +470,11 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             lblMessUtente.Text = "Regione/Provincia selezionata per l'abbinamento al NUOVO Responsabile Visita: " + DesRegione
             lblMessUtente.Text += IIf(Trim(DesProvincia) <> "", " (" + DesProvincia.Trim + ")", "")
             If IsNumeric(CodRegione) Then
+                Session("CodRegione") = CodRegione
                 PosizionaItemDDL(CodRegione, ddlRegioni)
+            End If
+            If DesProvincia.Trim <> "" Then
+                PosizionaItemDDL(DesProvincia, ddlProvince)
             End If
         Catch ex As Exception
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
