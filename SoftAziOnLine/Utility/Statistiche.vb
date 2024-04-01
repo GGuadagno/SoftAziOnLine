@@ -5,6 +5,7 @@ Imports Microsoft.Reporting.WebForms
 Imports It.SoftAzi.Model.Facade
 Imports It.SoftAzi.Model.Entity
 Imports It.SoftAzi.SystemFramework
+Imports System.Drawing.Imaging
 Public Class Statistiche
     'GIU110619 OK SU PIU' ANNI
     Public Function StampaStatisticheVendutoArticoloCliente(ByVal CodArt1 As String, ByVal CodArt2 As String, ByVal CodCliente As String, ByVal txtDataDa As String, ByVal txtDataA As String, ByVal txtDataNC As String, ByVal Ordinamento As Integer, ByVal Statistica As Integer, ByVal VisualizzaPrezzoVendita As Boolean, ByVal SWRegione As Boolean, ByVal CodRegione As Integer, ByVal _Esercizio As String, ByRef DSStatVendCliArt1 As DsStatVendCliArt, ByRef ObjReport As Object, ByRef Errore As String,
@@ -3587,6 +3588,110 @@ Public Class Statistiche
                 Next
                 DSStatVendCliArt1.AcceptChanges()
             End If
+        Catch ex As Exception
+            Errore = ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area"
+            Return False
+            Exit Function
+        End Try
+
+        Return True
+
+    End Function
+
+    Public Function AggiornaContrattiCambioRespVisite(ByVal txtDataDa As String, ByVal txtDataA As String, ByVal TipoDoc As String, ByVal StatoDoc As String,
+                                                ByVal CodRespVisite As Integer, ByVal CodRespVisiteNEW As Integer,
+                                                ByVal CodRegione As Integer, ByVal Provincia As String,
+                                                ByRef Errore As String) As Boolean
+        Dim dbCon As New dbStringaConnesioneFacade(HttpContext.Current.Session(ESERCIZIO))
+        Dim SqlConnUPGCM As SqlConnection
+        Dim OKTransTmp As Boolean = False
+        Dim TransTmp As SqlClient.SqlTransaction
+        Dim SqlDbUpdCmd As SqlCommand
+        Try
+            SqlConnUPGCM = New SqlConnection
+            SqlDbUpdCmd = New SqlCommand
+
+            Dim strValore As String = ""
+            Dim strErrore As String = ""
+            Dim myTimeOUT As Long = 5000
+            If App.GetDatiAbilitazioni(CSTABILCOGE, "TimeOUTST", strValore, strErrore) = True Then
+                If IsNumeric(strValore.Trim) Then
+                    If CLng(strValore.Trim) > myTimeOUT Then
+                        myTimeOUT = CLng(strValore.Trim)
+                    End If
+                End If
+            End If
+            SqlDbUpdCmd.CommandTimeout = myTimeOUT
+            '---------------------------
+            SqlConnUPGCM.ConnectionString = dbCon.getConnectionString(TipoDB.dbScadenzario)
+            SqlDbUpdCmd.CommandType = System.Data.CommandType.StoredProcedure
+            SqlDbUpdCmd.CommandText = "Update_RespVisitaCambio"
+
+            SqlDbUpdCmd.Connection = SqlConnUPGCM
+
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DAllaData", System.Data.SqlDbType.NVarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@AllaData", System.Data.SqlDbType.NVarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TipoDoc", System.Data.SqlDbType.NVarChar, 2, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@StatoDoc", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodRespVisite", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodRespVisiteNEW", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodRegione", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            SqlDbUpdCmd.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Provincia", System.Data.SqlDbType.NVarChar, 2, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing))
+            'OK ASSEGNO I PARAMETRI
+            SqlDbUpdCmd.Parameters.Item("@DAllaData").Value = Format(DateTime.Parse(txtDataDa), FormatoData)
+            SqlDbUpdCmd.Parameters.Item("@AllaData").Value = Format(DateTime.Parse(txtDataA), FormatoData)
+            SqlDbUpdCmd.Parameters.Item("@TipoDoc").Value = TipoDoc
+            SqlDbUpdCmd.Parameters.Item("@StatoDoc").Value = StatoDoc
+            '------
+            If CodRespVisite <> 0 Then
+                SqlDbUpdCmd.Parameters.Item("@CodRespVisite").Value = CodRespVisite
+            Else
+                SqlDbUpdCmd.Parameters.Item("@CodRespVisite").Value = System.DBNull.Value
+            End If
+            If CodRespVisiteNEW <> 0 Then
+                SqlDbUpdCmd.Parameters.Item("@CodRespVisiteNEW").Value = CodRespVisiteNEW
+            Else
+                SqlDbUpdCmd.Parameters.Item("@CodRespVisiteNEW").Value = System.DBNull.Value
+            End If
+            If CodRegione <> 0 Then
+                SqlDbUpdCmd.Parameters.Item("@CodRegione").Value = CodRegione
+            Else
+                SqlDbUpdCmd.Parameters.Item("@CodRegione").Value = System.DBNull.Value
+            End If
+            If Provincia.Trim <> "" Then
+                SqlDbUpdCmd.Parameters.Item("@Provincia").Value = Provincia.Trim
+            Else
+                SqlDbUpdCmd.Parameters.Item("@Provincia").Value = System.DBNull.Value
+            End If
+            '-
+            Try
+                SqlDbUpdCmd.Connection.Open()
+                TransTmp = SqlConnUPGCM.BeginTransaction(IsolationLevel.ReadCommitted)
+                OKTransTmp = True
+                SqlDbUpdCmd.Transaction = TransTmp
+                '-
+                SqlDbUpdCmd.ExecuteNonQuery()
+                TransTmp.Commit()
+                OKTransTmp = False
+            Catch SQLEx As SqlException
+                If OKTransTmp = True Then TransTmp.Rollback()
+                Throw SQLEx
+                Exit Function
+            Catch Ex As Exception
+                If OKTransTmp = True Then TransTmp.Rollback()
+                Throw Ex
+                Exit Function
+            Finally
+                If Not IsNothing(SqlDbUpdCmd.Connection) Then
+                    If SqlDbUpdCmd.Connection.State <> ConnectionState.Closed Then
+                        SqlDbUpdCmd.Connection.Close()
+                        SqlDbUpdCmd.Connection = Nothing
+                    End If
+                End If
+            End Try
+            '---------
+
         Catch ex As Exception
             Errore = ex.Message & " - Elenco Contratti per Cambio Responsabile Visita/Area"
             Return False

@@ -428,6 +428,15 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     Protected WithEvents btnStampa As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Controllo btnAggiornaRespVisiteArea.
+    '''</summary>
+    '''<remarks>
+    '''Campo generato automaticamente.
+    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+    '''</remarks>
+    Protected WithEvents btnAggiornaRespVisiteArea As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Controllo btnAnnulla.
     '''</summary>
     '''<remarks>

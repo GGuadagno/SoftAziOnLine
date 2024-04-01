@@ -80,7 +80,7 @@
                                     runat="server" BorderStyle="Outset" Font-Bold="false" Font-Overline="False" 
                                     Style="text-align:center" Text="Elenco abbinamenti Regioni/Province del Responsabile Visita da cambiare" Width="99%"></asp:Label>
                             </div>
-                            <div id="divGridRegProv" style="overflow: auto; height:110px; border-style:groove">
+                            <div id="divGridViewBody" style="overflow: auto; height:110px; border-style:groove">
                                 <asp:GridView ID="GridViewBody" runat="server" 
                                     GridLines="None" CssClass="GridViewStyle" 
                                     AllowSorting="False" AutoGenerateColumns="False" 
@@ -211,6 +211,12 @@
                                  <div id="noradio">
                                     <asp:Button ID="btnStampa" runat="server" class="btnstyle" Text="Stampa" 
                                          TabIndex="21" />
+                                </div>
+                                <div style="height: 15px">
+                                </div>
+                                 <div id="noradio">
+                                    <asp:Button ID="btnAggiornaRespVisiteArea" runat="server" class="btnstyleDoppio" Text="Aggiorna Resp.Visite/Area" 
+                                            TabIndex="21" />
                                 </div>
                                 <div style="height: 15px">
                                 </div>

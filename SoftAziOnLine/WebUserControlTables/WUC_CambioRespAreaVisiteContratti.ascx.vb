@@ -14,6 +14,7 @@ Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
 'Imports Microsoft.Reporting.WebForms
 Imports System.IO
+Imports System.ComponentModel
 Partial Public Class WUC_CambioRespAreaVisiteContratti
     Inherits System.Web.UI.UserControl
     Private CodiceDitta As String = ""
@@ -47,8 +48,8 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             ddlRespVisiteNEW.Items.Add("")
             ddlRespVisiteNEW.DataBind()
             '--
-            txtDataDa.Text = "01/01/" & Session(ESERCIZIO)
-            txtDataA.Text = "31/12/" & Session(ESERCIZIO)
+            txtDataDa.Text = "01/01/2000" '& Session(ESERCIZIO)
+            txtDataA.Text = "31/12/2100" '& Session(ESERCIZIO)
             '-
             chkTutteRegioni.Checked = False
             ddlRegioni.Enabled = True
@@ -69,6 +70,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
 
     Private Sub btnStampa_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnStampa.Click
         lnkElenco.Visible = False
+        lblMessUtente.BackColor = SEGNALA_OKLBL
         Dim DsStatVendCliArt1 As New DsStatVendCliArt
         Dim ObjReport As New Object
         Dim ClsPrint As New Statistiche
@@ -301,11 +303,13 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             ddlProvince.Focus()
         End If
         lnkElenco.Visible = False
+        lblMessUtente.BackColor = SEGNALA_OKLBL
     End Sub
 
     Private Sub ddlRegioni_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlRegioni.SelectedIndexChanged
         Session("CodRegione") = ddlRegioni.SelectedValue
         lnkElenco.Visible = False
+        lblMessUtente.BackColor = SEGNALA_OKLBL
     End Sub
 #Region "RBTN"
 
@@ -363,6 +367,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         GridViewBody.SelectedIndex = -1
         btnAbbinaRegPr.Enabled = False
         lblMessUtente.Text = ""
+        lblMessUtente.BackColor = SEGNALA_OKLBL
         Try
             Session(IDRESPVISITE) = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
             If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
@@ -375,6 +380,7 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     End Sub
 
     Private Sub ddlRespVisiteNEW_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlRespVisiteNEW.SelectedIndexChanged
+        lblMessUtente.BackColor = SEGNALA_OKLBL
         Try
             If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
                IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
@@ -414,7 +420,82 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
     End Function
 
     Private Sub btnAbbinaRegPr_Click(sender As Object, e As EventArgs) Handles btnAbbinaRegPr.Click
-
+        If CKCambioRegionePr() = False Then Exit Sub
+        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+        Session(MODALPOPUP_CALLBACK_METHOD) = "OKCambioRegionePr"
+        ModalPopup.Show("Cambio abbinamento Regione/Provincia", "Confermi il cambio abbinamento ?<br>" + lblMessUtente.Text, WUC_ModalPopup.TYPE_CONFIRM)
+    End Sub
+    Private Function CKCambioRegionePr() As Boolean
+        CKCambioRegionePr = False
+        Dim CodRespVisiteRegPr As String = Session("CodRespVisiteRegPr")
+        Try
+            If IsNothing(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            If String.IsNullOrEmpty(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            If Not IsNumeric(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            '-
+            If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
+               IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+                If CLng(CodRespVisiteRegPr) = 0 Then
+                    ModalPopup.Show("Attenzione", "Selezionare la Regione da attribuire al NUOVO Responsabile Visita", WUC_ModalPopup.TYPE_ALERT)
+                    Exit Function
+                End If
+                If CKCodResVisitaOLDNEW() = False Then
+                    Exit Function
+                End If
+            Else
+                ModalPopup.Show("Attenzione", "Selezionare il Responsabile Visita da cambiare e il NUOVO", WUC_ModalPopup.TYPE_ALERT)
+                Exit Function
+            End If
+        Catch ex As Exception
+            ModalPopup.Show("Cambio abbinamento Regione/Provincia ERR.: ", ex.Message.Trim, WUC_ModalPopup.TYPE_ALERT)
+            Exit Function
+        End Try
+        CKCambioRegionePr = True
+    End Function
+    Public Sub OKCambioRegionePr()
+        If CKCambioRegionePr() = False Then Exit Sub
+        Dim CodRespVisiteRegPr As String = Session("CodRespVisiteRegPr")
+        Try
+            If IsNothing(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            If String.IsNullOrEmpty(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            If Not IsNumeric(CodRespVisiteRegPr) Then
+                CodRespVisiteRegPr = "0"
+            End If
+            If CLng(CodRespVisiteRegPr) = 0 Then
+                ModalPopup.Show("Attenzione", "Selezionare la Regione da attribuire al NUOVO Responsabile Visita", WUC_ModalPopup.TYPE_ALERT)
+                Exit Sub
+            End If
+        Catch ex As Exception
+            ModalPopup.Show("Cambio abbinamento Regione/Provincia ERR.: ", ex.Message.Trim, WUC_ModalPopup.TYPE_ALERT)
+            Exit Sub
+        End Try
+        'OK
+        Dim strSQL As String = "UPDATE RespVisiteRegPr SET CodRespVisite=" + ddlRespVisiteNEW.SelectedValue.Trim + " WHERE Codice=" + CodRespVisiteRegPr.Trim
+        Dim strErrore As String = ""
+        If OKExecute(strSQL, strErrore) = True Then
+            lblMessUtente.BackColor = SEGNALA_INFO
+            lblMessUtente.Text = "Cambio abbinamento Regione/Provincia avvenuto con SUCCESSO"
+        ElseIf strErrore.Trim <> "" Then
+            lblMessUtente.BackColor = SEGNALA_KO
+            lblMessUtente.Text = strErrore.Trim
+        End If
+        SqlDSRegPrElenco.DataBind()
+        GridViewBody.DataBind()
+        ddlRegioni.SelectedIndex = -1
+        ddlProvince.SelectedIndex = -1
+        Session("CodRespVisiteRegPr") = 0
+        GridViewBody.SelectedIndex = -1
+        btnAbbinaRegPr.Enabled = False
     End Sub
     Private Function OKExecute(ByVal strSQL As String, ByRef strErrore As String) As Boolean
         strErrore = ""
@@ -429,27 +510,10 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
             Exit Function
         End Try
     End Function
-    Protected Sub btnEliminaRegPr_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        Try
-            Dim Riga As Integer = GridViewBody.SelectedDataKey.Value
-            If Riga <> 0 Then
-                Dim strSQL As String = "delete from RespVisiteRegPr where codice=" + Riga.ToString.Trim
-                Dim strErrore As String = ""
-                If OKExecute(strSQL, strErrore) = True Then
-                    lblMessUtente.Text = "Abbinamento eliminato"
-                ElseIf strErrore.Trim <> "" Then
-                    lblMessUtente.Text = strErrore.Trim
-                    Exit Sub
-                End If
-                SqlDSRegPrElenco.DataBind()
-                GridViewBody.DataBind()
-            End If
-        Catch Ex As Exception
-            lblMessUtente.Text = "Nessun elemento selezionato. (Elimina)"
-            Exit Sub
-        End Try
-    End Sub
+
     Private Sub GridViewBody_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewBody.SelectedIndexChanged
+        lnkElenco.Visible = False
+        lblMessUtente.BackColor = SEGNALA_OKLBL
         Try
             Dim Riga As Integer = GridViewBody.SelectedDataKey.Value
             Session("CodRespVisiteRegPr") = Riga
@@ -483,4 +547,130 @@ Partial Public Class WUC_CambioRespAreaVisiteContratti
         End Try
 
     End Sub
+
+    Private Sub btnAggiornaRespVisiteArea_Click(sender As Object, e As EventArgs) Handles btnAggiornaRespVisiteArea.Click
+        If CKCambioRespVisiteAreaCM() = False Then Exit Sub
+        Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+        Session(MODALPOPUP_CALLBACK_METHOD) = "OKAggiornaRespVisiteArea"
+        ModalPopup.Show("Cambio Responsabile Visita/Area", "Confermi il cambio Responsabile Visita/Area ?<br>" + ddlRespVisiteOLD.SelectedItem.Text.Trim + "<br>" + ddlRespVisiteNEW.SelectedItem.Text.Trim, WUC_ModalPopup.TYPE_CONFIRM)
+    End Sub
+    Private Function CKCambioRespVisiteAreaCM() As Boolean
+        CKCambioRespVisiteAreaCM = False
+        Dim ErroreCampi As Boolean = False
+        Dim StrErroreCampi As String = "Per procedere con l'aggiornamento, correggere i seguenti errori:"
+        Dim StrErrore As String = ""
+        Dim CodRegione As Integer
+        'CONTROLLI PRIMA DI AVVIARE LA STAMPA
+        If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) = 0 Then
+            StrErroreCampi = StrErroreCampi & "<BR>- Selezionare il Responsabile Visita da cambiare"
+            ErroreCampi = True
+        End If
+        If IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) = 0 Then
+            StrErroreCampi = StrErroreCampi & "<BR>- Selezionare il NUOVO Responsabile Visita"
+            ErroreCampi = True
+        End If
+        If chkTutteRegioni.Checked Then
+            'NON CAPITERA'MAI
+        Else
+            CodRegione = ddlRegioni.SelectedValue
+            If CodRegione = 0 Then
+                StrErroreCampi = StrErroreCampi & "<BR>- Selezionare una Regione"
+                ErroreCampi = True
+            End If
+        End If
+        If txtDataDa.Text = "" Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di inizio periodo"
+            ErroreCampi = True
+        End If
+        If txtDataA.Text = "" Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di fine periodo"
+            ErroreCampi = True
+        End If
+
+        If Not IsDate(txtDataDa.Text) Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di inizio periodo"
+            ErroreCampi = True
+        End If
+        If Not IsDate(txtDataA.Text) Then
+            StrErroreCampi = StrErroreCampi & "<BR>- inserire la data di fine periodo"
+            ErroreCampi = True
+        End If
+        If IsDate(txtDataDa.Text) And IsDate(txtDataA.Text) Then
+            If CDate(txtDataDa.Text) > CDate(txtDataA.Text) Then
+                StrErroreCampi = StrErroreCampi & "<BR>- data inizio periodo superiore alla data fine periodo"
+                ErroreCampi = True
+            End If
+        Else
+            StrErroreCampi = StrErroreCampi & "<BR>- date inizio/fine periodo non valide"
+            ErroreCampi = True
+        End If
+        '--
+        If ErroreCampi Then
+            ModalPopup.Show("Attenzione", StrErroreCampi, WUC_ModalPopup.TYPE_ALERT)
+            Exit Function
+        End If
+        Try
+            If IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0) > 0 And
+               IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0) > 0 Then
+                If CKCodResVisitaOLDNEW() = False Then
+                    Exit Function
+                End If
+            Else
+                ModalPopup.Show("Attenzione", "Selezionare il Responsabile Visita da cambiare e il NUOVO", WUC_ModalPopup.TYPE_ALERT)
+                Exit Function
+            End If
+        Catch ex As Exception
+            ModalPopup.Show("CAMBIO Resp.Visite/Area ERR.: ", ex.Message.Trim, WUC_ModalPopup.TYPE_ALERT)
+            Exit Function
+        End Try
+        CKCambioRespVisiteAreaCM = True
+    End Function
+    Public Sub OKAggiornaRespVisiteArea()
+        If CKCambioRespVisiteAreaCM() = False Then Exit Sub
+        'OK
+        lnkElenco.Visible = False
+        lblMessUtente.BackColor = SEGNALA_OKLBL
+        Dim ClsPrint As New Statistiche
+        Dim CodRegione As Integer
+        Dim Provincia As String = ""
+        Dim StrErrore As String = ""
+        If chkTutteRegioni.Checked Then
+            CodRegione = -1
+            ModalPopup.Show("CAMBIO Resp.Visite/Area", "Codice Regione obbligatorio.", WUC_ModalPopup.TYPE_INFO)
+            Exit Sub
+        Else
+            CodRegione = ddlRegioni.SelectedValue
+        End If
+        If chkTutteProvince.Checked Then
+            Provincia = ""
+        Else
+            Provincia = ddlProvince.SelectedValue
+        End If
+        Dim CodRespVisite As Integer = IIf(IsNumeric(ddlRespVisiteOLD.SelectedValue), ddlRespVisiteOLD.SelectedValue, 0)
+        If CodRespVisite = 0 Then
+            ModalPopup.Show("CAMBIO Resp.Visite/Area", "Codice Responsabile Visita  obbligatorio.", WUC_ModalPopup.TYPE_INFO)
+            Exit Sub
+        End If
+        Dim CodRespVisiteNEW As Integer = IIf(IsNumeric(ddlRespVisiteNEW.SelectedValue), ddlRespVisiteNEW.SelectedValue, 0)
+        If CodRespVisiteNEW = 0 Then
+            ModalPopup.Show("CAMBIO Resp.Visite/Area", "Codice Responsabile Visita NUOVO obbligatorio.", WUC_ModalPopup.TYPE_INFO)
+            Exit Sub
+        End If
+        Try
+            If ClsPrint.AggiornaContrattiCambioRespVisite(txtDataDa.Text, txtDataA.Text, "CM", Session(CSTSTATODOC),
+                                                   CodRespVisite, CodRespVisiteNEW, CodRegione, Provincia, StrErrore) Then
+                If StrErrore.Trim <> "" Then
+                    ModalPopup.Show("Errore in CAMBIO Resp.Visite/Area.<br>", StrErrore.Trim, WUC_ModalPopup.TYPE_ERROR)
+                    Exit Sub
+                End If
+                ModalPopup.Show("CAMBIO Resp.Visite/Area", "Terminato con successo.", WUC_ModalPopup.TYPE_INFO)
+            Else
+                ModalPopup.Show("Errore", StrErrore, WUC_ModalPopup.TYPE_ERROR)
+            End If
+        Catch ex As Exception
+            ModalPopup.Show("Errore in CAMBIO Resp.Visite/Area (OKAggiornaRespVisiteArea)<br>", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+        End Try
+    End Sub
+
+
 End Class
