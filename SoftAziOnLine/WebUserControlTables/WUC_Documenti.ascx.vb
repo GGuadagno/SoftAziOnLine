@@ -9652,7 +9652,7 @@ Partial Public Class WUC_Documenti
             If _Formato = "PDF" Then
                 myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Else
-                myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+                myStream = _Rpt.ExportToStream(ExportFormatType.ExcelRecord)
             End If
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
             Session("WebFormStampe") = byteReport

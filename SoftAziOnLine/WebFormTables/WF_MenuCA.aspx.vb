@@ -12,6 +12,7 @@ Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Magazzino
 Imports System.Data.SqlClient
+Imports System.IO
 
 Partial Public Class WF_MenuCA
     Inherits System.Web.UI.Page
@@ -3186,20 +3187,21 @@ Partial Public Class WF_MenuCA
             '-----------------------------------------------------------------------------------------------
             Session(CSTNOMEPDF) = mySerieLotto.Trim & "_" & NomeStampa.Trim
             '---------
-            'giu140615 prova con binary 
+            getOutputRPT(Rpt, "PDF") 'giu050424
+            '----------------------------------
             '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-            Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
+            '''Session(CSTESPORTAPDF) = True
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
 
-            Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '''Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             lblMessAttivita.Text = "Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message.Trim
@@ -3210,10 +3212,10 @@ Partial Public Class WF_MenuCA
             ' ''Chiudi("Errore in esporta PDF: " & Session(CSTNOMEPDF) & " " & ex.Message)
             Exit Sub
         End Try
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        LnkVerbale.HRef = LnkName
-        LnkApriVerbale.HRef = LnkName
-        LnkApriVerbale2.HRef = LnkName
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''LnkVerbale.HRef = LnkName
+        '''LnkApriVerbale.HRef = LnkName
+        '''LnkApriVerbale2.HRef = LnkName
         LnkVerbale.Visible = True
         LnkApriVerbale.Visible = True
         LnkApriVerbale2.Visible = True
@@ -3303,24 +3305,29 @@ Partial Public Class WF_MenuCA
                 Session(CSTNOMEPDF) = strDalAl.Trim & "_" & InizialiUT.Trim & NomeStampa.Trim
             End If
             '---------
-            'giu140615 prova con binary 
-            '' ''GIU230514 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ pdf FUZIONA PS LA DIR _RPT Ã¨ SUL SERVER,MA BISOGNA AVERE I PERMESSI
-            Session(CSTESPORTAPDF) = True
-            Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
-            Dim stPathReport As String = Session(CSTPATHPDF)
-
+            'GIU050424
             If chkElencoXLS.Checked = False Then
-                Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+                getOutputRPT(Rpt, "PDF")
             Else
-                Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+                getOutputRPT(Rpt, "EXEL")
             End If
-            'giu140124
-            Rpt.Close()
-            Rpt.Dispose()
-            Rpt = Nothing
-            '-
-            GC.WaitForPendingFinalizers()
-            GC.Collect()
+            '---------
+            '''Session(CSTESPORTAPDF) = True
+            '''Session(CSTPATHPDF) = ConfigurationManager.AppSettings("AppPathPDF") & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "\", "")
+            '''Dim stPathReport As String = Session(CSTPATHPDF)
+
+            '''If chkElencoXLS.Checked = False Then
+            '''    Rpt.ExportToDisk(ExportFormatType.PortableDocFormat, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''Else
+            '''    Rpt.ExportToDisk(ExportFormatType.ExcelRecord, Trim(stPathReport & Session(CSTNOMEPDF)))
+            '''End If
+            ''''giu140124
+            '''Rpt.Close()
+            '''Rpt.Dispose()
+            '''Rpt = Nothing
+            ''''-
+            '''GC.WaitForPendingFinalizers()
+            '''GC.Collect()
             '-------------
         Catch ex As Exception
             lblMessAttivita.Text = "Errore in esporta: " & Session(CSTNOMEPDF) & " " & ex.Message.Trim
@@ -3331,13 +3338,52 @@ Partial Public Class WF_MenuCA
             Exit Sub
         End Try
         lnkElencoSc.Visible = True
-        Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
-        If Session(CSTTASTOST) = btnElencoSc.ID Then
-            lnkElencoSc.HRef = LnkName
-        Else
-            lnkElencoSc.HRef = LnkName
-        End If
+        '''Dim LnkName As String = "~/Documenti/" & IIf(SubDirDOC.Trim <> "", SubDirDOC.Trim & "/", "") & Session(CSTNOMEPDF)
+        '''If Session(CSTTASTOST) = btnElencoSc.ID Then
+        '''    lnkElencoSc.HRef = LnkName
+        '''Else
+        '''    lnkElencoSc.HRef = LnkName
+        '''End If
     End Sub
+    '@@@@@
+    Private Function getOutputRPT(ByVal _Rpt As Object, ByVal _Formato As String) As Boolean
+        '_Rpt.Refresh()
+        Dim myStream As Stream
+        Try
+            If _Formato = "PDF" Then
+                myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
+            Else
+                myStream = _Rpt.ExportToStream(ExportFormatType.ExcelRecord)
+            End If
+            Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
+            Session("WebFormStampe") = byteReport
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Try
+            _Rpt.Close()
+            _Rpt.Dispose()
+            _Rpt = Nothing
+            GC.WaitForPendingFinalizers()
+            GC.Collect()
+        Catch
+        End Try
+        getOutputRPT = True
+    End Function
+    Private Shared Function GetStreamAsByteArray(ByVal stream As System.IO.Stream) As Byte()
+
+        Dim streamLength As Integer = Convert.ToInt32(stream.Length)
+
+        Dim fileData As Byte() = New Byte(streamLength) {}
+
+        ' Read the file into a byte array
+        stream.Read(fileData, 0, streamLength)
+        stream.Close()
+
+        Return fileData
+    End Function
+    '@@@@@
     Public Function CKCSTTipoDocST(Optional ByRef myTD As String = "", Optional ByRef myTabCliFor As String = "") As Boolean
         CKCSTTipoDocST = True
         TipoDoc = Session(CSTTIPODOC)

@@ -50,7 +50,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArticolo1 = Session(CSTDSOrdinatoArticolo)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArticolo1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticolo"
@@ -61,7 +61,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArticolo1 = Session(CSTDSOrdinatoArticolo)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArticolo1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloData"
@@ -72,6 +72,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoPerCliente1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoPerCliente1)
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteCodiceCoge"
@@ -82,7 +83,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoPerCliente1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoPerCliente1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteRagSoc"
@@ -93,7 +94,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArtCli1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArtCli1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloCliente"
@@ -105,6 +106,7 @@ Partial Public Class WF_PrintWebOrdinato
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArtCli1)
             CrystalReportViewer1.ReportSource = Rpt
+            CrystalReportViewer1.DisplayGroupTree = False
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloClienteFor"
             getOutputRPT(Rpt)
@@ -115,6 +117,7 @@ Partial Public Class WF_PrintWebOrdinato
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArtCli1)
             CrystalReportViewer1.ReportSource = Rpt
+            CrystalReportViewer1.DisplayGroupTree = False
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloClienteForS"
             getOutputRPT(Rpt)
@@ -124,7 +127,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArtCli1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArtCli1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloFornitore"
@@ -135,7 +138,7 @@ Partial Public Class WF_PrintWebOrdinato
             dsStatOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsStatOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "StatOrdForOrdTutti"
@@ -146,7 +149,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteOrdine"
@@ -179,7 +182,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByNDoc"
@@ -190,7 +193,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByDataDoc"
@@ -201,7 +204,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByDataConsegna"
@@ -212,7 +215,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoPerCliente1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoPerCliente1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteCodiceCogeAg"
@@ -223,7 +226,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoPerCliente1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoPerCliente1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteRagSocAg"
@@ -234,7 +237,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArticolo1 = Session(CSTDSOrdinatoArticolo)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArticolo1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloAg"
@@ -245,7 +248,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArticolo1 = Session(CSTDSOrdinatoArticolo)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArticolo1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloDataAg"
@@ -256,7 +259,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoArtCli1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoArtCli1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoArticoloClienteAg"
@@ -267,7 +270,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoClienteOrdineAG"
@@ -278,7 +281,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByNDocAG"
@@ -289,7 +292,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByDataDocAG"
@@ -300,7 +303,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "OrdinatoOrdineSortByDataConsegnaAG"
@@ -311,7 +314,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSStatOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSStatOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "StatOrdinatoClienteOrdine"
@@ -323,7 +326,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             If Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevClienteOrdineAG Then
@@ -339,7 +342,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             If Session(CSTORDINATO) = TIPOSTAMPAORDINATO.PrevOrdineClienteAG Then
@@ -354,7 +357,7 @@ Partial Public Class WF_PrintWebOrdinato
             DSOrdinatoClienteOrdine1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(DSOrdinatoClienteOrdine1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "PrevClienteOrdineLS"
@@ -374,7 +377,7 @@ Partial Public Class WF_PrintWebOrdinato
             '''If _Formato = ReportFormatEnum.Pdf Then
             '''    myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             '''ElseIf _Formato = ReportFormatEnum.Excel Then
-            '''    myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.ExcelRecord)
             '''End If
             myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)

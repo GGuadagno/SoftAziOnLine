@@ -56,7 +56,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsListino1 As New DSListino
             dsListino1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsListino1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -67,7 +67,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -78,7 +78,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -90,7 +90,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -101,7 +101,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -112,7 +112,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -123,7 +123,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -134,7 +134,7 @@ Partial Public Class WF_PrintWebCR_Mag
             Dim dsAnaMag1 As New DSAnaMag
             dsAnaMag1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
-            CrystalReportViewer1.DisplayGroupTree = False
+            'CrystalReportViewer1.DisplayGroupTree = False
             Rpt.SetDataSource(dsAnaMag1)
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
@@ -207,7 +207,7 @@ Partial Public Class WF_PrintWebCR_Mag
             '''If _Formato = ReportFormatEnum.Pdf Then
             '''    myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             '''ElseIf _Formato = ReportFormatEnum.Excel Then
-            '''    myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.ExcelRecord)
             '''End If
             myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)

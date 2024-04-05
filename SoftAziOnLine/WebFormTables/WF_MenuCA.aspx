@@ -154,12 +154,15 @@
         <div>
         <asp:Label ID="Label16" runat="server" Font-Bold="true" BorderStyle="Outset" Width="75px">Stampe:</asp:Label>
         <asp:Button ID="btnVerbale" runat="server" class="btnstyle1R" Text="Verbale" />
-        <a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>
-        <a ID="LnkApriVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>
+        <%--<a ID="LnkVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>--%>
+        <a ID="LnkVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="height:30px;border-color:snow;border-style:outset;background-color:Green;color:White;">Apri Verbale</a>
+        <%--<a ID="LnkApriVerbale" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>--%>
+        <a ID="LnkApriVerbale" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="height:30px;border-color:snow;border-style:outset;background-color:Green;color:White;">Apri Verbale</a>
         <asp:Label ID="Label15" runat="server" Width="15px"></asp:Label>
         <asp:Button ID="btnElencoSc" runat="server" class="btnstyle1R" Text="Elenco" />
         <asp:CheckBox ID="chkElencoXLS" runat="server" Font-Bold="false" ForeColor="Black" Text="EXCEL" Checked="false" AutoPostBack="false"/>
-        <a ID="lnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco Sc."  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Elenco</a>
+        <%--<a ID="lnkElencoSc" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco Sc."  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Elenco</a>--%>
+        <a ID="lnkElencoSc" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Elenco" style="height:30px;border-color:snow;border-style:outset;background-color:Green;color:White;">Apri Elenco</a>
         <asp:Label ID="Label0" runat="server" Text="Ordine elenco per:" ForeColor="Blue"></asp:Label>
         <asp:RadioButton ID="rbtnOrdCliente" runat="server" Text="Cliente" AutoPostBack="true" GroupName="TipoOrdine" Checked="true" />
         <asp:RadioButton ID="rbtnOrdScadenza" runat="server" Text="Scadenza" AutoPostBack="true" GroupName="TipoOrdine" />
@@ -552,7 +555,8 @@
             <asp:Label ID="Label19" runat="server" Width="50px"></asp:Label>
             <asp:Label ID="Label18" runat="server" Font-Bold="true" BorderStyle="Outset" Width="75px">Stampe:</asp:Label>
             <asp:Button ID="btnVerbale2" runat="server" class="btnstyle1R" Text="Verbale" />
-            <a ID="LnkApriVerbale2" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>
+            <%--<a ID="LnkApriVerbale2" runat="server" href="#" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale"  style="border-style:outset;text-decoration:none;height:30px;background-color:Green;color:White;">Apri Verbale</a>--%>
+            <a ID="LnkApriVerbale2" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Verbale" style="height:30px;border-color:snow;border-style:outset;background-color:Green;color:White;">Apri Verbale</a>
         </div>
         <div>
             <asp:Label ID="Label2" runat="server" Width="1px"></asp:Label>

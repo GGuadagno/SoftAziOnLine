@@ -130,7 +130,7 @@ Partial Public Class WF_PrintWebControllo
             '''If _Formato = ReportFormatEnum.Pdf Then
             '''    myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             '''ElseIf _Formato = ReportFormatEnum.Excel Then
-            '''    myStream = _Rpt.ExportToStream(ExportFormatType.Excel)
+            '''    myStream = _Rpt.ExportToStream(ExportFormatType.ExcelRecord)
             '''End If
             myStream = _Rpt.ExportToStream(ExportFormatType.PortableDocFormat)
             Dim byteReport() As Byte = GetStreamAsByteArray(myStream)
