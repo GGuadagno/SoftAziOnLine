@@ -281,7 +281,7 @@ Partial Public Class Login
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & 
 #End Region
         lblRelease.Text = "Release 05/04/2024 18:45 Nuova funzione cambio Responsabile Visite/Area (Ilaria)" +
-        " - Stampe in PDF senza salvare dati sul SERVER - Statistica Contratti per Tipo Evasione/Cateoria Cliente/Modello: Aggiunto selezione per Codice Cliente "
+        " - Stampe in PDF senza salvare dati sul SERVER - Statistica Contratti per Tipo Evasione/Categoria Cliente/Modello: Aggiunto selezione per Codice Cliente "
         lblRelease.ToolTip = "10-11/03/2024 - Gestione anteprima Stampe ed esporta in PDF - 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server" +
         " - 07/03/2024 Ultima Sessione solo con SESSION e non IP - 06/03/2024 Ottimizzato accesso al gestionale - 05/03/2024 Contratti - Gestione evasione attività SW Esterno: corretto errore aggiornamento Note attività" +
         " - 29/02/2024 Elenco Scadenze Attività contratti: Segnala Scadenze Anno disabilitato -  Collaga Viste Ultimo Anno: Aggiunto Regioni,Categorie e Agenti " +
