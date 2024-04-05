@@ -983,7 +983,7 @@ Partial Public Class Login
         ElseIf Session(CSTCODDITTA) = "01" Then
             ImgAzienza.Src = "Immagini/Sfera_Sitopiccolo.jpg"
         ElseIf Session(CSTCODDITTA) = "05" Then
-            ImgAzienza.Src = "Immagini/Iredeem_Ridotta.jpg"
+            ImgAzienza.Src = "Immagini/iredeemLOGO.png"
         Else
             ImgAzienza.Src = "Immagini/soft_azienda.png"
         End If
