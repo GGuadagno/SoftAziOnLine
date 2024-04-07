@@ -332,7 +332,6 @@ Partial Public Class MasterPage
         If sIDAzienda = "00" Or SWDebug = True Then 'giu060224 'GIU160418
             labelIdentificaUtente.BackColor = Drawing.Color.Red
         End If
-        '''labelIdentificaUtente.BackColor = Drawing.Color.Red 'GIU210224
         Session(CSTUTENTE) = UtenteConnesso.NomeOperatore
         Session(CSTAZIENDARPT) = sRifAzienda & " - Esercizio: " & sEsercizio
 
