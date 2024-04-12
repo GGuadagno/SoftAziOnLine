@@ -30,13 +30,13 @@
         margin-left: 0px;
         white-space: pre-wrap;   
     }
-    .style23
+    .stylePagAltezza
     {
-        height: 478px;
+        height: 550px;
     }
 </style>
 <br />
-<asp:Panel ID="panelPrincipale" runat="server" BorderStyle="Double" Width="980px" Height="550px" BackColor="Silver">
+<asp:Panel ID="panelPrincipale" runat="server" BorderStyle="Double" Width="980px" Height="600px" BackColor="Silver">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
     <wuc:WFPElenco ID="WFPElencoAliquotaIVA" runat="server" Tabella="AliquoteIva" Titolo="Elenco Aliquote IVA"/>
@@ -58,7 +58,7 @@
     </asp:SqlDataSource>
     <table style="width:auto; height:auto;">
         <tr>
-            <td class="style23">
+            <td class="stylePagAltezza">
                 <div id="divPrincipale" runat="server" >
                 <table class="sfondopagine">
                     <tr>
@@ -126,17 +126,17 @@
                     <tr>
                         <td>
                             <ajaxToolkit:TabContainer ID="Tabs" runat="server" ActiveTabIndex="2" 
-                                Width="860px" Height="330px" BackColor="Silver">
+                                Width="860px" Height="370px" BackColor="Silver">
                                 <ajaxToolkit:TabPanel runat="server" ID="Panel1" HeaderText="Articolo"  BackColor="Silver">
                                     <HeaderTemplate>
                                         Articolo
                                     </HeaderTemplate>
                                     <ContentTemplate>
-                                        <table class="sfondopagine" style="Width:840px;Height:330px;">
+                                        <table class="sfondopagine" style="Width:840px;Height:370px;">
                                             <tr>
                                                 <td align="Left">
                                                     <asp:Panel ID="panel2" runat="server" BorderWidth="0px" width="800px">
-                                                        <table class="sfondopagine" style="Width:830px;Height:330px">
+                                                        <table class="sfondopagine" style="Width:830px;Height:370px">
                                                             <tr>
                                                                 <td>Codice articolo</td>
                                                                 <td colspan="2">
@@ -146,9 +146,9 @@
                                                                         MaxLength="5" Width="50px" BorderStyle="None"/>&nbsp;
                                                                     <asp:Label ID="lblCodArticolo" runat="server" BorderStyle="Outset"
                                                                         Font-Bold="True" Width="190px" />&nbsp;&nbsp;
-                                                                    <asp:Label ID="LblBasOpz" runat="server" Width="65px" Text="Base/Opz." />&nbsp;
+                                                                    <asp:Label ID="LblBasOpz" runat="server" Text="Base/Opzione" />&nbsp;
                                                                     <asp:TextBox ID="TxtDefCodBase" runat="server" AutoPostBack="True" MaxLength="2" Width="30px" BorderStyle="None"/>&nbsp;                                                                    
-                                                                    <asp:Label ID="LblDefBasOpz" runat="server" BorderStyle="Outset" Font-Bold="True" Width="20px" Text="0" />&nbsp;&nbsp;
+                                                                    <asp:Label ID="LblDefBasOpz" runat="server" BorderStyle="Outset" Font-Bold="True" Width="20px" Text="0" />&nbsp;
                                                                     <asp:Button ID="btnDefBaseOpz" runat="server" Height="22px" Text="M" Width="25px" ToolTip ="Modifica" /> 
                                                                     <asp:Button ID="btnAnnDefBaseOpz" runat="server" Height="22px" Text="X" Width="25px" ToolTip ="Annulla" /> 
                                                                 </td>
@@ -157,12 +157,12 @@
                                                                 <td>Descrizione articolo</td>
                                                                 <td colspan="2">
                                                                     <asp:TextBox ID="txtDescBreve" runat="server" AutoPostBack="True" MaxLength="150"
-                                                                        Width="600px" Rows="2" TextMode="MultiLine" BorderStyle="None"></asp:TextBox></td>
+                                                                        Width="650px" Rows="2" TextMode="MultiLine" BorderStyle="None"></asp:TextBox></td>
                                                             </tr>
                                                             <tr>
                                                                 <td colspan="3">
                                                                     <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="2" 
-                                                                        Width="830px" Height="150px" BackColor="Silver">
+                                                                        Width="830px" Height="180px" BackColor="Silver">
                                                                         <ajaxToolkit:TabPanel runat="server" ID="TabPanel5" HeaderText="DescrizioneEstesa"  BackColor="Silver">
                                                                             <HeaderTemplate>Descrizione estesa</HeaderTemplate>
                                                                             <ContentTemplate>
@@ -217,11 +217,11 @@
                                         Caratteristiche commerciali
                                     </HeaderTemplate>
                                     <ContentTemplate>
-                                        <table class="sfondopagine" style="Width:840px;Height:330px;">
+                                        <table class="sfondopagine" style="Width:840px;Height:370px;">
                                             <tr>
                                                 <td align="center">
                                                     <asp:Panel ID="panel4" runat="server" BorderWidth="0px" width="700px">
-                                                        <table class="sfondopagine" style="Width:750px;Height:330px;">
+                                                        <table class="sfondopagine" style="Width:750px;Height:370px;">
                                                             <tr>
                                                                 <td style="width:120px">
                                                                     Categoria</td>
@@ -366,7 +366,7 @@
                                         Caratteristiche fisiche / N° Anni scadenze e Allegati
                                     </HeaderTemplate>
                                     <ContentTemplate>
-                                        <table class="sfondopagine" style="Width:840px;Height:330px">
+                                        <table class="sfondopagine" style="Width:840px;Height:370px">
                                             <tr style="Height:10%">
                                                 <td style="text-align:right">
                                                     Peso espresso in Kg.</td>
@@ -440,7 +440,7 @@
                                         Fornitori
                                     </HeaderTemplate>
                                     <ContentTemplate>
-                                        <table class="sfondopagine" style="Width:840px;Height:330px">
+                                        <table class="sfondopagine" style="Width:840px;Height:370px">
                                             <asp:SqlDataSource ID="SqlDataSourceFornitore" runat="server"
                                                 SelectCommand="SELECT Codice_CoGe, Rag_Soc, Titolare, Riferimento FROM Fornitori ORDER BY Rag_Soc" />
                                             <tr>
@@ -548,11 +548,11 @@
                                         Distinta base
                                     </HeaderTemplate>
                                     <ContentTemplate>
-                                        <table class="sfondopagine" style="Width:840px;Height:330px;">
+                                        <table class="sfondopagine" style="Width:840px;Height:370px;">
                                             <tr>
                                                 <td align="Left">
                                                     <asp:Panel ID="panel3" runat="server" BorderWidth="0px" width="800px">
-                                                        <table class="sfondopagine" style="Width:830px;Height:330px">
+                                                        <table class="sfondopagine" style="Width:830px;Height:370px">
                                                             <tr>
                                                                 <td colspan="3">Elenco componenti</td>
                                                             </tr>
@@ -575,7 +575,7 @@
                 </div>
             </td>
             <div id="divBottoni" runat="server" >
-            <td class="style23" align="left">
+            <td class="stylePagAltezza" align="left">
                 <div id="noradio" >
                 <asp:Button ID="btnNuovo" runat="server" Text="Nuovo" class="btnstyle"/>
                 </div>

@@ -2302,12 +2302,7 @@ Partial Public Class WF_MenuCA
         btnRicerca.BackColor = SEGNALA_KO
         aDataViewScAtt = Nothing
         aDataViewScAtt = New DataView
-        'Session("aDataViewScAtt") = aDataViewScAtt
-        ' ''myObject = aDataViewScAtt
-        ' ''composeChiave = String.Format("{0}_{1}", _
-        ' ''    "aDataViewScAtt", UtenteConnesso.Codice)
-        ' ''SetObjectToCache(composeChiave, myObject)
-        '--
+
         GridViewPrevT.DataSource = aDataViewScAtt
         GridViewPrevT.Enabled = True
 
@@ -2322,12 +2317,7 @@ Partial Public Class WF_MenuCA
         '-
         DVScadAtt = Nothing
         DVScadAtt = New DataView
-        'GIU041122()
-        ' ''myObject = DVScadAtt
-        ' ''composeChiave = String.Format("{0}_{1}", _
-        ' ''    CSTSCADATTCA, UtenteConnesso.Codice)
-        ' ''SetObjectToCache(composeChiave, myObject)
-        '--
+
         GridViewDettCAAtt.DataSource = DVScadAtt
         GridViewDettCAAtt.DataBind()
         GridViewDettCAAtt.Enabled = False
@@ -4501,7 +4491,7 @@ Partial Public Class WF_MenuCA
                 ' ''    End If
                 ' ''End If
             Else
-                If txtDEV.Text.Trim <> "" Or txtDEVN.Text.Trim <> "" Then
+                If txtDEV.Text.Trim <> "" Then 'giu080424 Or txtDEVN.Text.Trim <> "" Then
                     lblMessDebug.Text = "Attenzione, alcune date di Scadenza/Esecuzione consumabile sono state azzerate perchè la riga non risulta Evasa"
                     lblMessDebug.Visible = True
                     lblMessAttivita.Text = "Attenzione, alcune date di Scadenza/Esecuzione consumabile sono state azzerate perchè la riga non risulta Evasa"
@@ -4509,7 +4499,21 @@ Partial Public Class WF_MenuCA
                 'nessun controllo
                 txtDEV.Text = "" 'GIU140123
                 'giu150223 controllo solo se il text è abilitato perche da Ufficio possono mettere una data sui check
-                If txtDEVN.Enabled = True Then txtDEVN.Text = ""
+                'giu080424 If txtDEVN.Enabled = True Then txtDEVN.Text = ""
+                If txtDEVN.Enabled = True And txtDEVN.Text.Trim <> "" Then
+                    txtDEVN.Text = ConvData(txtDEVN.Text.ToString.Trim)
+                    If txtDEVN.Text.Trim.Length <> 10 Then
+                        txtDEVN.BackColor = SEGNALA_KO
+                        SWErrore = True
+                        strErrore += " - Data scadenza consumabile errata"
+                    ElseIf Not IsDate(txtDEVN.Text.Trim) Then
+                        txtDEVN.BackColor = SEGNALA_KO
+                        SWErrore = True
+                        strErrore += " - Data scadenza consumabile errata"
+                    Else
+                        txtDEVN.BackColor = SEGNALA_OK
+                    End If
+                End If
             End If
             idxRow += 1
         Next
@@ -4671,8 +4675,45 @@ Partial Public Class WF_MenuCA
                 If DVScadAtt.Item(idxRow).Item("TextDataEv").ToString.Trim <> "" Then
                     SWModDett = "S"
                 End If
-                If DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim <> "" Then
+                'giu080424
+                '''If DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim <> "" Then
+                '''    SWModDett = "S"
+                '''End If
+                '-
+                If DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim <> txtDEVN.Text.Trim Then
                     SWModDett = "S"
+                End If
+                '-
+                If txtDEVN.Enabled = True And txtDEVN.Text.Trim <> "" Then
+                    txtDEVN.Text = ConvData(txtDEVN.Text.ToString.Trim)
+                    If txtDEVN.Text.Trim.Length <> 10 Then
+                        txtDEVN.BackColor = SEGNALA_KO
+                        SWErrore = True
+                        strErrore += " - Data scadenza consumabile errata"
+                    ElseIf Not IsDate(txtDEVN.Text.Trim) Then
+                        txtDEVN.BackColor = SEGNALA_KO
+                        SWErrore = True
+                        strErrore += " - Data scadenza consumabile errata"
+                    Else
+                        txtDEVN.BackColor = SEGNALA_OK
+                        If DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim = "" Then
+                            'giu080424 solo quando viene evasa
+                            '''SWModDett = "S"
+                            '''strDateScadCons += IIf(IsDBNull(DVScadAtt.Item(idxRow).Item("TextDataSc")), "", "(Anno Rif.") +
+                            '''                         CDate(DVScadAtt.Item(idxRow).Item("TextDataSc")).Date.ToString("yyyy") + ") " +
+                            '''                         DVScadAtt.Item(idxRow).Item("Cod_Articolo").ToString.Replace("§", " ").Trim _
+                            '''                         + " - " + DVScadAtt.Item(idxRow).Item("Descrizione").ToString.Replace("§", " ").Trim _
+                            '''                         + " Scadenza: " + txtDEVN.Text.Trim + vbCr
+                        ElseIf DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim <> txtDEVN.Text.Trim Then
+                            'giu080424 solo quando viene evasa
+                            '''SWModDett = "S"
+                            '''strDateScadCons += IIf(IsDBNull(DVScadAtt.Item(idxRow).Item("TextDataSc")), "", "(Anno Rif.") +
+                            '''                         CDate(DVScadAtt.Item(idxRow).Item("TextDataSc")).Date.ToString("yyyy") + ") " +
+                            '''                         DVScadAtt.Item(idxRow).Item("Cod_Articolo").ToString.Replace("§", " ").Trim _
+                            '''                         + " - " + DVScadAtt.Item(idxRow).Item("Descrizione").ToString.Replace("§", " ").Trim _
+                            '''                         + " Scadenza: " + txtDEVN.Text.Trim + vbCr
+                        End If
+                    End If
                 End If
             End If
             'OK
@@ -4729,9 +4770,16 @@ Partial Public Class WF_MenuCA
                 rowScadAttCa.Qta_Selezionata = 0
                 rowScadAttCa.Qta_Evasa = 0
                 rowScadAttCa.Qta_Residua = rowScadAttCa.Qta_Ordinata
-                rowScadAttCa.TextDataEv = "" '= txtDEV.Text.Trim
+                rowScadAttCa.TextDataEv = ""
                 rowScadAttCa.TipoScontoMerce = SWModDett 'giu160123
-                rowScadAttCa.TextRefDataNC = txtDEVN.Text.Trim
+                'giu080424
+                '''rowScadAttCa.TextRefDataNC = txtDEVN.Text.Trim
+                If txtDEVN.Text.Trim <> "" Then
+                    rowScadAttCa.TextRefDataNC = txtDEVN.Text.Trim
+                Else
+                    rowScadAttCa.TextRefDataNC = ""
+                End If
+                '---------
                 DVScadAtt.EndInit()
             End If
             If rowScadAttCa.Qta_Evasa <> 0 Then SWOKEvasa = True

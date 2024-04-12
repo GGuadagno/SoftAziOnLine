@@ -91,7 +91,7 @@ Partial Public Class WF_PrintWebFatturato
                 dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                 CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                 Rpt.SetDataSource(dsFatturatoClienteFattura1)
-               ' CrystalReportViewer1.DisplayGroupTree = True
+                CrystalReportViewer1.DisplayGroupTree = False
                 CrystalReportViewer1.ReportSource = Rpt
                 'giu090324
                 Session("NomeRpt") = "FatturatoClienteFatturaMarg"
@@ -103,7 +103,7 @@ Partial Public Class WF_PrintWebFatturato
                     dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                     CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                     Rpt.SetDataSource(dsFatturatoClienteFattura1)
-                   ' CrystalReportViewer1.DisplayGroupTree = True
+                    CrystalReportViewer1.DisplayGroupTree = False
                     CrystalReportViewer1.ReportSource = Rpt
                     'giu090324
                     Session("NomeRpt") = "FatturatoClienteFatturaMargForAG"
@@ -114,7 +114,7 @@ Partial Public Class WF_PrintWebFatturato
                     dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                     CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                     Rpt.SetDataSource(dsFatturatoClienteFattura1)
-                   ' CrystalReportViewer1.DisplayGroupTree = True
+                    CrystalReportViewer1.DisplayGroupTree = False
                     CrystalReportViewer1.ReportSource = Rpt
                     'giu090324
                     Session("NomeRpt") = "FatturatoClienteFatturaMargForReg"
@@ -125,7 +125,7 @@ Partial Public Class WF_PrintWebFatturato
                     dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                     CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                     Rpt.SetDataSource(dsFatturatoClienteFattura1)
-                   ' CrystalReportViewer1.DisplayGroupTree = True
+                    CrystalReportViewer1.DisplayGroupTree = False
                     CrystalReportViewer1.ReportSource = Rpt
                     'giu090324
                     Session("NomeRpt") = "FatturatoClienteFatturaMargFor"
@@ -138,7 +138,7 @@ Partial Public Class WF_PrintWebFatturato
                 dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                 CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                 Rpt.SetDataSource(dsFatturatoClienteFattura1)
-               ' CrystalReportViewer1.DisplayGroupTree = True
+                CrystalReportViewer1.DisplayGroupTree = False
                 CrystalReportViewer1.ReportSource = Rpt
                 'giu090324
                 Session("NomeRpt") = "FatturatoClienteFatturaMargForS"
@@ -149,7 +149,7 @@ Partial Public Class WF_PrintWebFatturato
                 dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                 CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                 Rpt.SetDataSource(dsFatturatoClienteFattura1)
-               ' CrystalReportViewer1.DisplayGroupTree = True
+                CrystalReportViewer1.DisplayGroupTree = False
                 CrystalReportViewer1.ReportSource = Rpt
                 'giu090324
                 Session("NomeRpt") = "FatturatoClienteFatturaMargAG"
@@ -160,7 +160,7 @@ Partial Public Class WF_PrintWebFatturato
                 dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                 CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                 Rpt.SetDataSource(dsFatturatoClienteFattura1)
-               ' CrystalReportViewer1.DisplayGroupTree = True
+                CrystalReportViewer1.DisplayGroupTree = False
                 CrystalReportViewer1.ReportSource = Rpt
                 'giu090324
                 Session("NomeRpt") = "FatturatoClienteFatturaMargReg"
@@ -171,7 +171,7 @@ Partial Public Class WF_PrintWebFatturato
                 dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
                 CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
                 Rpt.SetDataSource(dsFatturatoClienteFattura1)
-               ' CrystalReportViewer1.DisplayGroupTree = True
+                CrystalReportViewer1.DisplayGroupTree = False
                 CrystalReportViewer1.ReportSource = Rpt
                 'giu090324
                 Session("NomeRpt") = "FatturatoClienteFatturaMarg"
@@ -184,7 +184,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattOrdineSortByNDoc"
@@ -195,7 +195,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattOrdineSortByDataDoc"
@@ -206,7 +206,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattSintOrdineSortByNDoc"
@@ -217,7 +217,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "DiffFTDTSintOrdineSortByNDoc"
@@ -228,7 +228,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "DTFTDoppiSintOrdineSortByNDoc"
@@ -239,7 +239,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattOrdineSortClienteNDocAG"
@@ -250,7 +250,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattOrdineSortByNDocAG"
@@ -261,7 +261,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattOrdineSortByDataDocAG"
@@ -272,7 +272,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattSintOrdineSortByNDocAG"
@@ -283,7 +283,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FattSintOrdineSortByNDocReg"
@@ -294,7 +294,7 @@ Partial Public Class WF_PrintWebFatturato
             dsFatturatoClienteFattura1 = Session(CSTDsPrinWebDoc)
             CrystalReportViewer1.ToolbarImagesFolderUrl = "~\Immagini\CR\"
             Rpt.SetDataSource(dsFatturatoClienteFattura1)
-           ' CrystalReportViewer1.DisplayGroupTree = True
+            CrystalReportViewer1.DisplayGroupTree = False
             CrystalReportViewer1.ReportSource = Rpt
             'giu090324
             Session("NomeRpt") = "FTNCCCausErrSintOrdineSortByNDoc"

@@ -15,7 +15,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:Panel ID="PanelBody" runat="server" BorderStyle="Solid" BorderWidth="1px">
-                <div id="divGridArtCTV" style="overflow: auto; height:90px; border-style:groove">
+                <div id="divGridArtCTV" style="overflow: auto; height:120px; border-style:groove">
                     <asp:GridView ID="GridViewBody" runat="server" 
                         GridLines="None" CssClass="GridViewStyle" 
                         AllowSorting="False" AutoGenerateColumns="False" 

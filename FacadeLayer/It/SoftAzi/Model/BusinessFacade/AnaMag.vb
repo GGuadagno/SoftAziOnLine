@@ -26,6 +26,11 @@ Namespace It.SoftAzi.Model.Facade
             Dim myAnaMag As New Roles.AnaMagRole
             Return myAnaMag.CIAnaMagByCodice(Codice)
         End Function
+        'GIU110424 PER VELOCIZZARE I CARICAMENTI INIZIALI
+        Public Function getAnaMagCodDes() As ArrayList
+            Dim myAnaMag As New Roles.AnaMagRole
+            Return myAnaMag.getAnaMagCodDes()
+        End Function
     End Class
 End Namespace
 

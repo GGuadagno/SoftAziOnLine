@@ -6,5 +6,6 @@ Namespace It.SoftAzi.Integration.Dao
         Function delAnaMagByCodice(ByVal idTransazione As Integer, ByVal Codice As String) As Boolean
         Function InsertUpdateAnaMag(ByVal idTransazione As Integer, ByVal myAnaMag As Object) As Boolean
         Function CIAnaMagByCodice(ByVal idTransazione As Integer, ByVal Codice As String) As Boolean
+        Function getAnaMagCodDes(ByVal idTransazione As Integer) As ArrayList 'giu110424
     End Interface
 End Namespace

@@ -372,7 +372,7 @@ Public Class App
            Def.E_COD_ARTICOLI, numEsercizio)
 
         Try
-            For Each x As AnaMagEntity In sys.getAnaMag
+            For Each x As AnaMagEntity In sys.getAnaMagCodDes 'giu110424 carico solo quello che mi serve Cod. e des. qui tutto>> sys.getAnaMag
                 If (result Is Nothing) Then
                     result = New ArrayList
                 End If

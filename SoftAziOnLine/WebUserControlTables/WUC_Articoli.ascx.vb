@@ -1505,10 +1505,10 @@ Partial Public Class WUC_Articoli
         Dim AMSys As New AnaMag
         Dim myAM As AnaMagEntity
         Dim arrAM As ArrayList
-
-        Try
-            'giu200123
-            Dim myID As String = Session(COD_ARTICOLO)
+        'giu120424
+        '''Try
+        'giu200123
+        Dim myID As String = Session(COD_ARTICOLO)
             If IsNothing(myID) Then
                 myID = ""
             End If
@@ -1540,12 +1540,12 @@ Partial Public Class WUC_Articoli
                 btnAggiorna.Enabled = False
                 btnAggiungiFornSec.Visible = False
             End If
-        Catch ex As Exception
-            Session(MODALPOPUP_CALLBACK_METHOD) = ""
-            Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ModalPopup.Show("Errore", ex.Message, WUC_ModalPopup.TYPE_ERROR)
-            Return
-        End Try
+        '''Catch ex As Exception
+        '''    Session(MODALPOPUP_CALLBACK_METHOD) = ""
+        '''    Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+        '''    ModalPopup.Show("Errore", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+        '''    Return
+        '''End Try
     End Sub
 
     Private Sub ValorizzaTextBoxCombinata(ByVal valore As String, ByRef txt As TextBox, ByRef ddl As DropDownList)

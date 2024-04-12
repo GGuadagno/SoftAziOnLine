@@ -15,7 +15,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:Panel ID="PanelBody" runat="server" BorderStyle="Solid" BorderWidth="1px">
-                <div id="divGridViewBody" style="overflow: auto; height: 100px; border-style:groove">
+                <div id="divGridViewBody" style="overflow: auto; height: 130px; border-style:groove">
                     <asp:GridView ID="GridViewBody" runat="server" 
                         GridLines="None" CssClass="GridViewStyle" 
                         AllowSorting="False" AutoGenerateColumns="False" 
@@ -48,7 +48,7 @@
                         </Columns>
                     </asp:GridView>
                 </div>
-                <asp:TextBox ID="txtRiga" runat="server" Width="95%" AutoPostBack="true" 
+                <asp:TextBox ID="txtRiga" runat="server" Width="95%" AutoPostBack="false" 
                     MaxLength="150" Rows="2" TextMode="MultiLine"/>
             </asp:Panel>
         </td>

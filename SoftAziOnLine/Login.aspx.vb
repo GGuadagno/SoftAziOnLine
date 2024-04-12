@@ -280,7 +280,8 @@ Partial Public Class Login
         'lblRelease.Text = "Release 10/10/2022 15.05 Modifica Gestione Spedizione file DDT: Aggiunta la Profondita / Modifica campo Località senza la Pr. e EUR "
         '+ Format(Now, "dddd d MMMM yyyy, HH:mm:ss") & 
 #End Region
-        lblRelease.Text = "Release 07/04/2024 15:25 Corretto errore emissione Fattura Riepilogativa Contratti (CM.N° 1240)" +
+        lblRelease.Text = "Release 10/04/2024 Gestionale Esterno la data Scadenza Consumabili deve riportare la scadenza effettiva " +
+        " - 07/04/2024 15:25 Corretto errore emissione Fattura Riepilogativa Contratti (CM.N° 1240)" +
         " - 06/04/2024 10:30 Nuova funzione cambio Responsabile Visite/Area (Ilaria)" +
         " - Stampe in PDF senza salvare dati sul SERVER - Statistica Contratti per Tipo Evasione/Categoria Cliente/Modello: Aggiunto selezione per Codice Cliente "
         lblRelease.ToolTip = "10-11/03/2024 - Gestione anteprima Stampe ed esporta in PDF - 08/03/2024 12.45 - Limite stampe: modifica controllo errore in fase di stampa dopo la modifica del n.limite stampe nel registro di sistema del Server" +
