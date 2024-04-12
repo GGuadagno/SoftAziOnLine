@@ -12,7 +12,6 @@ Partial Public Class WUC_ArticoliCTV
     Private Const INS_RIGA_PRIMA As Integer = 0
     Private Const INS_RIGA_DOPO As Integer = 1
     Private Const SEL_PROGRESSIVO As String = "SelProgressivo"
-
 #End Region
 
 #Region "Variabili private"
@@ -54,13 +53,10 @@ Partial Public Class WUC_ArticoliCTV
         lblMess.Visible = False
     End Sub
 
-    Private Sub GridViewBody_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles GridViewBody.RowDataBound
-        ' ''e.Row.Attributes.Add("onMouseOver", "this.style.cursor='hand';")
-        ' ''e.Row.Attributes.Add("onclick", Page.ClientScript.GetPostBackEventReference(GridViewBody, "Select$" + e.Row.RowIndex.ToString()))
-    End Sub
-
     Private Function funCKCampiTV() As Boolean
         funCKCampiTV = False
+        txtTipo.Text.Replace("'", " ") 'GIU120424
+        txtValore.Text.Replace("'", " ")
         If txtTipo.Text.Trim.Length > 35 Then
             txtTipo.BackColor = SEGNALA_KO
             lblMess.Text = "Lunghezza massima consentita è di 35 caratteri"
@@ -115,24 +111,6 @@ Partial Public Class WUC_ArticoliCTV
             ModificaRiga()
         End If
     End Sub
-    'giu021222
-    ' ''Private Sub txtRiga_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTipo.TextChanged, txtValore.TextChanged
-    ' ''    btnModificaRiga.Enabled = False
-    ' ''    btnCancellaRiga.Enabled = False
-    ' ''    If (Not String.IsNullOrEmpty(txtTipo.Text)) And (Not String.IsNullOrEmpty(txtValore.Text)) Then
-    ' ''        btnModificaRiga.Enabled = True
-    ' ''        btnCancellaRiga.Enabled = True
-    ' ''        lblMess.Visible = False
-    ' ''    ElseIf txtTipo.Text.Trim.Length > 35 Then
-    ' ''        txtTipo.BackColor = SEGNALA_KO
-    ' ''        txtTipo.ToolTip = "Lunghezza massima consentita è di 35 caratteri"
-    ' ''    ElseIf txtValore.Text.Trim.Length > 35 Then
-    ' ''        txtValore.BackColor = SEGNALA_KO
-    ' ''        txtValore.ToolTip = "Lunghezza massima consentita è di 35 caratteri"
-    ' ''    Else
-    ' ''        lblMess.Visible = True
-    ' ''    End If
-    ' ''End Sub
 
 #End Region
 
