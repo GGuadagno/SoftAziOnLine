@@ -1797,6 +1797,7 @@ Partial Public Class WUC_Contratti
             ' ''If CKCSTTipoDoc(TipoDoc, TabCliFor) = False Then
             ' ''    TipoDoc = SWTD(TD.ContrattoAssistenza)
             ' ''End If
+            Session(CSTANTICIPATO) = "" 'GIU150424
             Dim dsPag As New DataSet
             Dim rowPag() As DataRow = Nothing
             Dim strSQL As String = "" : Dim Comodo = ""
@@ -1807,6 +1808,7 @@ Partial Public Class WUC_Contratti
                 If (dsPag.Tables.Count > 0) Then
                     If (dsPag.Tables(0).Rows.Count > 0) Then
                         rowPag = dsPag.Tables(0).Select()
+                        Session(CSTANTICIPATO) = rowPag(0).Item("Anticipato") 'GIU150424
                     Else
                         ' ''Session(MODALPOPUP_CALLBACK_METHOD) = ""
                         ' ''Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""

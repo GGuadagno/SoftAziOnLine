@@ -1258,6 +1258,7 @@ mm2gg1:
     Public Const CSTNUOVOCADAOC As String = "NUOVOCADAOC"
     Public Const CSTNUOVOCADACA As String = "NUOVOCADACA"
     Public Const L_NSERIELOTTO As String = "L_NSERIELOTTO" 'GIU010322 PER LE NOTE PUNTUALI AL NSERIELOTTO
+    Public Const CSTANTICIPATO As String = "TIPOPAGANTICIPATO"
     'Codice Agente del DOCUMENTO (Cliente) per DocumentiDett 
     Public Const IDAGENTE As String = "IDAgente"
     'SCONTO CASSA del DOCUMENTO della pagina Spese, Trasporti e Totali

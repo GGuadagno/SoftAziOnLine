@@ -217,6 +217,16 @@
                                 <asp:TextBox ID="txtLotto" runat="server" Width="140px" MaxLength="16" Visible="false" BorderStyle="None"></asp:TextBox>
                                 
                                 <asp:TextBox ID="txtNote" runat="server" Width="290px" MaxLength="30" BorderStyle="None"></asp:TextBox>
+
+                                <asp:Label ID="Label13" runat="server" Width="117px"></asp:Label>
+                                <asp:Label ID="Label7" runat="server">Data Scadenza Consumabile</asp:Label>
+                                <asp:TextBox ID="txtDataScCons" runat="server" AutoPostBack="false" MaxLength="10" Width="70px" BorderStyle="None"></asp:TextBox>
+                                  <asp:ImageButton ID="ImgDataScCons" runat="server" CausesValidation="False" ImageUrl="~/Immagini/Icone/Calendar_scheduleHS.png"
+                                      ToolTip="apri il calendario"/>
+                                  <asp:CalendarExtender ID="CalendarExtender1" runat="server" Enabled="True"
+                                      Format="dd/MM/yyyy" PopupButtonID="ImgDataScCons"
+                                      TargetControlID="txtDataScCons">
+                                  </asp:CalendarExtender>
                           </div>
                           <div>&nbsp;
                           </div>

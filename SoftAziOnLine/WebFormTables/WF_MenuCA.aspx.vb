@@ -1856,15 +1856,14 @@ Partial Public Class WF_MenuCA
             Session("PageIndex") = GridViewPrevT.PageIndex
             Session("SelIndex") = GridViewPrevT.SelectedIndex
 
-            If (aDataViewScAtt Is Nothing) Then
-                'aDataViewScAtt = Session("aDataViewScAtt")
-                composeChiave = String.Format("{0}_{1}",
+            '''If (aDataViewScAtt Is Nothing) Then 'giu150424
+            composeChiave = String.Format("{0}_{1}",
                 "aDataViewScAtt", UtenteConnesso.Codice)
-                GetObjectToCache(composeChiave, myObject)
-                aDataViewScAtt = myObject
-                GridViewPrevT.DataSource = aDataViewScAtt
-                GridViewPrevT.DataBind()
-            End If
+            GetObjectToCache(composeChiave, myObject)
+            aDataViewScAtt = myObject
+            GridViewPrevT.DataSource = aDataViewScAtt
+            GridViewPrevT.DataBind()
+            '''End If'giu150424
             Dim myRowIndex As Integer = GridViewPrevT.SelectedIndex + (GridViewPrevT.PageSize * GridViewPrevT.PageIndex)
             Dim Stato As String = ""
             Try
@@ -4577,7 +4576,7 @@ Partial Public Class WF_MenuCA
             End If
         End If
         '--- Parametri
-        SqlUpd_ConTScadPag.CommandText = "[update_ConDByIDDocRiga]"
+        SqlUpd_ConTScadPag.CommandText = "update_ConDByIDDocRigaSWEXT"
         SqlUpd_ConTScadPag.CommandType = System.Data.CommandType.StoredProcedure
         SqlUpd_ConTScadPag.Connection = SqlConn
         SqlUpd_ConTScadPag.Parameters.Add(New System.Data.SqlClient.SqlParameter("@IDDocumenti", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(10, Byte), CType(0, Byte), "IDDocumenti", System.Data.DataRowVersion.Current, Nothing))
@@ -4698,7 +4697,7 @@ Partial Public Class WF_MenuCA
                         txtDEVN.BackColor = SEGNALA_OK
                         If DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim = "" Then
                             'giu080424 solo quando viene evasa
-                            '''SWModDett = "S"
+                            SWModDett = "S"
                             '''strDateScadCons += IIf(IsDBNull(DVScadAtt.Item(idxRow).Item("TextDataSc")), "", "(Anno Rif.") +
                             '''                         CDate(DVScadAtt.Item(idxRow).Item("TextDataSc")).Date.ToString("yyyy") + ") " +
                             '''                         DVScadAtt.Item(idxRow).Item("Cod_Articolo").ToString.Replace("§", " ").Trim _
@@ -4706,7 +4705,7 @@ Partial Public Class WF_MenuCA
                             '''                         + " Scadenza: " + txtDEVN.Text.Trim + vbCr
                         ElseIf DVScadAtt.Item(idxRow).Item("TextRefDataNC").ToString.Trim <> txtDEVN.Text.Trim Then
                             'giu080424 solo quando viene evasa
-                            '''SWModDett = "S"
+                            SWModDett = "S"
                             '''strDateScadCons += IIf(IsDBNull(DVScadAtt.Item(idxRow).Item("TextDataSc")), "", "(Anno Rif.") +
                             '''                         CDate(DVScadAtt.Item(idxRow).Item("TextDataSc")).Date.ToString("yyyy") + ") " +
                             '''                         DVScadAtt.Item(idxRow).Item("Cod_Articolo").ToString.Replace("§", " ").Trim _
@@ -5076,6 +5075,7 @@ Partial Public Class WF_MenuCA
         btnRicerca.BackColor = SEGNALA_KO
         GridViewPrevT.DataSource = aDataViewScAtt
         GridViewPrevT.DataBind()
+        Call PopolaGridScAtt() 'GIU150424
         'giu220123 GridViewPrevT_SelectedIndexChanged(GridViewPrevT, Nothing)
         '---------
         'giu051122

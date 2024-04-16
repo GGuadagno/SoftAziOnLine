@@ -669,6 +669,18 @@ Partial Public Class WUC_ContrattiDett
             Else
                 txtDataSc.Text = ""
             End If
+            'giu150424
+            Try
+                myData = aDataView1.Item(myRowIndex).Item("RefDataNC")
+            Catch ex As Exception
+                myData = ""
+            End Try
+            If IsDate(myData) Then
+                txtDataScCons.Text = Format(CDate(myData), FormatoData)
+            Else
+                txtDataScCons.Text = ""
+            End If
+            '---------
             Try
                 myData = aDataView1.Item(myRowIndex).Item("DataEv")
             Catch ex As Exception
@@ -1062,6 +1074,7 @@ Partial Public Class WUC_ContrattiDett
         chkSWSostituito.Checked = False
         chkSWCalcoloTot.Checked = False
         txtDataSc.Text = ""
+        txtDataScCons.Text = ""
         txtDataEv.Text = ""
         chkEvasa.AutoPostBack = False
         chkEvasa.Checked = False
@@ -4851,6 +4864,22 @@ Partial Public Class WUC_ContrattiDett
                     txtDataSc.ToolTip = "Data Scadenza obbligatoria.!!"
                     Exit Sub
                 End If
+                'giu150424
+                txtDataScCons.BackColor = SEGNALA_OK : txtDataScCons.ToolTip = ""
+                If txtDataScCons.Text.Trim <> "" And txtDataScCons.Text.Trim.Length <> 10 Then
+                    txtDataScCons.BackColor = SEGNALA_KO
+                    txtDataScCons.ToolTip = "Data Scadenza errata.!!"
+                    Exit Sub
+                ElseIf txtDataScCons.Text.Trim <> "" And Not IsDate(txtDataScCons.Text.Trim) Then
+                    txtDataScCons.BackColor = SEGNALA_KO
+                    txtDataScCons.ToolTip = "Data Scadenza errata.!!"
+                    Exit Sub
+                ElseIf Not IsDate(txtDataScCons.Text.Trim) Then
+                    txtDataScCons.BackColor = SEGNALA_KO
+                    txtDataScCons.ToolTip = "Data Scadenza obbligatoria.!!"
+                    Exit Sub
+                End If
+                '---------
                 txtDataEv.BackColor = SEGNALA_OK : txtDataEv.ToolTip = ""
                 If txtDataEv.Text.Trim <> "" And txtDataEv.Text.Trim.Length <> 10 Then
                     txtDataEv.BackColor = SEGNALA_KO
@@ -4863,19 +4892,6 @@ Partial Public Class WUC_ContrattiDett
                 End If
                 'giu131223 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                 Dim strMess As String = ""
-                '''Dim myDataInizio As String = Session(CSTDATAINIZIO)
-                '''Dim myDataFine As String = Session(CSTDATAFINE)
-                '''If IsNothing(myDataFine) Then
-                '''    myDataFine = ""
-                '''End If
-                '''If String.IsNullOrEmpty(myDataFine) Then
-                '''    myDataFine = ""
-                '''End If
-                '''If Not IsDate(myDataFine) Then
-                '''    'nulla
-                '''Else
-
-                '''End If
                 If DDLTipoDettagli.SelectedIndex = 0 Then 'APPARECCHIATURE
                     'nulla
                 Else
@@ -4949,6 +4965,12 @@ Partial Public Class WUC_ContrattiDett
                     aDataView1.Item(myRowIndex).Item("DataSc") = CDate(txtDataSc.Text.Trim)
                 Else
                     aDataView1.Item(myRowIndex).Item("DataSc") = DBNull.Value
+                End If
+                'giu150424
+                If IsDate(txtDataScCons.Text.Trim) Then
+                    aDataView1.Item(myRowIndex).Item("RefDataNC") = CDate(txtDataScCons.Text.Trim)
+                Else
+                    aDataView1.Item(myRowIndex).Item("RefDataNC") = DBNull.Value
                 End If
                 '-
                 If IsDate(txtDataEv.Text.Trim) Then
@@ -5354,6 +5376,31 @@ Partial Public Class WUC_ContrattiDett
             strMess = "Non è stato possibile recuperare la Data Inizio del Contratto"
             Exit Function
         End If
+        'giu130424
+        Dim myDataFine As String = Session(CSTDATAFINE)
+        If IsNothing(myDataFine) Then
+            strMess = "Non è stato possibile recuperare la Data Fine del Contratto"
+            Exit Function
+        End If
+        If String.IsNullOrEmpty(myDataFine) Then
+            strMess = "Non è stato possibile recuperare la Data Fine del Contratto"
+            Exit Function
+        ElseIf Not IsDate(myDataFine.Trim) Then
+            strMess = "Non è stato possibile recuperare la Data Fine del Contratto"
+            Exit Function
+        End If
+        If CDate(pDataNEW) < CDate(myDataInizio) Or CDate(pDataNEW) > CDate(myDataFine) Then
+            strMess += "Non compresa nelle date di Inizio/Fine Contratto<br>"
+            Session("NewDNRiga") = ""
+            Session("NewDNRigaDes") = ""
+            Exit Function
+        End If
+        Dim myPagAnticipato As Boolean = True
+        Try
+            myPagAnticipato = CBool(Session(CSTANTICIPATO))
+        Catch ex As Exception
+            myPagAnticipato = True
+        End Try
         '----------
         Dim NewDNRiga As Integer = -1
         Dim NewDNRigaDes As String = ""
