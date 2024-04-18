@@ -1,0 +1,509 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterPage.master.vb" Inherits="SoftAziOnLine.MasterPage" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register src="WebUserControl/WUC_ModalPopup.ascx" tagname="WUC_ModalPopup" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Soft Azienda OnLine</title>
+<%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+    <link href="~/App_Themes/Softlayout.css" rel="stylesheet" type="text/css"/>
+    <link href="~/App_Themes/StyleSheet.css" rel="stylesheet" type="text/css"/>
+    <link href="~/App_Themes/AcquaGridView.css" rel="stylesheet" type="text/css"/>
+    <link href="~/App_Themes/AcquaCalendar.css" rel="stylesheet" type="text/css"/>  
+    <link href="~/App_Themes/gridheader.css" rel="stylesheet" type="text/css"/>
+    <script src="../JScript/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+<%--<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />--%>
+<script language="javascript" type="text/javascript">
+    var scrollTop;
+    var scrollTopdv1;
+    var scrollTopOC;
+    var scrollTopdd;
+    var scrollTopDCT;
+    var scrollTopDCD;
+    var scrollTopddl;
+    var scrollTopLIDD;
+    var scrollTopLIL;
+    var scrollTopdga;
+    var scrollToppb;
+    var scrollTopfs;
+    var scrollTopdb;
+    var scrollTopCAI;
+    var scrollTopCDM;
+    var scrollTopSPED;
+    var scrollTopSPEDdv1;
+    var scrollTopAL;
+    var scrollTopL;
+    var scrollTopMag;
+    var scrollTopLIN;
+    var scrollTopLOU;
+    var scrollTopCASC;
+    var scrollToppctv;
+    //GIU191123 FATTURAZIONE RATE CONTRATTI
+    var scrollTopCASCT;
+    var scrollTopCASCD;
+    function Loading() {
+        window.history.forward(1)
+                
+        //Register Begin Request and End Request 
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+        function BeginRequestHandler(sender, args) {
+            document.body.style.cursor = 'wait';
+            $('#updPrgPnlHeaderDefault1_master').show();
+            //Get The Div Scroll Position
+            //Elenco documenti
+            var mdv1 = document.getElementById('GridViewPrevTdv1');
+            if (mdv1 != null)
+                scrollTopdv1 = mdv1.scrollTop;
+            var m = document.getElementById('divGridViewPrevT');
+            if (m != null)
+                scrollTop = m.scrollTop;
+            var moc = document.getElementById('divGridViewOrdT');
+            if (moc != null)
+                scrollTopOC = moc.scrollTop;
+            //DocumentiDett
+            var mdd = document.getElementById('divGridViewDett');
+            if (mdd != null)
+                scrollTopdd = mdd.scrollTop;
+            var mddl = document.getElementById('divGridViewDettL');
+            if (mddl != null)
+                scrollTopddl = mddl.scrollTop;
+            // Doc. collegati
+            var mDCT = document.getElementById('divGridViewDCT');
+            if (mDCT != null)
+                scrollTopDCT = mDCT.scrollTop;
+            var mDCD = document.getElementById('divGridViewDCD');
+            if (mDCD != null)
+                scrollTopDCD = mDCD.scrollTop;
+            //Lotti con lettore 
+            var mlidd = document.getElementById('divGridViewDocD');
+            if (mlidd != null)
+                scrollTopLIDD = mlidd.scrollTop;
+            var mlil = document.getElementById('divgridLotti');
+            if (mlil != null)
+                scrollTopLIL = mlil.scrollTop;
+            //Articoli
+            var mdga = document.getElementById('divGridArticoli');
+            if (mdga != null)
+                scrollTopdga = mdga.scrollTop;
+            //Articoli - descrizione estesa
+            var mpb = document.getElementById('divGridViewBody');
+            if (mpb != null)
+                scrollToppb = mpb.scrollTop;
+            //Articoli - CTV
+            var mpctv = document.getElementById('divGridArtCTV');
+            if (mpctv != null)
+                scrollToppctv = mpctv.scrollTop;
+            //divGridViewForSec
+            var mfs = document.getElementById('divGridViewForSec');
+            if (mfs != null)
+                scrollTopfs = mfs.scrollTop;
+            //divGridViewDisB
+            var mdb = document.getElementById('divGridViewDisB');
+            if (mdb != null)
+                scrollTopdb = mdb.scrollTop;
+            //CLIENTI divGridViewAltriInd
+            var mCAI = document.getElementById('divGridViewAltriInd');
+            if (mCAI != null)
+                scrollTopCAI = mCAI.scrollTop;
+            //CLIENTI divGridViewDestMerce
+            var mCDM = document.getElementById('divGridViewDestMerce');
+            if (mCDM != null)
+                scrollTopCDM = mCDM.scrollTop;
+            //SPEDIZIONI divGridViewSped
+            var mSPED = document.getElementById('divGridViewSped');
+            if (mSPED != null)
+                scrollTopSPED = mSPED.scrollTop;
+            var mSPEDdv1 = document.getElementById('GridViewSpeddv1');
+            if (mSPEDdv1 != null)
+                scrollTopSPEDdv1 = mSPEDdv1.scrollTop;
+            //Listini: divGridArtLis
+            var mAL = document.getElementById('divGridArtLis');
+            if (mAL != null)
+                scrollTopAL = mAL.scrollTop;
+            //Listini: divGridViewListini - divGridViewArtIn - divGridViewArtOu
+            var mL = document.getElementById('divGridViewListini');
+            if (mL != null)
+                scrollTopL = mL.scrollTop;
+            //Magazzini: divGridViewMagazzini - divGridViewArtIn - divGridViewArtOu
+            var mMagaz = document.getElementById('divGridViewMagazzini');
+            if (mMagaz != null)
+                scrollTopMag = mMagaz.scrollTop;
+            var mLIN = document.getElementById('divGridViewArtIn');
+            if (mLIN != null)
+                scrollTopLIN = mLIN.scrollTop;
+            var mLOU = document.getElementById('divGridViewArtOu');
+            if (mLOU != null)
+                scrollTopLOU = mLOU.scrollTop;
+            var mCASC = document.getElementById('divGridViewDettCASC');
+            if (mCASC != null)
+                scrollTopCASC = mCASC.scrollTop;
+            var mCASCT = document.getElementById('divGridViewPrevT');
+            if (mCASCT != null)
+                scrollTopCASCT = mCASCT.scrollTop;
+            var mCASCD = document.getElementById('divGridViewPrevD');
+            if (mCASCD != null)
+                scrollTopCASCD = mCASCD.scrollTop;
+        }
+        function EndRequestHandler(sender, args) {
+            //per intercettare errori sulla pagina lato client per concorrenza di eventi
+            //            if (args.get_error() != undefined) {
+            //                args.set_errorHandled(true);
+            //            }
+            document.body.style.cursor = 'default';
+            $('#updPrgPnlHeaderDefault1_master').hide();
+            //Set The Div Scroll Position
+            //Elenco documenti
+            var mdv1 = document.getElementById('GridViewPrevTdv1');
+            if (mdv1 != null)
+                mdv1.scrollTop = scrollTopdv1;
+            var m = document.getElementById('divGridViewPrevT');
+            if (m != null)
+                m.scrollTop = scrollTop;
+            var moc = document.getElementById('divGridViewOrdT');
+            if (moc != null)
+                moc.scrollTop = scrollTopOC;    
+            //DocumentiDett
+            var mdd = document.getElementById('divGridViewDett');
+            if (mdd != null)
+                mdd.scrollTop = scrollTopdd;
+            var mddl = document.getElementById('divGridViewDettL');
+            if (mddl != null)
+                mddl.scrollTop = scrollTopddl;
+            // Doc. collegati
+            var mDCT = document.getElementById('divGridViewDCT');
+            if (mDCT != null)
+                mDCT.scrollTop = scrollTopDCT;
+            var mDCD = document.getElementById('divGridViewDCD');
+            if (mDCD != null)
+                mDCD.scrollTop = scrollTopDCD;
+            //Lotti con lettore 
+            var mlidd = document.getElementById('divGridViewDocD');
+            if (mlidd != null)
+                mlidd.scrollTop = scrollTopLIDD;
+            var mlil = document.getElementById('divgridLotti');
+            if (mlil != null)
+                mlil.scrollTop = scrollTopLIL;
+            //Articoli
+            var mdga = document.getElementById('divGridArticoli');
+            if (mdga != null)
+                mdga.scrollTop = scrollTopdga;
+            //Articoli -descrizione estesa
+            var mpb = document.getElementById('divGridViewBody');
+            if (mpb != null)
+                mpb.scrollTop = scrollToppb;
+            //Articoli -ctv
+            var mpctv = document.getElementById('divGridArtCTV');
+            if (mpctv != null)
+                mpctv.scrollTop = scrollToppctv;
+            //divGridViewForSec
+            var mfs = document.getElementById('divGridViewForSec');
+            if (mfs != null)
+                mfs.scrollTop = scrollTopfs;
+            //divGridViewDisB
+            var mdb = document.getElementById('divGridViewDisB');
+            if (mdb != null)
+                mdb.scrollTop = scrollTopdb;
+            //CLIENTI divGridViewAltriInd
+            var mCAI = document.getElementById('divGridViewAltriInd');
+            if (mCAI != null)
+                mCAI.scrollTop = scrollTopCAI;
+            //CLIENTI divGridViewDestMerce
+            var mCDM = document.getElementById('divGridViewDestMerce');
+            if (mCDM != null)
+                mCDM.scrollTop = scrollTopCDM;
+            //SPEDIZIONI divGridViewSped
+            var mSPEDdv1 = document.getElementById('GridViewSpeddv1');
+            if (mSPEDdv1 != null)
+                mSPEDdv1.scrollTop = scrollTopSPEDdv1;
+            var mSPED = document.getElementById('divGridViewSped');
+            if (mSPED != null)
+                mSPED.scrollTop = scrollTopSPED;
+            //Listini: divGridArtLis
+            var mAL = document.getElementById('divGridArtLis');
+            if (mAL != null)
+                mAL.scrollTop = scrollTopAL;
+            //Listini: divGridViewListini - divGridViewArtIn - divGridViewArtOu
+            var mL = document.getElementById('divGridViewListini');
+            if (mL != null)
+                mL.scrollTop = scrollTopL;
+            //Magazzini: divGridViewMagazzini - divGridViewArtIn - divGridViewArtOu
+            var mMagaz = document.getElementById('divGridViewMagazzini');
+            if (mMagaz != null)
+                mMagaz.scrollTop = scrollTopMag;
+            var mLIN = document.getElementById('divGridViewArtIn');
+            if (mLIN != null)
+                mLIN.scrollTop = scrollTopLIN;
+            var mLOU = document.getElementById('divGridViewArtOu');
+            if (mLOU != null)
+                mLOU.scrollTop = scrollTopLOU;
+            var mCASC = document.getElementById('divGridViewDettCASC');
+            if (mCASC != null)
+                mCASC.scrollTop = scrollTopCASC;
+            var mCASCT = document.getElementById('divGridViewPrevT');
+            if (mCASCT != null)
+                mCASCT.scrollTop = scrollTopCASCT;
+            var mCASCD = document.getElementById('divGridViewPrevD');
+            if (mCASCD != null)
+                mCASCD.scrollTop = scrollTopCASCD;
+        }
+    }
+    function KeepSessionAlive() {
+//        console.log('KeepSessionAlive');
+
+        url = "../KeepSessionAlive.ashx?"; // Modificare l'url in produzione
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", url, true);
+        xmlHttp.send();
+    }
+
+    function captureBarcode() {
+
+        setInterval("KeepSessionAlive()", 5 * 60 * 1000) // 5 minuti
+
+    }
+    function apristampa() {
+        window.open('Stampa.aspx', '_blank')
+    };
+</script>
+</head>
+<body onload="Loading();captureBarcode();">
+    <form id="form1" runat="server" style="border:1;border-style:solid;border-color:White;background: #FFFFCC; width: 1240px;margin-left:auto;margin-right:auto;">
+        <div>
+            <uc1:WUC_ModalPopup ID="ModalPopup" runat="server" />
+            <div id="DivMenu" style="height: 20px; width: 1240px;">
+                <div>
+                    <div>
+                        <asp:LinkButton ID="LnkMenu" runat="server" Text="Menu" 
+                        BorderColor="#888888" Font-Bold="false" Font-Size="Medium" ForeColor="White" Font-Names="Arial" 
+                        BorderStyle="Outset" BackColor="#888888"></asp:LinkButton>
+                        <asp:LinkButton ID="LnkLogOut" runat="server" Text="Esci" Visible="true" 
+                        BorderColor="#888888" Font-Bold="false" Font-Size="Medium" ForeColor="White" Font-Names="Arial" 
+                        BorderStyle="Outset" BackColor="#888888"></asp:LinkButton>
+                        <asp:Label ID="labelIdentificaUtente" runat="server" Text="" Width="30%"
+                        BorderColor="#888888" Font-Bold="false" Font-Size="Medium" ForeColor="White" Font-Names="Arial" 
+                        BorderStyle="Outset" BackColor="#888888">
+                        </asp:Label>
+                        <asp:Label ID="labelForm" runat="server" Font-Bold="True" Text="" Width="60%"></asp:Label>
+                    </div>
+                </div>
+                <%--<hr />--%>
+                <asp:Menu ID="Menu" runat="server" DataSourceID="SiteMapDataSourceAdmin" ToolTip="Menu"  
+                    BorderColor="Snow" Font-Bold="false" Font-Size="Medium" ForeColor="White" Font-Names="Arial" 
+                    BorderWidth="1px" BorderStyle="Groove" BackColor="#888888" Height="22px" Enabled="false" 
+                    DynamicHorizontalOffset="5" 
+                    DynamicVerticalOffset="5"
+                    DynamicHoverStyle-BackColor="#888888" 
+                    DynamicHoverStyle-ForeColor="Black"
+                    DynamicMenuItemStyle-BackColor="#888888"
+                    DynamicMenuItemStyle-ForeColor="White" 
+                    DynamicMenuItemStyle-BorderColor="Snow" 
+                    DynamicMenuItemStyle-Height="20px"
+                    DynamicMenuItemStyle-BorderWidth="1px" 
+                    DisappearAfter="1000" Orientation="Horizontal" ItemWrap="false"
+                    StaticItemFormatString="{0} &nbsp;&nbsp;&nbsp; ">
+                    <DynamicHoverStyle BackColor="ControlLight" ForeColor="Black" />
+                    <DynamicMenuStyle CssClass="IE8_Menu_Fix" />
+                    <DynamicMenuItemStyle BackColor="#888888" BorderColor="Snow" BorderWidth="1px" ForeColor="White" Height="20px"></DynamicMenuItemStyle>
+                    
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSourceAdmin" runat="server" SiteMapProvider="SiteMapAdmin" ShowStartingNode="true" />
+                <asp:SiteMapDataSource ID="SiteMapDataSourceAzienda" runat="server" SiteMapProvider="SiteMapAzienda" ShowStartingNode="true" />
+                <asp:SiteMapDataSource ID="SiteMapDataSourceTecnico" runat="server" SiteMapProvider="SiteMapTecnico" ShowStartingNode="true" />
+                <asp:SiteMapDataSource ID="SiteMapMagazzino" runat="server" SiteMapProvider="SiteMapMagazzino" ShowStartingNode="true" />
+                <asp:SiteMapDataSource ID="SiteMapAcquisti" runat="server" SiteMapProvider="SiteMapAcquisti" ShowStartingNode="true" />
+                <asp:SiteMapDataSource ID="SiteMapVendite" runat="server" SiteMapProvider="SiteMapVendite" ShowStartingNode="true" />
+            </div>
+			<div style="width: 1240px"><br /></div>
+            <div style="height: 9px; width: 1240px;">
+                <ajaxToolkit:ToolkitScriptManager runat="Server" ID="ScriptManager1" 
+                    enablescriptglobalization="true" enablescriptlocalization="true"  AsyncPostBackTimeOut= "360000">
+                </ajaxToolkit:ToolkitScriptManager>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="styleCopyright">Copyright © 2011-2024 Soft Solutions S.r.l.</div>
+            </div>
+      </div>
+      <div id="updPrgPnlHeaderDefault1_master"  role="status" aria-hidden="true">
+        <div id="PrgTmplPnlPaging11_master" class="boOverlay">
+            <div id="PrgTmplPnlPaging21_master" class="boLoaderCircle">
+                    <div style="width:64px; height:64px;"></div>
+             </div>
+        </div>
+    </div>
+</form>
+</body>
+    <script type="text/javascript">
+        var ismodal = 0;
+//        console.log('var ismodal = 0;');
+        function InIEvent() {
+//            console.log('InIEvent');
+            ismodal = 0;
+//            console.log('InIEvent ismodal = 0');
+            $('#updPrgPnlHeaderDefault1_master').hide();
+            $('.modalPopup input[type="submit"]').click(function(e) {
+//                console.log('modalPopup hide');
+                $('#updPrgPnlHeaderDefault1_master').hide();
+                ismodal = 1;
+//                console.log('.modalPopup ismodal = 1');
+            });
+            $('input[type="submit"]').click(function() {
+//            console.log('submit .click(function');
+                if (ismodal == 0) {
+                    var xddocc = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Contratti1_TabContainer1_Intestazione_DateRegexValidator');
+                    if (xddocc != null) {
+//                        console.log('Trovato xddocc');
+                        if (xddocc.style.visibility === 'hidden') {
+//                            console.log('hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+//                            console.log('NO hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+//                            console.log('Non trovato xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var xddocic = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Contratti1_TabContainer1_Intestazione_RegularExpressionValidator5');
+                    if (xddocic != null) {
+                        //                        console.log('Trovato xddocc');
+                        if (xddocic.style.visibility === 'hidden') {
+                            //                            console.log('hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+                            //                            console.log('NO hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+                            //                            console.log('Non trovato xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var xddocfc = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Contratti1_TabContainer1_Intestazione_RegularExpressionValidator6');
+                    if (xddocfc != null) {
+                        //                        console.log('Trovato xddocc');
+                        if (xddocfc.style.visibility === 'hidden') {
+                            //                            console.log('hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+                            //                            console.log('NO hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+                            //                            console.log('Non trovato xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var xddocac = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Contratti1_TabContainer1_Intestazione_RegularExpressionValidator4');
+                    if (xddocac != null) {
+                        //                        console.log('Trovato xddocc');
+                        if (xddocac.style.visibility === 'hidden') {
+                            //                            console.log('hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+                            //                            console.log('NO hidden xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+                            //                            console.log('Non trovato xddocc');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var xddocd = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Documenti1_TabContainer1_Intestazione_DateRegexValidator');
+                    if (xddocd != null) {
+//                        console.log('Trovato xddocd');
+                        if (xddocd.style.visibility === 'hidden') {
+//                            console.log('hidden xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+//                            console.log('NO hidden xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+//                            console.log('Non trovato xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var xdrifd = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Documenti1_TabContainer1_Intestazione_RegularExpressionValidator1');
+                    if (xdrifd != null) {
+                        //                        console.log('Trovato xddocd');
+                        if (xdrifd.style.visibility === 'hidden') {
+                            //                            console.log('hidden xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+                            //                            console.log('NO hidden xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+                            //                            console.log('Non trovato xddocd');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                    var x1c = document.getElementById('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder2_WUC_Contratti1_TabContainer1_Dettaglio_WUC_ContrattiDett1_PanelSubDettArt_TabPanelDettArtIns_RegularExpressionValidator1');
+                    if (x1c != null) {
+//                        console.log('Trovato x1c');
+                        if (x1c.style.visibility === 'hidden') {
+//                            console.log('hidden x1c');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        } else {
+//                            console.log('NO hidden x1c');
+                            $('#updPrgPnlHeaderDefault1_master').hide();
+                            ismodal = 1;
+                        }
+                    } else {
+                        if (ismodal == 0) {
+//                            console.log('Non trovato x1c');
+                            $('#updPrgPnlHeaderDefault1_master').show();
+                        }
+                    }
+                }
+                ismodal = 0;
+            });
+            $('input[type="radio"]').change(function() {
+                var xradio1 = document.getElementById('noradio');
+                if (xradio1 != null) {
+//                    console.log('Trovato noradio');
+                    ismodal = 1;
+                }
+                if (ismodal == 0) {
+//                    console.log('radio show');
+                    $('#updPrgPnlHeaderDefault1_master').show();
+                }
+                ismodal = 0;
+            });
+            //giu111123
+            $('input[type="checkbox"]').click(function() {
+//                            console.log('checkbox.click(function()');
+                if (ismodal == 0) {
+                    //                console.log('ismodal == 0 show');
+                    $('#updPrgPnlHeaderDefaultLoc_master').show();
+                } else {
+                    //                console.log('ismodal <> 0 hide');
+                    $('#updPrgPnlHeaderDefaultLoc_master').hide();
+                    ismodal = 1;
+                }
+            });
+        ismodal = 0;//giu111123
+        }
+        $(document).ready(InIEvent);
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(InIEvent);
+    </script>
+</html>

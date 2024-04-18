@@ -1,0 +1,31 @@
+﻿/* grid */
+.GridViewStyle { border-collapse: collapse; margin: 0px !important; width: 100%; border: #6593CF 1px solid; }
+.GridViewStyle td { font-size: 11px; font-family: Arial; color: #000000; cursor: default; text-align: left; }
+.GridViewStyle th { font-size: 11px; font-family: Arial; color:  #484848; cursor: default; text-align: left; }
+.GridViewStyle a { color: #000000; text-decoration: none; }
+.GridViewStyle a:hover { text-decoration: underline; }
+.GridViewStyle tr.normal:hover, .GridViewStyle tr.alternate:hover { color: #ffffDE; }
+
+/* header */
+.HeaderStyle { background-color: #DEECFF; }
+.HeaderStyle th { color: black; font-weight: normal; text-align: left;border-top: solid 1px #6593CF; border-bottom: solid 1px #6593CF; border-left: solid 1px #6593CF; border-right: solid 1px #6593CF; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; }
+.HeaderStyle th a { color: #484848; text-decoration: none; }
+.HeaderStyle th a:hover { color: #484848; text-decoration: none; }
+
+/* item row */
+.RowStyle { background-color: #FFFFFF;}
+.RowStyle td { padding: 2px 5px; border-right: #FFFFFF 0px solid; border-top: #FFFFFF 1px solid; border-left: #FFFFFF 0px solid; border-bottom: #ADD1FF 1px solid; }
+.RowStyle td a { text-decoration: underline; }
+
+/* alternating item row */
+.AltRowStyle { background-color: #FFFFFF; }
+.AltRowStyle td { padding: 2px 5px; border-right: #FFFFFF 0px solid; border-top: #FFFFFF 1px solid; border-left: #FFFFFF 0px solid; border-bottom: #ADD1FF 1px solid; }
+.AltRowStyle td a { text-decoration: underline; }
+
+/* pager row */
+.PagerStyle { width : 100%; }
+.PagerStyle td { background-image: url(../Immagini/GridView/bg.gif); background-repeat: repeat-x; height: 23px; padding: 0px; font-size: 10px; font-family: Arial;}
+.PagerStyle_ddl { font-size: 10px; font-family: Arial; }
+
+.SelectedRowStyle td { background-color:#9471DE; font:bold; color:White;}
+

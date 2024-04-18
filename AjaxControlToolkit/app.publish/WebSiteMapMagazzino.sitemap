@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+
+    <siteMapNode title="Magazzino" description="Magazzino">
+      <siteMapNode url="WebFormTables\WF_StampaArticoliForMnu.aspx?labelForm=Stampa articoli fornitori." title="Stampa articoli fornitori"  description="Stampa articoli fornitori" />
+      <siteMapNode url="WebFormTables\WF_ArticoliUbicazione.aspx?labelForm=Ubicazione articoli" title="Ubicazione articoli"  description="Ubicazione articoli" />
+      <siteMapNode url="WebFormTables\WF_ElencoMovMag.aspx?labelForm=Gestione movimenti di magazzino" title="Gestione movimenti di magazzino"  description="Gestione movimenti di magazzino" />
+      <siteMapNode url="WebFormTables\WF_StatMovMag.aspx?labelForm=Stampa movimenti di magazzino" title="Stampa movimenti di magazzino"  description="Stampa movimenti di magazzino" />
+      <siteMapNode url="WebFormTables\WF_StatMovMagArt.aspx?labelForm=Stampa movimenti di magazzino per articolo" title="Stampa movimenti di magazzino per articolo"  description="Stampa movimenti di magazzino per articolo" />
+      <siteMapNode url="WebFormTables\WF_Magazzino.aspx?labelForm=Ricalcola giacenze" title="Ricalcola giacenze"  description="Ricalcola giacenze" />
+      <siteMapNode url="WebFormTables\WF_DispMag.aspx?labelForm=Disponibiltà di magazzino" title="Disponibiltà di magazzino"  description="Disponibiltà di magazzino" />
+      <siteMapNode title="Inventari" description="Inventari">
+        <siteMapNode url="WebFormTables\WF_Inventario.aspx?labelForm=Generazione schede inventario" title="Generazione schede inventario"  description="Generazione schede inventario" />
+        <siteMapNode url="WebFormTables\WF_ElencoSchedeInventario.aspx?labelForm=Gestione schede inventario" title="Gestione schede inventario"  description="Gestione schede inventario" />
+      </siteMapNode>
+      <siteMapNode title="Valorizzazione di magazzino" description="Valorizzazione di magazzino">
+        <siteMapNode url="WebFormTables\WF_ValorizzazioneMagazzino.aspx?labelForm=Valorizzazione di magazzino (FIFO)" title="Valorizzazione di magazzino (FIFO)"  description="Valorizzazione di magazzino (FIFO)" />
+        <siteMapNode url="WebFormTables\WF_ValorizzazioneMagazzino.aspx?labelForm=Valorizzazione di magazzino (LIFO)" title="Valorizzazione di magazzino (LIFO)"  description="Valorizzazione di magazzino (LIFO)" />
+        <siteMapNode url="WebFormTables\WF_ValorizzazioneMagazzino.aspx?labelForm=Valorizzazione di magazzino (Ultimo prezzo di acquisto)" title="Valorizzazione di magazzino (Ultimo prezzo di acquisto)"  description="Valorizzazione di magazzino (Ultimo prezzo di acquisto)" />
+        <siteMapNode url="WebFormTables\WF_ValorizzazioneMagazzino.aspx?labelForm=Valorizzazione di magazzino (Media ponderata)" title="Valorizzazione di magazzino (Media ponderata)"  description="Valorizzazione di magazzino (Media ponderata)" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Clienti" description="Clienti">
+      <siteMapNode title="Ordini" description="Ordini">
+        <siteMapNode url="WebFormTables\WF_ElencoDistinteSped.aspx?labelForm=Gestione spedizioni" title="Gestione spedizioni" description="Gestione spedizioni" />
+        <siteMapNode url="WebFormTables\WF_ElencoOrdini.aspx?labelForm=Includi/Escludi Ordini in Allestimento" title="Includi/Escludi Ordini in Allestimento" description="Includi/Escludi Ordini in Allestimento" />
+      </siteMapNode>
+      <siteMapNode title="Documenti" description="Documenti">
+        <siteMapNode url="WebFormTables\WF_DocumentiElenco.aspx?labelForm=Gestione documenti" title="Gestione documenti" description="Gestione documenti" />
+        <siteMapNode title="Ristampa Documenti emessi" description="Ristampa Documenti emessi">
+          <siteMapNode url="WebFormTables\WF_RistampaDDT.aspx?labelForm=Ristampa DDT" title="Ristampa DDT" description="Ristampa DDT" />
+          <!--<siteMapNode url="WebFormTables\WF_RistampaFatture.aspx?labelForm=Ristampa Fatture" title="Ristampa Fatture" description="Ristampa Fatture" />-->
+        </siteMapNode>
+        <siteMapNode url="WebFormTables\WF_UploadLotti.aspx?labelForm=Carico lotti da archivio (CSV)" title="Carico lotti da archivio (CSV)" description="Carico lotti da archivio (CSV)" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Fornitori" description="Fornitori">
+      <siteMapNode url="WebFormTables\WF_ElencoOrdiniFornitori.aspx?labelForm=Carico ordini FORNITORI" title="Carico ordini" description="Carico ordini" />
+      <siteMapNode url="WebFormTables\WF_DocumentiElencoFor.aspx?labelForm=Gestione DDT fornitori" title="Gestione DDT fornitori" description="Gestione DDT fornitori" />
+      <siteMapNode url="WebFormTables\WF_StampaArticoliFornitori.aspx?labelForm=Stampa articoli fornitori." title="Stampa articoli fornitori"  description="Stampa articoli fornitori" />
+      <siteMapNode title="Statistiche Ordinato - Venduto/Fatturato" description="Statistiche Ordinato - Venduto/Fatturato">
+        <siteMapNode url="WebFormTables\WF_OrdineStampaForArt.aspx?labelForm=Ordinato per articolo/fornitore" title="Ordinato per articolo/fornitore"  description="Ordinato per articolo/fornitore" />
+        <siteMapNode url="WebFormTables\WF_StatVendForArt.aspx?labelForm=Venduto/Fatturato per fornitore/articolo" title="Venduto/Fatturato per fornitore/articolo"  description="Venduto/Fatturato per fornitore/articolo" />
+        <siteMapNode url="WebFormTables\WF_StatVendRegForArt.aspx?labelForm=Venduto/Fatturato per regione/fornitore/articolo" title="Venduto/Fatturato per regione/fornitore/articolo"  description="Venduto/Fatturato per regione/fornitore/articolo" />
+        <siteMapNode url="WebFormTables\WF_StatOrdForOrdTutti.aspx?labelForm=Statistica ordinato per fornitore/N°documento [Tutti]" title="Statistica ordinato per fornitore/N°documento [Tutti]"  description="Statistica ordinato per fornitore/N°documento [Tutti]" />
+      </siteMapNode>
+    </siteMapNode>
+    
+    <siteMapNode title="Menu" description="Menu" url="WebFormTables\WF_Menu.aspx?labelForm=Menu principale" />
+
+    <siteMapNode title="?" description="Info programma ....." url="" />
+
+  </siteMapNode>
+
+</siteMap>
+

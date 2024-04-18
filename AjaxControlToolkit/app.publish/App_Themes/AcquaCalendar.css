@@ -1,0 +1,52 @@
+﻿.CalendarStyle  
+{
+	width: 100%; 
+	border: #DEECFF 1px solid; 
+	font-family:Verdana;
+	font-Size: 8pt;
+	height:20px;
+	width:250px;
+	font-size:smaller;
+}
+
+.CalendarSelectedDayStyle
+{
+	background-color:#ffffDE;
+	font-weight:bold;
+}
+
+.CalendarSelectorStyle
+{
+	background-color:#ffffDE;
+}
+
+.CalendarTodayDayStyle
+{
+	background-color:#ffffDE; /*giallo tenue*/
+	color:white;
+}
+
+.CalendarOtherMonthDayStyle
+{
+	color:#DEECFF;
+}
+
+.CalendarNextPrevStyle
+{
+	font-size:8pt;
+	color:#FFFFCC;
+	background-color: #DEECFF;
+}
+
+.CalendarDayHeaderStyle
+{
+	background-color: #DEECFF; /*azzurro*/
+	height:1px; 
+}
+
+.CalendarTitleStyle
+{
+	background-color: #DEECFF;
+	color:Black;
+	font-size:9pt;
+}

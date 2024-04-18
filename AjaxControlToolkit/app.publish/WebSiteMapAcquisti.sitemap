@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode title="Statistiche Clienti" description="Statistiche Clienti" >
+      <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
+      <siteMapNode title="Preventivi/Offerte Clienti" description="Preventivi/Offerte Clienti" >
+        <siteMapNode url="WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Agente/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
+        <siteMapNode url="WF_PrevClienteOrdineAG.aspx?labelForm=Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" title="Preventivi per Lead Source/Cliente/Preventivo - Stato:[Conf./Da Conf... Conteggio Totali]" />
+      </siteMapNode>
+      <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Statistiche Fornitori" description="Statistiche Fornitori" >
+      <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
+      <siteMapNode title="Statistiche Ordinato Fornitori" description="Statistiche Ordinato Fornitori" >
+        <siteMapNode url="WebFormTables\WF_StatOrdForOrdTutti.aspx?labelForm=Statistica ordinato per fornitore/N°documento [Tutti]" title="Statistica ordinato per fornitore/N°documento [Tutti]"  description="Statistica ordinato per fornitore/N°documento [Tutti]" />
+      </siteMapNode>
+      <siteMapNode title="----------------------------------------" description="" ></siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

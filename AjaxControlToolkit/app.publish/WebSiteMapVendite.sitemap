@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="WebFormTables\WF_ContrattiElenco.aspx?labelForm=Elenco Contratti" title="Elenco Contratti"  description="Elenco Contratti" />
+    <siteMapNode title="Menu" description="Menu" url="WebFormTables\WF_MenuCA.aspx?labelForm=Menu Gestione CONTRATTI" />
+    <!--<siteMapNode title="Gestione Contratti" description="Gestione Contratti">
+      <siteMapNode title="" description=""></siteMapNode>
+      <siteMapNode url="WebFormTables\WF_ContrattiElenco.aspx?labelForm=Elenco Contratti" title="Elenco Contratti"  description="Elenco Contratti" />
+      <siteMapNode url="WebFormTables\WF_ContrattiElScad.aspx?labelForm=Elenco Attività in scadenza" title="Elenco Attività in scadenza"  description="Elenco Attività in scadenza" />
+      <siteMapNode url="WebFormTables\WF_ContrattiElScadPag.aspx?labelForm=Elenco Attività da fatturare" title="Elenco Attività da fatturare"  description="Elenco Attività da fatturare" />
+      <siteMapNode title="" description=""></siteMapNode>
+      <siteMapNode title="Tabelle Gestione Contratti" description="Tabelle Gestione Contratti">
+        <siteMapNode url="WebFormTables\WF_Tabelle.aspx?labelForm=Gestione Tabelle Responsabili Area" title="Responsabili Area" description="Responsabili Area" />
+        <siteMapNode url="WebFormTables\WF_Tabelle.aspx?labelForm=Gestione Tabelle Responsabili Visite" title="Responsabili Visite" description="Responsabili Visite" />
+        <siteMapNode url="WebFormTables\WF_TipoContratto.aspx?labelForm=Tabella Tipo Contratto" title="Tipo Contratto" description="Tipo Contratto" />
+      </siteMapNode>
+    </siteMapNode>-->
+
+  </siteMapNode>
+
+</siteMap>
