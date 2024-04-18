@@ -8,6 +8,7 @@ Imports SoftAziOnLine.App 'written by Marco
 Imports SoftAziOnLine.Formatta
 Imports SoftAziOnLine.WebFormUtility
 Imports SoftAziOnLine.Documenti
+Imports System.Drawing
 
 Partial Public Class WUC_ContrattiDett
     Inherits System.Web.UI.UserControl
@@ -125,7 +126,7 @@ Partial Public Class WUC_ContrattiDett
             ModalPopup.Show("Errore in ContrattiDett.Chiudi", ex.Message & " " & "Errore: TIPO DOCUMENTO SCONOSCIUTO", WUC_ModalPopup.TYPE_ERROR)
             Exit Sub
         End Try
-        
+
         'GIU170112 giu140512 i lotti solo nei documenti di trasporto
         '''If myTipoDoc = SWTD(TD.Preventivi) Or _
         '''   myTipoDoc = SWTD(TD.OrdClienti) Or _
@@ -149,7 +150,7 @@ Partial Public Class WUC_ContrattiDett
             Exit Sub
         End If
         txtCodArtIns.MaxLength = App.GetParamGestAzi(Session(ESERCIZIO)).LunghezzaMaxCodice 'GIU170112 + CSTLOpz
-        
+
         If Not IsPostBack Then
             lblMessAgg.ForeColor = Drawing.Color.Blue
             lblSuperatoScMax.ForeColor = Drawing.Color.Blue
@@ -628,8 +629,8 @@ Partial Public Class WUC_ContrattiDett
                 txtPrezzoCosto.BackColor = SEGNALA_OK
                 txtPrezzoCosto.Text = Format(aDataView1.Item(myRowIndex).Item("PrezzoCosto"), FormatoValEuro)
                 If txtCodArtIns.Text = "" Then
-                    If CDbl(txtQtaIns.Text) > 0 Or _
-                        CDbl(txtQtaIns.Text) > 0 Or _
+                    If CDbl(txtQtaIns.Text) > 0 Or
+                        CDbl(txtQtaIns.Text) > 0 Or
                         CDbl(txtPrezzoIns.Text) > 0 Then
                         txtPrezzoCosto.Enabled = True
                     Else
@@ -822,10 +823,10 @@ Partial Public Class WUC_ContrattiDett
         Dim myCodRespVisite As String = "" : Dim myDesRespVisite As String = ""
         Dim myCodRegione As String = ""
         Dim strSQL As String = ""
-        strSQL = "SELECT RespVisiteRegPr.Codice, RespVisiteRegPr.CodRespVisite, RespVisiteRegPr.CodRegione, RespVisiteRegPr.Provincia, " & _
-                 "RespVisite.CodRespArea, RespVisite.Descrizione AS DesRespVisite, RespArea.Descrizione AS DesRespArea " & _
-                 "FROM RespVisiteRegPr INNER JOIN RespVisite ON RespVisiteRegPr.CodRespVisite = RespVisite.Codice INNER JOIN " & _
-                 "RespArea ON RespVisite.CodRespArea = RespArea.Codice " & _
+        strSQL = "SELECT RespVisiteRegPr.Codice, RespVisiteRegPr.CodRespVisite, RespVisiteRegPr.CodRegione, RespVisiteRegPr.Provincia, " &
+                 "RespVisite.CodRespArea, RespVisite.Descrizione AS DesRespVisite, RespArea.Descrizione AS DesRespArea " &
+                 "FROM RespVisiteRegPr INNER JOIN RespVisite ON RespVisiteRegPr.CodRespVisite = RespVisite.Codice INNER JOIN " &
+                 "RespArea ON RespVisite.CodRespArea = RespArea.Codice " &
                  "WHERE RespVisiteRegPr.Provincia = '" & myProvApp.Trim & "'"
         Dim ObjDB As New DataBaseUtility
         Dim ds1 As New DataSet
@@ -875,10 +876,10 @@ Partial Public Class WUC_ContrattiDett
                         If (ds2.Tables(0).Rows.Count > 0) Then
                             rows = ds2.Tables(0).Select()
                             myCodRegione = IIf(IsDBNull(rows(0).Item("Regione")), "", rows(0).Item("Regione").ToString.Trim)
-                            strSQL = "SELECT RespVisiteRegPr.Codice, RespVisiteRegPr.CodRespVisite, RespVisiteRegPr.CodRegione, RespVisiteRegPr.Provincia, " & _
-                                     "RespVisite.CodRespArea, RespVisite.Descrizione AS DesRespVisite, RespArea.Descrizione AS DesRespArea " & _
-                                     "FROM RespVisiteRegPr INNER JOIN RespVisite ON RespVisiteRegPr.CodRespVisite = RespVisite.Codice INNER JOIN " & _
-                                     "RespArea ON RespVisite.CodRespArea = RespArea.Codice " & _
+                            strSQL = "SELECT RespVisiteRegPr.Codice, RespVisiteRegPr.CodRespVisite, RespVisiteRegPr.CodRegione, RespVisiteRegPr.Provincia, " &
+                                     "RespVisite.CodRespArea, RespVisite.Descrizione AS DesRespVisite, RespArea.Descrizione AS DesRespArea " &
+                                     "FROM RespVisiteRegPr INNER JOIN RespVisite ON RespVisiteRegPr.CodRespVisite = RespVisite.Codice INNER JOIN " &
+                                     "RespArea ON RespVisite.CodRespArea = RespArea.Codice " &
                                      "WHERE RespVisiteRegPr.CodRegione = " & myCodRegione.Trim & ""
                             ObjDB.PopulateDatasetFromQuery(TipoDB.dbScadenzario, strSQL, ds3)
                             If (ds3.Tables.Count > 0) Then
@@ -1062,7 +1063,7 @@ Partial Public Class WUC_ContrattiDett
         txtIVAIns.AutoPostBack = True
         '---
         LblPrezzoNetto.Text = HTML_SPAZIO : LblImportoRiga.Text = HTML_SPAZIO
-        
+
         checkNoScontoValore.Checked = True 'giu160112
 
         lblMessAgg.BorderStyle = BorderStyle.None
@@ -1096,6 +1097,13 @@ Partial Public Class WUC_ContrattiDett
         '---------
     End Sub
     Private Sub EnableTOTxtInsArticoli(ByVal SW As Boolean)
+        Dim pCodVisita As String = "" : Dim pNVisite As Integer = 0
+        If GetCodVisitaDATipoCAIdPag(pCodVisita, pNVisite) = False Then
+            lblMessAgg.Visible = True
+            lblMessAgg.ForeColor = Color.DarkRed
+            lblMessAgg.BorderStyle = BorderStyle.Outset
+            lblMessAgg.Text = "Definizione Tipo Contratto errato."
+        End If
         If GridViewDett.Enabled = True Then
             btnDelDettagli.Enabled = Not SW
 
@@ -1120,6 +1128,11 @@ Partial Public Class WUC_ContrattiDett
                     txtDataEv.Enabled = False : ImgDataEv.Enabled = False
                     chkEvasa.Enabled = False
                     chkFatturata.Enabled = False
+                End If
+                If txtCodArtIns.Text.Trim = pCodVisita.Trim Then
+                    txtDataScCons.Enabled = False : ImgDataScCons.Enabled = False
+                Else
+                    txtDataScCons.Enabled = True : ImgDataScCons.Enabled = True
                 End If
             End If
         Else
@@ -1150,7 +1163,7 @@ Partial Public Class WUC_ContrattiDett
             btnModificaNoteInterv.Enabled = False
         End If
         If SW = False Then txtPrezzoCosto.Enabled = False
-        
+
     End Sub
     Private Sub SetBtnPrimaRigaEnabled(ByVal SW As Boolean)
         btnPrimaRiga.Enabled = SW : btnPrimaRiga.Visible = SW
