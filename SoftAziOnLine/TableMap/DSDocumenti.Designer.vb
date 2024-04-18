@@ -12879,6 +12879,8 @@ Partial Public Class DSDocumenti
         
         Private columnTextRefDataNC As Global.System.Data.DataColumn
         
+        Private columnNextDataRefDataNC As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -13547,6 +13549,14 @@ Partial Public Class DSDocumenti
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property NextDataRefDataNCColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNextDataRefDataNC
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -13662,9 +13672,10 @@ Partial Public Class DSDocumenti
                     ByVal NextDataSc As Date,  _
                     ByVal TextDataSc As String,  _
                     ByVal TextDataEv As String,  _
-                    ByVal TextRefDataNC As String) As ContrattiDRow
+                    ByVal TextRefDataNC As String,  _
+                    ByVal NextDataRefDataNC As Date) As ContrattiDRow
             Dim rowContrattiDRow As ContrattiDRow = CType(Me.NewRow,ContrattiDRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, DurataNum, DurataNumRiga, Riga, Cod_Articolo, Descrizione, Cod_Iva, Prezzo, Prezzo_Netto, SWPNettoModificato, Prezzo_Netto_Inputato, Sconto_1, Sconto_2, Sconto_3, Sconto_4, Sconto_Pag, ScontoValore, Sconto_Merce, ScontoReale, Um, Qta_Ordinata, Qta_Evasa, Qta_Residua, Importo, Cod_Agente, Pro_Agente, ImportoProvvigione, Note, OmaggioImponibile, OmaggioImposta, NumeroPagina, N_Pacchi, Qta_Casse, Flag_Imb, Confezione, Riga_Trasf, Riga_Appartenenza, RefInt, RefNumPrev, RefDataPrev, RefNumOrd, RefDataOrd, RefNumDDT, RefDataDDT, RefNumNC, RefDataNC, LBase, LOpz, Qta_Impegnata, Qta_Prenotata, Qta_Allestita, PrezzoListino, PrezzoAcquisto, SWModAgenti, PrezzoCosto, Qta_Inviata, Qta_Fatturata, Qta_Selezionata, DedPerAcconto, TipoScontoMerce, Cod_Filiale, DataEv, Lotto, Serie, QtaDurataNum, QtaDurataNumR0, DataSc, SWInvioMod, SWCalcoloTot, SWSostituito, SWChiusaNoEv, RefNumFC, RefDataFC, RespArea, RespVisite, NextDataSc, TextDataSc, TextDataEv, TextRefDataNC}
+            Dim columnValuesArray() As Object = New Object() {Nothing, DurataNum, DurataNumRiga, Riga, Cod_Articolo, Descrizione, Cod_Iva, Prezzo, Prezzo_Netto, SWPNettoModificato, Prezzo_Netto_Inputato, Sconto_1, Sconto_2, Sconto_3, Sconto_4, Sconto_Pag, ScontoValore, Sconto_Merce, ScontoReale, Um, Qta_Ordinata, Qta_Evasa, Qta_Residua, Importo, Cod_Agente, Pro_Agente, ImportoProvvigione, Note, OmaggioImponibile, OmaggioImposta, NumeroPagina, N_Pacchi, Qta_Casse, Flag_Imb, Confezione, Riga_Trasf, Riga_Appartenenza, RefInt, RefNumPrev, RefDataPrev, RefNumOrd, RefDataOrd, RefNumDDT, RefDataDDT, RefNumNC, RefDataNC, LBase, LOpz, Qta_Impegnata, Qta_Prenotata, Qta_Allestita, PrezzoListino, PrezzoAcquisto, SWModAgenti, PrezzoCosto, Qta_Inviata, Qta_Fatturata, Qta_Selezionata, DedPerAcconto, TipoScontoMerce, Cod_Filiale, DataEv, Lotto, Serie, QtaDurataNum, QtaDurataNumR0, DataSc, SWInvioMod, SWCalcoloTot, SWSostituito, SWChiusaNoEv, RefNumFC, RefDataFC, RespArea, RespVisite, NextDataSc, TextDataSc, TextDataEv, TextRefDataNC, NextDataRefDataNC}
             If (Not (parentContrattiTRowByContrattiT_ContrattiD) Is Nothing) Then
                 columnValuesArray(0) = parentContrattiTRowByContrattiT_ContrattiD(0)
             End If
@@ -13775,6 +13786,7 @@ Partial Public Class DSDocumenti
             Me.columnTextDataSc = MyBase.Columns("TextDataSc")
             Me.columnTextDataEv = MyBase.Columns("TextDataEv")
             Me.columnTextRefDataNC = MyBase.Columns("TextRefDataNC")
+            Me.columnNextDataRefDataNC = MyBase.Columns("NextDataRefDataNC")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13938,6 +13950,8 @@ Partial Public Class DSDocumenti
             MyBase.Columns.Add(Me.columnTextDataEv)
             Me.columnTextRefDataNC = New Global.System.Data.DataColumn("TextRefDataNC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTextRefDataNC)
+            Me.columnNextDataRefDataNC = New Global.System.Data.DataColumn("NextDataRefDataNC", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNextDataRefDataNC)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIDDocumenti, Me.columnDurataNum, Me.columnDurataNumRiga, Me.columnRiga}, true))
             Me.columnIDDocumenti.AllowDBNull = false
             Me.columnDurataNum.AllowDBNull = false
@@ -38442,6 +38456,21 @@ Partial Public Class DSDocumenti
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property NextDataRefDataNC() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableContrattiD.NextDataRefDataNCColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'NextDataRefDataNC' nella tabella 'ContrattiD' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableContrattiD.NextDataRefDataNCColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property ContrattiTRow() As ContrattiTRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("ContrattiT_ContrattiD")),ContrattiTRow)
@@ -39349,6 +39378,18 @@ Partial Public Class DSDocumenti
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetTextRefDataNCNull()
             Me(Me.tableContrattiD.TextRefDataNCColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsNextDataRefDataNCNull() As Boolean
+            Return Me.IsNull(Me.tableContrattiD.NextDataRefDataNCColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetNextDataRefDataNCNull()
+            Me(Me.tableContrattiD.NextDataRefDataNCColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

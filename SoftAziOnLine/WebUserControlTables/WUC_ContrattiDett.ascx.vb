@@ -7640,6 +7640,9 @@ Partial Public Class WUC_ContrattiDett
                             If UCase(dc.ColumnName) = "NEXTDATASC" Then
                                 Continue For
                             End If
+                            If UCase(dc.ColumnName) = "NEXTREFDATANC" Then 'giu170424
+                                Continue For
+                            End If
                             If UCase(dc.ColumnName) = "TEXTDATASC" Then
                                 Continue For
                             End If
@@ -7667,6 +7670,18 @@ Partial Public Class WUC_ContrattiDett
                                         DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataSc))
                                         RowDett.NextDataSc = CDate(DataNext)
                                     End If
+                                    'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                    DataNext = CDate(RowDett.NextDataRefDataNC)
+                                    If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                        'SWDataScNOPeriodo = True
+                                    End If
+                                    If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                        'SWOK = False
+                                    Else
+                                        RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                        DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataRefDataNC))
+                                        RowDett.NextDataRefDataNC = CDate(DataNext)
+                                    End If
                                 ElseIf RowDett.Cod_Articolo.Trim = "" Then
                                     DataNext = CDate(RowDett.NextDataSc)
                                     If CDate(DataNext).Date < CDate(myDataInizio).Date Then
@@ -7678,6 +7693,18 @@ Partial Public Class WUC_ContrattiDett
                                         RowDettForIns.Item(dc.ColumnName) = CDate(DataNext)
                                         DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataSc))
                                         RowDett.NextDataSc = CDate(DataNext)
+                                    End If
+                                    'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                    DataNext = CDate(RowDett.NextDataRefDataNC)
+                                    If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                        'SWDataScNOPeriodo = True
+                                    End If
+                                    If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                        'SWOK = False
+                                    Else
+                                        RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                        DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataRefDataNC))
+                                        RowDett.NextDataRefDataNC = CDate(DataNext)
                                     End If
                                 Else
                                     If Me.DsContrattiDett.ArticoliAnniSc.FindByCod_Articolo(RowDett.Cod_Articolo.Trim) Is Nothing Then
@@ -7691,6 +7718,18 @@ Partial Public Class WUC_ContrattiDett
                                             RowDettForIns.Item(dc.ColumnName) = CDate(DataNext)
                                             DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataSc))
                                             RowDett.NextDataSc = CDate(DataNext)
+                                        End If
+                                        'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                        DataNext = CDate(RowDett.NextDataRefDataNC)
+                                        If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                            'SWDataScNOPeriodo = True
+                                        End If
+                                        If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                            'SWOK = False
+                                        Else
+                                            RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                            DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataRefDataNC))
+                                            RowDett.NextDataRefDataNC = CDate(DataNext)
                                         End If
                                     Else
                                         RowArtAnniSc = Me.DsContrattiDett.ArticoliAnniSc.FindByCod_Articolo(RowDett.Cod_Articolo.Trim)
@@ -7706,6 +7745,18 @@ Partial Public Class WUC_ContrattiDett
                                                 DataNext = DateAdd(DateInterval.Year, RowArtAnniSc.AnniSc_EL, CDate(RowDett.NextDataSc))
                                                 RowDett.NextDataSc = CDate(DataNext)
                                             End If
+                                            'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                            DataNext = CDate(RowDett.NextDataRefDataNC)
+                                            If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                                'SWDataScNOPeriodo = True
+                                            End If
+                                            If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                                'SWOK = False
+                                            Else
+                                                RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                                DataNext = DateAdd(DateInterval.Year, RowArtAnniSc.AnniSc_EL, CDate(RowDett.NextDataRefDataNC))
+                                                RowDett.NextDataRefDataNC = CDate(DataNext)
+                                            End If
                                         ElseIf RowArtAnniSc.AnniSc_BA > 0 Then
                                             DataNext = CDate(RowDett.NextDataSc)
                                             If CDate(DataNext).Date < CDate(myDataInizio).Date Then
@@ -7717,6 +7768,18 @@ Partial Public Class WUC_ContrattiDett
                                                 RowDettForIns.Item(dc.ColumnName) = CDate(DataNext)
                                                 DataNext = DateAdd(DateInterval.Year, RowArtAnniSc.AnniSc_BA, CDate(RowDett.NextDataSc))
                                                 RowDett.NextDataSc = CDate(DataNext)
+                                            End If
+                                            'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                            DataNext = CDate(RowDett.NextDataRefDataNC)
+                                            If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                                'SWDataScNOPeriodo = True
+                                            End If
+                                            If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                                'SWOK = False
+                                            Else
+                                                RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                                DataNext = DateAdd(DateInterval.Year, RowArtAnniSc.AnniSc_BA, CDate(RowDett.NextDataRefDataNC))
+                                                RowDett.NextDataRefDataNC = CDate(DataNext)
                                             End If
                                         Else
                                             DataNext = CDate(RowDett.NextDataSc)
@@ -7730,9 +7793,22 @@ Partial Public Class WUC_ContrattiDett
                                                 DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataSc))
                                                 RowDett.NextDataSc = CDate(DataNext)
                                             End If
+                                            'giu170424 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                            DataNext = CDate(RowDett.NextDataRefDataNC)
+                                            If CDate(DataNext).Date < CDate(myDataInizio).Date Then
+                                                'SWDataScNOPeriodo = True
+                                            End If
+                                            If CDate(DataNext).Year <> CDate(myDataInizio).Year Then
+                                                'SWOK = False
+                                            Else
+                                                RowDettForIns.Item("NextDataRefDataNC") = CDate(DataNext)
+                                                DataNext = DateAdd(DateInterval.Year, 1, CDate(RowDett.NextDataRefDataNC))
+                                                RowDett.NextDataRefDataNC = CDate(DataNext)
+                                            End If
                                         End If
                                     End If
                                 End If
+
                             ElseIf UCase(dc.ColumnName) = "DURATANUM" Then
                                 RowDettForIns.Item(dc.ColumnName) = 1 'fisso 1
                             ElseIf UCase(dc.ColumnName) = "DURATANUMRIGA" Then
