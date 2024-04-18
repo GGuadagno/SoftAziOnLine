@@ -1103,7 +1103,11 @@ Partial Public Class WUC_ContrattiDett
             lblMessAgg.ForeColor = Color.DarkRed
             lblMessAgg.BorderStyle = BorderStyle.Outset
             lblMessAgg.Text = "Definizione Tipo Contratto errato."
-            lblMessAgg.Text = "Definizione Tipo Contratto errato."
+            lblMessRespAV.Text = "Definizione Tipo Contratto errato."
+            lblMessRespAV.Visible = True
+        Else
+            lblMessRespAV.Text = "Codice Visita: " + pCodVisita.Trim
+            lblMessRespAV.Visible = True
         End If
         If GridViewDett.Enabled = True Then
             btnDelDettagli.Enabled = Not SW
