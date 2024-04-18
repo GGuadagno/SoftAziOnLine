@@ -1,21 +1,21 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="WUC_Articoli.ascx.vb" Inherits="SoftAziOnLine.WUC_Articoli" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
-<%@ Register src="~/WebUserControl/WUC_ModalPopup.ascx" tagname="WUC_ModalPopup" tagprefix="uc1" %>
-<%@ Register Src="~/WebUserControlTables/WUC_FornitoriSec.ascx" TagName="FornitoriSec" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControlTables/WUC_PrezziAcquisto.ascx" TagName="PrezziAcquisto" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControlTables/WUC_DescEstesa.ascx" TagName="DescEstesa" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControlTables/WUC_ArticoliCTV.ascx" TagName="ArticoliCTV" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControl/WFP_FornitoreSec.ascx" TagName="WFPFornitoreSec" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControl/WFP_ListiniDaAggiornare.ascx" TagName="WFPListiniDaAggiornare" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControl/WFP_Elenco.ascx" TagName="WFPElenco" TagPrefix="wuc" %>
-<%@ Register Src="~/WebUserControl/WFP_ElencoCliForn.ascx" TagName="WFPElencoCliForn" TagPrefix="wuc" %>
+<%@ Register src="../WebUserControl/WUC_ModalPopup.ascx" tagname="WUC_ModalPopup" tagprefix="uc1" %>
+<%@ Register Src="../WebUserControlTables/WUC_FornitoriSec.ascx" TagName="FornitoriSec" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControlTables/WUC_PrezziAcquisto.ascx" TagName="PrezziAcquisto" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControlTables/WUC_DescEstesa.ascx" TagName="DescEstesa" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControlTables/WUC_ArticoliCTV.ascx" TagName="ArticoliCTV" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControl/WFP_FornitoreSec.ascx" TagName="WFPFornitoreSec" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControl/WFP_ListiniDaAggiornare.ascx" TagName="WFPListiniDaAggiornare" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControl/WFP_Elenco.ascx" TagName="WFPElenco" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControl/WFP_ElencoCliForn.ascx" TagName="WFPElencoCliForn" TagPrefix="wuc" %>
 <%@ Register src="../WebUserControl/WFP_CategorieArt.ascx" tagname="WFP_CategorieArt" tagprefix="wuc" %>
 <%@ Register src="../WebUserControl/WFP_LineeArt.ascx" tagname="WFP_LineeArt" tagprefix="wuc" %>
 <%@ Register src="../WebUserControl/WFP_TipoCodArt.ascx" tagname="WFP_TipoCodArt" tagprefix="wuc" %>
 <%@ Register src="../WebUserControl/WFP_Misure.ascx" tagname="WFP_Misure" tagprefix="wuc" %>
 <%@ Register src="../WebUserControl/WFP_Pagamenti.ascx" tagname="WFP_Pagamenti" tagprefix="wuc" %>
 <%@ Register src="../WebUserControl/WUC_SceltaStampaAnaArt.ascx" tagname="WUC_SceltaStampaAnaArt" tagprefix="uc2" %>
-<%@ Register Src="~/WebUserControlTables/WUC_DistintaBase.ascx" TagName="DistintaBase" TagPrefix="wuc" %>
+<%@ Register Src="../WebUserControlTables/WUC_DistintaBase.ascx" TagName="DistintaBase" TagPrefix="wuc" %>
 <style type="text/css">
     .btnstyle
     {
