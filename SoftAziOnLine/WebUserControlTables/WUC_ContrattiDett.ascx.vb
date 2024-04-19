@@ -1099,15 +1099,9 @@ Partial Public Class WUC_ContrattiDett
     Private Sub EnableTOTxtInsArticoli(ByVal SW As Boolean)
         Dim pCodVisita As String = "" : Dim pNVisite As Integer = 0
         If GetCodVisitaDATipoCAIdPag(pCodVisita, pNVisite) = False Then
-            lblMessAgg.Visible = True
             lblMessAgg.ForeColor = Color.DarkRed
             lblMessAgg.BorderStyle = BorderStyle.Outset
             lblMessAgg.Text = "Definizione Tipo Contratto errato."
-            lblMessRespAV.Text = "Definizione Tipo Contratto errato."
-            lblMessRespAV.Visible = True
-        Else
-            lblMessRespAV.Text = "Codice Visita: " + pCodVisita.Trim
-            lblMessRespAV.Visible = True
         End If
         If GridViewDett.Enabled = True Then
             btnDelDettagli.Enabled = Not SW
@@ -1133,11 +1127,6 @@ Partial Public Class WUC_ContrattiDett
                     txtDataEv.Enabled = False : ImgDataEv.Enabled = False
                     chkEvasa.Enabled = False
                     chkFatturata.Enabled = False
-                End If
-                If txtCodArtIns.Text.Trim = pCodVisita.Trim Then
-                    txtDataScCons.Enabled = False : ImgDataScCons.Enabled = False
-                Else
-                    txtDataScCons.Enabled = True : ImgDataScCons.Enabled = True
                 End If
             End If
         Else
@@ -1168,7 +1157,11 @@ Partial Public Class WUC_ContrattiDett
             btnModificaNoteInterv.Enabled = False
         End If
         If SW = False Then txtPrezzoCosto.Enabled = False
-
+        If txtCodArtIns.Text.Trim = pCodVisita.Trim And pCodVisita.Trim <> "" Then
+            txtDataScCons.Enabled = False : ImgDataScCons.Enabled = False
+        Else
+            txtDataScCons.Enabled = True : ImgDataScCons.Enabled = True
+        End If
     End Sub
     Private Sub SetBtnPrimaRigaEnabled(ByVal SW As Boolean)
         btnPrimaRiga.Enabled = SW : btnPrimaRiga.Visible = SW
@@ -3487,6 +3480,7 @@ Partial Public Class WUC_ContrattiDett
             'RICARICO I LOTTI PER LA RIGA SELEZIONATA
             '''BuildLottiRigaDB(GridViewDett.SelectedDataKey.Value)
             '-----------
+            PopolaTxtDett() 'giu190424
         Catch Ex As Exception
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
@@ -3502,6 +3496,40 @@ Partial Public Class WUC_ContrattiDett
         Session(SWOPDETTDOCR) = SWOPNESSUNA
         Session(SWOPDETTDOCL) = SWOPNESSUNA
         Session(SWMODIFICATO) = SWSI
+        ''''giu190424 NON FUNGE 
+        '''If DDLTipoDettagli.SelectedIndex = 0 Then
+        '''    _WucElement.SetBtnDupGen(True)
+        '''    PopolaTxtDett()
+        '''Else
+        '''    _WucElement.SetBtnDupGen(False)
+        '''End If
+        '''If chkSelModifica.Checked Or GridViewDett.Rows.Count = 0 Then
+        '''    Call _WucElement.CallBtnModifica()
+        '''Else
+        '''    Dim myRowIndex As Integer = GridViewDett.SelectedIndex + (GridViewDett.PageSize * GridViewDett.PageIndex)
+        '''    Dim myCodArt As String = ""
+        '''    Try
+        '''        myCodArt = aDataView1.Item(myRowIndex).Item("Cod_Articolo")
+        '''    Catch ex As Exception
+        '''        myCodArt = ""
+        '''    End Try
+        '''    If myCodArt = "" Then
+        '''        Call _WucElement.CallBtnModifica()
+        '''        Call _WucElement.SetLblMessDoc("Attenzione: Errore in " & DDLTipoDettagli.SelectedItem.Text.Trim & " - Nessun dettaglio presente.")
+        '''    End If
+        '''End If
+        ''''-NoteIntervento 
+        '''If DDLTipoDettagli.SelectedIndex = 0 Then 'APPARECCHIATURE
+        '''    Dim NSL As String = DDLDurNumRIga.SelectedItem.Text
+        '''    If NSL.Trim = "" Or InStr(NSL, "[") > 0 Or InStr(NSL, "Nuova") > 0 Then
+        '''        txtNoteIntervento.Text = ""
+        '''        Exit Sub
+        '''    End If
+        '''    NSL = Trim(Mid(NSL, InStr(NSL, "-") + 1))
+        '''    txtNoteIntervento.Text = GetNoteSL(txtNoteInterventoALL.Text.Trim, NSL.Trim)
+        '''Else
+        '''    txtNoteIntervento.Text = ""
+        '''End If
     End Sub
 #End Region
 
