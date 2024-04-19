@@ -1157,6 +1157,7 @@ Partial Public Class WUC_ContrattiDett
             btnModificaNoteInterv.Enabled = False
         End If
         If SW = False Then txtPrezzoCosto.Enabled = False
+        'GIU190424
         If txtCodArtIns.Text.Trim = pCodVisita.Trim And pCodVisita.Trim <> "" Then
             txtDataScCons.Enabled = False : ImgDataScCons.Enabled = False
         Else
@@ -2714,8 +2715,15 @@ Partial Public Class WUC_ContrattiDett
         GridViewDett.EditIndex = myRiga 'e.NewEditIndex
         aDataView1 = Session("aDataView1")
         If aDataView1.Count > 0 Then aDataView1.Sort = "Riga" 'giu311011
-        GridViewDett.DataSource = aDataView1
-        GridViewDett.DataBind()
+        Try 'GIU190424
+            GridViewDett.DataSource = aDataView1
+            GridViewDett.DataBind()
+        Catch ex As Exception
+            Session(MODALPOPUP_CALLBACK_METHOD) = ""
+            Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
+            ModalPopup.Show("Errore SESSIONE SCADUTA in ContrattiDett.GridViewDett_RowEditing", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+            Exit Sub
+        End Try
         '-----------
         'Selezionato
         'giu130112 errore in posizionamento 
@@ -2725,7 +2733,7 @@ Partial Public Class WUC_ContrattiDett
         Catch ex As Exception
             Session(MODALPOPUP_CALLBACK_METHOD) = ""
             Session(MODALPOPUP_CALLBACK_METHOD_NO) = ""
-            ModalPopup.Show("Errore in ContrattiDett.GridViewDett_RowEditing", ex.Message, WUC_ModalPopup.TYPE_ERROR)
+            ModalPopup.Show("Errore pOSIZIONAMENTO RIGA in ContrattiDett.GridViewDett_RowEditing", ex.Message, WUC_ModalPopup.TYPE_ERROR)
             Exit Sub
         End Try
 
@@ -3496,40 +3504,8 @@ Partial Public Class WUC_ContrattiDett
         Session(SWOPDETTDOCR) = SWOPNESSUNA
         Session(SWOPDETTDOCL) = SWOPNESSUNA
         Session(SWMODIFICATO) = SWSI
-        ''''giu190424 NON FUNGE 
-        '''If DDLTipoDettagli.SelectedIndex = 0 Then
-        '''    _WucElement.SetBtnDupGen(True)
-        '''    PopolaTxtDett()
-        '''Else
-        '''    _WucElement.SetBtnDupGen(False)
-        '''End If
-        '''If chkSelModifica.Checked Or GridViewDett.Rows.Count = 0 Then
-        '''    Call _WucElement.CallBtnModifica()
-        '''Else
-        '''    Dim myRowIndex As Integer = GridViewDett.SelectedIndex + (GridViewDett.PageSize * GridViewDett.PageIndex)
-        '''    Dim myCodArt As String = ""
-        '''    Try
-        '''        myCodArt = aDataView1.Item(myRowIndex).Item("Cod_Articolo")
-        '''    Catch ex As Exception
-        '''        myCodArt = ""
-        '''    End Try
-        '''    If myCodArt = "" Then
-        '''        Call _WucElement.CallBtnModifica()
-        '''        Call _WucElement.SetLblMessDoc("Attenzione: Errore in " & DDLTipoDettagli.SelectedItem.Text.Trim & " - Nessun dettaglio presente.")
-        '''    End If
-        '''End If
-        ''''-NoteIntervento 
-        '''If DDLTipoDettagli.SelectedIndex = 0 Then 'APPARECCHIATURE
-        '''    Dim NSL As String = DDLDurNumRIga.SelectedItem.Text
-        '''    If NSL.Trim = "" Or InStr(NSL, "[") > 0 Or InStr(NSL, "Nuova") > 0 Then
-        '''        txtNoteIntervento.Text = ""
-        '''        Exit Sub
-        '''    End If
-        '''    NSL = Trim(Mid(NSL, InStr(NSL, "-") + 1))
-        '''    txtNoteIntervento.Text = GetNoteSL(txtNoteInterventoALL.Text.Trim, NSL.Trim)
-        '''Else
-        '''    txtNoteIntervento.Text = ""
-        '''End If
+        'giu190424 
+        GridViewDett_RowEditing(Nothing, Nothing)
     End Sub
 #End Region
 
@@ -4920,7 +4896,7 @@ Partial Public Class WUC_ContrattiDett
                     txtDataScCons.BackColor = SEGNALA_KO
                     txtDataScCons.ToolTip = "Data Scadenza errata.!!"
                     Exit Sub
-                ElseIf Not IsDate(txtDataScCons.Text.Trim) Then
+                ElseIf Not IsDate(txtDataScCons.Text.Trim) And txtDataScCons.Enabled Then
                     txtDataScCons.BackColor = SEGNALA_KO
                     txtDataScCons.ToolTip = "Data Scadenza obbligatoria.!!"
                     Exit Sub
@@ -5093,6 +5069,10 @@ Partial Public Class WUC_ContrattiDett
                 '-
                 aDataView1.Item(myRowIndex).Item("Note") = txtNote.Text.Trim
                 'giu280420
+                DDLModello.BackColor = SEGNALA_OK
+                If DDLModello.SelectedIndex < 1 Then
+                    DDLModello.BackColor = SEGNALA_KO
+                End If
                 aDataView1.Item(myRowIndex).Item("QtaDurataNumR0") = DDLModello.SelectedIndex
                 'SELEZ.
                 Passo = 14
