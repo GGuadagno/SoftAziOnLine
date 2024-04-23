@@ -206,7 +206,7 @@
                                 <div style="height: 15px">
                                 </div>
                                 <div>
-                                    <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Proforma" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Proforma</a>
+                                    <a ID="LnkStampa" runat="server" href="..\WebFormTables\WebFormStampe.aspx" target="_blank" onclick="return openUrl(this.href);" visible="false" title="Apri Stampa" style="border-color:snow;border-style:outset;background-color:yellow;">Apri Stampa</a>
                                 </div>
                                 <div style="height: 15px">
                                 </div>
